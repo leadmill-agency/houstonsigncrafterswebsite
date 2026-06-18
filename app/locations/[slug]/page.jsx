@@ -6,6 +6,7 @@ import { BUSINESS, SERVICE_AREAS } from "@/data/business";
 import CTASection from "@/components/CTASection";
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
+import Faq from "@/components/Faq";
 import icons from "@/components/icons";
 
 export function generateStaticParams() {
@@ -72,14 +73,27 @@ export default async function LocationPage({ params }) {
 
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <div className="answer-block">
-          <p>Houston Sign Crafters provides custom signs in {m.cityState} with in-house design, City-area permitting, and licensed installation — backed by a 5-year warranty and a free quote within one business day.</p>
-        </div>
-        <div className="prose-content">
-          <h2>Signage for {m.city} businesses</h2>
-          <p>{m.localContext}</p>
+          <p>{m.answer}</p>
         </div>
 
-        <h2 className="mb-4 mt-10 text-2xl font-bold text-ink">Sign services in {m.city}</h2>
+        <div className="prose-content">
+          {m.sections.map((sec) => (
+            <div key={sec.heading}>
+              <h2>{sec.heading}</h2>
+              {sec.body.split(/\n\n+/).map((para, i) => (
+                <p key={i}>{para}</p>
+              ))}
+            </div>
+          ))}
+        </div>
+
+        {m.faqs?.length > 0 && (
+          <div className="mt-12">
+            <Faq items={m.faqs} heading={`${m.city} sign FAQs`} />
+          </div>
+        )}
+
+        <h2 className="mb-4 mt-12 text-2xl font-bold text-ink">Sign services in {m.city}</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {services.map((s) => (
             <Link key={s.slug} href={`/services/${s.slug}`} className="flex items-center gap-3 rounded-lg border border-fog p-4 hover:border-ink">
