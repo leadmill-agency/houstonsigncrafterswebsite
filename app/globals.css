@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+/*
+  Houston Sign Crafters brand theme (Tailwind v4 @theme tokens).
+  Colors + fonts pulled from the live brand: primary blue #1e64e6, Figtree +
+  Fragment Mono. Token names are kept stable so components don't need to change:
+
+  - ink:    deep blue-black for dark sections (hero, footer)
+  - signal: brand blue #1e64e6 — primary CTAs, accents, links (use WHITE text on it)
+  - steel/fog/cloud: neutrals for text, borders, surfaces (cloud = light blue tint)
+*/
+@theme {
+  --color-ink: #0a1530;
+  --color-ink-700: #142a52;
+  --color-signal: #1e64e6;
+  --color-signal-600: #1d5bcf;
+  --color-carbon: #16181d;
+  --color-steel: #5b6573;
+  --color-fog: #dbe3f0;
+  --color-cloud: #f0f4fa;
+  --color-white: #ffffff;
+
+  --font-sans: var(--font-figtree), ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono: var(--font-fragment-mono), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-white);
+  color: var(--color-carbon);
+}
+
+/* --- Reusable content components (playbook Appendix H) --- */
+
+/* Answer-first block — AI Overview / featured-snippet eligibility (Part 5.3) */
+.answer-block {
+  background: linear-gradient(135deg, var(--color-cloud) 0%, #e6eefa 100%);
+  border-left: 4px solid var(--color-signal);
+  padding: 24px 28px;
+  border-radius: 0 12px 12px 0;
+  margin: 0 0 32px;
+}
+.answer-block::before {
+  content: "Quick answer";
+  display: block;
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-weight: 700;
+  color: var(--color-signal-600);
+  margin-bottom: 10px;
+}
+.answer-block p {
+  font-size: 16.5px;
+  line-height: 1.7;
+  color: var(--color-carbon);
+  margin: 0;
+}
+
+/* FAQ accordion — native HTML, no JS (Part H.4) */
+.faq-item {
+  border: 1px solid var(--color-fog);
+  border-radius: 14px;
+  margin-bottom: 14px;
+  overflow: hidden;
+}
+.faq-item[open] {
+  border-color: var(--color-ink);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+.faq-item summary {
+  padding: 18px 22px;
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+.faq-item summary::-webkit-details-marker {
+  display: none;
+}
+.faq-item summary::after {
+  content: "+";
+  font-size: 24px;
+  color: var(--color-signal-600);
+  flex-shrink: 0;
+}
+.faq-item[open] summary::after {
+  content: "−";
+}
+.faq-answer {
+  padding: 0 22px 20px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--color-steel);
+}
+
+/* Long-form prose (blog + service body) */
+.prose-content h2 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  margin: 2rem 0 0.75rem;
+}
+.prose-content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-ink-700);
+  margin: 1.5rem 0 0.5rem;
+}
+.prose-content p {
+  margin: 0 0 1rem;
+  line-height: 1.75;
+  color: var(--color-carbon);
+}
+.prose-content ul {
+  margin: 0 0 1rem 1.25rem;
+  list-style: disc;
+}
+.prose-content li {
+  margin-bottom: 0.4rem;
+  line-height: 1.7;
+}
+.prose-content a {
+  color: var(--color-ink);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
