@@ -15,6 +15,7 @@ const SERVICES = {
     slug: "channel-letters",
     name: "Channel Letter Signs",
     shortName: "Channel Letters",
+    formLabel: "Storefront Sign",
     order: 1,
     icon: "bolt",
     img: "https://images.unsplash.com/photo-1545972154-9bb223aac798?w=1200&q=75",

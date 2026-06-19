@@ -62,7 +62,7 @@ export default function LeadForm({
           >
             <option value="" disabled>Select a sign type…</option>
             {services.map((s) => (
-              <option key={s.slug} value={s.name}>{s.name}</option>
+              <option key={s.slug} value={s.formLabel || s.name}>{s.formLabel || s.name}</option>
             ))}
             <option value="Not sure / other">Not sure / other</option>
           </select>
