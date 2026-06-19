@@ -10,7 +10,7 @@ export default function PortfolioGallery({ limit }) {
   return (
     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((p) => (
-        <figure key={p.id} className="group overflow-hidden rounded-xl border border-fog bg-white shadow-sm">
+        <figure key={p.id} className="group overflow-hidden rounded-sm border border-fog bg-white">
           <div className="relative aspect-[4/3] overflow-hidden bg-cloud">
             <Image
               src={p.imageSrc}

@@ -29,7 +29,7 @@ export default function BlogHub() {
         ) : (
           <div className="grid gap-6">
             {posts.map((p) => (
-              <Link key={p.slug} href={`/blog/${p.slug}`} className="group rounded-xl border border-fog p-6 transition-shadow hover:shadow-md">
+              <Link key={p.slug} href={`/blog/${p.slug}`} className="group rounded-sm border border-fog p-6 transition-colors hover:border-ink">
                 {p.category && <span className="text-xs font-semibold uppercase tracking-wider text-signal-600">{p.category}</span>}
                 <h2 className="mt-1 text-xl font-bold text-ink group-hover:text-signal-600">{p.title}</h2>
                 {p.description && <p className="mt-2 text-steel">{p.description}</p>}

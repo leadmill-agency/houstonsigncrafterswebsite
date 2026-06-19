@@ -5,7 +5,6 @@ import { getAllServices } from "@/data/services";
 import { BUSINESS } from "@/data/business";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import PhoneLink from "@/components/PhoneLink";
-import icons from "@/components/icons";
 
 export const metadata = {
   title: "Commercial Sign Portfolio | Houston Sign Crafters",
@@ -72,10 +71,10 @@ export default function PortfolioPage() {
               restaurants, franchises, and commercial properties.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/quote" className="inline-flex items-center justify-center rounded-full bg-signal px-7 py-3 text-sm font-bold text-white hover:bg-signal-600">
+              <Link href="/quote" className="btn btn-primary">
                 Request a Quote
               </Link>
-              <a href="#work" className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10">
+              <a href="#work" className="btn btn-outline-light">
                 View Our Work
               </a>
             </div>
@@ -84,7 +83,7 @@ export default function PortfolioPage() {
           {/* Collage */}
           <div className="grid grid-cols-2 gap-3">
             {collage.map((p, i) => (
-              <div key={p.id} className={`relative overflow-hidden rounded-xl ${i === 0 ? "row-span-2 aspect-[3/4]" : "aspect-[4/3]"}`}>
+              <div key={p.id} className={`relative overflow-hidden rounded-sm ${i === 0 ? "row-span-2 aspect-[3/4]" : "aspect-[4/3]"}`}>
                 <Image src={p.imageSrc} alt={`${p.signType} for ${p.title}`} fill sizes="(max-width: 1024px) 50vw, 25vw" className="object-cover" priority={i === 0} />
               </div>
             ))}
@@ -93,11 +92,11 @@ export default function PortfolioPage() {
       </section>
 
       {/* Trust strip */}
-      <section className="border-b border-fog bg-cloud">
-        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-8 gap-y-3 px-4 py-5 sm:px-6">
+      <section className="border-b border-fog bg-ink">
+        <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-7 gap-y-2 px-4 py-4 sm:px-6">
           {TRUST.map((t) => (
-            <span key={t} className="inline-flex items-center gap-2 text-sm font-medium text-ink">
-              <span className="inline-flex h-4 w-4 text-signal-600">{icons.check}</span>
+            <span key={t} className="inline-flex items-center gap-2.5 font-display text-xs font-semibold uppercase tracking-wide text-white">
+              <span className="h-1.5 w-1.5 bg-signal" aria-hidden="true" />
               {t}
             </span>
           ))}
@@ -126,12 +125,12 @@ export default function PortfolioPage() {
               we'll help you figure out the right option.
             </p>
           </div>
-          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-px overflow-hidden border border-fog bg-fog sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`} className="group rounded-xl border border-fog bg-white p-6 hover:shadow-md">
-                <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-cloud p-2.5 text-ink">{icons[s.icon] || icons.bolt}</span>
-                <h3 className="font-semibold text-ink group-hover:text-signal-600">{s.name}</h3>
+              <Link key={s.slug} href={`/services/${s.slug}`} className="group bg-white p-6 transition-colors hover:bg-cloud">
+                <h3 className="font-display text-lg font-semibold text-ink group-hover:text-signal-600">{s.name}</h3>
                 <p className="mt-1 text-sm text-steel">{s.heroSubtitle}</p>
+                <span className="mt-3 inline-block font-display text-xs font-semibold uppercase tracking-wide text-signal-600">View →</span>
               </Link>
             ))}
           </div>
@@ -145,12 +144,12 @@ export default function PortfolioPage() {
           We keep it simple: review the site, create a mockup, finalize the quote, handle permitting
           and production, then install the sign.
         </p>
-        <ol className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-5">
+        <ol className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
           {PROCESS.map((step, i) => (
-            <li key={step.title} className="rounded-xl border border-fog p-5">
-              <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-signal font-bold text-white">{i + 1}</span>
-              <h3 className="mt-3 font-semibold text-ink">{step.title}</h3>
-              <p className="mt-1 text-sm text-steel">{step.body}</p>
+            <li key={step.title} className="border-t-2 border-ink pt-4">
+              <span className="font-display text-2xl font-bold text-signal-600">{String(i + 1).padStart(2, "0")}</span>
+              <h3 className="mt-1 text-lg font-semibold text-ink">{step.title}</h3>
+              <p className="mt-1.5 text-sm leading-relaxed text-steel">{step.body}</p>
             </li>
           ))}
         </ol>
@@ -165,10 +164,10 @@ export default function PortfolioPage() {
             right sign type, design, and next step.
           </p>
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link href="/quote" className="inline-flex items-center justify-center rounded-full bg-signal px-7 py-3 text-sm font-bold text-white hover:bg-signal-600">
+            <Link href="/quote" className="btn btn-primary">
               Request a Quote
             </Link>
-            <PhoneLink className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10" />
+            <PhoneLink className="btn btn-outline-light" />
           </div>
           <p className="mt-4 text-sm text-white/50">Serving Houston and surrounding areas.</p>
         </div>

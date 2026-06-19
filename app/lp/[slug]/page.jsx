@@ -3,7 +3,6 @@ import { getLanding, getLandingSlugs } from "@/data/landing";
 import { BUSINESS } from "@/data/business";
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
-import icons from "@/components/icons";
 
 export function generateStaticParams() {
   return getLandingSlugs().map((slug) => ({ slug }));
@@ -38,7 +37,7 @@ export default async function LandingPage({ params }) {
           <ul className="mt-8 space-y-3">
             {lp.bullets.map((b) => (
               <li key={b} className="flex items-start gap-3">
-                <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-signal p-1 text-white">{icons.check}</span>
+                <span className="mt-[7px] h-2 w-2 flex-shrink-0 bg-signal" aria-hidden="true" />
                 <span className="text-white/90">{b}</span>
               </li>
             ))}

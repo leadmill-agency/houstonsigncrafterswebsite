@@ -2,7 +2,6 @@ import { notFound } from "next/navigation";
 import { getGuide, getGuideSlugs } from "@/data/guides";
 import { BUSINESS } from "@/data/business";
 import LeadForm from "@/components/LeadForm";
-import icons from "@/components/icons";
 
 export function generateStaticParams() {
   return getGuideSlugs().map((slug) => ({ slug }));
@@ -35,7 +34,7 @@ export default async function GuidePage({ params }) {
           <ul className="mt-8 space-y-3">
             {g.bullets.map((b) => (
               <li key={b} className="flex items-start gap-3">
-                <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-signal p-1 text-white">{icons.check}</span>
+                <span className="mt-[7px] h-2 w-2 flex-shrink-0 bg-signal" aria-hidden="true" />
                 <span className="text-carbon">{b}</span>
               </li>
             ))}

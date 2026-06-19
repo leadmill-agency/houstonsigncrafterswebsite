@@ -1,5 +1,4 @@
 import LeadForm from "@/components/LeadForm";
-import icons from "@/components/icons";
 
 export const metadata = {
   title: "Free Sign Design Mockup — See Your Sign Before You Buy",
@@ -34,7 +33,7 @@ export default function FreeMockupPage() {
             <ol className="mt-6 space-y-6">
               {STEPS.map((s, i) => (
                 <li key={s.title} className="flex gap-4">
-                  <span className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-signal font-bold text-white">{i + 1}</span>
+                  <span className="inline-flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-sm bg-signal font-display font-semibold text-white">{i + 1}</span>
                   <div>
                     <h3 className="font-semibold text-ink">{s.title}</h3>
                     <p className="mt-1 text-sm text-steel">{s.body}</p>
@@ -42,8 +41,8 @@ export default function FreeMockupPage() {
                 </li>
               ))}
             </ol>
-            <div className="mt-8 flex items-start gap-3 rounded-lg border border-fog bg-cloud p-4 text-sm text-steel">
-              <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-ink p-1 text-signal">{icons.check}</span>
+            <div className="mt-8 flex items-start gap-3 rounded-sm border border-fog bg-cloud p-4 text-sm text-steel">
+              <span className="mt-[7px] h-2 w-2 flex-shrink-0 bg-signal" aria-hidden="true" />
               Free and no obligation — you only move forward if you love the design.
             </div>
           </div>

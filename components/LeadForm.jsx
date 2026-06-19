@@ -4,7 +4,6 @@ import { useActionState, useRef, useEffect } from "react";
 import { submitLead } from "@/lib/leads";
 import { getAllServices } from "@/data/services";
 import { trackEvent } from "@/lib/analytics";
-import icons from "@/components/icons";
 
 const initialState = { ok: null, errors: {}, message: "" };
 
@@ -38,7 +37,7 @@ export default function LeadForm({
     <form
       ref={formRef}
       action={formAction}
-      className={`rounded-xl border border-fog bg-white p-6 text-left shadow-sm md:p-8 ${className}`}
+      className={`rounded-sm border border-fog bg-white p-6 text-left md:p-8 ${className}`}
     >
       <input type="hidden" name="kind" value={kind} />
       {/* Honeypot */}
@@ -59,7 +58,7 @@ export default function LeadForm({
           <select
             name="signType"
             defaultValue=""
-            className="w-full rounded-md border border-fog bg-white px-3 py-2 text-sm text-carbon focus:border-ink focus:outline-none"
+            className="w-full rounded-sm border border-fog bg-white px-3 py-2 text-sm text-carbon focus:border-ink focus:outline-none"
           >
             <option value="" disabled>Select a sign type…</option>
             {services.map((s) => (
@@ -76,18 +75,13 @@ export default function LeadForm({
           <textarea
             name="message"
             rows={4}
-            className="w-full resize-y rounded-md border border-fog px-3 py-2 text-sm text-carbon focus:border-ink focus:outline-none"
+            className="w-full resize-y rounded-sm border border-fog px-3 py-2 text-sm text-carbon focus:border-ink focus:outline-none"
           />
         </div>
       )}
 
-      <button
-        type="submit"
-        disabled={pending}
-        className="mt-5 inline-flex w-full items-center justify-center gap-2 rounded-full bg-signal px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-signal-600 disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto"
-      >
+      <button type="submit" disabled={pending} className="btn btn-primary mt-5 w-full disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto">
         {pending ? "Sending…" : submitLabel}
-        {!pending && <span className="h-4 w-4">{icons.arrowRight}</span>}
       </button>
 
       {state?.ok === true && (
@@ -117,7 +111,7 @@ function Field({ label, name, type = "text", required = false, autoComplete = "o
         name={name}
         required={required}
         autoComplete={autoComplete}
-        className="w-full rounded-md border border-fog px-3 py-2 text-sm text-carbon focus:border-ink focus:outline-none"
+        className="w-full rounded-sm border border-fog px-3 py-2 text-sm text-carbon focus:border-ink focus:outline-none"
       />
       {error && <p className="mt-1 text-xs text-red-600">{error}</p>}
     </div>

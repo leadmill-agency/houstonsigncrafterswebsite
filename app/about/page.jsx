@@ -1,6 +1,5 @@
 import { getAllServices } from "@/data/services";
 import CTASection from "@/components/CTASection";
-import icons from "@/components/icons";
 
 export const metadata = {
   title: "About Houston Sign Crafters",
@@ -51,8 +50,7 @@ export default function AboutPage() {
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {DIFFERENTIATORS.map((d) => (
-            <div key={d.title} className="rounded-xl border border-fog p-5">
-              <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-cloud p-2.5 text-ink">{icons[d.icon]}</span>
+            <div key={d.title} className="rounded-sm border border-fog p-5">
               <h3 className="font-semibold text-ink">{d.title}</h3>
               <p className="mt-1 text-sm text-steel">{d.body}</p>
             </div>

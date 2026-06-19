@@ -1,7 +1,6 @@
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
 import { BUSINESS } from "@/data/business";
-import icons from "@/components/icons";
 
 export const metadata = {
   title: "Get a Free Sign Quote in Houston, TX",
@@ -30,12 +29,12 @@ export default function QuotePage() {
           <ul className="mt-8 space-y-3">
             {POINTS.map((p) => (
               <li key={p} className="flex items-start gap-3">
-                <span className="mt-0.5 inline-flex h-5 w-5 items-center justify-center rounded-full bg-signal p-1 text-white">{icons.check}</span>
+                <span className="mt-[7px] h-2 w-2 flex-shrink-0 bg-signal" aria-hidden="true" />
                 <span className="text-carbon">{p}</span>
               </li>
             ))}
           </ul>
-          <div className="mt-8 rounded-lg border border-fog bg-cloud p-4 text-sm text-steel">
+          <div className="mt-8 rounded-sm border border-fog bg-cloud p-4 text-sm text-steel">
             Prefer to talk? Call{" "}
             <PhoneLink className="font-semibold text-ink" showIcon={false} /> · {BUSINESS.hoursLabel}
           </div>

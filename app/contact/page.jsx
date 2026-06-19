@@ -1,7 +1,6 @@
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
 import { BUSINESS } from "@/data/business";
-import icons from "@/components/icons";
 
 export const metadata = {
   title: "Contact Houston Sign Crafters",
@@ -23,14 +22,12 @@ export default function ContactPage() {
 
           <div className="mt-8 space-y-4">
             <div className="flex items-center gap-3">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-cloud p-2.5 text-ink">{icons.phone}</span>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-wider text-steel">Phone</div>
                 <PhoneLink className="font-semibold text-ink" showIcon={false} />
               </div>
             </div>
             <div className="flex items-center gap-3">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-cloud p-2.5 text-ink">{icons.marker}</span>
               <div>
                 <div className="text-xs font-semibold uppercase tracking-wider text-steel">Email &amp; hours</div>
                 <a href={`mailto:${BUSINESS.email}`} className="font-medium text-ink">{BUSINESS.email}</a>
@@ -39,7 +36,7 @@ export default function ContactPage() {
             </div>
           </div>
 
-          <div className="mt-8 rounded-lg border border-fog bg-cloud p-4 text-sm text-steel">
+          <div className="mt-8 rounded-sm border border-fog bg-cloud p-4 text-sm text-steel">
             Ready for numbers? Skip ahead and{" "}
             <a href="/quote" className="font-semibold text-signal-600">request a free quote →</a>
           </div>

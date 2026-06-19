@@ -1,20 +1,22 @@
-import { Figtree, Fragment_Mono } from "next/font/google";
+import { Oswald, Public_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
 import { BUSINESS, SERVICE_AREAS } from "@/data/business";
 
-const figtree = Figtree({
-  variable: "--font-figtree",
+// Oswald = condensed, signage-style display face for headlines (reads like
+// fabricated channel lettering). Public Sans = sturdy, plain-spoken body grotesk.
+const oswald = Oswald({
+  variable: "--font-display",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700", "800"],
+  weight: ["500", "600", "700"],
 });
 
-const fragmentMono = Fragment_Mono({
-  variable: "--font-fragment-mono",
+const publicSans = Public_Sans({
+  variable: "--font-body",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -82,7 +84,7 @@ export default function RootLayout({ children }) {
   };
 
   return (
-    <html lang="en" className={`${figtree.variable} ${fragmentMono.variable}`}>
+    <html lang="en" className={`${oswald.variable} ${publicSans.variable}`}>
       <head>
         <script
           type="application/ld+json"

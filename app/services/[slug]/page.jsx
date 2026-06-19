@@ -6,7 +6,6 @@ import Faq from "@/components/Faq";
 import CTASection from "@/components/CTASection";
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
-import icons from "@/components/icons";
 
 export function generateStaticParams() {
   return getServiceSlugs().map((slug) => ({ slug }));
@@ -79,10 +78,10 @@ export default async function ServicePage({ params }) {
               <h1 className="text-3xl font-bold leading-tight sm:text-4xl">{s.h1}</h1>
               <p className="mt-4 text-lg text-white/75">{s.heroSubtitle}</p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Link href="/quote" className="inline-flex items-center justify-center rounded-full bg-signal px-7 py-3 text-sm font-bold text-white hover:bg-signal-600">
+                <Link href="/quote" className="btn btn-primary">
                   Get a Free Quote
                 </Link>
-                <PhoneLink className="inline-flex items-center justify-center rounded-full border border-white/30 px-7 py-3 text-sm font-semibold text-white hover:bg-white/10" label={`Call ${BUSINESS.phone}`} />
+                <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
               </div>
             </div>
           </div>
@@ -106,7 +105,7 @@ export default async function ServicePage({ params }) {
         </div>
 
         {/* Inline CTA */}
-        <div className="my-12 rounded-xl border border-fog bg-cloud p-6 text-center">
+        <div className="my-12 rounded-sm border border-fog bg-cloud p-6 text-center">
           <h3 className="text-lg font-bold text-ink">Get a free quote for {s.shortName.toLowerCase()}</h3>
           <p className="mt-1 text-sm text-steel">Written quote within one business day. Permitting and installation included.</p>
           <div className="mt-4">
@@ -126,11 +125,10 @@ export default async function ServicePage({ params }) {
           <h2 className="mb-6 text-2xl font-bold text-ink">Related services</h2>
           <div className="grid gap-5 sm:grid-cols-3">
             {related.map((r) => (
-              <Link key={r.slug} href={`/services/${r.slug}`} className="group flex flex-col rounded-xl border border-fog p-5 hover:shadow-md">
-                <span className="mb-2 inline-flex h-9 w-9 items-center justify-center rounded-lg bg-cloud p-2 text-ink">{icons[r.icon] || icons.bolt}</span>
+              <Link key={r.slug} href={`/services/${r.slug}`} className="group flex flex-col rounded-sm border border-fog p-5">
                 <h3 className="font-semibold text-ink group-hover:text-signal-600">{r.shortName}</h3>
                 <span className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-signal-600">
-                  Learn more <span className="h-4 w-4">{icons.arrowRight}</span>
+                  Learn more →
                 </span>
               </Link>
             ))}

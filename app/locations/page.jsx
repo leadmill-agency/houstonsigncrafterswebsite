@@ -2,7 +2,6 @@ import Link from "next/link";
 import { getAllMarkets } from "@/data/markets";
 import { SERVICE_AREAS } from "@/data/business";
 import CTASection from "@/components/CTASection";
-import icons from "@/components/icons";
 
 export const metadata = {
   title: "Service Areas — Houston Sign Company",
@@ -29,18 +28,17 @@ export default function LocationsHub() {
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {markets.map((m) => (
-            <Link key={m.slug} href={`/locations/${m.slug}`} className="group flex flex-col rounded-xl border border-fog p-6 transition-shadow hover:shadow-md">
-              <span className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-lg bg-cloud p-2.5 text-ink">{icons.marker}</span>
+            <Link key={m.slug} href={`/locations/${m.slug}`} className="group flex flex-col rounded-sm border border-fog p-6 transition-colors hover:border-ink">
               <h2 className="font-semibold text-ink group-hover:text-signal-600">{m.city}, {m.region}</h2>
               <p className="mt-1 flex-1 text-sm text-steel">{m.intro.slice(0, 120)}…</p>
               <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-signal-600">
-                View {m.city} <span className="h-4 w-4">{icons.arrowRight}</span>
+                View {m.city} →
               </span>
             </Link>
           ))}
         </div>
 
-        <div className="mt-10 rounded-xl border border-fog bg-cloud p-6">
+        <div className="mt-10 rounded-sm border border-fog bg-cloud p-6">
           <h3 className="font-semibold text-ink">Also serving</h3>
           <p className="mt-2 text-sm text-steel">{SERVICE_AREAS.join(" · ")} — and nearby communities. Don't see your area? <Link href="/contact" className="font-medium text-signal-600">Get in touch</Link> — we likely cover it.</p>
         </div>
