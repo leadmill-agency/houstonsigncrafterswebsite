@@ -49,7 +49,10 @@ All forms (`/quote`, `/free-mockup`, `/guides/*`, `/contact`) use one component
 
 1. **Notifies** the business (`RESEND_TO_EMAIL`)
 2. **Auto-responds** to the lead
-3. **Adds** the lead to a Resend Audience (`RESEND_AUDIENCE_ID`) for broadcasts
+3. **Subscribes** the lead to the beehiiv newsletter (`BEEHIIV_API_KEY` + `BEEHIIV_PUBLICATION_ID`)
+
+Email is split on purpose: **Resend** = automated/transactional (notification + auto-responder),
+**beehiiv** = the weekly newsletter list.
 
 Without `RESEND_API_KEY` set, submissions succeed and log to the console — so
 dev/preview works with no setup.

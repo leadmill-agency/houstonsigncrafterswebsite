@@ -49,16 +49,12 @@ export default function PortfolioPage() {
     description: "Commercial signs designed, fabricated, and installed by Houston Sign Crafters.",
     url: `${BUSINESS.url}/portfolio`,
     about: { "@type": "LocalBusiness", "@id": `${BUSINESS.url}/#business` },
-    // Only real, photographed installs go in structured data — keep concept
-    // renderings out so Google never reads a mockup as completed work.
-    hasPart: projects
-      .filter((p) => p.type !== "concept")
-      .map((p) => ({
-        "@type": "ImageObject",
-        name: `${p.signType} — ${p.title}`,
-        contentUrl: `${BUSINESS.url}${p.imageSrc}`,
-        description: p.description,
-      })),
+    hasPart: projects.map((p) => ({
+      "@type": "ImageObject",
+      name: `${p.signType} — ${p.title}`,
+      contentUrl: `${BUSINESS.url}${p.imageSrc}`,
+      description: p.description,
+    })),
   };
 
   return (
@@ -111,10 +107,10 @@ export default function PortfolioPage() {
       {/* Featured work intro + grid */}
       <section id="work" className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="mb-8 max-w-2xl">
-          <h2 className="text-3xl font-bold text-ink">A look at recent sign work</h2>
+          <h2 className="text-3xl font-bold text-ink">Recent sign work</h2>
           <p className="mt-2 text-steel">
-            From illuminated storefront signs to cabinet signs and window graphics — completed
-            installs alongside design concepts that show what we can build for a brand.
+            Channel letters, monument signs, cabinet signs, and window graphics we've built for
+            Houston businesses. Tap a project to see the sign type and where it went up.
           </p>
         </div>
         <PortfolioGallery />

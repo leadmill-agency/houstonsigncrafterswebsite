@@ -111,20 +111,8 @@ const PORTFOLIO = [
     industry: "Education",
     type: "install",
   },
-  {
-    id: "bg-wealth-sharing",
-    title: "BG Wealth Sharing",
-    category: "Channel Letters",
-    signType: "Dimensional Letters & Logo",
-    description:
-      "Two-tone dimensional letters with a custom logo, mounted flush to a stucco facade for a sharp, modern storefront.",
-    imageSrc: "/portfolio/bgwealth.jpg",
-    location: "Houston, TX",
-    industry: "Professional Services",
-    type: "install",
-  },
 
-  // ---- Design concepts (renderings / mockups) ----
+  // ---- Additional projects ----
   {
     id: "luce-avenue-coffee",
     title: "Luce Avenue Coffee Roasters",
