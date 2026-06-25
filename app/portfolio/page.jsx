@@ -108,8 +108,8 @@ export default function PortfolioPage() {
         <div className="mb-8 max-w-2xl">
           <h2 className="text-3xl font-bold text-ink">Recent sign work</h2>
           <p className="mt-2 text-steel">
-            Channel letters, monument signs, cabinet signs, and window graphics we've built for
-            Houston businesses. Tap a project to see the sign type and where it went up.
+            Channel letters, monument signs, cabinet signs, and window graphics we've built and
+            installed for Houston businesses.
           </p>
         </div>
         <PortfolioGallery />

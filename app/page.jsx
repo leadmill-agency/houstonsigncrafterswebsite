@@ -65,12 +65,12 @@ export default function HomePage() {
             <div>
               <p className="eyebrow text-signal-600">Straight from the shop</p>
               <h2 className="mt-1 text-4xl font-bold text-ink">See what we actually make</h2>
-              <p className="mt-2 max-w-xl text-steel">Real signs we built and installed for Houston businesses. Tap one to see the type and where it went up.</p>
+              <p className="mt-2 max-w-xl text-steel">Real signs we built and installed for Houston businesses — channel letters, monument signs, cabinet signs, wraps, and more.</p>
             </div>
             <Link href="/portfolio" className="font-display text-sm font-semibold uppercase tracking-wide text-signal-600 hover:text-ink">See all our work →</Link>
           </div>
 
-          <PortfolioGallery limit={6} />
+          <PortfolioGallery limit={8} />
 
           <div className="mt-8 flex flex-wrap items-center gap-2">
             <span className="font-display text-sm font-semibold uppercase tracking-wide text-ink">Looking for something specific?</span>
