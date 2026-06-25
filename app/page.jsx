@@ -8,6 +8,7 @@ import PhoneLink from "@/components/PhoneLink";
 import TextLink from "@/components/TextLink";
 import LeadForm from "@/components/LeadForm";
 import TrustBar from "@/components/TrustBar";
+import OfferBadge from "@/components/OfferBadge";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import Faq from "@/components/Faq";
 
@@ -34,7 +35,7 @@ const PROOF = ["UL-certified fabrication", "Our own install crew", "Permits hand
 export default function HomePage() {
   const services = getAllServices();
   const markets = getAllMarkets();
-  const { team, offer, stats } = BUSINESS;
+  const { team } = BUSINESS;
 
   return (
     <main>
@@ -57,9 +58,10 @@ export default function HomePage() {
               <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
             </div>
             <p className="mt-3 text-sm text-white/65">
-              Prefer to text? <TextLink className="font-semibold text-white underline underline-offset-2" label="Text us" /> · {offer.label}: {offer.detail}
+              Prefer to text? <TextLink className="font-semibold text-white underline underline-offset-2" label="Text us" />
             </p>
-            <TrustBar tone="dark" className="mt-7" />
+            <OfferBadge tone="dark" className="mt-5" />
+            <TrustBar tone="dark" className="mt-6" />
           </div>
 
           <div className="flex items-center">

@@ -70,12 +70,11 @@ export const BUSINESS = {
     businessesServed: null,
   },
 
-  // Homepage offer. Defaults to the free design mockup we already provide
-  // (real, no fabrication). Swap to a discount/coupon any time.
+  // Promo shown on the home + service pages. Edit freely.
   offer: {
-    label: "Free design mockup",
-    detail: "See your sign on your own building before you pay a dime.",
-    href: "/free-mockup",
+    label: "$400 off a lighted storefront sign",
+    detail: "mention this offer when you request your quote",
+    href: "/quote",
   },
 
   // Real directory profiles from the live site. Keep the strongest 8–12, all

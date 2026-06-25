@@ -3,9 +3,12 @@ import { notFound } from "next/navigation";
 import { getService, getServiceSlugs, getAllServices } from "@/data/services";
 import { BUSINESS } from "@/data/business";
 import Faq from "@/components/Faq";
-import CTASection from "@/components/CTASection";
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
+import TextLink from "@/components/TextLink";
+import OfferBadge from "@/components/OfferBadge";
+import WhatYouGet from "@/components/WhatYouGet";
+import CostCallout from "@/components/CostCallout";
 
 export function generateStaticParams() {
   return getServiceSlugs().map((slug) => ({ slug }));
@@ -82,7 +85,9 @@ export default async function ServicePage({ params }) {
                   Get a Free Quote
                 </Link>
                 <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
+                <TextLink className="btn btn-outline-light" label="Text Us" />
               </div>
+              <OfferBadge tone="dark" className="mt-5" />
             </div>
           </div>
         </div>
@@ -104,11 +109,18 @@ export default async function ServicePage({ params }) {
           ))}
         </div>
 
-        {/* Inline CTA */}
-        <div className="my-12 rounded-sm border border-fog bg-cloud p-6 text-center">
-          <h3 className="text-lg font-bold text-ink">Get a free quote for {s.shortName.toLowerCase()}</h3>
+      </section>
+
+      <CostCallout />
+
+      <WhatYouGet heading={`What you get with your ${s.shortName.toLowerCase()}`} />
+
+      {/* On-page quote form */}
+      <section className="mx-auto max-w-3xl px-4 pb-14 sm:px-6">
+        <div className="rounded-sm border border-fog bg-cloud p-6 text-center md:p-8">
+          <h2 className="text-2xl font-bold text-ink">Get a free quote for {s.shortName.toLowerCase()}</h2>
           <p className="mt-1 text-sm text-steel">Written quote within one business day. Permitting and installation included.</p>
-          <div className="mt-4">
+          <div className="mt-5">
             <LeadForm kind="quote" submitLabel="Get My Free Quote" showSignType={false} messageLabel={`Tell us about your ${s.shortName.toLowerCase()} project`} />
           </div>
         </div>
@@ -135,8 +147,6 @@ export default async function ServicePage({ params }) {
           </div>
         </section>
       )}
-
-      <CTASection title={`Need ${s.shortName.toLowerCase()} in Houston?`} />
     </main>
   );
 }

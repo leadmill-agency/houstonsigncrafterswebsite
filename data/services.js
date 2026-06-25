@@ -26,7 +26,7 @@ const SERVICES = {
     heroSubtitle:
       "Custom illuminated storefront lettering — designed, fabricated, permitted, and installed by one Houston team.",
     answer:
-      "Channel letters are custom three-dimensional letters, usually lit with energy-efficient LEDs, mounted to your building to spell out your business name. They are the most common storefront sign in Houston because they read clearly day and night and meet most city and landlord sign codes. Houston Sign Crafters handles the whole job in-house: design mockup, UL-listed fabrication, City of Houston permitting, and licensed installation. Most projects are quoted within one business day and installed within a few weeks, backed by a 5-year warranty on materials and workmanship.",
+      "Channel letters are the 3D letters you see across the top of most storefronts — usually lit with LEDs, mounted right to the building, spelling out your name. They're the go-to storefront sign in Houston because they read clean day and night and pass most city and landlord codes. We build the whole thing ourselves: a mockup so you see it first, UL-listed fabrication in our shop, the City permits, and our own crew on install day. Most jobs are quoted in one business day, up in a few weeks, and carry a 5-year warranty.",
     sections: [
       {
         heading: "What are channel letter signs?",
@@ -72,7 +72,7 @@ const SERVICES = {
     heroSubtitle:
       "Ground-level business signage that anchors your address — built to last and to match your brand.",
     answer:
-      "A monument sign is a freestanding, ground-level sign that identifies your business, office park, or community from the street. Unlike tall pole signs, monuments sit low to the ground on a solid base of masonry, stone, aluminum, or acrylic, and can be illuminated for night visibility. They project permanence and are often required by Houston-area developments and HOAs. Houston Sign Crafters designs, builds, permits, and installs monument signs end to end, color-matched to your brand and engineered for the local climate, with a free quote delivered within one business day.",
+      "A monument sign is the low, freestanding sign that sits at your driveway or entrance and names your business, office park, or community from the street. Unlike a tall pole sign, it sits close to the ground on a solid base — masonry, stone, aluminum, or acrylic — and can be lit for night visibility. A lot of Houston developments and HOAs require them. We design, build, permit, and install monuments end to end, color-matched to your brand and engineered for Gulf Coast wind. Send a photo and you'll have a quote in a business day.",
     sections: [
       {
         heading: "What is a monument sign?",
@@ -118,7 +118,7 @@ const SERVICES = {
     heroSubtitle:
       "Turn your car, truck, or fleet into a moving billboard — designed and installed by Houston pros.",
     answer:
-      "A vehicle wrap is a printed adhesive vinyl applied over your car, van, truck, or fleet to display your branding. Wraps are one of the lowest cost-per-impression forms of advertising because a single wrapped vehicle is seen by thousands of Houston drivers every day. They also protect your factory paint and can be removed without damage. Houston Sign Crafters designs your wrap, prints on premium cast vinyl, and installs it cleanly with no bubbles or lifting — full wraps, partial wraps, and simple lettering, quoted within one business day.",
+      "A vehicle wrap is printed vinyl laid over your car, van, truck, or whole fleet to turn it into rolling advertising. It's about the cheapest advertising there is per set of eyes — one wrapped van gets seen by thousands of Houston drivers a day — and it protects your factory paint, peeling off clean when you're done. We design it, print on premium cast vinyl, and install it tight with no bubbles or lifting. Full wraps, partial wraps, or simple lettering — quoted in one business day.",
     sections: [
       {
         heading: "What is a vehicle wrap?",
@@ -164,7 +164,7 @@ const SERVICES = {
     heroSubtitle:
       "Branded interiors, logo walls, and window graphics that turn blank space into marketing.",
     answer:
-      "Wall graphics are large-format printed or cut vinyl applied to interior or exterior walls, windows, and floors to brand a space. They're used for logo walls in lobbies, motivational graphics in offices and gyms, product displays in retail, and storefront window promotions. Wall graphics install quickly, cost far less than painted murals, and can be updated or removed without repainting. Houston Sign Crafters designs and installs interior and exterior wall graphics, murals, and window films across Houston, with a free quote delivered within one business day.",
+      "Wall graphics are large printed or cut vinyl applied to interior or exterior walls, windows, and floors to brand a space — a logo wall in the lobby, big graphics in a gym or office, product displays in retail, promos on a storefront window. They go up fast, cost a fraction of a painted mural, and peel off without repainting when you want a change. We design and install interior and exterior graphics, murals, and window film across Houston, and get a quote back to you in one business day.",
     sections: [
       {
         heading: "What are wall graphics?",
@@ -210,7 +210,7 @@ const SERVICES = {
     heroSubtitle:
       "Lobby logo signs, office and suite signage, ADA and wayfinding — a polished, on-brand interior.",
     answer:
-      "Interior signs are the signage inside your space — lobby and reception logo signs, dimensional letters, acrylic and metal wall signs, office and suite plaques, ADA-compliant room signs, wayfinding, and hours decals. They make a space feel finished, reinforce your brand the moment someone walks in, and help visitors navigate. Houston Sign Crafters designs, fabricates, and installs interior signage for offices, medical practices, retail, restaurants, gyms, and more across Houston — color-matched to your brand and installed cleanly, with a free quote within one business day.",
+      "Interior signs are everything inside your space — the reception logo wall, dimensional letters, acrylic and metal wall signs, suite and office plaques, ADA room signs, wayfinding, hours on the door. They make a space feel finished and tell people they're in the right place. We design, build, and install the whole interior package for offices, medical and dental practices, retail, restaurants, and gyms — color-matched to your brand and mounted clean. Quote's back in a business day.",
     sections: [
       {
         heading: "What are interior signs?",
@@ -256,7 +256,7 @@ const SERVICES = {
     heroSubtitle:
       "Durable, vivid banners for grand openings, events, and promotions — with rush options when you're on a deadline.",
     answer:
-      "Custom banners are printed vinyl signs used for grand openings, events, sales, construction sites, and seasonal promotions. They're the fastest, most affordable way to get a large branded message up quickly, indoors or outdoors. Houston Sign Crafters prints full-color banners on heavy-duty vinyl or mesh, finishes them with hems and grommets for easy hanging, and offers rush turnaround for tight deadlines. Most banners are quoted within one business day, and we can often produce them fast when you're up against a grand opening or event date.",
+      "Banners are the fastest, cheapest way to get a big message up — grand openings, events, sales, construction sites, seasonal promos, indoors or out. We print full-color on heavy 13oz+ vinyl (or mesh for windy spots), then hem and grommet them so they're ready to hang. On a deadline? Tell us the date — banners are one of our quickest jobs and we run rush when we can. Most are quoted the same or next business day.",
     sections: [
       {
         heading: "What kinds of banners do you print?",
@@ -302,7 +302,7 @@ const SERVICES = {
     heroSubtitle:
       "Welcome signs, seating charts, custom neon, and backdrops — beautiful event signage, even on a tight timeline.",
     answer:
-      "Wedding and event signage covers the custom signs that guide and delight your guests: welcome signs, seating charts, table numbers, directional signs, bar menus, faux-neon signs, and step-and-repeat backdrops. Houston Sign Crafters designs and produces event signage in materials like acrylic, foam board, vinyl, and LED-lit faux neon, matched to your colors and theme. We're known for handling last-minute event needs — so if your date is close, we can often still help. Every piece is quoted within one business day.",
+      "Wedding and event signs are the pieces that guide and wow your guests — welcome signs, seating charts, table numbers, directionals, bar menus, custom faux-neon, and big step-and-repeat backdrops for photos. We make them in acrylic, mirror, foam board, vinyl, and LED faux-neon, matched to your colors and theme. Tight timeline? We handle a lot of last-minute event work, so if your date's close, reach out — we can usually still help. Every piece is quoted in one business day.",
     sections: [
       {
         heading: "What wedding signs do you make?",
