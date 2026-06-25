@@ -28,6 +28,10 @@ export const HOME_FAQS = [
     q: "Do you design, build, and install signs in-house?",
     a: "Yes. We handle the entire process under one roof — design and mockups, UL-certified fabrication, permitting, and licensed installation — so you work with one team from your first quote to the finished, installed sign.",
   },
+  {
+    q: "Who actually shows up to do the work?",
+    a: "Our own crew — the same people who build your sign in our Houston shop. We don't hand your job off to a wholesale factory in another state or a random subcontractor. When you call, you talk to a real person who makes signs, and when we install, it's our licensed crew on the ladder.",
+  },
 ];
 
 export default HOME_FAQS;

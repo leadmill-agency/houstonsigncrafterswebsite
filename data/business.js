@@ -16,6 +16,7 @@ export const BUSINESS = {
 
   phone: "(832) 974-2546",
   phoneHref: "tel:+18329742546",
+  smsHref: "sms:+18329742546",
 
   // Lead notifications land here; auto-responders send from RESEND_FROM_EMAIL.
   // sales@ is the address used on the company's own catalogue/collateral.
@@ -50,6 +51,32 @@ export const BUSINESS = {
     "Built in Houston",
     "Free Quote in 1 Business Day",
   ],
+
+  // "Who you'll talk to" — the single biggest anti-AI / trust signal.
+  // TODO: drop in the owner/lead's real NAME and a real HEADSHOT.
+  //   1) add the photo to public/team/ (e.g. public/team/owner.jpg)
+  //   2) set name + photo below. Until then, `photo` points at a real shot of
+  //      the HSC-branded work truck on a job, and the section adapts if name is null.
+  team: {
+    name: null, // e.g. "Mike Rodriguez"
+    title: "Owner",
+    photo: "/portfolio/jys.jpg", // interim: real HSC truck on a job site
+    note: "answers most of the calls himself",
+  },
+
+  // Optional headline stat. TODO: set a REAL number (e.g. 300) to show
+  // "300+ Houston businesses served"; leave null to hide it. Don't invent one.
+  stats: {
+    businessesServed: null,
+  },
+
+  // Homepage offer. Defaults to the free design mockup we already provide
+  // (real, no fabrication). Swap to a discount/coupon any time.
+  offer: {
+    label: "Free design mockup",
+    detail: "See your sign on your own building before you pay a dime.",
+    href: "/free-mockup",
+  },
 
   // Real directory profiles from the live site. Keep the strongest 8–12, all
   // verified (playbook Field Note #7). Re-confirm each resolves before launch.
