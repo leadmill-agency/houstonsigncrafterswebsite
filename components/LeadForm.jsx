@@ -3,7 +3,7 @@
 import { useActionState, useRef, useEffect } from "react";
 import { submitLead } from "@/lib/leads";
 import { getAllServices } from "@/data/services";
-import { trackEvent } from "@/lib/analytics";
+import { trackEvent, trackPixel } from "@/lib/analytics";
 
 const initialState = { ok: null, errors: {}, message: "" };
 
@@ -28,6 +28,7 @@ export default function LeadForm({
       formRef.current.reset();
       trackEvent("form_submit", { form_name: `lead_${kind}`, form_location: kind });
       if (kind === "quote") trackEvent("generate_lead", { value: 1, currency: "USD" });
+      trackPixel("Lead", { content_name: `lead_${kind}` });
     }
   }, [state.ok, kind]);
 

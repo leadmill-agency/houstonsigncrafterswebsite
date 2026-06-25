@@ -2,7 +2,9 @@ import { Oswald, Public_Sans } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
+import FooterGate from "@/components/FooterGate";
 import Analytics from "@/components/Analytics";
+import MetaPixel from "@/components/MetaPixel";
 import { BUSINESS, SERVICE_AREAS } from "@/data/business";
 
 // Oswald = condensed, signage-style display face for headlines (reads like
@@ -91,11 +93,14 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
         <Analytics />
+        <MetaPixel />
       </head>
       <body className="font-sans antialiased">
         <Nav />
         {children}
-        <Footer />
+        <FooterGate>
+          <Footer />
+        </FooterGate>
       </body>
     </html>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS } from "@/data/business";
@@ -17,6 +18,10 @@ const NAV_LINKS = [
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Landing pages (/lp/*) are chrome-free for ad conversion — no nav escape routes.
+  if (pathname?.startsWith("/lp")) return null;
 
   return (
     <header className="sticky top-0 z-50">
