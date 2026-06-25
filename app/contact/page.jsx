@@ -3,7 +3,7 @@ import PhoneLink from "@/components/PhoneLink";
 import { BUSINESS } from "@/data/business";
 
 export const metadata = {
-  title: "Contact Houston Sign Crafters",
+  title: "Contact Us",
   description:
     "Get in touch with Houston Sign Crafters for custom signs, quotes, and project questions. Call (832) 974-2546 or send us a message — we respond within one business day.",
   alternates: { canonical: "/contact" },

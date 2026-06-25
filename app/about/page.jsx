@@ -2,7 +2,7 @@ import { getAllServices } from "@/data/services";
 import CTASection from "@/components/CTASection";
 
 export const metadata = {
-  title: "About Houston Sign Crafters",
+  title: "About Us",
   description:
     "Houston Sign Crafters is a local custom sign company handling design, fabrication, permitting, and installation in-house — serving Houston businesses with quality signage and fast quotes.",
   alternates: { canonical: "/about" },
