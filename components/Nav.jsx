@@ -20,23 +20,6 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Utility bar — local-business signals */}
-      <div className="hidden bg-ink text-white/80 md:block">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-1.5 text-xs">
-          <span className="tracking-wide">Houston, TX &nbsp;·&nbsp; In-house fabrication &amp; installation</span>
-          <span className="flex items-center gap-4">
-            <span className="text-white/55">{BUSINESS.hoursLabel}</span>
-            <a
-              href={BUSINESS.phoneHref}
-              onClick={() => trackEvent("phone_click", { event_label: "nav_utility" })}
-              className="font-semibold text-white hover:text-signal"
-            >
-              {BUSINESS.phone}
-            </a>
-          </span>
-        </div>
-      </div>
-
       <div className="border-b border-fog bg-white/95 backdrop-blur">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex h-16 items-center justify-between gap-4">
