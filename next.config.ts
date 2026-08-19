@@ -38,7 +38,11 @@ const nextConfig: NextConfig = {
       { source: "/blog/do-you-need-a-permit-for-a-sign-in-houston", destination: "/blog/houston-business-sign-permits", permanent: true },
       { source: "/blog/how-much-does-a-vehicle-wrap-cost-in-houston", destination: "/services/vehicle-wraps", permanent: true },
       { source: "/blog/free-sign-design-consultation-in-houston", destination: "/free-mockup", permanent: true },
-      { source: "/blog/rebranding-your-houston-business", destination: "/blog", permanent: true },
+      // Informational rebrand post → the services hub (closest intent: a rebrand
+      // needs new signage) rather than the generic blog index, so its equity lands
+      // on a relevant page. Republish a real rebrand post on this slug later to
+      // reclaim the ranking directly (like the cost + vs-cabinet posts).
+      { source: "/blog/rebranding-your-houston-business", destination: "/services", permanent: true },
     ];
   },
 };
