@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getMarket, getMarketSlugs } from "@/data/markets";
 import { getAllServices } from "@/data/services";
-import { BUSINESS, SERVICE_AREAS } from "@/data/business";
+import { BUSINESS } from "@/data/business";
 import CTASection from "@/components/CTASection";
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
@@ -35,17 +35,30 @@ export default async function LocationPage({ params }) {
 
   const services = getAllServices();
 
-  // LocalBusiness schema with THIS city first in areaServed (playbook Part 2.5).
-  const areaServed = [m.cityState, ...SERVICE_AREAS.filter((a) => a !== m.cityState)];
+  // The sitewide LocalBusiness (layout.jsx, @id #business) already covers this
+  // city in areaServed. Re-declaring LocalBusiness here with the SAME @id but a
+  // different url/areaServed created a duplicate-entity conflict — replaced
+  // with the BreadcrumbList this page was missing, plus a WebPage node that
+  // points back at the one true business entity.
   const schema = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "@id": `${BUSINESS.url}/#business`,
-    name: BUSINESS.name,
-    url: `${BUSINESS.url}/locations/${slug}`,
-    telephone: BUSINESS.phoneHref.replace("tel:", ""),
-    priceRange: BUSINESS.priceRange,
-    areaServed: areaServed.map((name) => ({ "@type": "City", name })),
+    "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${BUSINESS.url}/locations/${slug}#webpage`,
+        url: `${BUSINESS.url}/locations/${slug}`,
+        name: m.metaTitle,
+        about: { "@id": `${BUSINESS.url}/#business` },
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          { "@type": "ListItem", position: 1, name: "Home", item: BUSINESS.url },
+          { "@type": "ListItem", position: 2, name: "Service Areas", item: `${BUSINESS.url}/locations` },
+          { "@type": "ListItem", position: 3, name: m.city, item: `${BUSINESS.url}/locations/${slug}` },
+        ],
+      },
+    ],
   };
 
   return (

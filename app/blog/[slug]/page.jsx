@@ -48,9 +48,20 @@ export default async function BlogPost({ params }) {
     mainEntityOfPage: { "@type": "WebPage", "@id": `${BUSINESS.url}/blog/${slug}` },
   };
 
+  const breadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BUSINESS.url },
+      { "@type": "ListItem", position: 2, name: "Blog", item: `${BUSINESS.url}/blog` },
+      { "@type": "ListItem", position: 3, name: post.title, item: `${BUSINESS.url}/blog/${slug}` },
+    ],
+  };
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       <article className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <nav className="mb-4 text-sm text-steel">

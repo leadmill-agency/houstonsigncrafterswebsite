@@ -61,6 +61,7 @@ export default function Footer() {
               <li><Link href="/free-mockup" className="hover:text-white">Free Design Mockup</Link></li>
               <li><Link href="/guides/sign-permitting-checklist" className="hover:text-white">Sign Permitting Checklist</Link></li>
               <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
+              <li><Link href="/company-facts" className="hover:text-white">Company Facts</Link></li>
               <li><Link href="/contact" className="hover:text-white">Contact</Link></li>
             </ul>
           </div>

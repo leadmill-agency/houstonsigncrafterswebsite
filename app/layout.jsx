@@ -85,12 +85,27 @@ export default function RootLayout({ children }) {
       : {}),
   };
 
+  // WebSite entity so AI/search systems resolve the site itself (not just the
+  // business) as a named entity, tied to the LocalBusiness via publisher @id.
+  const websiteLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "@id": `${BUSINESS.url}/#website`,
+    url: BUSINESS.url,
+    name: BUSINESS.name,
+    publisher: { "@id": `${BUSINESS.url}/#business` },
+  };
+
   return (
     <html lang="en" className={`${oswald.variable} ${publicSans.variable}`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
         />
         <Analytics />
         <MetaPixel />

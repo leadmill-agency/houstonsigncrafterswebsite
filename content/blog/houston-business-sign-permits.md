@@ -8,7 +8,9 @@ category: Permitting
 keywords: ["houston sign permit", "business sign permit houston", "channel letter permit houston"]
 ---
 
-Most permanent business signs in Houston **do** require a permit, and getting it wrong is one of the most expensive mistakes a business owner can make. A sign that's the wrong size, too bright, or installed without approval can mean fines, a forced removal, and paying to have the whole thing redone. This guide walks through what actually needs a permit, what the city looks at, and how to get approved the first time.
+<div class="answer-block"><p>Yes — most permanent business signs in Houston require a permit, including channel letters, monument signs, and most illuminated signage. The review checks size, height, illumination, placement, and structural/electrical safety, and your landlord's sign criteria apply on top of city rules. Getting it wrong can mean fines, forced removal, and paying for the sign twice — so approvals come before fabrication, not after.</p></div>
+
+A sign that's the wrong size, too bright, or installed without approval is one of the most expensive mistakes a business owner can make. This guide walks through what actually needs a permit, what the city looks at, and how to get approved the first time.
 
 ## Which signs need a permit in Houston?
 

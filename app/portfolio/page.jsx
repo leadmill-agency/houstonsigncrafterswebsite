@@ -56,9 +56,19 @@ export default function PortfolioPage() {
     })),
   };
 
+  const breadcrumbs = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: BUSINESS.url },
+      { "@type": "ListItem", position: 2, name: "Portfolio", item: `${BUSINESS.url}/portfolio` },
+    ],
+  };
+
   return (
     <main>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }} />
 
       {/* Hero */}
       <section className="bg-ink text-white">

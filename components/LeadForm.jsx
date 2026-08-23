@@ -81,6 +81,26 @@ export default function LeadForm({
         </div>
       )}
 
+      {/* AI-search attribution: analytics can't see most assistant referrals,
+          so self-report is the highest-signal instrument at this lead volume. */}
+      <div className="mt-4">
+        <label className="mb-1.5 block text-xs font-semibold text-carbon">How did you hear about us?</label>
+        <select
+          name="heardAbout"
+          defaultValue=""
+          className="field w-full rounded-sm border border-fog bg-white px-3 py-2 text-sm text-carbon"
+        >
+          <option value="">Select one (optional)…</option>
+          <option value="Google search">Google search</option>
+          <option value="ChatGPT / AI assistant">ChatGPT / AI assistant (Claude, Perplexity, Gemini…)</option>
+          <option value="Google Maps">Google Maps</option>
+          <option value="Instagram / Facebook">Instagram / Facebook</option>
+          <option value="Referral">Referral from someone</option>
+          <option value="Drove by / saw your work">Drove by / saw a sign we made</option>
+          <option value="Other">Other</option>
+        </select>
+      </div>
+
       <button type="submit" disabled={pending} className="btn btn-primary mt-5 w-full disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto">
         {pending ? "Sending…" : submitLabel}
       </button>
