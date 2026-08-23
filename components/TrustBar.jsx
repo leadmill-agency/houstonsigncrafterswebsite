@@ -14,7 +14,7 @@ export default function TrustBar({ tone = "light", className = "" }) {
       ? [
           <span key="rating" className="inline-flex items-center gap-2">
             <Stars rating={reviews.rating} />
-            <span className="font-display font-semibold">{reviews.rating.toFixed(1)}</span>
+            <span className="font-display font-semibold tabular-nums">{reviews.rating.toFixed(1)}</span>
             <span className={sub}>· {reviews.count} reviews</span>
           </span>,
         ]

@@ -9,7 +9,7 @@ export default function PortfolioGallery({ limit }) {
   return (
     <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4">
       {items.map((p) => (
-        <div key={p.id} className="group relative aspect-[4/3] overflow-hidden rounded-sm bg-cloud">
+        <div key={p.id} className="img-outline group relative aspect-[4/3] overflow-hidden rounded-sm bg-cloud">
           <Image
             src={p.imageSrc}
             alt={p.location ? `${p.signType} for ${p.title} in ${p.location}` : `${p.signType} for ${p.title}`}

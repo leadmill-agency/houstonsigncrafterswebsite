@@ -45,7 +45,7 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/95 via-ink/90 to-ink/65" />
 
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
-          <div className="flex flex-col justify-center">
+          <div className="stagger-in flex flex-col justify-center">
             <p className="eyebrow mb-3 text-signal">Houston Sign Company</p>
             <h1 className="text-5xl font-bold leading-[0.98] sm:text-6xl">Custom signs, built in our Houston shop.</h1>
             <p className="mt-5 max-w-xl text-lg text-white/80">
@@ -110,13 +110,16 @@ export default function HomePage() {
               <h2 className="mt-1 text-4xl font-bold text-ink">See what we actually make</h2>
               <p className="mt-2 max-w-xl text-steel">Real signs we built and installed for Houston businesses — channel letters, monument signs, cabinet signs, wraps, and more.</p>
             </div>
-            <Link href="/portfolio" className="font-display text-sm font-semibold uppercase tracking-wide text-signal-600 hover:text-ink">See all our work →</Link>
+            <Link href="/portfolio" className="group inline-flex items-center gap-1.5 font-display text-sm font-semibold uppercase tracking-wide text-signal-600 transition-colors hover:text-ink">
+              See all our work
+              <span className="transition-transform duration-200 ease-[cubic-bezier(0.2,0,0,1)] group-hover:translate-x-1">→</span>
+            </Link>
           </div>
           <PortfolioGallery limit={8} />
           <div className="mt-8 flex flex-wrap items-center gap-2">
             <span className="font-display text-sm font-semibold uppercase tracking-wide text-ink">Looking for something specific?</span>
             {services.map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`} className="rounded-sm border border-fog bg-white px-3.5 py-1.5 text-sm text-steel hover:border-ink hover:text-ink">
+              <Link key={s.slug} href={`/services/${s.slug}`} className="rounded-sm border border-fog bg-white px-3.5 py-1.5 text-sm text-steel transition-colors hover:border-ink hover:text-ink">
                 {s.shortName}
               </Link>
             ))}
@@ -215,7 +218,7 @@ export default function HomePage() {
         <p className="mt-2 text-steel">Based in Houston, on the road across the metro most days.</p>
         <div className="mt-6 flex flex-wrap gap-2.5">
           {markets.map((m) => (
-            <Link key={m.slug} href={`/locations/${m.slug}`} className="rounded-sm border border-fog bg-white px-4 py-2 text-sm font-semibold text-ink hover:border-ink">
+            <Link key={m.slug} href={`/locations/${m.slug}`} className="rounded-sm border border-fog bg-white px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-ink">
               {m.city}
             </Link>
           ))}

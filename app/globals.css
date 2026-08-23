@@ -27,12 +27,15 @@
 
 html {
   scroll-behavior: smooth;
+  /* Lets `height: auto` animate (FAQ reveal below) in supporting browsers */
+  interpolate-size: allow-keywords;
 }
 
 body {
   background: var(--color-paper);
   color: var(--color-carbon);
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /* Headlines use the condensed display face */
@@ -41,6 +44,7 @@ h1, h2, h3 {
   font-weight: 600;
   letter-spacing: 0.01em;
   line-height: 1.05;
+  text-wrap: balance; /* keep the last line from orphaning a single word */
 }
 
 /* Section eyebrow — small industrial label */
@@ -65,10 +69,14 @@ h1, h2, h3 {
   font-size: 0.85rem;
   border-radius: 3px;
   padding: 0.85rem 1.6rem;
-  transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+  /* Explicit properties only — never `transition: all`. Adds `scale` so press
+     feedback is interruptible alongside the color transitions. */
+  transition: background-color 0.15s, color 0.15s, border-color 0.15s, scale 0.1s;
   cursor: pointer;
   border: 2px solid transparent;
 }
+/* Tactile press feedback — 0.96 is the floor; anything smaller feels exaggerated */
+.btn:active { scale: 0.96; }
 .btn-sm { padding: 0.55rem 1.05rem; font-size: 0.78rem; }
 .btn-primary { background: var(--color-signal); color: #fff; }
 .btn-primary:hover { background: var(--color-signal-600); }
@@ -119,21 +127,41 @@ h1, h2, h3 {
   justify-content: space-between;
   align-items: center;
   gap: 16px;
+  transition: color 0.15s;
 }
+.faq-item summary:hover { color: var(--color-signal-600); }
 .faq-item summary::-webkit-details-marker { display: none; }
+/* One glyph that rotates 45° into an "×" on open — smoother than swapping +/– */
 .faq-item summary::after {
   content: "+";
   font-size: 22px;
+  line-height: 1;
   font-weight: 400;
   color: var(--color-signal-600);
   flex-shrink: 0;
+  transition: rotate 0.2s cubic-bezier(0.2, 0, 0, 1);
 }
-.faq-item[open] summary::after { content: "–"; }
+.faq-item[open] summary::after { rotate: 45deg; }
 .faq-answer {
   padding: 0 4px 20px;
   font-size: 15px;
   line-height: 1.7;
   color: var(--color-steel);
+}
+
+/* Animate the disclosure open/close where the browser supports it; elsewhere
+   it just snaps (no harm). Reserved to no-preference per reduced-motion. */
+@media (prefers-reduced-motion: no-preference) {
+  .faq-item::details-content {
+    height: 0;
+    overflow: clip;
+    opacity: 0;
+    transition: height 0.28s cubic-bezier(0.2, 0, 0, 1), opacity 0.2s, content-visibility 0.28s allow-discrete;
+  }
+  .faq-item[open]::details-content {
+    height: auto;
+    opacity: 1;
+  }
 }
 
 /* Long-form prose */
@@ -154,7 +182,47 @@ h1, h2, h3 {
   margin: 0 0 1rem;
   line-height: 1.75;
   color: var(--color-carbon);
+  text-wrap: pretty; /* avoid single-word orphans on the last line */
 }
 .prose-content ul { margin: 0 0 1rem 1.25rem; list-style: disc; }
 .prose-content li { margin-bottom: 0.4rem; line-height: 1.7; }
 .prose-content a { color: var(--color-signal-600); text-decoration: underline; text-underline-offset: 2px; }
+
+/* Subtle image outline — a hairline of PURE black at 10% keeps photo edges
+   crisp against the paper background without reading as a tinted "dirty" border.
+   Inset so it sits on top of the image rather than expanding the box. */
+.img-outline {
+  outline: 1px solid rgba(0, 0, 0, 0.1);
+  outline-offset: -1px;
+}
+
+/* --- Form fields: soft focus ring (a shadow, not a hard border swap) --- */
+.field {
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+.field:focus {
+  outline: none;
+  border-color: var(--color-signal);
+  box-shadow: 0 0 0 3px rgba(30, 100, 230, 0.16);
+}
+
+/* --- Staggered enter: split hero content into chunks, ~90ms apart ---
+   Keyframes (run-once), not transitions — the correct tool for a staged
+   entrance. Guarded behind reduced-motion; the `both` fill keeps items
+   hidden until their delay so nothing flashes at full opacity first. */
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes rise {
+    from { opacity: 0; translate: 0 12px; }
+    to   { opacity: 1; translate: 0 0; }
+  }
+  .stagger-in > * {
+    animation: rise 0.5s cubic-bezier(0.2, 0, 0, 1) both;
+  }
+  .stagger-in > *:nth-child(1) { animation-delay: 0.05s; }
+  .stagger-in > *:nth-child(2) { animation-delay: 0.14s; }
+  .stagger-in > *:nth-child(3) { animation-delay: 0.23s; }
+  .stagger-in > *:nth-child(4) { animation-delay: 0.32s; }
+  .stagger-in > *:nth-child(5) { animation-delay: 0.41s; }
+  .stagger-in > *:nth-child(6) { animation-delay: 0.50s; }
+  .stagger-in > *:nth-child(7) { animation-delay: 0.59s; }
+}

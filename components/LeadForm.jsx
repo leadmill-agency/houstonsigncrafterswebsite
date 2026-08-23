@@ -59,7 +59,7 @@ export default function LeadForm({
           <select
             name="signType"
             defaultValue=""
-            className="w-full rounded-sm border border-fog bg-white px-3 py-2 text-sm text-carbon focus:border-ink focus:outline-none"
+            className="field w-full rounded-sm border border-fog bg-white px-3 py-2 text-sm text-carbon"
           >
             <option value="" disabled>Select a sign type…</option>
             {services.map((s) => (
@@ -76,7 +76,7 @@ export default function LeadForm({
           <textarea
             name="message"
             rows={4}
-            className="w-full resize-y rounded-sm border border-fog px-3 py-2 text-sm text-carbon focus:border-ink focus:outline-none"
+            className="field w-full resize-y rounded-sm border border-fog px-3 py-2 text-sm text-carbon"
           />
         </div>
       )}
@@ -112,7 +112,7 @@ function Field({ label, name, type = "text", required = false, autoComplete = "o
         name={name}
         required={required}
         autoComplete={autoComplete}
-        className="w-full rounded-sm border border-fog px-3 py-2 text-sm text-carbon focus:border-ink focus:outline-none"
+        className="field w-full rounded-sm border border-fog px-3 py-2 text-sm text-carbon"
       />
       {error && <p className="mt-1 text-xs text-red-600">{error}</p>}
     </div>

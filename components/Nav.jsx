@@ -34,7 +34,7 @@ export default function Nav() {
 
             <nav className="hidden items-center gap-7 text-[15px] font-semibold text-ink lg:flex">
               {NAV_LINKS.map((l) => (
-                <Link key={l.href} href={l.href} className="hover:text-signal-600">
+                <Link key={l.href} href={l.href} className="transition-colors hover:text-signal-600">
                   {l.label}
                 </Link>
               ))}
@@ -44,7 +44,7 @@ export default function Nav() {
               <a
                 href={BUSINESS.phoneHref}
                 onClick={() => trackEvent("phone_click", { event_label: "nav" })}
-                className="font-display text-sm font-semibold uppercase tracking-wide text-ink hover:text-signal-600"
+                className="font-display text-sm font-semibold uppercase tracking-wide text-ink transition-colors hover:text-signal-600"
               >
                 {BUSINESS.phone}
               </a>
@@ -52,14 +52,15 @@ export default function Nav() {
             </div>
 
             <button
-              className="md:hidden inline-flex items-center justify-center p-2 text-ink"
+              className="md:hidden relative inline-flex h-11 w-11 items-center justify-center text-ink transition-transform active:scale-[0.96]"
               onClick={() => setOpen((v) => !v)}
               aria-label="Toggle menu"
               aria-expanded={open}
             >
-              <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" strokeWidth="2">
-                {open ? <path d="M18 6 6 18M6 6l12 12" /> : <path d="M3 12h18M3 6h18M3 18h18" />}
-              </svg>
+              {/* Both icons stay mounted and cross-fade (opacity + scale + blur)
+                  so the swap has an enter AND an exit — no dependency needed. */}
+              <MenuIcon path="M3 12h18M3 6h18M3 18h18" visible={!open} />
+              <MenuIcon path="M18 6 6 18M6 6l12 12" visible={open} />
             </button>
           </div>
         </div>
@@ -81,5 +82,29 @@ export default function Nav() {
         )}
       </div>
     </header>
+  );
+}
+
+// Cross-faded menu glyph. Uses the skill's exact icon-swap values —
+// scale 0.25→1, opacity 0→1, blur 4px→0 — on a cubic-bezier(0.2,0,0,1) ease.
+function MenuIcon({ path, visible }) {
+  return (
+    <svg
+      viewBox="0 0 24 24"
+      width="26"
+      height="26"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      aria-hidden="true"
+      className="absolute transition-[opacity,scale,filter] duration-200 ease-[cubic-bezier(0.2,0,0,1)]"
+      style={{
+        opacity: visible ? 1 : 0,
+        scale: visible ? "1" : "0.25",
+        filter: visible ? "blur(0px)" : "blur(4px)",
+      }}
+    >
+      <path d={path} />
+    </svg>
   );
 }
