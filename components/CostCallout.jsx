@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { BUSINESS } from "@/data/business";
+import { getPricingRow, formatRange } from "@/data/pricing";
 import PhoneLink from "@/components/PhoneLink";
 import TextLink from "@/components/TextLink";
 
 // Honest "what does it cost / how we quote" block — answers the #1 buyer
-// question instead of dodging it.
-export default function CostCallout() {
+// question instead of dodging it. Pass the service `slug` to show that
+// service's published range (owner-confirmed, data/pricing.js).
+export default function CostCallout({ slug }) {
+  const row = slug ? getPricingRow(slug) : null;
   const drivers = [
     "How big it is and how many letters",
     "Lit or not — and how it's lit",
@@ -19,7 +22,15 @@ export default function CostCallout() {
         <h2 className="mt-1 text-3xl font-bold sm:text-4xl">What does it cost?</h2>
         <div className="mt-6 grid gap-6 text-lg leading-relaxed text-white/80 md:grid-cols-2">
           <div>
-            <p>It depends — anybody quoting a flat number off a website is guessing. What moves the price:</p>
+            {row ? (
+              <p>
+                {row.label} in Houston typically run{" "}
+                <span className="font-semibold text-white">{formatRange(row)}</span> installed
+                (typical timeline: {row.timeline.toLowerCase()}). Where your project lands depends on:
+              </p>
+            ) : (
+              <p>It depends — anybody quoting a flat number off a website is guessing. What moves the price:</p>
+            )}
             <ul className="mt-4 space-y-2">
               {drivers.map((d) => (
                 <li key={d} className="flex items-start gap-2.5">
@@ -36,6 +47,13 @@ export default function CostCallout() {
               <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
               <TextLink className="btn btn-outline-light" label="Text Us" />
             </div>
+            <p className="mt-4 text-sm text-white/60">
+              See all our published ranges on the{" "}
+              <Link href="/pricing" className="text-white underline underline-offset-2 hover:text-signal">
+                Houston sign pricing page
+              </Link>
+              .
+            </p>
           </div>
         </div>
       </div>

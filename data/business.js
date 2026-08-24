@@ -53,16 +53,15 @@ export const BUSINESS = {
   ],
 
   // "Who you'll talk to" — the single biggest anti-AI / trust signal.
-  // TODO: drop in the owner/lead's real NAME and a real HEADSHOT.
-  //   1) add the photo to public/team/ (e.g. public/team/owner.jpg)
-  //   2) set name + photo below. Until then, `photo` points at a real shot of
-  //      the HSC-branded work truck on a job, and the section adapts if name is null.
+  // Owners confirmed by Rameel 2026-08-23. TODO: real HEADSHOT(s) →
+  // public/team/, then update `photo`.
   team: {
-    name: null, // e.g. "Mike Rodriguez"
+    name: "Rameel Sheikh",
     title: "Owner",
     photo: "/portfolio/jys.jpg", // interim: real HSC truck on a job site
     note: "answers most of the calls himself",
   },
+  owners: ["Rameel Sheikh", "Kashir Sheikh"],
 
   // Optional headline stat. TODO: set a REAL number (e.g. 300) to show
   // "300+ Houston businesses served"; leave null to hide it. Don't invent one.

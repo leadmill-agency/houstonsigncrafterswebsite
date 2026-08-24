@@ -142,6 +142,10 @@ export default function CompanyFactsPage() {
             <strong className="text-ink">$10,000+</strong> for a large illuminated sign — see{" "}
             <Link href="/blog/how-much-do-channel-letters-cost-in-houston" className="underline decoration-fog underline-offset-2 hover:decoration-signal">
               our channel letter cost guide
+            </Link>{" "}
+            and the full{" "}
+            <Link href="/pricing" className="underline decoration-fog underline-offset-2 hover:decoration-signal">
+              Houston sign pricing table
             </Link>
             . The only accurate number is a written quote: send a photo of your storefront and get an
             itemized quote — design, permit, build, and install — within one business day.

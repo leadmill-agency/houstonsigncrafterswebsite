@@ -111,7 +111,7 @@ export default async function ServicePage({ params }) {
 
       </section>
 
-      <CostCallout />
+      <CostCallout slug={slug} />
 
       <WhatYouGet heading={`What you get with your ${s.shortName.toLowerCase()}`} />
 
