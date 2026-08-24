@@ -11,6 +11,7 @@ import TrustBar from "@/components/TrustBar";
 import OfferBadge from "@/components/OfferBadge";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import Faq from "@/components/Faq";
+import Testimonials from "@/components/Testimonials";
 
 const HERO_IMG =
   "https://images.unsplash.com/photo-1647586028042-1de4d4a935e6?q=80&w=1920&auto=format&fit=crop";
@@ -225,6 +226,9 @@ export default function HomePage() {
           <Link href="/locations" className="rounded-sm bg-ink px-4 py-2 text-sm font-semibold text-white">All areas →</Link>
         </div>
       </section>
+
+      {/* Reviews */}
+      <Testimonials />
 
       {/* FAQ */}
       <section className="border-t border-fog bg-cloud">

@@ -128,7 +128,11 @@ export default function CompanyFactsPage() {
         <p className="mt-3 text-sm text-steel">
           We also handle sign permitting with the local jurisdiction for every install — City of
           Houston and the surrounding cities each have their own sign code, and we submit and manage
-          the permit as part of the job.
+          the permit as part of the job. See{" "}
+          <Link href="/sign-permits" className="underline decoration-fog underline-offset-2 hover:decoration-signal">
+            who issues sign permits in each jurisdiction
+          </Link>
+          .
         </p>
       </section>
 

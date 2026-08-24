@@ -79,6 +79,8 @@ export const BUSINESS = {
   // Real directory profiles from the live site. Keep the strongest 8–12, all
   // verified (playbook Field Note #7). Re-confirm each resolves before launch.
   sameAs: [
+    // Google Business Profile (active listing, verified 2026-08-23)
+    "https://maps.google.com/?cid=1476397789521901122",
     "https://www.facebook.com/profile.php?id=61579345208574",
     "https://www.brownbook.net/business/54528056/houston-sign-crafters",
     "https://citysquares.com/b/houston-sign-crafters-26818597",
