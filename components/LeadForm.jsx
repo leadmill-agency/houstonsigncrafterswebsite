@@ -1,6 +1,7 @@
 "use client";
 
 import { useActionState, useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 import { submitLead } from "@/lib/leads";
 import { getAllServices } from "@/data/services";
 import { trackEvent, trackPixel } from "@/lib/analytics";
@@ -22,6 +23,7 @@ export default function LeadForm({
   const [state, formAction, pending] = useActionState(submitLead, initialState);
   const formRef = useRef(null);
   const services = getAllServices();
+  const router = useRouter();
 
   useEffect(() => {
     if (state.ok && formRef.current) {
@@ -29,8 +31,21 @@ export default function LeadForm({
       trackEvent("form_submit", { form_name: `lead_${kind}`, form_location: kind });
       if (kind === "quote") trackEvent("generate_lead", { value: 1, currency: "USD" });
       trackPixel("Lead", { content_name: `lead_${kind}` });
+      // Google Ads conversion signal (contractor spec): push the dataLayer
+      // event ONCE at the moment of real submit success — the GTM trigger is
+      // built on this event, not the /thankyou pageview, so a refresh of the
+      // confirmation page can never double-count. Quote forms (homepage, /quote,
+      // LPs) share this component, so they all emit `quote_form_success`.
+      if (typeof window !== "undefined") {
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({
+          event: kind === "quote" ? "quote_form_success" : `${kind}_form_success`,
+        });
+      }
+      // Then land on the dedicated confirmation page (exact old path).
+      router.push("/thankyou");
     }
-  }, [state.ok, kind]);
+  }, [state.ok, kind, router]);
 
   const phoneRequired = kind === "quote" || kind === "mockup";
 

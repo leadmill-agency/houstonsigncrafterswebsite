@@ -26,7 +26,9 @@ const nextConfig: NextConfig = {
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/terms-of-service", destination: "/terms", permanent: true },
       { source: "/end-user-license-agreement", destination: "/terms", permanent: true },
-      { source: "/thankyou", destination: "/contact", permanent: true },
+      // NOTE: /thankyou is deliberately NOT redirected — it's a live page again.
+      // The Google Ads contractor's conversion tracking depends on the exact
+      // /thankyou path (form submits land there; see LeadForm.jsx).
 
       // Old landing / printing pages → closest new equivalent
       { source: "/sign-printing", destination: "/services", permanent: true },

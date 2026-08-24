@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import FooterGate from "@/components/FooterGate";
 import Analytics from "@/components/Analytics";
 import MetaPixel from "@/components/MetaPixel";
+import { GTMHead, GTMBody } from "@/components/GTM";
 import { BUSINESS, SERVICE_AREAS } from "@/data/business";
 
 // Oswald = condensed, signage-style display face for headlines (reads like
@@ -107,10 +108,12 @@ export default function RootLayout({ children }) {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
         />
+        <GTMHead />
         <Analytics />
         <MetaPixel />
       </head>
       <body className="font-sans antialiased">
+        <GTMBody />
         <Nav />
         {children}
         <FooterGate>
