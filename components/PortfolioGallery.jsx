@@ -16,6 +16,9 @@ export default function PortfolioGallery({ limit }) {
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             className="object-cover transition-transform duration-300 group-hover:scale-[1.04]"
+            // Portrait shots in the landscape tile crop from center by default,
+            // which can cut the sign off — items can pin the crop (e.g. "top").
+            style={p.objectPosition ? { objectPosition: p.objectPosition } : undefined}
           />
         </div>
       ))}
