@@ -3,26 +3,28 @@
 import { useActionState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { submitLead } from "@/lib/leads";
-import { getAllServices } from "@/data/services";
 import { trackEvent, trackPixel } from "@/lib/analytics";
 
 const initialState = { ok: null, errors: {}, message: "" };
 
 // One form, four jobs. `kind` (quote|mockup|guide|contact) drives the hidden
-// field, which fields show, and the GA4 event name. Wraps the shared
-// submitLead server action (lib/leads.js).
+// field and the analytics event names. Wraps the shared submitLead server
+// action (lib/leads.js).
+//
+// Owner decision (2026-08-24, pre-launch): every form shows exactly FOUR
+// fields — Name, Email, Phone, and an open comment box. The sign-type and
+// "how did you hear about us" selects were cut for conversion; the comment box
+// carries that context, and heard-about gets asked on the first call. Legacy
+// props (showCompany/showSignType/showMessage) are accepted but ignored so
+// existing call sites don't break.
 export default function LeadForm({
   kind = "contact",
   submitLabel = "Send",
-  showCompany = false,
-  showSignType = false,
-  showMessage = true,
   messageLabel = "Tell us about your project",
   className = "",
 }) {
   const [state, formAction, pending] = useActionState(submitLead, initialState);
   const formRef = useRef(null);
-  const services = getAllServices();
   const router = useRouter();
 
   useEffect(() => {
@@ -65,55 +67,16 @@ export default function LeadForm({
         <Field label="Name" name="name" required autoComplete="name" state={state} />
         <Field label="Email" name="email" type="email" required autoComplete="email" state={state} />
         <Field label="Phone" name="phone" type="tel" required={phoneRequired} autoComplete="tel" state={state} />
-        {showCompany && <Field label="Company" name="company" autoComplete="organization" state={state} />}
       </div>
 
-      {showSignType && (
-        <div className="mt-4">
-          <label className="mb-1.5 block text-xs font-semibold text-carbon">What kind of sign do you need?</label>
-          <select
-            name="signType"
-            defaultValue=""
-            className="field w-full rounded-sm border border-fog bg-white px-3 py-2 text-sm text-carbon"
-          >
-            <option value="" disabled>Select a sign type…</option>
-            {services.map((s) => (
-              <option key={s.slug} value={s.formLabel || s.name}>{s.formLabel || s.name}</option>
-            ))}
-            <option value="Not sure / other">Not sure / other</option>
-          </select>
-        </div>
-      )}
-
-      {showMessage && (
-        <div className="mt-4">
-          <label className="mb-1.5 block text-xs font-semibold text-carbon">{messageLabel}</label>
-          <textarea
-            name="message"
-            rows={4}
-            className="field w-full resize-y rounded-sm border border-fog px-3 py-2 text-sm text-carbon"
-          />
-        </div>
-      )}
-
-      {/* AI-search attribution: analytics can't see most assistant referrals,
-          so self-report is the highest-signal instrument at this lead volume. */}
       <div className="mt-4">
-        <label className="mb-1.5 block text-xs font-semibold text-carbon">How did you hear about us?</label>
-        <select
-          name="heardAbout"
-          defaultValue=""
-          className="field w-full rounded-sm border border-fog bg-white px-3 py-2 text-sm text-carbon"
-        >
-          <option value="">Select one (optional)…</option>
-          <option value="Google search">Google search</option>
-          <option value="ChatGPT / AI assistant">ChatGPT / AI assistant (Claude, Perplexity, Gemini…)</option>
-          <option value="Google Maps">Google Maps</option>
-          <option value="Instagram / Facebook">Instagram / Facebook</option>
-          <option value="Referral">Referral from someone</option>
-          <option value="Drove by / saw your work">Drove by / saw a sign we made</option>
-          <option value="Other">Other</option>
-        </select>
+        <label className="mb-1.5 block text-xs font-semibold text-carbon">{messageLabel}</label>
+        <textarea
+          name="message"
+          rows={4}
+          placeholder="What kind of sign, rough size, and where it's going — anything helps."
+          className="field w-full resize-y rounded-sm border border-fog px-3 py-2 text-sm text-carbon"
+        />
       </div>
 
       <button type="submit" disabled={pending} className="btn btn-primary mt-5 w-full disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto">
