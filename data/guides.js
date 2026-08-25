@@ -8,10 +8,10 @@ const GUIDES = {
   "sign-permitting-checklist": {
     slug: "sign-permitting-checklist",
     title: "The Houston Sign Permitting Checklist",
-    subtitle: "Everything you need to get your business sign approved in Houston — the first time.",
+    subtitle: "Everything you need to get your business sign approved in Houston, the first time.",
     metaTitle: "Free Houston Sign Permitting Checklist (PDF)",
     metaDescription:
-      "Download our free Houston sign permitting checklist — sizes, illumination rules, landlord criteria, and the documents you need to get your business sign approved.",
+      "Download our free Houston sign permitting checklist: sizes, illumination rules, landlord criteria, and the documents you need to get your business sign approved.",
     // Drop the actual PDF here before launch; the auto-responder links to it.
     file: "/guides/houston-sign-permitting-checklist.pdf",
     bullets: [
@@ -19,7 +19,7 @@ const GUIDES = {
       "How to read your lease's sign criteria before you order",
       "Size, height, and illumination rules that trip people up",
       "The documents and drawings you'll need to submit",
-      "How long approval really takes — and how to speed it up",
+      "How long approval really takes, and how to speed it up",
     ],
   },
 };

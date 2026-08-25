@@ -9,9 +9,9 @@ import PhoneLink from "@/components/PhoneLink";
 // publish processing times — no times are stated for the others on purpose.
 
 export const metadata = {
-  title: "Sign Permits in Houston, Katy, Sugar Land & Beyond — Who Issues What",
+  title: "Sign Permits in Houston, Katy, Sugar Land & Beyond: Who Issues What",
   description:
-    "Which office issues your sign permit in Houston, Katy, Sugar Land, The Woodlands, Pearland, Pasadena, Spring, and Cypress — official sources, applications, and what each review checks.",
+    "Which office issues your sign permit in Houston, Katy, Sugar Land, The Woodlands, Pearland, Pasadena, Spring, and Cypress: official sources, applications, and what each review checks.",
   alternates: { canonical: "/sign-permits" },
 };
 
@@ -22,7 +22,7 @@ const JURISDICTIONS = [
     authority: "Sign Administration (Houston Public Works) via the Houston Permitting Center",
     facts: [
       "Signs are governed by Chapter 46 of the City of Houston Building Code. Erecting, reconstructing, altering, relocating, or using a sign requires a written permit from the Sign Administrator (Sec. 4605(a)), with limited exceptions.",
-      "Most sign permits are issued only to licensed sign contractors — owners can self-permit only certain small non-electrical signs (ground signs up to 60 sq ft and 8 ft tall, or wall signs up to 16 ft above grade).",
+      "Most sign permits are issued only to licensed sign contractors. Owners can self-permit only certain small non-electrical signs (ground signs up to 60 sq ft and 8 ft tall, or wall signs up to 16 ft above grade).",
       "Scenic and historic districts add review: designated scenic rights-of-way have their own rules, and in historic districts the Planning Department requires a Certificate of Appropriateness for exterior changes, including signs.",
       "The city's stated processing time is 4–11 business days, with fees starting around $69 plus per-square-foot charges over 32 sq ft.",
     ],
@@ -52,13 +52,13 @@ const JURISDICTIONS = [
     authority: "Permits & Inspections; sign rules in Development Code Chapter 4 (Planning & Development Services)",
     facts: [
       "Placing, erecting, replacing, or altering a monument sign requires a sign permit first; repainting or changing only the letters/message does not. Monument-sign permits are valid 180 days.",
-      "Sugar Land prohibits several sign types outright — including electronic signs, revolving or moving signs, and portable signs.",
+      "Sugar Land prohibits several sign types outright, including electronic signs, revolving or moving signs, and portable signs.",
       "Monument sizes are capped by district (36 sq ft/4 ft in residential, 60 sq ft/6 ft nonresidential, 100 sq ft/10 ft with US-59 frontage), with setback and spacing rules.",
       "One temporary unlighted freestanding sign (up to 32 sq ft, 10 ft) is allowed without a permit for up to 75 days per calendar year.",
     ],
     links: [
       { label: "Permits & Inspections", url: "https://www.sugarlandtx.gov/2362/Permits-Inspections" },
-      { label: "Sign Regulations — key excerpts (PDF)", url: "https://www.sugarlandtx.gov/DocumentCenter/View/32599/FINAL_SIGN-REG_DEC2023" },
+      { label: "Sign Regulations: key excerpts (PDF)", url: "https://www.sugarlandtx.gov/DocumentCenter/View/32599/FINAL_SIGN-REG_DEC2023" },
     ],
   },
   {
@@ -77,7 +77,7 @@ const JURISDICTIONS = [
   {
     id: "pearland",
     name: "City of Pearland",
-    authority: "Community Development — Planning Division",
+    authority: "Community Development, Planning Division",
     facts: [
       "A sign permit is required before erecting, installing, or modifying any sign, under the Sign Ordinance (Chapter 4, Division 5).",
       "All permanent signs requiring a permit must have their design certified by a professional engineer for structural integrity.",
@@ -105,9 +105,9 @@ const JURISDICTIONS = [
   {
     id: "harris-county",
     name: "Spring & Cypress (unincorporated Harris County)",
-    authority: "Harris County Engineering Department — Permits Division, Sign Permitting Group",
+    authority: "Harris County Engineering Department, Permits Division, Sign Permitting Group",
     facts: [
-      "Yes, the county itself permits signs: permits are required before placing on-premise signs in unincorporated Harris County — which covers most of Spring and Cypress.",
+      "Yes, the county itself permits signs: permits are required before placing on-premise signs in unincorporated Harris County, which covers most of Spring and Cypress.",
       "New off-premise signage (billboards) is prohibited countywide.",
       "Banners over 40 sq ft need a permit; up to 5 on-premise signs can be permitted per business address; ground signs 30 ft or taller need engineer-sealed foundation drawings and a hole inspection.",
       "The county's stated plan-review time is 3–5 business days; permits are valid 180 days and all signs are inspected.",
@@ -140,7 +140,7 @@ export default function SignPermitsPage() {
             Sign permits in Houston &amp; the surrounding cities: who issues what
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white/75">
-            Every jurisdiction in the metro runs sign permits differently — different office,
+            Every jurisdiction in the metro runs sign permits differently: different office,
             different code, different quirks. Here's the map, sourced from each authority's own
             published rules.
           </p>
@@ -218,11 +218,11 @@ export default function SignPermitsPage() {
       <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
         <h2 className="text-2xl font-bold text-ink">The part nobody tells you</h2>
         <p className="mt-3 max-w-2xl leading-relaxed text-steel">
-          City code is only half the approval. Your landlord's sign criteria — letter style, colors,
-          mounting — apply on top of everything above, and a sign can pass the city and still get
+          City code is only half the approval. Your landlord's sign criteria (letter style, colors,
+          mounting) apply on top of everything above, and a sign can pass the city and still get
           rejected by the property. The order that avoids paying for a sign twice: lease criteria
           first, jurisdiction rules second, permit approval third, fabrication last. That's the
-          order we run on every job — we confirm the criteria, prepare permit-ready drawings, submit
+          order we run on every job: we confirm the criteria, prepare permit-ready drawings, submit
           to the right office above, and install after approval.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
@@ -232,7 +232,7 @@ export default function SignPermitsPage() {
         </div>
         <p className="mt-8 text-xs leading-relaxed text-steel">
           Facts on this page were read from each authority's official published sources (linked
-          above) in August 2026. Rules change — always confirm current requirements with the issuing
+          above) in August 2026. Rules change, so always confirm current requirements with the issuing
           office, or let us do it as part of your project.
         </p>
       </section>

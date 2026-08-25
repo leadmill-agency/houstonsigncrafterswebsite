@@ -4,7 +4,7 @@ import { getAllGuides } from "@/data/guides";
 export const metadata = {
   title: "Free Sign Guides & Checklists",
   description:
-    "Free guides from Houston Sign Crafters — sign permitting, costs, and what to know before you order a business sign in Houston.",
+    "Free guides from Houston Sign Crafters: sign permitting, costs, and what to know before you order a business sign in Houston.",
   alternates: { canonical: "/guides" },
 };
 
@@ -44,7 +44,7 @@ export default function GuidesIndexPage() {
           <Link href="/blog" className="underline decoration-fog underline-offset-2 hover:decoration-signal">
             the blog
           </Link>{" "}
-          — sign costs, materials, and permitting in Houston.
+          for sign costs, materials, and permitting in Houston.
         </p>
       </section>
     </main>

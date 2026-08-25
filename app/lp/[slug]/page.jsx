@@ -21,7 +21,7 @@ const WHAT_YOU_GET = [
 
 const STEPS = [
   { t: "Send a photo", b: "Your storefront and logo is enough. We'll tell you what'll work." },
-  { t: "Get your quote", b: "An itemized, written quote in one business day — no runaround." },
+  { t: "Get your quote", b: "An itemized, written quote in one business day, no runaround." },
   { t: "We build & install", b: "We fabricate, permit, and put it up. Then it's yours, warrantied." },
 ];
 
@@ -151,7 +151,7 @@ export default async function LandingPage({ params }) {
         <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">Ready for a sign that gets noticed?</h2>
           <p className="mx-auto mt-3 max-w-xl text-white/85">
-            Send a photo and a rough size — you'll have a real quote in your inbox within one business
+            Send a photo and a rough size. You'll have a real quote in your inbox within one business
             day. {BUSINESS.offer?.label ? `Mention this ad for ${BUSINESS.offer.label.toLowerCase()}.` : ""}
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -160,7 +160,7 @@ export default async function LandingPage({ params }) {
             <TextLink className="btn btn-outline-light" label="Text Us" />
           </div>
           <p className="mt-5 text-sm font-semibold uppercase tracking-wide text-white/80">
-            We only take a handful of new installs a week — get your spot.
+            We only take a handful of new installs a week. Get your spot.
           </p>
         </div>
       </section>

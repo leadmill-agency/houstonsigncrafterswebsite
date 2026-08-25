@@ -99,7 +99,7 @@ export default function AudiencePage({ audience }) {
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <h2 className="text-2xl font-bold text-ink">Start with a photo and an address</h2>
         <p className="mt-2 text-steel">
-          Itemized written quote — design, permit, build, install — within one business day.
+          Itemized written quote (design, permit, build, install) within one business day.
         </p>
         <div className="mt-6">
           <LeadForm kind="quote" submitLabel="Get My Quote" />

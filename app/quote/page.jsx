@@ -5,7 +5,7 @@ import { BUSINESS } from "@/data/business";
 export const metadata = {
   title: "Get a Free Sign Quote in Houston, TX",
   description:
-    "Request a free, written quote for your custom sign in Houston. Channel letters, monument signs, wraps, banners, and more — quote within one business day.",
+    "Request a free, written quote for your custom sign in Houston. Channel letters, monument signs, wraps, banners, and more. Quote within one business day.",
   alternates: { canonical: "/quote" },
 };
 
@@ -24,7 +24,7 @@ export default function QuotePage() {
           <h1 className="text-4xl font-bold text-ink">Get your free sign quote</h1>
           <p className="mt-4 text-lg text-steel">
             Tell us a bit about your project and we'll send a clear, written quote within one
-            business day — including permitting and installation, with no surprise fees.
+            business day, including permitting and installation, with no surprise fees.
           </p>
           <ul className="mt-8 space-y-3">
             {POINTS.map((p) => (

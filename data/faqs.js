@@ -6,7 +6,7 @@
 export const HOME_FAQS = [
   {
     q: "How much do custom signs cost in Houston?",
-    a: "It depends on the sign type, size, lighting, and installation, so we give every customer a firm written quote rather than a vague range. Send us your storefront photo and rough dimensions and we'll get a detailed quote back to you within one business day — including permitting and installation, with no surprise fees.",
+    a: "It depends on the sign type, size, lighting, and installation, so we give every customer a firm written quote rather than a vague range. Send us your storefront photo and rough dimensions and we'll get a detailed quote back to you within one business day, including permitting and installation, with no surprise fees.",
   },
   {
     q: "Do you handle sign permits in Houston?",
@@ -14,23 +14,23 @@ export const HOME_FAQS = [
   },
   {
     q: "How long does it take to get a sign made?",
-    a: "Most projects run a few weeks from approved design to installation, depending on the sign type and permit turnaround. Banners and simpler signs are faster. If you have a hard deadline like a grand opening, tell us up front and we'll be honest about whether we can hit it — we offer rush options where possible.",
+    a: "Most projects run a few weeks from approved design to installation, depending on the sign type and permit turnaround. Banners and simpler signs are faster. If you have a hard deadline like a grand opening, tell us up front and we'll be honest about whether we can hit it. We offer rush options where possible.",
   },
   {
     q: "Do you offer a warranty?",
-    a: "Yes — every sign we build is backed by a 5-year warranty on materials and workmanship, including LED lighting on illuminated signs.",
+    a: "Yes. Every sign we build is backed by a 5-year warranty on materials and workmanship, including LED lighting on illuminated signs.",
   },
   {
     q: "What areas around Houston do you serve?",
-    a: "We're based in Houston and serve the whole metro, including Katy, Sugar Land, The Woodlands, Cypress, Pearland, Spring, Pasadena, and surrounding communities. If you're not sure whether we cover your area, just ask — we likely do.",
+    a: "We're based in Houston and serve the whole metro, including Katy, Sugar Land, The Woodlands, Cypress, Pearland, Spring, Pasadena, and surrounding communities. If you're not sure whether we cover your area, just ask. We likely do.",
   },
   {
     q: "Do you design, build, and install signs in-house?",
-    a: "Yes. We handle the entire process under one roof — design and mockups, UL-certified fabrication, permitting, and licensed installation — so you work with one team from your first quote to the finished, installed sign.",
+    a: "Yes. We handle the entire process under one roof: design and mockups, UL-certified fabrication, permitting, and licensed installation. You work with one team from your first quote to the finished, installed sign.",
   },
   {
     q: "Who actually shows up to do the work?",
-    a: "Our own crew — the same people who build your sign in our Houston shop. We don't hand your job off to a wholesale factory in another state or a random subcontractor. When you call, you talk to a real person who makes signs, and when we install, it's our licensed crew on the ladder.",
+    a: "Our own crew, the same people who build your sign in our Houston shop. We don't hand your job off to a wholesale factory in another state or a random subcontractor. When you call, you talk to a real person who makes signs, and when we install, it's our licensed crew on the ladder.",
   },
 ];
 

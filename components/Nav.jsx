@@ -49,7 +49,7 @@ export default function Nav() {
       <div className="border-b border-fog bg-white/95 backdrop-blur">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex h-20 items-center justify-between gap-4 lg:h-24">
-            <Link href="/" className="flex items-center" aria-label="Houston Sign Crafters — home">
+            <Link href="/" className="flex items-center" aria-label="Houston Sign Crafters home">
               <Image
                 src="/logo-light.png"
                 alt="Houston Sign Crafters"
@@ -68,15 +68,9 @@ export default function Nav() {
               ))}
             </nav>
 
-            <div className="hidden items-center gap-4 md:flex">
-              <a
-                href={BUSINESS.phoneHref}
-                onClick={() => trackEvent("phone_click", { event_label: "nav" })}
-                className="font-display text-lg font-bold tracking-wide text-ink transition-colors hover:text-signal-600"
-              >
-                {BUSINESS.phone}
-              </a>
-              <Link href="/quote" className="btn btn-primary">Get a Quote</Link>
+            {/* One CTA. The phone lives in the topbar; repeating it here was clutter. */}
+            <div className="hidden items-center md:flex">
+              <Link href="/quote" className="btn btn-primary">Get A Quote</Link>
             </div>
 
             <button

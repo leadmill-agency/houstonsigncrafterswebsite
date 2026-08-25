@@ -29,7 +29,7 @@ export const metadata = {
     template: "%s | Houston Sign Crafters",
   },
   description:
-    "Houston Sign Crafters is a custom sign company in Houston, TX — channel letters, monument signs, vehicle wraps, interior signs, and banners, designed, fabricated, permitted, and installed in-house. Free quote within one business day.",
+    "Houston Sign Crafters is a custom sign company in Houston, TX: channel letters, monument signs, vehicle wraps, interior signs, and banners, designed, fabricated, permitted, and installed in-house. Free quote within one business day.",
   robots: "index, follow",
   alternates: { canonical: "/" },
   openGraph: {

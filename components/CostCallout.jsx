@@ -11,7 +11,7 @@ export default function CostCallout({ slug }) {
   const row = slug ? getPricingRow(slug) : null;
   const drivers = [
     "How big it is and how many letters",
-    "Lit or not — and how it's lit",
+    "Lit or not, and how it's lit",
     "How it mounts to your building",
     "Whether it needs a permit or engineering",
   ];
@@ -29,7 +29,7 @@ export default function CostCallout({ slug }) {
                 (typical timeline: {row.timeline.toLowerCase()}). Where your project lands depends on:
               </p>
             ) : (
-              <p>It depends — anybody quoting a flat number off a website is guessing. What moves the price:</p>
+              <p>It depends. Anybody quoting a flat number off a website is guessing. What moves the price:</p>
             )}
             <ul className="mt-4 space-y-2">
               {drivers.map((d) => (
@@ -41,7 +41,7 @@ export default function CostCallout({ slug }) {
             </ul>
           </div>
           <div>
-            <p>Send a photo of your storefront and a rough size. We pull up your address, factor in permitting and installation, and email you an <span className="text-white">itemized quote — usually within one business day.</span></p>
+            <p>Send a photo of your storefront and a rough size. We pull up your address, factor in permitting and installation, and email you an <span className="text-white">itemized quote, usually within one business day.</span></p>
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/quote" className="btn btn-primary">Get My Free Quote</Link>
               <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />

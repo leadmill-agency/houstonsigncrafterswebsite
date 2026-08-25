@@ -26,7 +26,7 @@ export default function Testimonials({ limit = 6, heading = "What Houston busine
         <p className="eyebrow text-signal-600">Reviews</p>
         <h2 className="mt-1 text-3xl font-bold text-ink">{heading}</h2>
         <p className="mt-2 text-steel">
-          Real reviews from our Google listing — word for word.
+          Real reviews from our Google listing, word for word.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {items.map((t) => (

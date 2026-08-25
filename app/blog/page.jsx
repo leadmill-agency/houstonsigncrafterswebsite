@@ -3,9 +3,9 @@ import { getAllPosts } from "@/lib/blog";
 import CTASection from "@/components/CTASection";
 
 export const metadata = {
-  title: "Houston Signage Blog — Tips, Guides & Ideas",
+  title: "Houston Signage Blog: Tips, Guides & Ideas",
   description:
-    "Guides and tips on custom signs for Houston businesses — permitting, sign types, design, and getting your storefront noticed. From Houston Sign Crafters.",
+    "Guides and tips on custom signs for Houston businesses: permitting, sign types, design, and getting your storefront noticed. From Houston Sign Crafters.",
   alternates: { canonical: "/blog" },
 };
 

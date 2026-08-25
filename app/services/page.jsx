@@ -5,7 +5,7 @@ import CTASection from "@/components/CTASection";
 export const metadata = {
   title: "Sign Services in Houston, TX",
   description:
-    "Explore Houston Sign Crafters' services — channel letters, monument signs, vehicle wraps, wall graphics, custom banners, and event signage. In-house design, permitting, and installation.",
+    "Explore Houston Sign Crafters' services: channel letters, monument signs, vehicle wraps, wall graphics, custom banners, and event signage. In-house design, permitting, and installation.",
   alternates: { canonical: "/services" },
 };
 
@@ -18,7 +18,7 @@ export default function ServicesHub() {
         <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:px-6">
           <h1 className="text-4xl font-bold text-ink">Our Sign Services in Houston</h1>
           <p className="mx-auto mt-4 max-w-2xl text-steel">
-            We design, fabricate, permit, and install every kind of business sign in-house —
+            We design, fabricate, permit, and install every kind of business sign in-house,
             so your project is handled by one team from first sketch to final installation.
           </p>
         </div>

@@ -69,12 +69,11 @@ export const BUSINESS = {
     businessesServed: null,
   },
 
-  // Promo shown on the home + service pages. Edit freely.
-  offer: {
-    label: "$400 off a lighted storefront sign",
-    detail: "mention this offer when you request your quote",
-    href: "/quote",
-  },
+  // Promo badge (home + service pages + LPs). Owner paused the discount
+  // 2026-08-25. To re-enable, restore:
+  //   offer: { label: "$400 off a lighted storefront sign",
+  //            detail: "mention this offer when you request your quote", href: "/quote" }
+  offer: null,
 
   // Real directory profiles from the live site. Keep the strongest 8–12, all
   // verified (playbook Field Note #7). Re-confirm each resolves before launch.

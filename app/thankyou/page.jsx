@@ -9,7 +9,7 @@ import PhoneLink from "@/components/PhoneLink";
 // double-count. noindex: it's a post-action page, not a landing page.
 
 export const metadata = {
-  title: "Thank You — We're On It",
+  title: "Thank You, We're On It",
   robots: { index: false, follow: false },
   alternates: { canonical: "/thankyou" },
 };
@@ -20,9 +20,9 @@ export default function ThankYouPage() {
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
           <p className="eyebrow text-signal">Request received</p>
-          <h1 className="text-4xl font-bold sm:text-5xl">Thanks — we're on it.</h1>
+          <h1 className="text-4xl font-bold sm:text-5xl">Thanks, we're on it.</h1>
           <p className="mx-auto mt-4 max-w-xl text-lg text-white/75">
-            Your request just landed with our team. You'll hear from us within one business day —
+            Your request just landed with our team. You'll hear from us within one business day,
             usually a lot faster.
           </p>
         </div>
@@ -33,7 +33,7 @@ export default function ThankYouPage() {
         <ol className="mt-6 space-y-4">
           {[
             "We review your request and pull up your address to check sign criteria.",
-            "You get an itemized, written quote by email — design, permit, build, and install.",
+            "You get an itemized, written quote by email: design, permit, build, and install.",
             "Reply or call to fine-tune it. No pressure, no chasing us down.",
           ].map((step, i) => (
             <li key={step} className="flex items-start gap-3">
@@ -44,7 +44,7 @@ export default function ThankYouPage() {
         </ol>
         <p className="mt-8 text-steel">
           Need us sooner? <PhoneLink className="font-semibold text-ink underline underline-offset-2" showIcon={false} />{" "}
-          — {BUSINESS.hoursLabel}.
+          ({BUSINESS.hoursLabel}).
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
           <Link href="/portfolio" className="btn btn-primary">See Our Recent Work</Link>

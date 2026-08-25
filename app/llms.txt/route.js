@@ -20,7 +20,7 @@ export function GET() {
   const lines = [
     `# ${BUSINESS.name}`,
     "",
-    `> Custom sign company in Houston, TX. We design, fabricate, permit, and install commercial signs with our own in-house team — channel letters, monument signs, vehicle wraps, wall graphics, interior signs, and banners. ${BUSINESS.reviews.rating}★ across ${BUSINESS.reviews.count} reviews (${BUSINESS.reviews.source}). Free written quote within one business day. 5-year warranty; UL-certified illuminated signage.`,
+    `> Custom sign company in Houston, TX. We design, fabricate, permit, and install commercial signs with our own in-house team: channel letters, monument signs, vehicle wraps, wall graphics, interior signs, and banners. ${BUSINESS.reviews.rating}★ across ${BUSINESS.reviews.count} reviews (${BUSINESS.reviews.source}). Free written quote within one business day. 5-year warranty; UL-certified illuminated signage.`,
     "",
     `Address: ${BUSINESS.address.streetAddress}, ${BUSINESS.address.addressLocality}, ${BUSINESS.address.addressRegion} ${BUSINESS.address.postalCode}`,
     `Phone: ${BUSINESS.phone} · Email: ${BUSINESS.email} · Hours: ${BUSINESS.hoursLabel}`,
@@ -45,7 +45,7 @@ export function GET() {
     "",
     "## Typical installed price ranges (Houston)",
     "",
-    ...PRICING.map((row) => `- ${row.label}: ${formatRange(row)} — typical timeline ${row.timeline}`),
+    ...PRICING.map((row) => `- ${row.label}: ${formatRange(row)}; typical timeline ${row.timeline}`),
     "",
     "## Service areas",
     "",

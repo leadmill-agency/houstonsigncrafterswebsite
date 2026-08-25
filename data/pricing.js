@@ -20,7 +20,7 @@ export const PRICING = [
     label: "Monument signs",
     low: 6000,
     high: "50,000+",
-    note: "Masonry, foundations, and engineering drive the range — multi-tenant and lit monuments sit at the top.",
+    note: "Masonry, foundations, and engineering drive the range. Multi-tenant and lit monuments sit at the top.",
     timeline: "10–12 weeks",
   },
   {

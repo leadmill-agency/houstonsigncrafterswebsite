@@ -4,7 +4,7 @@ const ITEMS = [
   { t: "A real design mockup", b: "Your sign on a photo of your actual building, before you commit." },
   { t: "UL-certified fabrication", b: "Built in our Houston shop with weather-rated materials and LEDs." },
   { t: "Permits, handled", b: "We pull the City permits and check your landlord's sign criteria." },
-  { t: "Licensed installation", b: "Our own crew mounts it, wires it, cleans up — no subcontractors." },
+  { t: "Licensed installation", b: "Our own crew mounts it, wires it, cleans up. No subcontractors." },
   { t: "A 5-year warranty", b: "Materials and workmanship, lighting included." },
 ];
 

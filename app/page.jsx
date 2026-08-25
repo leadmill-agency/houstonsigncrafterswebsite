@@ -17,18 +17,18 @@ const HERO_IMG =
   "https://images.unsplash.com/photo-1647586028042-1de4d4a935e6?q=80&w=1920&auto=format&fit=crop";
 
 const WHAT_YOU_GET = [
-  { t: "A real design mockup", b: "Your sign rendered on a photo of your actual building — so you see it before you commit to anything." },
+  { t: "A real design mockup", b: "Your sign rendered on a photo of your actual building. You see it before you commit to anything." },
   { t: "UL-certified fabrication", b: "Built in our Houston shop with weather-rated materials and LEDs made to take the Gulf Coast heat." },
-  { t: "Permits, handled", b: "We pull the City of Houston permits and check your landlord's sign criteria so it passes inspection the first time." },
+  { t: "Permits, handled", b: "We pull the city permits and check your landlord's sign criteria so it passes inspection the first time." },
   { t: "Licensed installation", b: "Our own crew mounts it, wires it, and cleans up. No subcontractor roulette." },
-  { t: "A 5-year warranty", b: "Materials and workmanship, lighting included. If something fails, you call us — the people who built it." },
+  { t: "A 5-year warranty", b: "Materials and workmanship, lighting included. If something fails, you call the people who built it." },
 ];
 
 const STEPS = [
-  { title: "Send us what you've got", body: "A photo of your storefront and your logo is enough to start. We'll tell you what'll work — and what the city and your landlord will let you put up." },
+  { title: "Send us what you've got", body: "A photo of your storefront and your logo is enough to start. We'll tell you what'll work, and what the city and your landlord will let you put up." },
   { title: "We mock it up", body: "You see the sign on your own building before we cut a thing. Hate it? Change it. It's just pixels at this stage." },
   { title: "We build it & permit it", body: "Fabrication starts in our shop while we handle the City paperwork. No surprise “that's not to code” after the money's spent." },
-  { title: "We put it up", body: "Our licensed crew installs it, wires it, and makes sure it passes inspection. Then it's yours — warrantied for five years." },
+  { title: "We put it up", body: "Our licensed crew installs it, wires it, and makes sure it passes inspection. Then it's yours, warrantied for five years." },
 ];
 
 const PROOF = ["UL-certified fabrication", "Our own install crew", "Permits handled in-house", "5-year warranty"];
@@ -42,12 +42,11 @@ export default function HomePage() {
     <main>
       {/* Hero */}
       <section className="relative isolate overflow-hidden bg-ink text-white">
-        <Image src={HERO_IMG} alt="Metal fabrication — grinding and welding, the kind of shop work behind a custom-built sign" fill priority sizes="100vw" className="absolute inset-0 -z-10 object-cover" />
+        <Image src={HERO_IMG} alt="Metal fabrication: grinding and welding, the kind of shop work behind a custom-built sign" fill priority sizes="100vw" className="absolute inset-0 -z-10 object-cover" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-ink/95 via-ink/90 to-ink/65" />
 
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
           <div className="stagger-in flex flex-col justify-center">
-            <p className="eyebrow mb-3 text-signal">Houston Sign Company</p>
             <h1 className="text-5xl font-bold leading-[0.98] sm:text-6xl">Custom signs, built in our Houston shop.</h1>
             <p className="mt-5 max-w-xl text-lg text-white/80">
               Channel letters, monument signs, vehicle wraps. We design them, weld and wire them ourselves,
@@ -83,7 +82,7 @@ export default function HomePage() {
           </div>
           <div>
             <p className="eyebrow text-signal-600">Who you'll talk to</p>
-            <h2 className="mt-1 text-4xl font-bold text-ink">A real sign maker picks up — not a call center.</h2>
+            <h2 className="mt-1 text-4xl font-bold text-ink">A real sign maker picks up. Not a call center.</h2>
             <p className="mt-4 text-lg leading-relaxed text-steel">
               {team.name
                 ? `Most days that's ${team.name}, our ${team.title.toLowerCase()}, who ${team.note}.`
@@ -92,7 +91,7 @@ export default function HomePage() {
               tell you straight: what'll work, what it'll run, and how fast we can get it up.
             </p>
             <p className="mt-4 text-lg leading-relaxed text-steel">
-              We're a Houston shop — the same people who quote your job design it, build it, and climb the
+              We're a Houston shop. The same people who quote your job design it, build it, and climb the
               ladder on install day. That's on purpose.
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
@@ -110,7 +109,7 @@ export default function HomePage() {
             <div>
               <p className="eyebrow text-signal-600">Straight from the shop</p>
               <h2 className="mt-1 text-4xl font-bold text-ink">See what we actually make</h2>
-              <p className="mt-2 max-w-xl text-steel">Real signs we built and installed for Houston businesses — channel letters, monument signs, cabinet signs, wraps, and more.</p>
+              <p className="mt-2 max-w-xl text-steel">Real signs we built and installed for Houston businesses: channel letters, monument signs, cabinet signs, wraps, and more.</p>
             </div>
             <Link href="/portfolio" className="group inline-flex items-center gap-1.5 font-display text-sm font-semibold uppercase tracking-wide text-signal-600 transition-colors hover:text-ink">
               See all our work
@@ -129,19 +128,52 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What you get */}
+      {/* What you get — photo-led, not a text grid: real installed work on the
+          left, a tight numbered rail on the right. */}
       <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-        <p className="eyebrow text-signal-600">No surprises</p>
-        <h2 className="mt-1 text-4xl font-bold text-ink">What you actually get</h2>
-        <p className="mt-2 max-w-xl text-steel">Every project includes the whole thing, start to finish. Here's what that means.</p>
-        <div className="mt-10 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-          {WHAT_YOU_GET.map((item, i) => (
-            <div key={item.t} className="border-t-2 border-ink pt-4">
-              <span className="font-display text-2xl font-bold text-signal-600">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="mt-1 text-xl font-semibold text-ink">{item.t}</h3>
-              <p className="mt-1.5 text-sm leading-relaxed text-steel">{item.b}</p>
+        <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_1fr] lg:gap-16">
+          <div className="relative">
+            <div className="img-outline relative aspect-[4/5] overflow-hidden rounded-sm">
+              <Image
+                src="/portfolio/copper.jpg"
+                alt="Illuminated channel letter sign we built and installed for a Houston coffee bar, lit at dusk"
+                fill
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                className="object-cover"
+              />
             </div>
-          ))}
+            <div className="img-outline absolute -bottom-8 -right-4 hidden w-[46%] overflow-hidden rounded-sm border-4 border-white shadow-lg sm:block lg:-right-10">
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src="/portfolio/clearlake.jpg"
+                  alt="Monument sign we built for a Houston medical plaza, illuminated at night"
+                  fill
+                  sizes="30vw"
+                  className="object-cover"
+                />
+              </div>
+            </div>
+            <span className="absolute left-4 top-4 bg-ink/85 px-3 py-1.5 font-display text-xs font-semibold uppercase tracking-wide text-white">
+              Built + installed by our crew
+            </span>
+          </div>
+
+          <div>
+            <p className="eyebrow text-signal-600">No surprises</p>
+            <h2 className="mt-1 text-4xl font-bold text-ink">What you actually get</h2>
+            <p className="mt-2 max-w-xl text-steel">Every project includes the whole thing, start to finish.</p>
+            <ol className="mt-8 divide-y divide-fog">
+              {WHAT_YOU_GET.map((item, i) => (
+                <li key={item.t} className="flex items-start gap-4 py-4 first:pt-0 last:pb-0">
+                  <span className="font-display text-xl font-bold leading-7 text-signal-600">{String(i + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h3 className="font-semibold text-ink">{item.t}</h3>
+                    <p className="mt-0.5 text-sm leading-relaxed text-steel">{item.b}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
         </div>
       </section>
 
@@ -155,7 +187,7 @@ export default function HomePage() {
               <p>
                 Straight answer: channel letters typically run{" "}
                 <span className="text-white">$1,500–$10,000+</span> installed, monuments{" "}
-                <span className="text-white">$6,000–$50,000+</span> — every range is published on our{" "}
+                <span className="text-white">$6,000–$50,000+</span>. Every range is published on our{" "}
                 <Link href="/pricing" className="font-semibold text-white underline underline-offset-2 hover:text-signal">
                   pricing page
                 </Link>
@@ -164,7 +196,7 @@ export default function HomePage() {
               <ul className="mt-4 space-y-2">
                 {[
                   "How big it is and how many letters",
-                  "Lit or not — and how it's lit (front-lit, halo, etc.)",
+                  "Lit or not, and how it's lit (front-lit, halo, etc.)",
                   "How it mounts to your building",
                   "Whether it needs a permit or engineering",
                 ].map((x) => (
@@ -176,7 +208,7 @@ export default function HomePage() {
               </ul>
             </div>
             <div>
-              <p>Here's how we actually do it: send a photo of your storefront and a rough size. We pull up your address, factor in permitting and installation, and email you an <span className="text-white">itemized quote — usually within one business day.</span> No “come in for a consultation,” no runaround.</p>
+              <p>Here's how we actually do it: send a photo of your storefront and a rough size. We pull up your address, factor in permitting and installation, and email you an <span className="text-white">itemized quote, usually within one business day.</span> No “come in for a consultation,” no runaround.</p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link href="/quote" className="btn btn-primary">Get My Free Quote</Link>
                 <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
@@ -191,7 +223,7 @@ export default function HomePage() {
         <h2 className="max-w-3xl text-4xl font-bold leading-tight text-ink sm:text-5xl">Most “sign companies” send the work out. We don't.</h2>
         <div className="mt-6 grid gap-6 text-lg leading-relaxed text-steel md:grid-cols-2">
           <p>A lot of shops are really just middlemen. They take your logo, email it to a wholesale factory a few states away, and show up weeks later to bolt on whatever comes off the truck.</p>
-          <p>We're an actual shop. The cutting, welding, wiring, painting, and printing all happen here in Houston — done by the same people who answer your call and climb the ladder on install day. If something's off, there's nobody to point at but us. That's the point.</p>
+          <p>We're an actual shop. The cutting, welding, wiring, painting, and printing all happen here in Houston, done by the same people who answer your call and climb the ladder on install day. If something's off, there's nobody to point at but us. That's the point.</p>
         </div>
         <div className="mt-9 flex flex-wrap gap-x-7 gap-y-3">
           {PROOF.map((p) => (
@@ -251,8 +283,8 @@ export default function HomePage() {
         <div className="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6">
           <h2 className="text-4xl font-bold text-white sm:text-5xl">Got a wall that needs a sign?</h2>
           <p className="mx-auto mt-3 max-w-xl text-white/85">
-            Send a photo and a rough size. You'll have a real quote in your inbox within one business day —
-            an actual number, not a runaround.
+            Send a photo and a rough size. You'll have a real quote in your inbox within one business
+            day. An actual number, not a runaround.
           </p>
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link href="/quote" className="btn bg-white text-signal-600 hover:bg-white/90">Get a Free Quote</Link>
@@ -260,7 +292,7 @@ export default function HomePage() {
             <TextLink className="btn btn-outline-light" label="Text Us" />
           </div>
           <p className="mt-5 text-sm font-semibold uppercase tracking-wide text-white/80">
-            We only take a handful of new installs a week — get your spot.
+            We only take a handful of new installs a week. Get your spot.
           </p>
         </div>
       </section>

@@ -24,9 +24,9 @@ const SERVICES = {
       "Custom illuminated channel letter signs in Houston, TX. Design, fabrication, permitting, and licensed installation. Free quote within one business day.",
     h1: "Channel Letter Signs in Houston, TX",
     heroSubtitle:
-      "Custom illuminated storefront lettering — designed, fabricated, permitted, and installed by one Houston team.",
+      "Custom illuminated storefront lettering, designed, fabricated, permitted, and installed by one Houston team.",
     answer:
-      "Channel letters are the 3D letters you see across the top of most storefronts — usually lit with LEDs, mounted right to the building, spelling out your name. They're the go-to storefront sign in Houston because they read clean day and night and pass most city and landlord codes. We build the whole thing ourselves: a mockup so you see it first, UL-listed fabrication in our shop, the City permits, and our own crew on install day. Most jobs are quoted in one business day, up in a few weeks, and carry a 5-year warranty.",
+      "Channel letters are the 3D letters you see across the top of most storefronts, usually lit with LEDs, mounted right to the building, spelling out your name. They're the go-to storefront sign in Houston because they read clean day and night and pass most city and landlord codes. We build the whole thing ourselves: a mockup so you see it first, UL-listed fabrication in our shop, the City permits, and our own crew on install day. Most jobs are quoted in one business day, up in a few weeks, and carry a 5-year warranty.",
     sections: [
       {
         heading: "What are channel letter signs?",
@@ -36,22 +36,22 @@ const SERVICES = {
       {
         heading: "How much do channel letters cost in Houston?",
         body:
-          "Pricing depends on letter size, lighting style, mounting method, and whether a raceway or backer is required by your landlord. Small interior-tenant sets start lower, while large illuminated exterior sets for multi-tenant centers cost more. Rather than guess, we give you a firm written quote within one business day of seeing your storefront photos or a site visit — including permit and installation costs, with no surprise fees later.",
+          "Pricing depends on letter size, lighting style, mounting method, and whether a raceway or backer is required by your landlord. Small interior-tenant sets start lower, while large illuminated exterior sets for multi-tenant centers cost more. Rather than guess, we give you a firm written quote within one business day of seeing your storefront photos or a site visit, including permit and installation costs, with no surprise fees later.",
       },
       {
         heading: "Do you handle sign permits and city code?",
         body:
-          "Yes. Houston Sign Crafters pulls the City of Houston sign permits and confirms your sign meets local code and your landlord's criteria before fabrication. Permitting trips up a lot of business owners — wrong size, wrong illumination, or missing approvals can mean a costly redo. We manage that process so your install passes inspection the first time.",
+          "Yes. Houston Sign Crafters pulls the City of Houston sign permits and confirms your sign meets local code and your landlord's criteria before fabrication. Permitting trips up a lot of business owners: wrong size, wrong illumination, or missing approvals can mean a costly redo. We manage that process so your install passes inspection the first time.",
       },
       {
         heading: "How long does a channel letter project take?",
         body:
-          "A typical project runs a few weeks from approved design to installation, depending on permit turnaround and letter size. We start with a free design mockup so you see exactly how the sign looks on your building, then move to fabrication once you approve. If you have a hard deadline — a grand opening or lease requirement — tell us and we'll tell you honestly whether we can hit it.",
+          "A typical project runs a few weeks from approved design to installation, depending on permit turnaround and letter size. We start with a free design mockup so you see exactly how the sign looks on your building, then move to fabrication once you approve. If you have a hard deadline, like a grand opening or lease requirement, tell us and we'll tell you honestly whether we can hit it.",
       },
     ],
     faqs: [
       { q: "Are channel letters illuminated?", a: "Most are. We build front-lit, reverse-lit (halo), and combination letters using energy-efficient, UL-listed LEDs. Non-illuminated dimensional letters are also available if your location doesn't allow lighting." },
-      { q: "Will my channel letters meet my landlord's sign criteria?", a: "Yes — we review your lease sign criteria and the City of Houston code before we build, so the finished sign is approved on both sides and passes inspection." },
+      { q: "Will my channel letters meet my landlord's sign criteria?", a: "Yes. We review your lease sign criteria and the City of Houston code before we build, so the finished sign is approved on both sides and passes inspection." },
       { q: "What warranty do you offer?", a: "Channel letters come with a 5-year warranty on materials and workmanship, including the LED lighting." },
       { q: "Can you match my exact brand colors?", a: "Yes. We color-match acrylic faces and vinyl to your brand standards and show you the match in the design mockup before fabrication." },
     ],
@@ -70,9 +70,9 @@ const SERVICES = {
       "Custom monument signs in Houston, TX for businesses, offices, and communities. Design, masonry, illumination, permitting, and installation. Free 1-day quote.",
     h1: "Monument Signs in Houston, TX",
     heroSubtitle:
-      "Ground-level business signage that anchors your address — built to last and to match your brand.",
+      "Ground-level business signage that anchors your address, built to last and to match your brand.",
     answer:
-      "A monument sign is the low, freestanding sign that sits at your driveway or entrance and names your business, office park, or community from the street. Unlike a tall pole sign, it sits close to the ground on a solid base — masonry, stone, aluminum, or acrylic — and can be lit for night visibility. A lot of Houston developments and HOAs require them. We design, build, permit, and install monuments end to end, color-matched to your brand and engineered for Gulf Coast wind. Send a photo and you'll have a quote in a business day.",
+      "A monument sign is the low, freestanding sign that sits at your driveway or entrance and names your business, office park, or community from the street. Unlike a tall pole sign, it sits close to the ground on a solid base (masonry, stone, aluminum, or acrylic) and can be lit for night visibility. A lot of Houston developments and HOAs require them. We design, build, permit, and install monuments end to end, color-matched to your brand and engineered for Gulf Coast wind. Send a photo and you'll have a quote in a business day.",
     sections: [
       {
         heading: "What is a monument sign?",
@@ -87,7 +87,7 @@ const SERVICES = {
       {
         heading: "Can monument signs be illuminated?",
         body:
-          "Yes. We offer internally illuminated faces, external (ground or gooseneck) lighting, and push-through acrylic lettering for a premium nighttime look. Illumination keeps your address visible after dark — important for restaurants, medical offices, and any business with evening hours.",
+          "Yes. We offer internally illuminated faces, external (ground or gooseneck) lighting, and push-through acrylic lettering for a premium nighttime look. Illumination keeps your address visible after dark, important for restaurants, medical offices, and any business with evening hours.",
       },
       {
         heading: "Do you handle permits and engineering?",
@@ -96,9 +96,9 @@ const SERVICES = {
       },
     ],
     faqs: [
-      { q: "How long does a monument sign take to build?", a: "Monument signs take longer than wall signs because of the base construction and permitting — typically several weeks. We give you a realistic timeline with your quote." },
+      { q: "How long does a monument sign take to build?", a: "Monument signs take longer than wall signs because of the base construction and permitting, typically several weeks. We give you a realistic timeline with your quote." },
       { q: "Can you add changeable or digital message panels?", a: "Yes. We build monuments with manual changeable-copy tracks or programmable LED message centers, depending on your needs and local code." },
-      { q: "Will it match my building and brand?", a: "Yes — we match masonry, colors, and finishes to your building and brand, and show it in a design mockup before construction." },
+      { q: "Will it match my building and brand?", a: "Yes. We match masonry, colors, and finishes to your building and brand, and show it in a design mockup before construction." },
       { q: "Do you replace or reface existing monument signs?", a: "We do. If your base is sound, refacing the sign panel is a cost-effective way to rebrand without rebuilding the whole monument." },
     ],
     related: ["channel-letters", "wall-graphics", "vehicle-wraps"],
@@ -116,9 +116,9 @@ const SERVICES = {
       "Custom vehicle wraps in Houston, TX for cars, trucks, vans, and fleets. Design, premium vinyl, and professional installation. Free quote within one business day.",
     h1: "Vehicle Wraps in Houston, TX",
     heroSubtitle:
-      "Turn your car, truck, or fleet into a moving billboard — designed and installed by Houston pros.",
+      "Turn your car, truck, or fleet into a moving billboard, designed and installed by Houston pros.",
     answer:
-      "A vehicle wrap is printed vinyl laid over your car, van, truck, or whole fleet to turn it into rolling advertising. It's about the cheapest advertising there is per set of eyes — one wrapped van gets seen by thousands of Houston drivers a day — and it protects your factory paint, peeling off clean when you're done. We design it, print on premium cast vinyl, and install it tight with no bubbles or lifting. Full wraps, partial wraps, or simple lettering — quoted in one business day.",
+      "A vehicle wrap is printed vinyl laid over your car, van, truck, or whole fleet to turn it into rolling advertising. It's about the cheapest advertising there is per set of eyes: one wrapped van gets seen by thousands of Houston drivers a day. It also protects your factory paint, peeling off clean when you're done. We design it, print on premium cast vinyl, and install it tight with no bubbles or lifting. Full wraps, partial wraps, or simple lettering. Quoted in one business day.",
     sections: [
       {
         heading: "What is a vehicle wrap?",
@@ -133,7 +133,7 @@ const SERVICES = {
       {
         heading: "Will a wrap damage my paint?",
         body:
-          "No — when installed and removed correctly on factory paint in good condition, quality wrap vinyl protects the surface underneath and comes off cleanly. It actually shields your original paint from UV and minor abrasion during the years it's on the vehicle.",
+          "No. When installed and removed correctly on factory paint in good condition, quality wrap vinyl protects the surface underneath and comes off cleanly. It actually shields your original paint from UV and minor abrasion during the years it's on the vehicle.",
       },
       {
         heading: "How long do vehicle wraps last?",
@@ -164,12 +164,12 @@ const SERVICES = {
     heroSubtitle:
       "Branded interiors, logo walls, and window graphics that turn blank space into marketing.",
     answer:
-      "Wall graphics are large printed or cut vinyl applied to interior or exterior walls, windows, and floors to brand a space — a logo wall in the lobby, big graphics in a gym or office, product displays in retail, promos on a storefront window. They go up fast, cost a fraction of a painted mural, and peel off without repainting when you want a change. We design and install interior and exterior graphics, murals, and window film across Houston, and get a quote back to you in one business day.",
+      "Wall graphics are large printed or cut vinyl applied to interior or exterior walls, windows, and floors to brand a space: a logo wall in the lobby, big graphics in a gym or office, product displays in retail, promos on a storefront window. They go up fast, cost a fraction of a painted mural, and peel off without repainting when you want a change. We design and install interior and exterior graphics, murals, and window film across Houston, and get a quote back to you in one business day.",
     sections: [
       {
         heading: "What are wall graphics?",
         body:
-          "Wall graphics are adhesive vinyl prints or cut-vinyl designs applied directly to a surface — drywall, brick, glass, or floors. They range from a single cut-vinyl logo behind a reception desk to full-wall printed murals and environmental graphics that wrap an entire room. Specialty films let you frost windows, create privacy, or print on textured surfaces.",
+          "Wall graphics are adhesive vinyl prints or cut-vinyl designs applied directly to a surface: drywall, brick, glass, or floors. They range from a single cut-vinyl logo behind a reception desk to full-wall printed murals and environmental graphics that wrap an entire room. Specialty films let you frost windows, create privacy, or print on textured surfaces.",
       },
       {
         heading: "Where do businesses use wall and window graphics?",
@@ -189,7 +189,7 @@ const SERVICES = {
     ],
     faqs: [
       { q: "Can you print large murals in one piece?", a: "We print in panels sized to your wall and install them seamlessly, so even room-sized murals look like a single continuous graphic." },
-      { q: "Do you do frosted or privacy window film?", a: "Yes — we install frosted, etched-look, and printed window films for privacy, branding, and storefront promotions." },
+      { q: "Do you do frosted or privacy window film?", a: "Yes. We install frosted, etched-look, and printed window films for privacy, branding, and storefront promotions." },
       { q: "How long do interior graphics last?", a: "Interior graphics typically last for years; exterior graphics use weather-rated, laminated materials for outdoor durability." },
       { q: "Can you match my brand colors and fonts?", a: "Yes. We work from your brand guidelines or existing logo files and color-match to your standards." },
     ],
@@ -205,12 +205,12 @@ const SERVICES = {
     img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=75",
     metaTitle: "Interior Signs in Houston, TX | Lobby, Office & Acrylic Signs",
     metaDescription:
-      "Custom interior signs in Houston, TX — lobby and reception logo signs, office and suite signage, ADA and wayfinding. In-house design and installation. Free 1-day quote.",
+      "Custom interior signs in Houston, TX: lobby and reception logo signs, office and suite signage, ADA and wayfinding. In-house design and installation. Free 1-day quote.",
     h1: "Interior Signs in Houston, TX",
     heroSubtitle:
-      "Lobby logo signs, office and suite signage, ADA and wayfinding — a polished, on-brand interior.",
+      "Lobby logo signs, office and suite signage, ADA and wayfinding. A polished, on-brand interior.",
     answer:
-      "Interior signs are everything inside your space — the reception logo wall, dimensional letters, acrylic and metal wall signs, suite and office plaques, ADA room signs, wayfinding, hours on the door. They make a space feel finished and tell people they're in the right place. We design, build, and install the whole interior package for offices, medical and dental practices, retail, restaurants, and gyms — color-matched to your brand and mounted clean. Quote's back in a business day.",
+      "Interior signs are everything inside your space: the reception logo wall, dimensional letters, acrylic and metal wall signs, suite and office plaques, ADA room signs, wayfinding, hours on the door. They make a space feel finished and tell people they're in the right place. We design, build, and install the whole interior package for offices, medical and dental practices, retail, restaurants, and gyms, color-matched to your brand and mounted clean. Quote's back in a business day.",
     sections: [
       {
         heading: "What are interior signs?",
@@ -220,12 +220,12 @@ const SERVICES = {
       {
         heading: "Do you make ADA-compliant signs?",
         body:
-          "Yes. We produce ADA-compliant room and wayfinding signs with the required raised characters, braille, and contrast — important for permanent rooms and spaces in commercial buildings. We make sure restroom, exit, suite, and room signs meet accessibility requirements while still matching your brand.",
+          "Yes. We produce ADA-compliant room and wayfinding signs with the required raised characters, braille, and contrast, important for permanent rooms and spaces in commercial buildings. We make sure restroom, exit, suite, and room signs meet accessibility requirements while still matching your brand.",
       },
       {
         heading: "What materials do interior signs use?",
         body:
-          "Common choices include brushed or painted acrylic, dimensional PVC or metal letters, frosted and printed acrylic panels, and vinyl graphics. We match finishes and colors to your brand and your space — a law office, a medical lobby, and a fitness studio each call for a different look, and we'll recommend what fits.",
+          "Common choices include brushed or painted acrylic, dimensional PVC or metal letters, frosted and printed acrylic panels, and vinyl graphics. We match finishes and colors to your brand and your space. A law office, a medical lobby, and a fitness studio each call for a different look, and we'll recommend what fits.",
       },
       {
         heading: "Can you brand our whole office?",
@@ -234,10 +234,10 @@ const SERVICES = {
       },
     ],
     faqs: [
-      { q: "Do you make lobby and reception logo signs?", a: "Yes — dimensional letters, acrylic standoff signs, and backlit logo signs for reception and lobby walls are some of our most popular interior pieces." },
+      { q: "Do you make lobby and reception logo signs?", a: "Yes. Dimensional letters, acrylic standoff signs, and backlit logo signs for reception and lobby walls are some of our most popular interior pieces." },
       { q: "Are your room signs ADA-compliant?", a: "Yes. We produce ADA-compliant signage with raised characters, braille, and proper contrast for restrooms, suites, and permanent rooms." },
       { q: "Can interior signs match our brand exactly?", a: "Yes. We color-match to your brand standards and show you a mockup before fabrication." },
-      { q: "Do you install, or just fabricate?", a: "Both — we design, fabricate, and install interior signage, and can coordinate a full-office rollout on your schedule." },
+      { q: "Do you install, or just fabricate?", a: "Both. We design, fabricate, and install interior signage, and can coordinate a full-office rollout on your schedule." },
     ],
     related: ["wall-graphics", "channel-letters", "monument-signs"],
   },
@@ -254,9 +254,9 @@ const SERVICES = {
       "Custom vinyl banners in Houston, TX for events, grand openings, and promotions. Durable printing, fast turnaround, rush options. Free quote within one business day.",
     h1: "Custom Banners in Houston, TX",
     heroSubtitle:
-      "Durable, vivid banners for grand openings, events, and promotions — with rush options when you're on a deadline.",
+      "Durable, vivid banners for grand openings, events, and promotions, with rush options when you're on a deadline.",
     answer:
-      "Banners are the fastest, cheapest way to get a big message up — grand openings, events, sales, construction sites, seasonal promos, indoors or out. We print full-color on heavy 13oz+ vinyl (or mesh for windy spots), then hem and grommet them so they're ready to hang. On a deadline? Tell us the date — banners are one of our quickest jobs and we run rush when we can. Most are quoted the same or next business day.",
+      "Banners are the fastest, cheapest way to get a big message up: grand openings, events, sales, construction sites, seasonal promos, indoors or out. We print full-color on heavy 13oz+ vinyl (or mesh for windy spots), then hem and grommet them so they're ready to hang. On a deadline? Tell us the date. Banners are one of our quickest jobs and we run rush when we can. Most are quoted the same or next business day.",
     sections: [
       {
         heading: "What kinds of banners do you print?",
@@ -266,7 +266,7 @@ const SERVICES = {
       {
         heading: "How fast can I get a banner in Houston?",
         body:
-          "Banners are one of our fastest products. When you're up against a grand opening, sale, or event date, tell us your deadline — we offer rush production and will tell you honestly what's achievable. Most standard banners are quoted within one business day.",
+          "Banners are one of our fastest products. When you're up against a grand opening, sale, or event date, tell us your deadline. We offer rush production and will tell you honestly what's achievable. Most standard banners are quoted within one business day.",
       },
       {
         heading: "Are your banners durable outdoors?",
@@ -276,12 +276,12 @@ const SERVICES = {
       {
         heading: "Can you design the banner for me?",
         body:
-          "Yes. Our designers lay out your banner for maximum readability from a distance, using your logo and brand colors, and send a proof for approval before printing. Big, clear, and legible — not cluttered.",
+          "Yes. Our designers lay out your banner for maximum readability from a distance, using your logo and brand colors, and send a proof for approval before printing. Big, clear, and legible, not cluttered.",
       },
     ],
     faqs: [
       { q: "What's the largest banner you can make?", a: "We produce everything from small indoor banners to large building-side banners, printing in seamed panels for oversized jobs." },
-      { q: "Do banners come ready to hang?", a: "Yes — standard banners include reinforced hems and grommets. We can also add pole pockets or wind slits on request." },
+      { q: "Do banners come ready to hang?", a: "Yes. Standard banners include reinforced hems and grommets. We can also add pole pockets or wind slits on request." },
       { q: "Can you do trade-show retractable banners?", a: "Yes. We make retractable banner stands and step-and-repeat backdrops that set up in seconds and travel easily." },
       { q: "Do you offer rush printing?", a: "We do. Share your deadline up front and we'll confirm whether rush production can meet it." },
     ],
@@ -297,12 +297,12 @@ const SERVICES = {
     img: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&q=75",
     metaTitle: "Wedding & Event Signage in Houston, TX | Custom Event Signs",
     metaDescription:
-      "Custom wedding and event signage in Houston, TX — welcome signs, seating charts, neon-look signs, and backdrops. Beautiful, fast, and stress-free. Free 1-day quote.",
+      "Custom wedding and event signage in Houston, TX: welcome signs, seating charts, neon-look signs, and backdrops. Beautiful, fast, and stress-free. Free 1-day quote.",
     h1: "Wedding & Event Signage in Houston, TX",
     heroSubtitle:
-      "Welcome signs, seating charts, custom neon, and backdrops — beautiful event signage, even on a tight timeline.",
+      "Welcome signs, seating charts, custom neon, and backdrops. Beautiful event signage, even on a tight timeline.",
     answer:
-      "Wedding and event signs are the pieces that guide and wow your guests — welcome signs, seating charts, table numbers, directionals, bar menus, custom faux-neon, and big step-and-repeat backdrops for photos. We make them in acrylic, mirror, foam board, vinyl, and LED faux-neon, matched to your colors and theme. Tight timeline? We handle a lot of last-minute event work, so if your date's close, reach out — we can usually still help. Every piece is quoted in one business day.",
+      "Wedding and event signs are the pieces that guide and wow your guests: welcome signs, seating charts, table numbers, directionals, bar menus, custom faux-neon, and big step-and-repeat backdrops for photos. We make them in acrylic, mirror, foam board, vinyl, and LED faux-neon, matched to your colors and theme. Tight timeline? We handle a lot of last-minute event work, so if your date's close, reach out. We can usually still help. Every piece is quoted in one business day.",
     sections: [
       {
         heading: "What wedding signs do you make?",
@@ -312,7 +312,7 @@ const SERVICES = {
       {
         heading: "Can you produce event signage on short notice?",
         body:
-          "Often, yes. Event timelines are tight and things change — we're set up to handle rush and last-minute requests. Tell us your event date when you reach out and we'll tell you honestly what we can deliver in time.",
+          "Often, yes. Event timelines are tight and things change. We're set up to handle rush and last-minute requests. Tell us your event date when you reach out and we'll tell you honestly what we can deliver in time.",
       },
       {
         heading: "What materials and styles are available?",
@@ -326,9 +326,9 @@ const SERVICES = {
       },
     ],
     faqs: [
-      { q: "Do you make custom neon signs for weddings?", a: "Yes — we build LED faux-neon signs with your names, initials, or a custom phrase, in your choice of color. They're safe, lightweight, and reusable." },
+      { q: "Do you make custom neon signs for weddings?", a: "Yes. We build LED faux-neon signs with your names, initials, or a custom phrase, in your choice of color. They're safe, lightweight, and reusable." },
       { q: "Can you match my wedding colors and invitations?", a: "Absolutely. We coordinate fonts, colors, and finishes to your invitation suite and décor and proof everything before production." },
-      { q: "How early should I order wedding signage?", a: "Earlier is better, but we specialize in tight timelines — reach out with your date and we'll let you know what's possible." },
+      { q: "How early should I order wedding signage?", a: "Earlier is better, but we specialize in tight timelines. Reach out with your date and we'll let you know what's possible." },
       { q: "Do you offer backdrops for photos?", a: "Yes. We produce step-and-repeat backdrops and large statement signs perfect for photos and social sharing." },
     ],
     related: ["custom-banners", "wall-graphics", "channel-letters"],

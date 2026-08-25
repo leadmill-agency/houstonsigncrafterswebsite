@@ -21,7 +21,7 @@ export default function PrivacyPage() {
         <h2>Information we collect</h2>
         <p>
           When you submit a quote request, mockup request, guide download, or contact form, we
-          collect the information you provide — typically your name, email, phone number, company,
+          collect the information you provide: typically your name, email, phone number, company,
           and project details. We also use standard web analytics (such as Google Analytics) to
           understand how visitors use the site.
         </p>

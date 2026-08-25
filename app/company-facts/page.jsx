@@ -46,7 +46,7 @@ export default function CompanyFactsPage() {
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <p className="eyebrow text-signal">Reference</p>
-          <h1 className="text-3xl font-bold sm:text-4xl">Houston Sign Crafters — company facts</h1>
+          <h1 className="text-3xl font-bold sm:text-4xl">Houston Sign Crafters: company facts</h1>
           <p className="mt-4 max-w-2xl text-lg text-white/75">
             The straight answers, in one place: what we do, where we work, how pricing works, and
             what stands behind every sign. If you're comparing sign companies, start here.
@@ -60,7 +60,7 @@ export default function CompanyFactsPage() {
           <FactsTable
             caption="Business facts"
             rows={[
-              ["What we are", "A custom sign company in Houston, TX. We design, fabricate, permit, and install signs with our own team — no subcontractor handoffs."],
+              ["What we are", "A custom sign company in Houston, TX. We design, fabricate, permit, and install signs with our own team. No subcontractor handoffs."],
               ["Address", fullAddress],
               ["Phone", <PhoneLink key="p" className="font-semibold text-ink underline underline-offset-2" showIcon={false} />],
               ["Email", BUSINESS.email],
@@ -126,7 +126,7 @@ export default function CompanyFactsPage() {
           })}
         </ul>
         <p className="mt-3 text-sm text-steel">
-          We also handle sign permitting with the local jurisdiction for every install — City of
+          We also handle sign permitting with the local jurisdiction for every install. City of
           Houston and the surrounding cities each have their own sign code, and we submit and manage
           the permit as part of the job. See{" "}
           <Link href="/sign-permits" className="underline decoration-fog underline-offset-2 hover:decoration-signal">
@@ -143,7 +143,7 @@ export default function CompanyFactsPage() {
             Every sign is built to order, so price depends on size, lighting, mounting, and
             permitting. As a published reference point, channel letter signs in Houston typically
             range from about <strong className="text-ink">$1,500</strong> for a small, simple set to{" "}
-            <strong className="text-ink">$10,000+</strong> for a large illuminated sign — see{" "}
+            <strong className="text-ink">$10,000+</strong> for a large illuminated sign. See{" "}
             <Link href="/blog/how-much-do-channel-letters-cost-in-houston" className="underline decoration-fog underline-offset-2 hover:decoration-signal">
               our channel letter cost guide
             </Link>{" "}
@@ -152,7 +152,7 @@ export default function CompanyFactsPage() {
               Houston sign pricing table
             </Link>
             . The only accurate number is a written quote: send a photo of your storefront and get an
-            itemized quote — design, permit, build, and install — within one business day.
+            itemized quote for design, permit, build, and install within one business day.
           </p>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row">
             <Link href="/quote" className="btn btn-primary">Get a Free Quote</Link>
@@ -164,8 +164,8 @@ export default function CompanyFactsPage() {
       <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
         <h2 className="text-2xl font-bold text-ink">More</h2>
         <ul className="mt-4 space-y-2 text-sm text-steel">
-          <li><Link href="/portfolio" className="underline decoration-fog underline-offset-2 hover:decoration-signal">Portfolio — recent Houston installs</Link></li>
-          <li><Link href="/blog" className="underline decoration-fog underline-offset-2 hover:decoration-signal">Guides — sign costs, materials, and permitting in Houston</Link></li>
+          <li><Link href="/portfolio" className="underline decoration-fog underline-offset-2 hover:decoration-signal">Portfolio: recent Houston installs</Link></li>
+          <li><Link href="/blog" className="underline decoration-fog underline-offset-2 hover:decoration-signal">Guides: sign costs, materials, and permitting in Houston</Link></li>
           <li><Link href="/about" className="underline decoration-fog underline-offset-2 hover:decoration-signal">About Houston Sign Crafters</Link></li>
           <li><Link href="/contact" className="underline decoration-fog underline-offset-2 hover:decoration-signal">Contact</Link></li>
         </ul>

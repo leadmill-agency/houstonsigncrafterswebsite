@@ -9,9 +9,9 @@ import Faq from "@/components/Faq";
 // server-rendered — built to be quoted by people and AI assistants alike.
 
 export const metadata = {
-  title: "Sign Prices in Houston — Real Ranges",
+  title: "Sign Prices in Houston: Real Ranges",
   description:
-    "What signs actually cost in Houston: channel letters $1,500–$10,000+, monument signs $6,000–$50,000+, vehicle wraps, wall graphics, interior signs, and banners — real ranges and timelines from a Houston sign shop.",
+    "What signs actually cost in Houston: channel letters $1,500–$10,000+, monument signs $6,000–$50,000+, vehicle wraps, wall graphics, interior signs, and banners. Real ranges and timelines from a Houston sign shop.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -22,17 +22,15 @@ const PRICING_FAQS = [
   },
   {
     q: "What's included in your quote?",
-    a: "Everything: design, materials, fabrication, the permit, and installation by our own crew — itemized, in writing, within one business day. No surprise line items later.",
+    a: "Everything: design, materials, fabrication, the permit, and installation by our own crew. Itemized, in writing, within one business day. No surprise line items later.",
   },
   {
     q: "Do timelines include the permit?",
-    a: "Timelines shown are typical production and installation once design and permit are approved. Permit review time varies by jurisdiction — we handle the submission and keep you posted either way.",
+    a: "Timelines shown are typical production and installation once design and permit are approved. Permit review time varies by jurisdiction. We handle the submission and keep you posted either way.",
   },
   {
-    q: "Is there really a $400 offer?",
-    a: BUSINESS.offer?.label
-      ? `Yes — ${BUSINESS.offer.label}, ${BUSINESS.offer.detail}.`
-      : "Ask about current offers when you request your quote.",
+    q: "Do prices include installation?",
+    a: "Yes. Every range on this page is the installed price: design, materials, fabrication, permit, and installation by our own crew. The written quote breaks each of those out.",
   },
 ];
 
@@ -44,8 +42,8 @@ export default function PricingPage() {
           <p className="eyebrow text-signal">Straight answers</p>
           <h1 className="text-3xl font-bold sm:text-4xl">What a sign costs in Houston</h1>
           <p className="mt-4 max-w-2xl text-lg text-white/75">
-            Most sign companies won't publish numbers. Here are our real ranges — installed, in
-            Houston — and what moves a project inside them.
+            Most sign companies won't publish numbers. Here are our real ranges, installed, in
+            Houston, and what moves a project inside them.
           </p>
         </div>
       </section>
@@ -55,7 +53,7 @@ export default function PricingPage() {
           <p>
             In Houston, channel letter signs typically run $1,500 to $10,000+, monument signs
             $6,000 to $50,000+, vehicle wraps $200 to $10,000, wall graphics $1,000 to $15,000,
-            interior signs $200 to $10,000+, and banners $30 to $1,000 — installed. Size,
+            interior signs $200 to $10,000+, and banners $30 to $1,000, installed. Size,
             lighting, mounting, and permitting set where a project lands; every quote is itemized
             and free within one business day.
           </p>
@@ -93,7 +91,7 @@ export default function PricingPage() {
         </div>
         <p className="mt-3 text-xs text-steel">
           *Typical production + installation once design and permit are approved. Permit review
-          varies by jurisdiction — we handle it as part of every job.
+          varies by jurisdiction. We handle it as part of every job.
         </p>
       </section>
 
@@ -102,9 +100,9 @@ export default function PricingPage() {
           <h2 className="text-2xl font-bold text-ink">The four things that set your price</h2>
           <div className="mt-6 grid gap-x-10 gap-y-6 sm:grid-cols-2">
             {[
-              ["Size", "Bigger letters, taller monuments, longer walls — more material, more engineering."],
+              ["Size", "Bigger letters, taller monuments, longer walls mean more material and more engineering."],
               ["Lighting", "Front-lit, halo-lit, or combination LED changes fabrication and electrical scope."],
-              ["Mounting", "Flush to brick, raceway, wireway, or a ground foundation — each installs differently."],
+              ["Mounting", "Flush to brick, raceway, wireway, or a ground foundation. Each installs differently."],
               ["Permitting", "City permits, landlord criteria, and engineering letters where the sign needs them."],
             ].map(([t, b], i) => (
               <div key={t} className="border-t-2 border-ink pt-3">
@@ -128,7 +126,7 @@ export default function PricingPage() {
         <div className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-6">
           <h2 className="text-3xl font-bold text-white">Want the exact number?</h2>
           <p className="mx-auto mt-3 max-w-xl text-white/85">
-            Send a photo of your storefront and a rough size — you'll have an itemized, written
+            Send a photo of your storefront and a rough size and you'll have an itemized, written
             quote within one business day. Design, permit, build, and install included.
           </p>
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">

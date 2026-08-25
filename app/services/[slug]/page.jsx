@@ -128,7 +128,7 @@ export default async function ServicePage({ params }) {
 
       {/* FAQ */}
       <section className="px-4 pb-14 sm:px-6">
-        <Faq items={s.faqs} heading={`${s.shortName} — frequently asked questions`} />
+        <Faq items={s.faqs} heading={`${s.shortName}: frequently asked questions`} />
       </section>
 
       {/* Related services */}

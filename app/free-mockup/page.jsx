@@ -1,9 +1,9 @@
 import LeadForm from "@/components/LeadForm";
 
 export const metadata = {
-  title: "Free Sign Design Mockup — See Your Sign Before You Buy",
+  title: "Free Sign Design Mockup: See Your Sign Before You Buy",
   description:
-    "Get a free design mockup of your custom sign on your own building or vehicle. No obligation. Houston Sign Crafters — design, permitting, and installation in-house.",
+    "Get a free design mockup of your custom sign on your own building or vehicle. No obligation. Houston Sign Crafters handles design, permitting, and installation in-house.",
   alternates: { canonical: "/free-mockup" },
 };
 
@@ -43,7 +43,7 @@ export default function FreeMockupPage() {
             </ol>
             <div className="mt-8 flex items-start gap-3 rounded-sm border border-fog bg-cloud p-4 text-sm text-steel">
               <span className="mt-[7px] h-2 w-2 flex-shrink-0 bg-signal" aria-hidden="true" />
-              Free and no obligation — you only move forward if you love the design.
+              Free and no obligation. You only move forward if you love the design.
             </div>
           </div>
 

@@ -2,28 +2,28 @@
 title: "Do You Need a Permit for a Business Sign in Houston?"
 slug: houston-business-sign-permits
 date: "2026-06-18"
-description: "A plain-English guide to Houston business sign permits — which signs need one, what the city checks, and how to avoid a costly redo."
+description: "A plain-English guide to Houston business sign permits: which signs need one, what the city checks, and how to avoid a costly redo."
 author: Houston Sign Crafters
 category: Permitting
 keywords: ["houston sign permit", "business sign permit houston", "channel letter permit houston"]
 ---
 
-<div class="answer-block"><p>Yes — most permanent business signs in Houston require a permit, including channel letters, monument signs, and most illuminated signage. The review checks size, height, illumination, placement, and structural/electrical safety, and your landlord's sign criteria apply on top of city rules. Getting it wrong can mean fines, forced removal, and paying for the sign twice — so approvals come before fabrication, not after.</p></div>
+<div class="answer-block"><p>Yes. Most permanent business signs in Houston require a permit, including channel letters, monument signs, and most illuminated signage. The review checks size, height, illumination, placement, and structural/electrical safety, and your landlord's sign criteria apply on top of city rules. Getting it wrong can mean fines, forced removal, and paying for the sign twice, so approvals come before fabrication, not after.</p></div>
 
 A sign that's the wrong size, too bright, or installed without approval is one of the most expensive mistakes a business owner can make. This guide walks through what actually needs a permit, what the city looks at, and how to get approved the first time.
 
 ## Which signs need a permit in Houston?
 
-As a general rule, **permanent signs attached to a building or mounted on the ground need a permit** — this includes channel letters, monument signs, pylon signs, and most illuminated signage. Temporary signs like banners may have separate, time-limited rules. Small window graphics and some interior signs often don't require a permit, but it's worth confirming before you order.
+As a general rule, **permanent signs attached to a building or mounted on the ground need a permit**. This includes channel letters, monument signs, pylon signs, and most illuminated signage. Temporary signs like banners may have separate, time-limited rules. Small window graphics and some interior signs often don't require a permit, but it's worth confirming before you order.
 
-The safest approach: assume a permanent exterior sign needs a permit until proven otherwise, and verify before fabrication — not after.
+The safest approach: assume a permanent exterior sign needs a permit until proven otherwise, and verify before fabrication, not after.
 
 ## What does the city check?
 
 When you apply for a sign permit, the review typically looks at:
 
 - **Size and height** relative to your building frontage and the road
-- **Illumination** — whether and how the sign is lit
+- **Illumination**: whether and how the sign is lit
 - **Placement and setback** from property lines and right-of-way
 - **Structural and electrical safety**, especially for larger or lit signs
 
@@ -38,8 +38,8 @@ The business owners who get tripped up usually order a sign first and deal with 
 3. **Get a permit-ready drawing** that documents dimensions and mounting.
 4. **Submit and get approval** before fabrication starts.
 
-At [Houston Sign Crafters](/services/channel-letters), we handle this for you — we review your lease criteria, confirm city code, pull the permit, and only then build and install. It's the difference between a sign that goes up cleanly and one you pay for twice.
+At [Houston Sign Crafters](/services/channel-letters), we handle this for you: we review your lease criteria, confirm city code, pull the permit, and only then build and install. It's the difference between a sign that goes up cleanly and one you pay for twice.
 
-Outside the Houston city limits? Every suburb runs this differently — see our jurisdiction-by-jurisdiction breakdown: [who issues sign permits in Houston, Katy, Sugar Land, The Woodlands, Pearland, Pasadena, and unincorporated Harris County](/sign-permits).
+Outside the Houston city limits? Every suburb runs this differently. See our jurisdiction-by-jurisdiction breakdown: [who issues sign permits in Houston, Katy, Sugar Land, The Woodlands, Pearland, Pasadena, and unincorporated Harris County](/sign-permits).
 
 Want it on paper? Download our free [Houston Sign Permitting Checklist](/guides/sign-permitting-checklist), or [get a free quote](/quote) and we'll handle the permitting as part of your project.

@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 export const metadata = {
   title: "Service Areas",
   description:
-    "Houston Sign Crafters serves Houston and surrounding communities including Katy, Sugar Land, The Woodlands, and more — with in-house design, permitting, and installation.",
+    "Houston Sign Crafters serves Houston and surrounding communities including Katy, Sugar Land, The Woodlands, and more, with in-house design, permitting, and installation.",
   alternates: { canonical: "/locations" },
 };
 
@@ -40,7 +40,7 @@ export default function LocationsHub() {
 
         <div className="mt-10 rounded-sm border border-fog bg-cloud p-6">
           <h3 className="font-semibold text-ink">Also serving</h3>
-          <p className="mt-2 text-sm text-steel">{SERVICE_AREAS.join(" · ")} — and nearby communities. Don't see your area? <Link href="/contact" className="font-medium text-signal-600">Get in touch</Link> — we likely cover it.</p>
+          <p className="mt-2 text-sm text-steel">{SERVICE_AREAS.join(" · ")}, plus nearby communities. Don't see your area? <Link href="/contact" className="font-medium text-signal-600">Get in touch</Link>. We likely cover it.</p>
         </div>
       </section>
 

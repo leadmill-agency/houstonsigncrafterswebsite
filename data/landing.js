@@ -11,32 +11,32 @@
 const LANDING = {
   "houston-signs": {
     slug: "houston-signs",
-    metaTitle: "Custom Storefront Signs in Houston — $400 Off | Houston Sign Crafters",
+    metaTitle: "Custom Storefront Signs in Houston: $400 Off | Houston Sign Crafters",
     metaDescription:
-      "Get $400 off a lighted storefront sign in Houston. Channel letters, monument signs, and more — designed, built, permitted, and installed in-house. Free quote in 1 business day.",
+      "Get $400 off a lighted storefront sign in Houston. Channel letters, monument signs, and more. Designed, built, permitted, and installed in-house. Free quote in 1 business day.",
     eyebrow: "Houston Sign Company",
     headline: "Custom storefront signs, built in Houston.",
     subhead:
-      "Channel letters, monument signs, vehicle wraps — designed, fabricated, permitted, and installed by one local crew. Get a free quote in one business day.",
+      "Channel letters, monument signs, vehicle wraps. Designed, fabricated, permitted, and installed by one local crew. Get a free quote in one business day.",
     heroImage: "/portfolio/clearlake.jpg",
     bullets: [
       "In-house design, fabrication & licensed install",
       "City permits handled for you",
       "UL-certified, backed by a 5-year warranty",
-      "Free design mockup — see it before you pay",
+      "Free design mockup: see it before you pay",
     ],
     formKind: "quote",
     cta: "Get My Free Quote",
   },
   "channel-letters-houston": {
     slug: "channel-letters-houston",
-    metaTitle: "Channel Letter Signs in Houston — $400 Off | Houston Sign Crafters",
+    metaTitle: "Channel Letter Signs in Houston: $400 Off | Houston Sign Crafters",
     metaDescription:
       "Illuminated channel letter signs for your Houston storefront, $400 off. Built and installed in-house with permits handled. Free quote within one business day.",
     eyebrow: "Houston Storefront Signs",
     headline: "Illuminated channel letters for your storefront.",
     subhead:
-      "UL-listed LED channel letters — designed, built, permitted, and installed by one Houston team. Free quote in one business day.",
+      "UL-listed LED channel letters. Designed, built, permitted, and installed by one Houston team. Free quote in one business day.",
     heroImage: "/portfolio/jys.jpg",
     bullets: [
       "UL-listed LED channel letters built for the Houston climate",
@@ -50,16 +50,16 @@ const LANDING = {
     slug: "vehicle-wraps-houston",
     metaTitle: "Vehicle Wraps in Houston | Houston Sign Crafters",
     metaDescription:
-      "Custom car, truck, van, and fleet wraps in Houston — designed and installed on premium cast vinyl. Free quote within one business day.",
+      "Custom car, truck, van, and fleet wraps in Houston, designed and installed on premium cast vinyl. Free quote within one business day.",
     eyebrow: "Houston Vehicle Wraps",
     headline: "Turn your vehicle into a 24/7 billboard.",
     subhead:
-      "Premium car, truck, van, and fleet wraps — designed and installed in Houston. Thousands of impressions a day for one flat cost.",
+      "Premium car, truck, van, and fleet wraps, designed and installed in Houston. Thousands of impressions a day for one flat cost.",
     heroImage: "/portfolio/slickcity.jpg",
     bullets: [
       "Full wraps, partial wraps, and cut-vinyl lettering",
       "Premium cast vinyl rated for years in the Texas sun",
-      "Single vehicles and full fleets — scheduled to limit downtime",
+      "Single vehicles and full fleets, scheduled to limit downtime",
     ],
     formKind: "quote",
     cta: "Get My Free Quote",

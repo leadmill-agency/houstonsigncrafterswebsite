@@ -74,7 +74,7 @@ export default function LeadForm({
         <textarea
           name="message"
           rows={4}
-          placeholder="What kind of sign, rough size, and where it's going — anything helps."
+          placeholder="What kind of sign, rough size, and where it's going. Anything helps."
           className="field w-full resize-y rounded-sm border border-fog px-3 py-2 text-sm text-carbon"
         />
       </div>

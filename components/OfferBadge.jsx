@@ -15,7 +15,7 @@ export default function OfferBadge({ tone = "light", className = "" }) {
     >
       <span className="bg-signal px-1.5 py-0.5 font-display text-[11px] font-bold uppercase tracking-wide text-white">Offer</span>
       <span>
-        {offer.label} <span className="font-normal opacity-80">— {offer.detail}</span>
+        {offer.label} <span className="font-normal opacity-80">· {offer.detail}</span>
       </span>
     </Link>
   );
