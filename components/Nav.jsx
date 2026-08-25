@@ -25,6 +25,27 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-50">
+      {/* Contact topbar — phone always, email from sm up. */}
+      <div className="bg-ink text-white">
+        <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-1.5 text-[13px] sm:gap-3 sm:px-6">
+          <span className="text-white/60">Call us now:</span>
+          <a
+            href={BUSINESS.phoneHref}
+            onClick={() => trackEvent("phone_click", { event_label: "topbar" })}
+            className="font-semibold text-signal transition-colors hover:text-white"
+          >
+            {BUSINESS.phone}
+          </a>
+          <span className="hidden text-white/30 sm:inline" aria-hidden="true">|</span>
+          <span className="hidden text-white/60 sm:inline">Email:</span>
+          <a
+            href={`mailto:${BUSINESS.email}`}
+            className="hidden font-semibold text-signal transition-colors hover:text-white sm:inline"
+          >
+            {BUSINESS.email}
+          </a>
+        </div>
+      </div>
       <div className="border-b border-fog bg-white/95 backdrop-blur">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex h-20 items-center justify-between gap-4 lg:h-24">

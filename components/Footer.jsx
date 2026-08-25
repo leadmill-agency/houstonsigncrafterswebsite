@@ -56,6 +56,9 @@ export default function Footer() {
             <div className="text-xs font-semibold uppercase tracking-wider text-white/50">Company</div>
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-white">About Us</Link></li>
+              <li><Link href="/general-contractors" className="hover:text-white">For General Contractors</Link></li>
+              <li><Link href="/property-managers" className="hover:text-white">For Property Managers</Link></li>
+              <li><Link href="/franchise-signage" className="hover:text-white">For Franchises</Link></li>
               <li><Link href="/portfolio" className="hover:text-white">Our Work</Link></li>
               <li><Link href="/quote" className="hover:text-white">Get a Free Quote</Link></li>
               <li><Link href="/pricing" className="hover:text-white">Sign Pricing</Link></li>

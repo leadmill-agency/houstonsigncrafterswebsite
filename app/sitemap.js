@@ -26,6 +26,9 @@ export default function sitemap() {
     { url: `${BASE}/company-facts`, changeFrequency: "monthly", priority: 0.7 },
     { url: `${BASE}/pricing`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/sign-permits`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/general-contractors`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/property-managers`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/franchise-signage`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/privacy`, changeFrequency: "yearly", priority: 0.3 },
     { url: `${BASE}/terms`, changeFrequency: "yearly", priority: 0.3 },
   ];
