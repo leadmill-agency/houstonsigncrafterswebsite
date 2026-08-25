@@ -54,8 +54,9 @@ export default function HomePage() {
               pull the permits, and hang them. One crew, one number to call, and a 5-year warranty bolted to
               every job.
             </p>
+            {/* No quote button here — the quote form sits right beside the hero,
+                and the nav CTA covers it. Call is the one action the form can't do. */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link href="/quote" className="btn btn-primary">Get a Free Quote</Link>
               <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
             </div>
             <p className="mt-3 text-sm text-white/65">
