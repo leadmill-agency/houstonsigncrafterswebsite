@@ -32,7 +32,7 @@ export default function Nav() {
           <a
             href={BUSINESS.phoneHref}
             onClick={() => trackEvent("phone_click", { event_label: "topbar" })}
-            className="font-semibold text-signal transition-colors hover:text-white"
+            className="font-semibold text-white transition-colors hover:text-signal"
           >
             {BUSINESS.phone}
           </a>
@@ -40,7 +40,7 @@ export default function Nav() {
           <span className="hidden text-white/60 sm:inline">Email:</span>
           <a
             href={`mailto:${BUSINESS.email}`}
-            className="hidden font-semibold text-signal transition-colors hover:text-white sm:inline"
+            className="hidden font-semibold text-white transition-colors hover:text-signal sm:inline"
           >
             {BUSINESS.email}
           </a>
