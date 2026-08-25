@@ -152,7 +152,15 @@ export default function HomePage() {
           <h2 className="mt-1 text-4xl font-bold sm:text-5xl">What does a sign cost?</h2>
           <div className="mt-6 grid gap-6 text-lg leading-relaxed text-white/80 md:grid-cols-2">
             <div>
-              <p>Straight answer: it depends — and anybody who quotes you a flat number off a website is guessing. What moves the price:</p>
+              <p>
+                Straight answer: channel letters typically run{" "}
+                <span className="text-white">$1,500–$10,000+</span> installed, monuments{" "}
+                <span className="text-white">$6,000–$50,000+</span> — every range is published on our{" "}
+                <Link href="/pricing" className="font-semibold text-white underline underline-offset-2 hover:text-signal">
+                  pricing page
+                </Link>
+                . What moves your project inside the range:
+              </p>
               <ul className="mt-4 space-y-2">
                 {[
                   "How big it is and how many letters",
@@ -168,8 +176,7 @@ export default function HomePage() {
               </ul>
             </div>
             <div>
-              <p>As a rough idea, a small set of dimensional letters can start in the few-hundred-to-low-thousands range, while a large illuminated monument sign runs several thousand and up.</p>
-              <p className="mt-4">Here's how we actually do it: send a photo of your storefront and a rough size. We pull up your address, factor in permitting and installation, and email you an <span className="text-white">itemized quote — usually within one business day.</span> No “come in for a consultation,” no runaround.</p>
+              <p>Here's how we actually do it: send a photo of your storefront and a rough size. We pull up your address, factor in permitting and installation, and email you an <span className="text-white">itemized quote — usually within one business day.</span> No “come in for a consultation,” no runaround.</p>
               <div className="mt-6 flex flex-wrap gap-3">
                 <Link href="/quote" className="btn btn-primary">Get My Free Quote</Link>
                 <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
