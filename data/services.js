@@ -19,7 +19,7 @@ const SERVICES = {
     order: 1,
     icon: "bolt",
     img: "https://images.unsplash.com/photo-1545972154-9bb223aac798?w=1200&q=75",
-    metaTitle: "Channel Letter Signs in Houston, TX | Custom Storefront Signage",
+    metaTitle: "Channel Letter Signs in Houston, TX",
     metaDescription:
       "Custom illuminated channel letter signs in Houston, TX. Design, fabrication, permitting, and licensed installation. Free quote within one business day.",
     h1: "Channel Letter Signs in Houston, TX",
@@ -65,9 +65,9 @@ const SERVICES = {
     order: 2,
     icon: "marker",
     img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=75",
-    metaTitle: "Monument Signs in Houston, TX | Custom Ground & Business Signs",
+    metaTitle: "Monument Signs in Houston, TX",
     metaDescription:
-      "Custom monument signs in Houston, TX for businesses, offices, and communities. Design, masonry, illumination, permitting, and installation. Free 1-day quote.",
+      "Custom monument signs in Houston, TX for businesses and communities. Design, masonry, illumination, permitting, and installation. Free 1-day quote.",
     h1: "Monument Signs in Houston, TX",
     heroSubtitle:
       "Ground-level business signage that anchors your address, built to last and to match your brand.",
@@ -111,9 +111,9 @@ const SERVICES = {
     order: 3,
     icon: "bolt",
     img: "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=1200&q=75",
-    metaTitle: "Vehicle Wraps in Houston, TX | Car, Truck & Fleet Wraps",
+    metaTitle: "Vehicle Wraps in Houston, TX",
     metaDescription:
-      "Custom vehicle wraps in Houston, TX for cars, trucks, vans, and fleets. Design, premium vinyl, and professional installation. Free quote within one business day.",
+      "Custom vehicle wraps in Houston, TX for cars, trucks, vans, and fleets. Design, premium vinyl, professional installation. Free quote in one business day.",
     h1: "Vehicle Wraps in Houston, TX",
     heroSubtitle:
       "Turn your car, truck, or fleet into a moving billboard, designed and installed by Houston pros.",
@@ -157,9 +157,9 @@ const SERVICES = {
     order: 4,
     icon: "pencil",
     img: "https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=1200&q=75",
-    metaTitle: "Wall Graphics & Murals in Houston, TX | Interior & Exterior Signage",
+    metaTitle: "Wall Graphics & Murals in Houston, TX",
     metaDescription:
-      "Custom wall graphics, murals, and window graphics in Houston, TX. Branded interiors, logo walls, and storefront windows. Free quote within one business day.",
+      "Custom wall graphics, murals, and window graphics in Houston, TX. Branded interiors, logo walls, storefront windows. Free quote in one business day.",
     h1: "Wall Graphics & Murals in Houston, TX",
     heroSubtitle:
       "Branded interiors, logo walls, and window graphics that turn blank space into marketing.",
@@ -203,9 +203,9 @@ const SERVICES = {
     order: 5,
     icon: "pencil",
     img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=75",
-    metaTitle: "Interior Signs in Houston, TX | Lobby, Office & Acrylic Signs",
+    metaTitle: "Interior Signs in Houston, TX",
     metaDescription:
-      "Custom interior signs in Houston, TX: lobby and reception logo signs, office and suite signage, ADA and wayfinding. In-house design and installation. Free 1-day quote.",
+      "Custom interior signs in Houston, TX: lobby logo signs, office signage, ADA and wayfinding. In-house design and installation. Free 1-day quote.",
     h1: "Interior Signs in Houston, TX",
     heroSubtitle:
       "Lobby logo signs, office and suite signage, ADA and wayfinding. A polished, on-brand interior.",
@@ -249,9 +249,9 @@ const SERVICES = {
     order: 6,
     icon: "bolt",
     img: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=1200&q=75",
-    metaTitle: "Custom Banners in Houston, TX | Vinyl, Event & Grand Opening Banners",
+    metaTitle: "Custom Banners in Houston, TX",
     metaDescription:
-      "Custom vinyl banners in Houston, TX for events, grand openings, and promotions. Durable printing, fast turnaround, rush options. Free quote within one business day.",
+      "Custom vinyl banners in Houston, TX for events, grand openings, and promotions. Durable printing, fast turnaround, rush options. Free 1-day quote.",
     h1: "Custom Banners in Houston, TX",
     heroSubtitle:
       "Durable, vivid banners for grand openings, events, and promotions, with rush options when you're on a deadline.",
@@ -295,9 +295,9 @@ const SERVICES = {
     order: 7,
     icon: "pencil",
     img: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&q=75",
-    metaTitle: "Wedding & Event Signage in Houston, TX | Custom Event Signs",
+    metaTitle: "Wedding & Event Signage in Houston, TX",
     metaDescription:
-      "Custom wedding and event signage in Houston, TX: welcome signs, seating charts, neon-look signs, and backdrops. Beautiful, fast, and stress-free. Free 1-day quote.",
+      "Custom wedding and event signage in Houston, TX: welcome signs, seating charts, neon-look signs, and backdrops. Fast and stress-free. Free 1-day quote.",
     h1: "Wedding & Event Signage in Houston, TX",
     heroSubtitle:
       "Welcome signs, seating charts, custom neon, and backdrops. Beautiful event signage, even on a tight timeline.",

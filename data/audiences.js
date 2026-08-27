@@ -11,7 +11,7 @@ const AUDIENCES = {
     name: "General Contractors",
     metaTitle: "Sign Company for General Contractors in Houston",
     metaDescription:
-      "A Houston sign sub that hits dates: permit-ready drawings, one point of contact, in-house fabrication and install, and written quotes in one business day for buildouts and ground-up projects.",
+      "Sign company for general contractors in Houston: permit-ready drawings, in-house fabrication and install, one point of contact. Quotes in one business day.",
     eyebrow: "For general contractors",
     h1: "The sign sub that doesn't blow your schedule",
     intro:
@@ -65,7 +65,7 @@ const AUDIENCES = {
     name: "Property Managers",
     metaTitle: "Sign Company for Property Managers in Houston",
     metaDescription:
-      "Tenant panel changes, monument refacing, code-compliant signage, and one accountable vendor across your Houston properties, with written quotes in one business day.",
+      "Sign company for property managers in Houston: tenant panels, monument refacing, code-compliant signage, one accountable vendor. Quotes in 1 business day.",
     eyebrow: "For property managers",
     h1: "One sign vendor for every property on your list",
     intro:
@@ -116,9 +116,9 @@ const AUDIENCES = {
   "franchise-signage": {
     slug: "franchise-signage",
     name: "Franchise & Multi-Location",
-    metaTitle: "Franchise Sign Company in Houston: Brand-Spec Signage",
+    metaTitle: "Franchise Sign Company in Houston",
     metaDescription:
-      "Brand-standard signage for franchise and multi-location openings in Houston: spec-accurate fabrication, landlord and city approvals handled, and quotes in one business day.",
+      "Franchise sign company in Houston: brand-standard, spec-accurate fabrication with landlord and city approvals handled. Quotes in one business day.",
     eyebrow: "For franchises & multi-location brands",
     h1: "Your brand standards, built to spec in Houston",
     intro:

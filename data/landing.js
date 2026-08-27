@@ -11,9 +11,9 @@
 const LANDING = {
   "houston-signs": {
     slug: "houston-signs",
-    metaTitle: "Custom Storefront Signs in Houston: $400 Off | Houston Sign Crafters",
+    metaTitle: "Custom Storefront Signs in Houston",
     metaDescription:
-      "Get $400 off a lighted storefront sign in Houston. Channel letters, monument signs, and more. Designed, built, permitted, and installed in-house. Free quote in 1 business day.",
+      "Custom storefront signs in Houston: channel letters, monument signs, and more. Built, permitted, and installed in-house. Free quote in one business day.",
     eyebrow: "Houston Sign Company",
     headline: "Custom storefront signs, built in Houston.",
     subhead:
@@ -30,9 +30,9 @@ const LANDING = {
   },
   "channel-letters-houston": {
     slug: "channel-letters-houston",
-    metaTitle: "Channel Letter Signs in Houston: $400 Off | Houston Sign Crafters",
+    metaTitle: "Channel Letter Signs Houston",
     metaDescription:
-      "Illuminated channel letter signs for your Houston storefront, $400 off. Built and installed in-house with permits handled. Free quote within one business day.",
+      "Illuminated channel letter signs for your Houston storefront. Built and installed in-house with permits handled. Free quote within one business day.",
     eyebrow: "Houston Storefront Signs",
     headline: "Illuminated channel letters for your storefront.",
     subhead:
@@ -48,7 +48,7 @@ const LANDING = {
   },
   "vehicle-wraps-houston": {
     slug: "vehicle-wraps-houston",
-    metaTitle: "Vehicle Wraps in Houston | Houston Sign Crafters",
+    metaTitle: "Vehicle Wraps in Houston",
     metaDescription:
       "Custom car, truck, van, and fleet wraps in Houston, designed and installed on premium cast vinyl. Free quote within one business day.",
     eyebrow: "Houston Vehicle Wraps",

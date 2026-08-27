@@ -9,7 +9,7 @@ import PhoneLink from "@/components/PhoneLink";
 export const metadata = {
   title: "Commercial Sign Portfolio",
   description:
-    "View commercial signs designed, fabricated, and installed by Houston Sign Crafters: channel letters, monument signs, cabinet signs, window vinyl, interior signs, and more.",
+    "View commercial signs designed, fabricated, and installed by Houston Sign Crafters: channel letters, monument signs, cabinet signs, window vinyl, and more.",
   alternates: { canonical: "/portfolio" },
   openGraph: {
     title: "Commercial Sign Portfolio",

@@ -6,7 +6,7 @@ import CTASection from "@/components/CTASection";
 export const metadata = {
   title: "Service Areas",
   description:
-    "Houston Sign Crafters serves Houston and surrounding communities including Katy, Sugar Land, The Woodlands, and more, with in-house design, permitting, and installation.",
+    "Houston Sign Crafters serves Houston and nearby communities including Katy, Sugar Land, and The Woodlands. In-house design, permitting, and installation.",
   alternates: { canonical: "/locations" },
 };
 

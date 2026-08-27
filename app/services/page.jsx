@@ -5,7 +5,7 @@ import CTASection from "@/components/CTASection";
 export const metadata = {
   title: "Sign Services in Houston, TX",
   description:
-    "Explore Houston Sign Crafters' services: channel letters, monument signs, vehicle wraps, wall graphics, custom banners, and event signage. In-house design, permitting, and installation.",
+    "Houston sign services: channel letters, monument signs, vehicle wraps, wall graphics, banners, and event signage. In-house design and installation.",
   alternates: { canonical: "/services" },
 };
 

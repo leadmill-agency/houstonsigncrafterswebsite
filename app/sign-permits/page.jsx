@@ -9,9 +9,9 @@ import PhoneLink from "@/components/PhoneLink";
 // publish processing times — no times are stated for the others on purpose.
 
 export const metadata = {
-  title: "Sign Permits in Houston, Katy, Sugar Land & Beyond: Who Issues What",
+  title: "Sign Permits in Houston & Suburbs",
   description:
-    "Which office issues your sign permit in Houston, Katy, Sugar Land, The Woodlands, Pearland, Pasadena, Spring, and Cypress: official sources, applications, and what each review checks.",
+    "Which office issues your sign permit in Houston, Katy, Sugar Land, The Woodlands, and nearby: official sources, applications, and what each review checks.",
   alternates: { canonical: "/sign-permits" },
 };
 

@@ -1,9 +1,9 @@
 import LeadForm from "@/components/LeadForm";
 
 export const metadata = {
-  title: "Free Sign Design Mockup: See Your Sign Before You Buy",
+  title: "Free Sign Design Mockup",
   description:
-    "Get a free design mockup of your custom sign on your own building or vehicle. No obligation. Houston Sign Crafters handles design, permitting, and installation in-house.",
+    "Get a free design mockup of your custom sign on your own building or vehicle. No obligation. Design, permitting, and installation handled in-house.",
   alternates: { canonical: "/free-mockup" },
 };
 

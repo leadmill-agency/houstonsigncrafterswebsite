@@ -11,7 +11,7 @@ const GUIDES = {
     subtitle: "Everything you need to get your business sign approved in Houston, the first time.",
     metaTitle: "Free Houston Sign Permitting Checklist (PDF)",
     metaDescription:
-      "Download our free Houston sign permitting checklist: sizes, illumination rules, landlord criteria, and the documents you need to get your business sign approved.",
+      "Free Houston sign permitting checklist: sizes, illumination rules, landlord criteria, and the documents you need to get your business sign approved.",
     // Drop the actual PDF here before launch; the auto-responder links to it.
     file: "/guides/houston-sign-permitting-checklist.pdf",
     bullets: [
