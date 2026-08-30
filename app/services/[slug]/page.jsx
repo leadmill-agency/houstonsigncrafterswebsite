@@ -1,13 +1,15 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getService, getServiceSlugs, getAllServices } from "@/data/services";
 import { BUSINESS } from "@/data/business";
+import PORTFOLIO from "@/data/portfolio";
+import { TESTIMONIALS } from "@/data/testimonials";
 import Faq from "@/components/Faq";
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
 import TextLink from "@/components/TextLink";
 import OfferBadge from "@/components/OfferBadge";
-import WhatYouGet from "@/components/WhatYouGet";
 import CostCallout from "@/components/CostCallout";
 
 export function generateStaticParams() {
@@ -31,6 +33,25 @@ export async function generateMetadata({ params }) {
   };
 }
 
+// Renders a section body string, turning [label](/path) markdown links into
+// real internal links. Internal paths only; anything else renders as text.
+function BodyText({ text }) {
+  const parts = text.split(/(\[[^\]]+\]\(\/[^)]*\))/g);
+  return (
+    <p>
+      {parts.map((part, i) => {
+        const m = part.match(/^\[([^\]]+)\]\((\/[^)]*)\)$/);
+        if (!m) return part;
+        return (
+          <Link key={i} href={m[2]} className="font-medium text-signal-600 underline underline-offset-2 hover:text-ink">
+            {m[1]}
+          </Link>
+        );
+      })}
+    </p>
+  );
+}
+
 export default async function ServicePage({ params }) {
   const { slug } = await params;
   const s = getService(slug);
@@ -40,6 +61,13 @@ export default async function ServicePage({ params }) {
   const related = (s.related || [])
     .map((r) => allServices.find((x) => x.slug === r))
     .filter(Boolean);
+
+  // Real installs of this sign type (data/portfolio.js — never placeholders).
+  const projects = (s.portfolioIds || [])
+    .map((id) => PORTFOLIO.find((p) => p.id === id))
+    .filter(Boolean);
+
+  const review = Number.isInteger(s.testimonialIndex) ? TESTIMONIALS[s.testimonialIndex] : null;
 
   // Service schema, tied to the site-wide LocalBusiness entity via provider @id.
   const serviceSchema = {
@@ -104,19 +132,85 @@ export default async function ServicePage({ params }) {
           {s.sections.map((sec) => (
             <div key={sec.heading}>
               <h2>{sec.heading}</h2>
-              <p>{sec.body}</p>
+              <BodyText text={sec.body} />
             </div>
           ))}
         </div>
-
       </section>
+
+      {/* Real installs of this sign type */}
+      {projects.length > 0 && (
+        <section className="mx-auto max-w-6xl px-4 pb-14 sm:px-6">
+          <h2 className="text-3xl font-bold text-ink">Recent {s.shortName.toLowerCase()} installs</h2>
+          <div className={`mt-8 grid gap-5 sm:grid-cols-2 ${projects.length > 2 ? "lg:grid-cols-3" : ""}`}>
+            {projects.map((p) => (
+              <figure key={p.id} className="img-outline overflow-hidden rounded-sm border border-fog bg-white">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src={p.imageSrc}
+                    alt={`${p.title}: ${p.signType} in ${p.location}`}
+                    fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                    className="object-cover"
+                    style={p.objectPosition ? { objectPosition: p.objectPosition } : undefined}
+                  />
+                </div>
+                <figcaption className="px-4 py-3">
+                  <span className="block font-semibold text-ink">{p.title}</span>
+                  <span className="block text-sm text-steel">{p.signType} · {p.location}</span>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+          <p className="mt-5">
+            <Link href="/portfolio" className="font-semibold text-signal-600 underline underline-offset-2 hover:text-ink">
+              See more of our work
+            </Link>
+          </p>
+        </section>
+      )}
+
+      {/* Per-service process timeline */}
+      {s.process?.length > 0 && (
+        <section className="border-y border-fog bg-cloud">
+          <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
+            <h2 className="text-3xl font-bold text-ink">How it works, start to finish</h2>
+            <div className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
+              {s.process.map((step, i) => (
+                <div key={step.t} className="border-t-2 border-ink pt-4">
+                  <span className="font-display text-2xl font-bold text-signal-600">{String(i + 1).padStart(2, "0")}</span>
+                  <h3 className="mt-1 text-lg font-semibold text-ink">{step.t}</h3>
+                  <p className="mt-1.5 text-sm leading-relaxed text-steel">{step.b}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       <CostCallout slug={slug} />
 
-      <WhatYouGet heading={`What you get with your ${s.shortName.toLowerCase()}`} />
+      {/* One real Google review, matched to this service */}
+      {review && (
+        <section className="mx-auto max-w-3xl px-4 pt-14 sm:px-6">
+          <blockquote className="border-l-4 border-signal bg-white py-1 pl-6">
+            <div className="flex gap-0.5 text-signal" aria-label={`${review.rating} out of 5 stars`}>
+              {Array.from({ length: review.rating }).map((_, i) => (
+                <svg key={i} viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true">
+                  <path d="M10 1.5l2.6 5.3 5.9.9-4.3 4.1 1 5.8L10 14.9l-5.2 2.7 1-5.8L1.5 7.7l5.9-.9L10 1.5z" />
+                </svg>
+              ))}
+            </div>
+            <p className="mt-3 text-lg leading-relaxed text-ink">"{review.quote}"</p>
+            <footer className="mt-3 text-sm text-steel">
+              <span className="font-semibold text-ink">{review.name}</span> · {review.platform} review
+            </footer>
+          </blockquote>
+        </section>
+      )}
 
       {/* On-page quote form */}
-      <section className="mx-auto max-w-3xl px-4 pb-14 sm:px-6">
+      <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
         <div className="rounded-sm border border-fog bg-cloud p-6 text-center md:p-8">
           <h2 className="text-2xl font-bold text-ink">Get a free quote for {s.shortName.toLowerCase()}</h2>
           <p className="mt-1 text-sm text-steel">Written quote within one business day. Permitting and installation included.</p>
