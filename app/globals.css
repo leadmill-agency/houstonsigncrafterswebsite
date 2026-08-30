@@ -69,19 +69,45 @@ h1, h2, h3 {
   font-size: 0.85rem;
   border-radius: 3px;
   padding: 0.85rem 1.6rem;
-  /* Explicit properties only — never `transition: all`. Adds `scale` so press
-     feedback is interruptible alongside the color transitions. */
-  transition: background-color 0.15s, color 0.15s, border-color 0.15s, scale 0.1s;
+  /* Explicit properties only — never `transition: all`. `scale` and `translate`
+     are separate so press + lift feedback stay interruptible. */
+  transition:
+    background-color 0.15s, color 0.15s, border-color 0.15s,
+    box-shadow 0.2s cubic-bezier(0.2, 0, 0, 1),
+    translate 0.2s cubic-bezier(0.2, 0, 0, 1),
+    scale 0.1s;
   cursor: pointer;
   border: 2px solid transparent;
 }
+/* Solid buttons lift 1px on hover and their shadow deepens; press cancels the
+   lift so the button visibly seats back down. */
+.btn-primary:hover, .btn-dark:hover { translate: 0 -1px; }
 /* Tactile press feedback — 0.96 is the floor; anything smaller feels exaggerated */
-.btn:active { scale: 0.96; }
+.btn:active { scale: 0.96; translate: 0 0; }
+.btn:focus-visible { outline: 2px solid var(--color-signal); outline-offset: 2px; }
 .btn-sm { padding: 0.55rem 1.05rem; font-size: 0.78rem; }
-.btn-primary { background: var(--color-signal); color: #fff; }
-.btn-primary:hover { background: var(--color-signal-600); }
-.btn-dark { background: var(--color-ink); color: #fff; }
-.btn-dark:hover { background: var(--color-ink-700); }
+.btn-primary {
+  background: var(--color-signal);
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(13, 23, 34, 0.16);
+}
+.btn-primary:hover {
+  background: var(--color-signal-600);
+  box-shadow: 0 6px 14px -6px rgba(26, 85, 196, 0.55);
+}
+.btn-dark {
+  background: var(--color-ink);
+  color: #fff;
+  box-shadow: 0 1px 2px rgba(13, 23, 34, 0.16);
+}
+.btn-dark:hover {
+  background: var(--color-ink-700);
+  box-shadow: 0 6px 14px -6px rgba(13, 23, 34, 0.5);
+}
+/* Icon inside a button: inherits currentColor; arrow variant nudges on hover. */
+.btn svg { flex: none; }
+.btn .btn-arrow { transition: translate 0.2s cubic-bezier(0.2, 0, 0, 1); }
+.btn:hover .btn-arrow { translate: 3px 0; }
 .btn-outline-light { border-color: rgba(255, 255, 255, 0.45); color: #fff; }
 .btn-outline-light:hover { background: rgba(255, 255, 255, 0.1); }
 .btn-outline-dark { border-color: var(--color-fog); color: var(--color-ink); }

@@ -70,8 +70,14 @@ export default function Nav() {
 
             {/* Two CTAs: booking (secondary, dark) + quote (primary). Phone stays in the topbar. */}
             <div className="hidden items-center gap-3 md:flex">
-              <Link href="/book" className="btn btn-dark whitespace-nowrap">Schedule a Call</Link>
-              <Link href="/quote" className="btn btn-primary whitespace-nowrap">Get A Quote</Link>
+              <Link href="/book" className="btn btn-dark whitespace-nowrap">
+                <CalendarIcon />
+                Schedule a Call
+              </Link>
+              <Link href="/quote" className="btn btn-primary whitespace-nowrap">
+                Get A Quote
+                <ArrowIcon />
+              </Link>
             </div>
 
             <button
@@ -98,14 +104,38 @@ export default function Nav() {
               ))}
               <div className="mt-4 flex flex-col gap-2">
                 <a href={BUSINESS.phoneHref} className="btn btn-outline-dark w-full">{BUSINESS.phone}</a>
-                <Link href="/book" className="btn btn-dark w-full" onClick={() => setOpen(false)}>Schedule a Call</Link>
-                <Link href="/quote" className="btn btn-primary w-full" onClick={() => setOpen(false)}>Get a Quote</Link>
+                <Link href="/book" className="btn btn-dark w-full" onClick={() => setOpen(false)}>
+                  <CalendarIcon />
+                  Schedule a Call
+                </Link>
+                <Link href="/quote" className="btn btn-primary w-full" onClick={() => setOpen(false)}>
+                  Get a Quote
+                  <ArrowIcon />
+                </Link>
               </div>
             </nav>
           </div>
         )}
       </div>
     </header>
+  );
+}
+
+// CTA glyphs — same 2px stroke as the menu icon so the icon set reads as one system.
+function CalendarIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <rect x="3" y="5" width="18" height="16" rx="2" />
+      <path d="M3 10h18M8 3v4M16 3v4" />
+    </svg>
+  );
+}
+
+function ArrowIcon() {
+  return (
+    <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true" className="btn-arrow">
+      <path d="M5 12h14M13 6l6 6-6 6" />
+    </svg>
   );
 }
 
