@@ -18,6 +18,10 @@ export const BUSINESS = {
   phoneHref: "tel:+18329742546",
   smsHref: "sms:+18329742546",
 
+  // Google Calendar appointment-scheduling link (owner-provided 2026-08-27).
+  // Always link to it via /book (tracked, branded) rather than raw in ads.
+  bookingUrl: "https://calendar.app.google/G69WyaCFWq4idayx6",
+
   // Lead notifications land here; auto-responders send from RESEND_FROM_EMAIL.
   // sales@ is the address used on the company's own catalogue/collateral.
   email: "sales@houstonsigncrafters.com",

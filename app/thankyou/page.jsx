@@ -42,12 +42,21 @@ export default function ThankYouPage() {
             </li>
           ))}
         </ol>
-        <p className="mt-8 text-steel">
+        <div className="mt-8 border border-signal bg-signal/5 p-5">
+          <h3 className="font-display text-lg font-bold text-ink">Want to skip the phone tag?</h3>
+          <p className="mt-1 text-sm text-steel">
+            Put yourself on our calendar and we'll talk through your project at a time you pick.
+          </p>
+          <div className="mt-4">
+            <BookButton label="Book a Free 15-Minute Consult" />
+          </div>
+        </div>
+        <p className="mt-6 text-steel">
           Need us sooner? <PhoneLink className="font-semibold text-ink underline underline-offset-2" showIcon={false} />{" "}
           ({BUSINESS.hoursLabel}).
         </p>
         <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-          <Link href="/portfolio" className="btn btn-primary">See Our Recent Work</Link>
+          <Link href="/portfolio" className="btn btn-outline-dark">See Our Recent Work</Link>
           <Link href="/pricing" className="btn btn-outline-dark">Browse Sign Pricing</Link>
         </div>
       </section>
