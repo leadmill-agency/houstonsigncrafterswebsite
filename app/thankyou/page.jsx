@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BUSINESS } from "@/data/business";
 import PhoneLink from "@/components/PhoneLink";
+import BookButton from "@/components/BookButton";
 
 // Dedicated post-submit confirmation page. Exact path /thankyou (no hyphen) to
 // match the old site's structure per the Google Ads contractor — but the Ads
