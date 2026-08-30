@@ -13,7 +13,8 @@ const NAV_LINKS = [
   { href: "/locations", label: "Service Areas" },
   { href: "/about", label: "About" },
   { href: "/blog", label: "Blog" },
-  { href: "/contact", label: "Contact" },
+  // /contact intentionally not in the nav — it stays linked from the footer
+  // and sitemap, which is all crawlers need. The nav CTAs cover the intent.
 ];
 
 export default function Nav() {
