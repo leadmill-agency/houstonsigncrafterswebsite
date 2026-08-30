@@ -21,6 +21,10 @@ export const BUSINESS = {
   // Google Calendar appointment-scheduling link (owner-provided 2026-08-27).
   // Always link to it via /book (tracked, branded) rather than raw in ads.
   bookingUrl: "https://calendar.app.google/G69WyaCFWq4idayx6",
+  // Same schedule as an inline iframe embed (Google's ?gv=true embed mode),
+  // resolved from the short link. Used by /book for the on-page calendar.
+  bookingEmbedUrl:
+    "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3TXOiZgHzz6gjfAH5PCvWaEHIPWTowaqEaiCWDyZuy_DJdaF86rxt5U8FbmbeeSumFupYTqAoj?gv=true",
 
   // Lead notifications land here; auto-responders send from RESEND_FROM_EMAIL.
   // sales@ is the address used on the company's own catalogue/collateral.

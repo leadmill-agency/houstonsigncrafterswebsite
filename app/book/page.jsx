@@ -1,10 +1,14 @@
 import { BUSINESS } from "@/data/business";
 import PhoneLink from "@/components/PhoneLink";
+import TextLink from "@/components/TextLink";
 import BookButton from "@/components/BookButton";
 
-// Booking page. Ads point HERE (tracked, branded), then the button hands off
-// to the Google Calendar scheduling link and fires `booking_click` for the
-// Ads conversion trigger.
+// Booking page with the Google Calendar appointment schedule embedded INLINE
+// (?gv=true embed mode), so visitors pick a time without leaving the site.
+// Fallback links cover blocked iframes. Note: the final "booked" click happens
+// inside Google's iframe, so GTM can't observe it; ads conversions use /book
+// pageviews + fallback booking_click, and bookings themselves reconcile
+// against the calendar.
 
 export const metadata = {
   title: "Book a Free Sign Consult",
@@ -13,48 +17,38 @@ export const metadata = {
   alternates: { canonical: "/book" },
 };
 
-const CALL_COVERS = [
-  "What sign type fits your building and budget",
-  "A realistic range, from our published pricing",
-  "Which permits your address needs, and who pulls them",
-  "Timeline to install, worked back from your open date",
-];
-
 export default function BookPage() {
   return (
     <main>
       <section className="bg-ink text-white">
-        <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
+        <div className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-6">
           <p className="eyebrow text-signal">Free 15-minute consult</p>
           <h1 className="text-4xl font-bold sm:text-5xl">Talk to a sign maker, not a salesperson</h1>
           <p className="mx-auto mt-4 max-w-xl text-lg text-white/75">
-            Pick a time that works and get straight answers about your sign from the people who
-            will actually build it.
+            Pick a time below. Bring a photo of your storefront and we'll talk sign type, real
+            price range, permits, and timeline on the spot.
           </p>
-          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <BookButton label="Pick a Time on Our Calendar" />
-            <PhoneLink className="btn btn-outline-light" label={`Or call ${BUSINESS.phone}`} />
-          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-3xl px-4 py-12 sm:px-6">
-        <h2 className="text-2xl font-bold text-ink">What we'll cover on the call</h2>
-        <ul className="mt-6 space-y-3">
-          {CALL_COVERS.map((c) => (
-            <li key={c} className="flex items-start gap-2.5 text-steel">
-              <span className="mt-2 h-2 w-2 flex-shrink-0 bg-signal" aria-hidden="true" />
-              <span>{c}</span>
-            </li>
-          ))}
-        </ul>
-        <p className="mt-6 text-sm text-steel">
-          Have a photo of your storefront handy. That plus a rough size is enough for us to talk
-          real numbers on the spot.
-        </p>
-        <div className="mt-8">
-          <BookButton label="Book My Free Consult" />
+      <section className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
+        <div className="img-outline overflow-hidden rounded-sm border border-fog bg-white">
+          <iframe
+            src={BUSINESS.bookingEmbedUrl}
+            title="Book a time with Houston Sign Crafters"
+            className="h-[900px] w-full border-0 sm:h-[760px]"
+            loading="eager"
+          />
         </div>
+        <p className="mt-4 text-center text-sm text-steel">
+          Calendar not loading?{" "}
+          <BookButton
+            label="Open the calendar in a new tab"
+            className="font-semibold text-signal-600 underline underline-offset-2 hover:text-ink"
+          />{" "}
+          · <PhoneLink className="font-semibold text-ink underline underline-offset-2" showIcon={false} /> ·{" "}
+          <TextLink className="font-semibold text-ink underline underline-offset-2" label="text us" />
+        </p>
       </section>
     </main>
   );
