@@ -80,6 +80,8 @@ h1, h2, h3 {
 .btn-sm { padding: 0.55rem 1.05rem; font-size: 0.78rem; }
 .btn-primary { background: var(--color-signal); color: #fff; }
 .btn-primary:hover { background: var(--color-signal-600); }
+.btn-dark { background: var(--color-ink); color: #fff; }
+.btn-dark:hover { background: var(--color-ink-700); }
 .btn-outline-light { border-color: rgba(255, 255, 255, 0.45); color: #fff; }
 .btn-outline-light:hover { background: rgba(255, 255, 255, 0.1); }
 .btn-outline-dark { border-color: var(--color-fog); color: var(--color-ink); }

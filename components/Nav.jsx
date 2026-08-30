@@ -60,17 +60,18 @@ export default function Nav() {
               />
             </Link>
 
-            <nav className="hidden items-center gap-7 text-base font-semibold text-ink lg:flex">
+            <nav className="hidden items-center gap-6 text-[15px] font-semibold text-ink lg:flex">
               {NAV_LINKS.map((l) => (
-                <Link key={l.href} href={l.href} className="transition-colors hover:text-signal-600">
+                <Link key={l.href} href={l.href} className="whitespace-nowrap transition-colors hover:text-signal-600">
                   {l.label}
                 </Link>
               ))}
             </nav>
 
-            {/* One CTA. The phone lives in the topbar; repeating it here was clutter. */}
-            <div className="hidden items-center md:flex">
-              <Link href="/quote" className="btn btn-primary">Get A Quote</Link>
+            {/* Two CTAs: booking (secondary, dark) + quote (primary). Phone stays in the topbar. */}
+            <div className="hidden items-center gap-3 md:flex">
+              <Link href="/book" className="btn btn-dark whitespace-nowrap">Schedule a Call</Link>
+              <Link href="/quote" className="btn btn-primary whitespace-nowrap">Get A Quote</Link>
             </div>
 
             <button
@@ -97,6 +98,7 @@ export default function Nav() {
               ))}
               <div className="mt-4 flex flex-col gap-2">
                 <a href={BUSINESS.phoneHref} className="btn btn-outline-dark w-full">{BUSINESS.phone}</a>
+                <Link href="/book" className="btn btn-dark w-full" onClick={() => setOpen(false)}>Schedule a Call</Link>
                 <Link href="/quote" className="btn btn-primary w-full" onClick={() => setOpen(false)}>Get a Quote</Link>
               </div>
             </nav>

@@ -49,7 +49,7 @@ export default function ThankYouPage() {
             Put yourself on our calendar and we'll talk through your project at a time you pick.
           </p>
           <div className="mt-4">
-            <BookButton label="Book a Free 15-Minute Consult" />
+            <BookButton label="Book a Free 30-Minute Consult" />
           </div>
         </div>
         <p className="mt-6 text-steel">

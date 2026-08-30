@@ -13,7 +13,7 @@ import BookButton from "@/components/BookButton";
 export const metadata = {
   title: "Book a Free Sign Consult",
   description:
-    "Book a free 15-minute call with Houston Sign Crafters. Bring a photo of your storefront and walk away knowing what your sign will take, cost, and need for permits.",
+    "Book a free 30-minute call with Houston Sign Crafters. Bring a photo of your storefront and walk away knowing what your sign will take, cost, and need for permits.",
   alternates: { canonical: "/book" },
 };
 
@@ -22,7 +22,7 @@ export default function BookPage() {
     <main>
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-6">
-          <p className="eyebrow text-signal">Free 15-minute consult</p>
+          <p className="eyebrow text-signal">Free 30-minute consult</p>
           <h1 className="text-4xl font-bold sm:text-5xl">Talk to a sign maker, not a salesperson</h1>
           <p className="mx-auto mt-4 max-w-xl text-lg text-white/75">
             Pick a time below. Bring a photo of your storefront and we'll talk sign type, real
