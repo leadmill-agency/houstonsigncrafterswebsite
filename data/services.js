@@ -88,7 +88,7 @@ const SERVICES = {
     order: 2,
     icon: "marker",
     img: "/portfolio/kirkwood.jpg",
-    portfolioIds: ["kirkwood-tech-center", "at-home-shopping-center"],
+    portfolioIds: ["coopwoods-air-conditioning", "kirkwood-tech-center", "zesty-cleaners"],
     testimonialIndex: 2,
     metaTitle: "Monument Signs in Houston, TX",
     metaDescription:
