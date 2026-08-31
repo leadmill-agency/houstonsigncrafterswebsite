@@ -18,13 +18,15 @@ export const BUSINESS = {
   phoneHref: "tel:+18329742546",
   smsHref: "sms:+18329742546",
 
-  // Google Calendar appointment-scheduling link (owner-provided 2026-08-27).
-  // Always link to it via /book (tracked, branded) rather than raw in ads.
-  bookingUrl: "https://calendar.app.google/G69WyaCFWq4idayx6",
-  // Same schedule as an inline iframe embed (Google's ?gv=true embed mode),
-  // resolved from the short link. Used by /book for the on-page calendar.
+  // Google Calendar appointment-scheduling link (owner's NEW schedule,
+  // 2026-08-31, with business-name + sign-type questions; replaced the
+  // original 2026-08-27 schedule). Always link via /book (tracked, branded).
+  bookingUrl: "https://calendar.app.google/y4xTtfje3f1txSod6",
+  // Same schedule as an inline iframe embed (Google's ?gv=true embed mode).
+  // Must use the /calendar/appointments/... path: that variant ships without
+  // X-Frame-Options; the short link's /appointments/... page blocks framing.
   bookingEmbedUrl:
-    "https://calendar.google.com/calendar/appointments/schedules/AcZssZ3TXOiZgHzz6gjfAH5PCvWaEHIPWTowaqEaiCWDyZuy_DJdaF86rxt5U8FbmbeeSumFupYTqAoj?gv=true",
+    "https://calendar.google.com/calendar/appointments/schedules/AcZssZ35QcviANOLdmMYsPupH_kvAiXvgzULbWL3N5aBEHy5ZL8qW2VcrGcJTTCKlkYb3kA4WxKT5s-v?gv=true",
 
   // Lead notifications land here; auto-responders send from RESEND_FROM_EMAIL.
   // sales@ is the address used on the company's own catalogue/collateral.
