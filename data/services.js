@@ -81,6 +81,73 @@ const SERVICES = {
     related: ["monument-signs", "wall-graphics", "custom-banners"],
   },
 
+  // The umbrella page for the searcher's own word: "storefront sign". Added
+  // 2026-08-31 for the Google Ads Store Front campaign (highest spend, had no
+  // matching landing page) and the "storefront signage" organic volume.
+  // order 1.5 slots it right after channel letters without renumbering.
+  "storefront-signs": {
+    slug: "storefront-signs",
+    name: "Storefront Signs",
+    shortName: "Storefront Signs",
+    formLabel: "Storefront Sign",
+    order: 1.5,
+    icon: "bolt",
+    img: "/portfolio/peachcobbler.jpg",
+    portfolioIds: ["peach-cobbler-factory", "jamaica-pon-di-road", "ss-perfumes"],
+    testimonialIndex: 3,
+    metaTitle: "Storefront Signs in Houston, TX",
+    metaDescription:
+      "Custom storefront signs in Houston, TX: lit channel letters, cabinet signs, dimensional letters, and window graphics. Designed, permitted, and installed in-house. Free quote in one business day.",
+    h1: "Storefront Signs in Houston, TX",
+    heroSubtitle:
+      "The sign over your door, done right: designed, built, permitted, and installed by one Houston crew.",
+    answer:
+      "A storefront sign is the sign that names your business on the front of your building, and it usually means one of four things: lit channel letters, a cabinet (lightbox) sign, non-lit dimensional letters, or window graphics. Most Houston storefronts use lit channel letters because they read day and night and pass most landlord criteria. We handle the whole job in-house: a mockup on a photo of your actual storefront, UL-listed fabrication in our Houston shop, the city permit, and installation by our own crew, backed by a 5-year warranty. Send a photo and you'll have a written quote in one business day.",
+    sections: [
+      {
+        heading: "What counts as a storefront sign?",
+        body:
+          "Four things, mostly. Channel letters are individually built, usually LED-lit letters mounted to your fascia, the standard for retail and restaurants. Cabinet signs (lightboxes) put your whole logo on one internally lit panel. Dimensional letters are non-lit cut letters for a cleaner, architectural look. Window graphics turn your glass into signage for hours, offers, and branding. Many storefronts combine two or more, like the letters-plus-cabinet builds you can see on [our work page](/portfolio).",
+      },
+      {
+        heading: "Which type is right for my storefront?",
+        body:
+          "Start with three questions. Does your landlord's sign criteria require a specific type? Strip centers and multi-tenant buildings usually do, and we read your lease criteria before designing. Do you need to be seen at night? If yes, lit channel letters or a cabinet. What does your budget look like? Dimensional letters and window graphics cost less than lit signs. We'll recommend the right build after seeing a photo of your storefront, and the mockup shows it on your actual building before you commit.",
+      },
+      {
+        heading: "How much does a storefront sign cost in Houston?",
+        body:
+          "Most lit storefront signs are channel letter sets, which run $1,500 to $10,000 and up installed depending on size, lighting, and mounting. Window graphics and dimensional letters cost less, and large multi-tenant work costs more. You get a firm written quote within one business day, with permit and installation included, and our published ranges for every sign type are on the [Houston sign pricing page](/pricing).",
+      },
+      {
+        heading: "Do storefront signs need a permit?",
+        body:
+          "Exterior storefront signs almost always need a sign permit, and your landlord usually has to approve the design too. We handle both: we check your lease criteria, pull the city permit, and build to code so the install passes inspection the first time. Rules differ by city, and our [sign permit guide](/sign-permits) covers what Houston, Katy, Sugar Land, and the other local jurisdictions require.",
+      },
+      {
+        heading: "How is the sign built and installed?",
+        body:
+          "Lit letters are cut and bent in our Houston shop, wired with LED modules, and bench-tested before they ship. The full build process is on our [channel letters page](/services/channel-letters). On install day our own crew levels a full-size pattern on your fascia, mounts the sign, seals every penetration, and checks it lit. One crew from mockup to light-up, no subcontractors, and a 5-year warranty on the work.",
+      },
+    ],
+    faqs: [
+      { q: "What is the most popular storefront sign type?", a: "Lit channel letters. They read clean day and night, meet most landlord sign criteria, and are the standard for Houston retail, restaurants, and offices." },
+      { q: "Can you match my sign to my logo and brand colors?", a: "Yes. We color-match faces, returns, and vinyl to your brand and show you the match in a design mockup on a photo of your actual storefront before fabrication." },
+      { q: "My landlord has sign criteria. Can you work with that?", a: "Yes, we do it constantly. Send us the sign criteria page from your lease and we design to it, so approval from your landlord and the city both go smoothly." },
+      { q: "How long does a storefront sign take?", a: "Most lit storefront signs take a few weeks from approved design to installation, driven mostly by permit turnaround. Tell us your opening date and we'll tell you honestly whether we can hit it." },
+      { q: "Do you remove the old sign?", a: "Yes. We take down the previous tenant's sign, patch and seal the mounting points, and install yours in its place as part of the job." },
+      { q: "Is the sign covered by a warranty?", a: "Yes. Materials and workmanship, LED lighting included, are covered for 5 years." },
+    ],
+    process: [
+      { t: "Send a photo of your storefront", b: "Snap the front of your space and tell us the name going up. Written quote in one business day." },
+      { t: "See it before you buy", b: "A free mockup shows the sign on your actual building, revised until you like it." },
+      { t: "We clear the red tape", b: "Landlord sign criteria checked and the city permit pulled before anything gets built." },
+      { t: "Built in our Houston shop", b: "UL-listed components, bench-tested lit before it leaves the shop." },
+      { t: "Installed by our own crew", b: "Old sign down, new sign mounted, sealed, and checked lit. 5-year warranty." },
+    ],
+    related: ["channel-letters", "wall-graphics", "interior-signs"],
+  },
+
   "monument-signs": {
     slug: "monument-signs",
     name: "Monument Signs",
