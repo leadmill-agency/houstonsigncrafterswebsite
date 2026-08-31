@@ -104,18 +104,21 @@ export default async function ServicePage({ params }) {
             <Link href="/services" className="hover:text-white">Services</Link> ·{" "}
             <span className="text-white/80">{s.shortName}</span>
           </nav>
-          <div className="grid gap-8 lg:grid-cols-2">
+          {/* Same split as the homepage hero: pitch left, form right, so nobody
+              has to scroll to ask for a quote (owner request 2026-08-31). */}
+          <div className="grid items-center gap-8 lg:grid-cols-2">
             <div>
               <h1 className="text-3xl font-bold leading-tight sm:text-4xl">{s.h1}</h1>
               <p className="mt-4 text-lg text-white/75">{s.heroSubtitle}</p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <Link href="/quote" className="btn btn-primary">
-                  Get a Free Quote
-                </Link>
                 <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
                 <TextLink className="btn btn-outline-light" label="Text Us" />
               </div>
               <OfferBadge tone="dark" className="mt-5" />
+            </div>
+            <div className="w-full">
+              <div className="eyebrow mb-3 text-center text-white/70">Free quote in 1 business day</div>
+              <LeadForm kind="quote" submitLabel="Get My Free Quote" messageLabel={`Tell us about your ${s.shortName.toLowerCase()} project`} />
             </div>
           </div>
         </div>
