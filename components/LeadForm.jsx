@@ -11,8 +11,8 @@ const initialState = { ok: null, errors: {}, message: "" };
 // field and the analytics event names. Wraps the shared submitLead server
 // action (lib/leads.js).
 //
-// Owner decision (2026-08-24, pre-launch): every form shows exactly FOUR
-// fields — Name, Email, Phone, and an open comment box. The sign-type and
+// Owner decision (2026-08-24, updated 2026-08-31): every form shows Name,
+// Email, Phone, Project Name, and an open comment box. The sign-type and
 // "how did you hear about us" selects were cut for conversion; the comment box
 // carries that context, and heard-about gets asked on the first call. Legacy
 // props (showCompany/showSignType/showMessage) are accepted but ignored so
@@ -67,6 +67,9 @@ export default function LeadForm({
         <Field label="Name" name="name" required autoComplete="name" state={state} />
         <Field label="Email" name="email" type="email" required autoComplete="email" state={state} />
         <Field label="Phone" name="phone" type="tel" required={phoneRequired} autoComplete="tel" state={state} />
+        {/* Owner request 2026-08-31: free-text Project Name. Posts as `company`
+            so it rides the existing pipeline (CRM company field + Slack card). */}
+        <Field label="Project Name" name="company" autoComplete="organization" placeholder="Business or project the sign is for" state={state} />
       </div>
 
       <div className="mt-4">
@@ -97,7 +100,7 @@ export default function LeadForm({
   );
 }
 
-function Field({ label, name, type = "text", required = false, autoComplete = "off", state }) {
+function Field({ label, name, type = "text", required = false, autoComplete = "off", placeholder, state }) {
   const error = state?.errors?.[name];
   return (
     <div>
@@ -110,6 +113,7 @@ function Field({ label, name, type = "text", required = false, autoComplete = "o
         name={name}
         required={required}
         autoComplete={autoComplete}
+        placeholder={placeholder}
         className="field w-full rounded-sm border border-fog px-3 py-2 text-sm text-carbon"
       />
       {error && <p className="mt-1 text-xs text-red-600">{error}</p>}
