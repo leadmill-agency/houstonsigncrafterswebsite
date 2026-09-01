@@ -33,9 +33,9 @@ export default function ThankYouPage() {
         <h2 className="text-2xl font-bold text-ink">What happens next</h2>
         <ol className="mt-6 space-y-4">
           {[
-            "We review your request and pull up your address to check sign criteria.",
-            "You get an itemized, written quote by email: design, permit, build, and install.",
-            "Reply or call to fine-tune it. No pressure, no chasing us down.",
+            "We review your request and call you to make sure we're a good fit.",
+            "We come out for a site survey and take exact measurements.",
+            "You get a free design mockup with an itemized estimate: design, permit, build, and install.",
           ].map((step, i) => (
             <li key={step} className="flex items-start gap-3">
               <span className="font-display text-xl font-bold text-signal-600">{String(i + 1).padStart(2, "0")}</span>
