@@ -223,6 +223,21 @@ h1, h2, h3 {
 .prose-content ul { margin: 0 0 1rem 1.25rem; list-style: disc; }
 .prose-content li { margin-bottom: 0.4rem; line-height: 1.7; }
 .prose-content a { color: var(--color-signal-600); text-decoration: underline; text-underline-offset: 2px; }
+/* Markdown tables (marked + gfm) — wrapped scroll on small screens comes from
+   the parent; keep the table itself clean and readable. */
+.prose-content table { width: 100%; border-collapse: collapse; margin: 0 0 1.5rem; font-size: 0.95rem; }
+.prose-content th {
+  text-align: left;
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background: var(--color-ink);
+  color: #fff;
+  padding: 10px 14px;
+}
+.prose-content td { padding: 10px 14px; border-bottom: 1px solid var(--color-fog); vertical-align: top; }
+.prose-content tbody tr:nth-child(even) { background: var(--color-cloud); }
 
 /* Subtle image outline — a hairline of PURE black at 10% keeps photo edges
    crisp against the paper background without reading as a tinted "dirty" border.

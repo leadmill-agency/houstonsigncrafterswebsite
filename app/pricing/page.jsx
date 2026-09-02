@@ -11,7 +11,7 @@ import Faq from "@/components/Faq";
 export const metadata = {
   title: "Sign Prices in Houston: Real Ranges",
   description:
-    "What signs cost in Houston: channel letters $1,500–$10,000+, monument signs $6,000–$50,000+, wraps, and banners. Real ranges from a Houston sign shop.",
+    "What signs cost in Houston: channel letters $2,000–$20,000+, monument signs $6,000–$50,000+, wraps, and banners. Real ranges from a Houston sign shop.",
   alternates: { canonical: "/pricing" },
 };
 
@@ -51,7 +51,7 @@ export default function PricingPage() {
       <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
         <div className="answer-block">
           <p>
-            In Houston, channel letter signs typically run $1,500 to $10,000+, monument signs
+            In Houston, channel letter signs typically run $2,000 to $20,000+, monument signs
             $6,000 to $50,000+, vehicle wraps $200 to $10,000, wall graphics $1,000 to $15,000,
             interior signs $200 to $10,000+, and banners $30 to $1,000, installed. Size,
             lighting, mounting, and permitting set where a project lands; every quote is itemized

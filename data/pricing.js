@@ -1,7 +1,8 @@
 // Published price ranges — the single source for /pricing, service-page cost
 // callouts, and company-facts. RANGES CONFIRMED IN WRITING BY THE OWNER
-// (Rameel, 2026-08-23). Do not edit numbers without owner sign-off (house
-// rule: no unverified figures anywhere).
+// (Rameel, 2026-08-23; channel-letters range revised per owner 2026-08-31 to
+// the industry-standard figures he confirmed as correct). Do not edit numbers
+// without owner sign-off (house rule: no unverified figures anywhere).
 //
 // `serviceSlug` links a row to its /services page; timeline = typical
 // production + install window once the design/permit is approved.
@@ -10,9 +11,9 @@ export const PRICING = [
   {
     serviceSlug: "channel-letters",
     label: "Channel letter signs",
-    low: 1500,
-    high: "10,000+",
-    note: "Small non-lit sets start around $1,500; large illuminated storefront sets typically run $4,000–$10,000+.",
+    low: 2000,
+    high: "20,000+",
+    note: "Non-lit sets start around $2,000; most single-storefront illuminated sets land between $4,000 and $12,000. Custom logo systems run to $25,000+.",
     timeline: "6–8 weeks",
   },
   {

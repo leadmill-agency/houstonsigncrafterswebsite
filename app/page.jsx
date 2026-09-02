@@ -186,7 +186,7 @@ export default function HomePage() {
             <div>
               <p>
                 Straight answer: channel letters typically run{" "}
-                <span className="text-white">$1,500–$10,000+</span> installed, monuments{" "}
+                <span className="text-white">$2,000–$20,000+</span> installed, monuments{" "}
                 <span className="text-white">$6,000–$50,000+</span>. Every range is published on our{" "}
                 <Link href="/pricing" className="font-semibold text-white underline underline-offset-2 hover:text-signal">
                   pricing page

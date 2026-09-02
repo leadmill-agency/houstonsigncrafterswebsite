@@ -161,7 +161,7 @@ const AUDIENCES = {
       },
       {
         q: "What does a typical franchise storefront sign cost?",
-        a: "Illuminated channel letter sets typically run $1,500 to $10,000+ installed depending on size and lighting. See our published pricing page. Every quote is itemized and free within one business day.",
+        a: "Illuminated channel letter sets typically run $3,000 to $15,000+ installed depending on size and lighting, with most single storefronts landing between $4,000 and $12,000. See our published pricing page. Every quote is itemized and free within one business day.",
       },
     ],
     portfolioIds: ["nautical-bowls", "slick-city-action-park", "emporium-games"],

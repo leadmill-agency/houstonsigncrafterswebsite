@@ -142,8 +142,8 @@ export default function CompanyFactsPage() {
           <p className="mt-2 max-w-2xl text-steel">
             Every sign is built to order, so price depends on size, lighting, mounting, and
             permitting. As a published reference point, channel letter signs in Houston typically
-            range from about <strong className="text-ink">$1,500</strong> for a small, simple set to{" "}
-            <strong className="text-ink">$10,000+</strong> for a large illuminated sign. See{" "}
+            range from about <strong className="text-ink">$2,000</strong> for a small, simple set to{" "}
+            <strong className="text-ink">$20,000+</strong> for a large illuminated system. See{" "}
             <Link href="/blog/how-much-do-channel-letters-cost-in-houston" className="underline decoration-fog underline-offset-2 hover:decoration-signal">
               our channel letter cost guide
             </Link>{" "}

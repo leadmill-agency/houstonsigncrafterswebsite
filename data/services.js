@@ -117,7 +117,7 @@ const SERVICES = {
       {
         heading: "How much does a storefront sign cost in Houston?",
         body:
-          "Most lit storefront signs are channel letter sets, which run $1,500 to $10,000 and up installed depending on size, lighting, and mounting. Window graphics and dimensional letters cost less, and large multi-tenant work costs more. You get a firm written quote within one business day, with permit and installation included, and our published ranges for every sign type are on the [Houston sign pricing page](/pricing).",
+          "Most lit storefront signs are channel letter sets, which run $3,000 to $15,000 and up installed depending on size, lighting, and mounting, with most single storefronts landing between $4,000 and $12,000. Window graphics and dimensional letters cost less, and large multi-tenant work costs more. You get a firm written quote within one business day, with permit and installation included, and our published ranges for every sign type are on the [Houston sign pricing page](/pricing).",
       },
       {
         heading: "Do storefront signs need a permit?",
