@@ -79,6 +79,9 @@ export const PROPOSALS = {
     ],
     approvalIntro:
       "The package gives Sinelli Concepts one Houston-based partner for field verification, fabrication, installation, and project closeout.",
+    // Client's own logo (from earthburger.com, owner-supplied 2026-09-02) —
+    // cover identification only, per the PRD's "identify the project" rule.
+    clientLogo: { src: "/proposals/eb/earth-burger-logo.png", w: 500, h: 297 },
     assets: {
       exteriorDrawing: { src: "/proposals/eb/east-elevation.png", w: 1755, h: 1496, alt: "East front elevation: face- and halo-illuminated Earth Burger logo, 8'-4 1/4\" wide by 6'-2 3/4\" high, with night view and building elevation from the supplied drawing set" },
       canopyDrawing: { src: "/proposals/eb/canopy.png", w: 1417, h: 1496, alt: "Drive-thru canopy drawing: front and side views with illuminated Earth Burger logo, Order Here copy, and 9'-0\" clearance, from the supplied drawing set" },

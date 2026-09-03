@@ -121,6 +121,9 @@ export default async function ProposalPage({ params }) {
       <div className="doc">
         {/* ACT 1 — Project decision page */}
         <section className="act">
+          {p.clientLogo && (
+            <Image src={p.clientLogo.src} alt={`${p.client} logo`} width={p.clientLogo.w} height={p.clientLogo.h} className="mb-6 h-16 w-auto" priority />
+          )}
           <Eyebrow>{p.client.toUpperCase()} #{p.proposalId.split("-").pop()}</Eyebrow>
           <h1 className="mt-3 font-display font-bold uppercase leading-[0.92] text-[var(--p-ink)]" style={{ fontSize: "clamp(3.2rem, 8vw, 7rem)" }}>
             {p.projectName}
@@ -169,7 +172,10 @@ export default async function ProposalPage({ params }) {
             complete package and the supplied drawings.
           </p>
 
-          <div className="mt-10 grid gap-x-14 gap-y-10 lg:grid-cols-2">
+          {/* One vertical, fully expanded list (owner call 2026-09-02): every
+              description visible, no disclosure affordance — a $47k line item
+              should never hide its spec behind a click. */}
+          <div className="mt-10 max-w-3xl space-y-10">
             {groups.map((g) => (
               <div key={g.id}>
                 <div className="flex items-baseline justify-between gap-4 border-b-2 border-[var(--p-ink)] pb-2">
@@ -178,17 +184,12 @@ export default async function ProposalPage({ params }) {
                 </div>
                 <ul>
                   {g.items.map((it) => (
-                    <li key={it.id} className="border-b border-[var(--p-line)]">
-                      <details>
-                        <summary className="flex items-baseline justify-between gap-4 py-3">
-                          <span className="flex items-baseline gap-2 font-medium">
-                            <span className="disclosure font-display" aria-hidden="true">+</span>
-                            {it.title}
-                          </span>
-                          <span className="whitespace-nowrap font-semibold">{money(it.price)}</span>
-                        </summary>
-                        <p className="pb-3 pl-5 pr-4 text-sm leading-relaxed text-[var(--p-muted)]">{it.description}</p>
-                      </details>
+                    <li key={it.id} className="border-b border-[var(--p-line)] py-3.5">
+                      <div className="flex items-baseline justify-between gap-6">
+                        <span className="font-semibold">{it.title}</span>
+                        <span className="whitespace-nowrap font-semibold">{money(it.price)}</span>
+                      </div>
+                      <p className="mt-1 max-w-xl text-sm leading-relaxed text-[var(--p-muted)]">{it.description}</p>
                     </li>
                   ))}
                 </ul>
