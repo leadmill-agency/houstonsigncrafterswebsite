@@ -57,11 +57,6 @@ export default async function ProposalPage({ params }) {
   const eventProps = { proposal_id: p.proposalId, client: p.client, market: "Houston", proposal_value: total, proposal_version: p.version };
   const mailtoAgreement = `mailto:${BUSINESS.email}?subject=${encodeURIComponent(`${p.projectName} #${p.proposalId.split("-").pop()} - Request Agreement and Site Survey`)}&body=${encodeURIComponent(`We would like to move forward with the ${p.projectName} signage proposal dated ${p.proposalDate}. Please send the final agreement and deposit invoice and coordinate the field survey.`)}`;
 
-  const groups = p.groups.map((g) => {
-    const items = p.items.filter((it) => it.group === g.id);
-    return { ...g, items, subtotal: items.reduce((s, it) => s + it.price, 0) };
-  });
-
   return (
     <main className="proposal-doc min-h-screen">
       <ProposalTracking proposalId={p.proposalId} client={p.client} value={total} version={p.version} />
@@ -172,31 +167,20 @@ export default async function ProposalPage({ params }) {
             complete package and the supplied drawings.
           </p>
 
-          {/* One continuous invoice-style table (owner calls 2026-09-02): specs
-              always visible, nothing behind a click, but condensed so the whole
-              investment reads in roughly one view — tight rows, small spec
-              type, slim group-subtotal dividers instead of separate blocks. */}
-          <div className="mt-8 max-w-3xl">
-            {groups.map((g) => (
-              <div key={g.id}>
-                <div className="flex items-baseline justify-between gap-4 border-b border-[var(--p-ink)] pb-1 pt-5 first:pt-0">
-                  <h3 className="font-display text-[13px] font-bold uppercase tracking-[0.12em] text-[var(--p-ink)]">{g.label}</h3>
-                  <span className="font-display text-[13px] font-bold text-[var(--hsc-blue)]">{money(g.subtotal)}</span>
+          {/* One flat invoice (owner call 2026-09-02, round 3): no group
+              dividers or subtotals — just the twelve line items with gray spec
+              text, then the one big total below. Minimum noise, one view. */}
+          <ul className="mt-8 max-w-3xl border-t border-[var(--p-ink)]">
+            {p.items.map((it) => (
+              <li key={it.id} className="border-b border-[var(--p-line)] py-2.5">
+                <div className="flex items-baseline justify-between gap-6">
+                  <span className="text-[15px] font-semibold leading-snug">{it.title}</span>
+                  <span className="whitespace-nowrap text-[15px] font-semibold">{money(it.price)}</span>
                 </div>
-                <ul>
-                  {g.items.map((it) => (
-                    <li key={it.id} className="border-b border-[var(--p-line)] py-2">
-                      <div className="flex items-baseline justify-between gap-6">
-                        <span className="text-[15px] font-semibold leading-snug">{it.title}</span>
-                        <span className="whitespace-nowrap text-[15px] font-semibold">{money(it.price)}</span>
-                      </div>
-                      <p className="mt-0.5 max-w-xl text-xs leading-snug text-[var(--p-muted)]">{it.description}</p>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+                <p className="mt-0.5 max-w-xl text-xs leading-snug text-[var(--p-muted)]">{it.description}</p>
+              </li>
             ))}
-          </div>
+          </ul>
 
           <div className="panel mt-12 bg-[var(--hsc-navy)] p-7 text-white sm:p-10">
             <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
