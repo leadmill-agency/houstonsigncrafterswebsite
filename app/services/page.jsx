@@ -2,10 +2,14 @@ import Link from "next/link";
 import { getAllServices } from "@/data/services";
 import CTASection from "@/components/CTASection";
 
+// "Manufacturing" wording is deliberate: GSC shows the manufacturing/fabrication
+// query family (business sign manufacturing houston pos ~5.6, sign fabrication
+// houston, houston sign manufacturing) landing here with zero clicks. We ARE
+// the manufacturer; the title should say the word searchers use.
 export const metadata = {
-  title: "Sign Services in Houston, TX",
+  title: "Sign Manufacturing & Installation in Houston, TX",
   description:
-    "Houston sign services: channel letters, monument signs, vehicle wraps, wall graphics, banners, and event signage. In-house design and installation.",
+    "Houston sign manufacturing: channel letters, monument signs, wall graphics, and banners, fabricated in our own shop and installed by our own crew. Free mockup and permits handled.",
   alternates: { canonical: "/services" },
 };
 
@@ -16,10 +20,11 @@ export default function ServicesHub() {
     <main>
       <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:px-6">
-          <h1 className="text-4xl font-bold text-ink">Our Sign Services in Houston</h1>
+          <h1 className="text-4xl font-bold text-ink">Sign Manufacturing and Installation in Houston</h1>
           <p className="mx-auto mt-4 max-w-2xl text-steel">
-            We design, fabricate, permit, and install every kind of business sign in-house,
-            so your project is handled by one team from first sketch to final installation.
+            We manufacture every kind of business sign in our own Houston shop and install it
+            with our own crew: design, fabrication, permits, and installation from one team,
+            first sketch to final light-up.
           </p>
         </div>
       </section>
