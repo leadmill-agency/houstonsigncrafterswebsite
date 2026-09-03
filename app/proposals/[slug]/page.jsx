@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
   const p = getProposal(slug);
   if (!p) return {};
   return {
-    title: `${p.projectName} Signage Proposal | Houston Sign Crafters`,
+    title: `${p.projectName} Signage Proposal`,
     description: `Signage fabrication, permitting, and installation proposal for ${p.client} #${p.proposalId.split("-").pop()} at ${p.projectAddress.split(",")[0]} in Houston.`,
     robots: { index: false, follow: false, noarchive: true },
   };
