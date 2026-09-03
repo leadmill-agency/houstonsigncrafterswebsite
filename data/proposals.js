@@ -113,6 +113,11 @@ export const PROPOSALS = {
       "Changes require written authorization and may affect price and schedule",
       "The final fabrication and installation agreement controls if it conflicts with this proposal page",
     ],
+    // Real HSC installs shown as evidence (ids from data/portfolio.js) and a
+    // verbatim Google review (index into data/testimonials.js) near the price.
+    evidencePortfolioIds: ["copper-espresso-bar", "coronation-theater", "luce-avenue-coffee"],
+    testimonialIndex: 2,
+    contact: { name: "Rameel Sheikh", title: "Owner" },
     pdfUrl: "/proposals/Houston_Sign_Crafters_Earth_Burger_Houston_Proposal.pdf",
     status: "sent",
   },
