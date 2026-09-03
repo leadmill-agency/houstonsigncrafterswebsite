@@ -1,17 +1,15 @@
-import { Fragment } from "react";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getProposal, getProposalSlugs } from "@/data/proposals";
 import { BUSINESS } from "@/data/business";
-import PORTFOLIO from "@/data/portfolio";
 import { TESTIMONIALS } from "@/data/testimonials";
 import LeadForm from "@/components/LeadForm";
 import { ProposalTracking, ProposalAction } from "@/components/ProposalClient";
 
-// Unlisted client proposal pages (PRD: Website Proposal Links/). Not linked
-// from navigation, not in the sitemap, noindexed. Editorial document layout
-// (ploy.ai-style numbered sections, whitespace over borders) per the approved
-// redesign plan; print CSS strips chrome for the PDF.
+// Unlisted client proposal pages — four-act decision document per the v2 PRD
+// (Earth_Burger_Proposal_Claude_Code_PRD.md): oversized condensed headlines,
+// large flat HSC color panels, real project drawings as proof, one dominant
+// CTA. Not linked from navigation, not in the sitemap, noindexed.
 
 export function generateStaticParams() {
   return getProposalSlugs().map((slug) => ({ slug }));
@@ -23,20 +21,24 @@ export async function generateMetadata({ params }) {
   if (!p) return {};
   return {
     title: `${p.projectName} Signage Proposal`,
-    description: `Signage fabrication, permitting, and installation proposal for ${p.client} #${p.proposalId.split("-").pop()} at ${p.projectAddress.split(",")[0]} in Houston.`,
+    description: `Signage fabrication, permitting, engineering, and installation proposal for ${p.client} #${p.proposalId.split("-").pop()} in Houston.`,
     robots: { index: false, follow: false, noarchive: true },
   };
 }
 
 const money = (n) => `$${n.toLocaleString("en-US")}`;
 
-// Ploy-style section heading: a big light numeral anchoring a bold title.
-function SectionHead({ n, children }) {
+function Eyebrow({ children }) {
   return (
-    <div className="flex items-baseline gap-4">
-      <span className="section-num" aria-hidden="true">{n}</span>
-      <h2>{children}</h2>
-    </div>
+    <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-[var(--hsc-blue)]">{children}</p>
+  );
+}
+
+function ActHeadline({ children }) {
+  return (
+    <h2 className="mt-3 font-display font-bold uppercase leading-[0.95] text-[var(--p-ink)]" style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}>
+      {children}
+    </h2>
   );
 }
 
@@ -45,54 +47,61 @@ export default async function ProposalPage({ params }) {
   const p = getProposal(slug);
   if (!p) notFound();
 
-  const deposit = (p.subtotal * p.depositPercent) / 100;
-  const eventProps = { proposal_id: p.proposalId, client: p.client, location: "Houston", proposal_value: p.subtotal, proposal_version: p.version };
-  const mailtoAgreement = `mailto:${BUSINESS.email}?subject=${encodeURIComponent(`${p.projectName} #${p.proposalId.split("-").pop()} - Request Agreement and Site Survey`)}&body=${encodeURIComponent(`We would like to move forward with the ${p.projectName} signage proposal dated ${p.proposalDate}. Please send the final agreement and deposit invoice and coordinate the site survey.`)}`;
-
-  const evidence = (p.evidencePortfolioIds || [])
-    .map((id) => PORTFOLIO.find((x) => x.id === id))
-    .filter(Boolean);
+  const total = p.items.reduce((s, it) => s + it.price, 0);
+  const deposit = (total * p.depositPercent) / 100;
+  const balance = total - deposit;
   const review = Number.isInteger(p.testimonialIndex) ? TESTIMONIALS[p.testimonialIndex] : null;
+  const eventProps = { proposal_id: p.proposalId, client: p.client, market: "Houston", proposal_value: total, proposal_version: p.version };
+  const mailtoAgreement = `mailto:${BUSINESS.email}?subject=${encodeURIComponent(`${p.projectName} #${p.proposalId.split("-").pop()} - Request Agreement and Site Survey`)}&body=${encodeURIComponent(`We would like to move forward with the ${p.projectName} signage proposal dated ${p.proposalDate}. Please send the final agreement and deposit invoice and coordinate the field survey.`)}`;
 
-  // Grouped scope rows mirror the at-a-glance figures so the table is auditable.
-  const groups = [
-    { label: "Exterior identity", ids: ["east-logo", "south-logo", "north-logo", "stencil"] },
-    { label: "Drive-thru", ids: ["canopy", "wayfinding"] },
-    { label: "Interior", ids: ["veggie-letters", "round-sign", "entrance-sign"] },
-    { label: "Project-wide", ids: ["install", "permit", "engineering"] },
-  ].map((g) => ({ ...g, items: g.ids.map((id) => p.scopeItems.find((it) => it.id === id)).filter(Boolean) }));
+  const groups = p.groups.map((g) => {
+    const items = p.items.filter((it) => it.group === g.id);
+    return { ...g, items, subtotal: items.reduce((s, it) => s + it.price, 0) };
+  });
 
   return (
-    <main className="proposal-doc min-h-screen" style={{ background: "#F7F9FC", color: "#17202A" }}>
-      <ProposalTracking proposalId={p.proposalId} client={p.client} value={p.subtotal} version={p.version} />
+    <main className="proposal-doc min-h-screen">
+      <ProposalTracking proposalId={p.proposalId} client={p.client} value={total} version={p.version} />
       <style>{`
-        .proposal-doc { font-size: 17px; }
-        .proposal-doc .doc { max-width: 820px; margin: 0 auto; padding: 0 22px; }
-        .proposal-doc .doc-wide { max-width: 1000px; margin: 0 auto; padding: 0 22px; }
-        .proposal-doc h2 { font-family: var(--font-display); font-size: 1.9rem; color: #0B2E59; letter-spacing: 0.01em; }
-        .proposal-doc .section-num { font-family: var(--font-display); font-size: 2.6rem; font-weight: 700; color: #C7D6E8; line-height: 1; }
-        .proposal-doc section { padding: 44px 0; }
-        .proposal-doc section + section { border-top: 1px solid #E4EAF1; }
-        .proposal-doc .btn-prop { display: inline-flex; align-items: center; justify-content: center; padding: 0.7rem 1.4rem; font-family: var(--font-display); font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.05em; border-radius: 3px; white-space: nowrap; }
-        .proposal-doc .btn-prop-primary { background: #1155AA; color: #fff; }
-        .proposal-doc .btn-prop-primary:hover { background: #0B2E59; }
-        .proposal-doc .btn-prop-ghost { border: 1px solid #D9E1EA; color: #0B2E59; background: #fff; }
-        .proposal-doc .btn-prop-ghost:hover { border-color: #1155AA; }
-        .proposal-doc .tick { display: inline-block; width: 7px; height: 7px; flex: none; margin-top: 9px; }
+        .proposal-doc {
+          --hsc-blue: #0C51AA; --hsc-cyan: #09B2FB; --hsc-navy: #082F5F;
+          --hsc-blue-dark: #093F84; --hsc-blue-light: #DCEBFF; --hsc-cyan-light: #E4F7FF;
+          --p-ink: #202124; --p-muted: #62676E; --p-paper: #F4F5F6; --p-line: #D9DEE5;
+          background: var(--p-paper); color: var(--p-ink); font-size: 17px;
+          font-variant-numeric: tabular-nums;
+        }
+        .proposal-doc .doc { max-width: 1180px; margin: 0 auto; padding: 0 24px; }
+        .proposal-doc .act { padding: 56px 0; }
+        .proposal-doc .panel { border-radius: 24px; }
+        .proposal-doc .btn-prop { display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 1.6rem; font-family: var(--font-display); font-weight: 600; font-size: 0.82rem; text-transform: uppercase; letter-spacing: 0.06em; border-radius: 999px; white-space: nowrap; transition: background-color 150ms, border-color 150ms; }
+        .proposal-doc .btn-prop-primary { background: var(--hsc-blue); color: #fff; }
+        .proposal-doc .btn-prop-primary:hover { background: var(--hsc-blue-dark); }
+        .proposal-doc .btn-prop-ghost { border: 1px solid var(--p-line); color: var(--hsc-blue); background: #fff; }
+        .proposal-doc .btn-prop-ghost:hover { border-color: var(--hsc-blue); }
+        .proposal-doc .btn-prop-invert { background: #fff; color: var(--hsc-navy); }
+        .proposal-doc .pill { display: inline-block; border-radius: 999px; padding: 0.35rem 0.9rem; font-family: var(--font-display); font-size: 0.7rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; }
+        .proposal-doc a:focus-visible, .proposal-doc button:focus-visible, .proposal-doc summary:focus-visible { outline: 2px solid var(--hsc-blue); outline-offset: 2px; }
+        .proposal-doc details > summary { list-style: none; cursor: pointer; }
+        .proposal-doc details > summary::-webkit-details-marker { display: none; }
+        .proposal-doc details[open] .disclosure { transform: rotate(45deg); }
+        .proposal-doc .disclosure { display: inline-block; transition: transform 150ms; color: var(--p-muted); }
         @media print {
           .no-print { display: none !important; }
           .proposal-doc { background: #fff !important; font-size: 12px; }
-          .proposal-doc section { break-inside: avoid; padding: 22px 0; }
+          .proposal-doc .act { padding: 20px 0; break-inside: avoid; }
+          .proposal-doc .act-break { break-before: page; }
+          .proposal-doc details { display: block; }
+          .proposal-doc details > *:not(summary) { display: block; }
         }
       `}</style>
 
-      {/* Sticky action header */}
-      <header className="no-print sticky top-0 z-50 border-b border-[#E4EAF1] bg-white/95 backdrop-blur">
-        <div className="doc-wide flex h-16 items-center justify-between gap-3">
+      {/* Sticky utility header */}
+      <header className="no-print sticky top-0 z-50 border-b border-[var(--p-line)] bg-white/95 backdrop-blur">
+        <div className="doc flex h-16 items-center justify-between gap-3">
           <div className="flex min-w-0 items-center gap-3">
             <Image src="/logo-light.png" alt="Houston Sign Crafters" width={1336} height={271} className="h-8 w-auto flex-none" />
-            <span className="hidden truncate text-sm text-[#667085] md:inline">
-              {p.projectName} · Proposal #{p.proposalId}
+            <span className="hidden truncate text-sm text-[var(--p-muted)] lg:inline">
+              {p.projectName} · {p.proposalId}
             </span>
           </div>
           <div className="flex flex-none items-center gap-2">
@@ -106,287 +115,241 @@ export default async function ProposalPage({ params }) {
         </div>
       </header>
 
-      {/* Cover */}
-      <div className="border-b border-[#E4EAF1] bg-white">
-        <div className="doc py-16">
-          <p className="font-display text-xs font-semibold uppercase tracking-[0.18em] text-[#1155AA]">
-            Signage fabrication and installation proposal
-          </p>
-          <h1 className="mt-4 font-display text-5xl font-bold leading-none text-[#0B2E59] sm:text-6xl">{p.projectName}</h1>
-          <p className="mt-3 text-lg text-[#3d4a5c]">{p.projectAddress}</p>
-          <p className="mt-1.5 text-[15px] text-[#667085]">
-            3 illuminated exterior identity signs · 2 drive-thru structures · 3 interior elements
-          </p>
-
-          <div className="mt-10 flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
-            <dl className="grid grid-cols-2 gap-x-10 gap-y-3 text-sm">
-              <div><dt className="text-[#667085]">Prepared for</dt><dd className="font-semibold">{p.preparedFor}</dd></div>
-              <div><dt className="text-[#667085]">Prepared by</dt><dd className="font-semibold">Houston Sign Crafters</dd></div>
-              <div><dt className="text-[#667085]">Proposal date</dt><dd className="font-semibold">{p.proposalDate}</dd></div>
-              <div><dt className="text-[#667085]">Valid through</dt><dd className="font-semibold">{p.validThrough}</dd></div>
-            </dl>
-            <div className="flex-none border-t-2 border-[#0B2E59] pt-3 sm:text-right">
-              <div className="text-sm text-[#667085]">Total investment</div>
-              <div className="font-display text-4xl font-bold text-[#0B2E59]">{money(p.subtotal)}</div>
-              <div className="text-xs text-[#667085]">{p.salesTaxLabel}</div>
-            </div>
-          </div>
-
-          <div className="no-print mt-10 flex flex-col gap-3 sm:flex-row">
-            <ProposalAction kind="agreement" href="#request" className="btn-prop btn-prop-primary" eventProps={eventProps}>
-              Request Agreement &amp; Schedule Survey
-            </ProposalAction>
-            <ProposalAction kind="pdf" href={p.pdfUrl} className="btn-prop btn-prop-ghost" eventProps={eventProps}>
-              Download PDF
-            </ProposalAction>
-          </div>
-        </div>
-      </div>
-
       <div className="doc">
-        {/* 01 Executive summary */}
-        <section>
-          <SectionHead n="01">Executive summary</SectionHead>
-          <p className="mt-5 leading-relaxed">{p.summary}</p>
-          <p className="mt-4 leading-relaxed text-[#3d4a5c]">{p.objective}</p>
+        {/* ACT 1 — Project decision page */}
+        <section className="act">
+          <Eyebrow>{p.client.toUpperCase()} #{p.proposalId.split("-").pop()}</Eyebrow>
+          <h1 className="mt-3 font-display font-bold uppercase leading-[0.92] text-[var(--p-ink)]" style={{ fontSize: "clamp(3.2rem, 8vw, 7rem)" }}>
+            {p.projectName}
+          </h1>
+          <p className="mt-5 max-w-2xl text-lg leading-relaxed text-[#3a3f46]">{p.heroDescription}</p>
+
+          <div className="panel mt-10 bg-[var(--hsc-blue-light)] p-6 sm:p-10">
+            <div className="grid items-center gap-8 lg:grid-cols-2">
+              <figure className="overflow-hidden rounded-2xl bg-white p-4">
+                <Image src={p.assets.exteriorDrawing.src} alt={p.assets.exteriorDrawing.alt} width={p.assets.exteriorDrawing.w} height={p.assets.exteriorDrawing.h} className="h-auto w-full" priority />
+              </figure>
+              <div>
+                <span className="pill bg-[var(--hsc-navy)] text-white">Complete signage package</span>
+                <dl className="mt-6 space-y-3 text-[15px]">
+                  <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Project site</dt><dd className="text-right font-semibold">{p.projectAddress}</dd></div>
+                  <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Prepared for</dt><dd className="text-right font-semibold">{p.preparedFor}</dd></div>
+                  <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Proposal date</dt><dd className="text-right font-semibold">{p.proposalDate}</dd></div>
+                  <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Valid through</dt><dd className="text-right font-semibold">{p.validThrough}</dd></div>
+                </dl>
+                <div className="mt-6">
+                  <div className="text-sm text-[var(--p-muted)]">Total project investment</div>
+                  <div className="font-display font-bold text-[var(--hsc-navy)]" style={{ fontSize: "clamp(2.8rem, 6vw, 5rem)", lineHeight: 1 }}>{money(total)}</div>
+                  <div className="mt-1 text-sm text-[var(--p-muted)]">{p.salesTaxLabel}</div>
+                </div>
+                <div className="no-print mt-7 flex flex-wrap gap-3">
+                  <ProposalAction kind="agreement" href="#request" className="btn-prop btn-prop-primary" eventProps={eventProps}>
+                    Request Agreement
+                  </ProposalAction>
+                  <ProposalAction kind="pdf" href={p.pdfUrl} className="btn-prop btn-prop-ghost" eventProps={eventProps}>
+                    Download PDF
+                  </ProposalAction>
+                </div>
+              </div>
+            </div>
+            <p className="mt-6 text-sm text-[var(--p-muted)]">Scope basis: supplied ten-sheet signage package dated {p.drawingSetDate}.</p>
+          </div>
+          <p className="mt-8 max-w-3xl leading-relaxed text-[#3a3f46]">{p.summary}</p>
         </section>
 
-        {/* 02 Scope and investment */}
-        <section>
-          <SectionHead n="02">Scope and investment</SectionHead>
-          <div className="mt-6 overflow-x-auto rounded-sm border border-[#D9E1EA] bg-white p-1">
-            <table className="w-full border-collapse text-[15px]">
-              <thead>
-                <tr className="text-left font-display text-xs uppercase tracking-wider text-[#667085]">
-                  <th className="px-4 py-3">Item</th>
-                  <th className="hidden px-4 py-3 sm:table-cell">Description</th>
-                  <th className="px-4 py-3 text-right">Qty.</th>
-                  <th className="px-4 py-3 text-right">Price</th>
-                </tr>
-              </thead>
-              <tbody>
-                {groups.map((g) => (
-                  <Fragment key={g.label}>
-                    <tr>
-                      <td colSpan={4} className="border-t border-[#E4EAF1] px-4 pb-1 pt-4 font-display text-xs font-bold uppercase tracking-[0.14em] text-[#1155AA]">
-                        {g.label}
-                      </td>
-                    </tr>
-                    {g.items.map((it) => (
-                      <tr key={it.id} className="align-top">
-                        <td className="px-4 py-2.5 font-semibold text-[#17202A]">
-                          {it.title}
-                          <div className="mt-1 text-[13px] font-normal leading-snug text-[#667085] sm:hidden">{it.description}</div>
-                        </td>
-                        <td className="hidden px-4 py-2.5 text-[13px] leading-snug text-[#667085] sm:table-cell">{it.description}</td>
-                        <td className="whitespace-nowrap px-4 py-2.5 text-right text-[#3d4a5c]">{it.quantity}</td>
-                        <td className="whitespace-nowrap px-4 py-2.5 text-right font-semibold">{money(it.price)}</td>
-                      </tr>
-                    ))}
-                  </Fragment>
-                ))}
-                <tr className="border-t-2 border-[#0B2E59]">
-                  <td className="px-4 py-4 font-display text-sm font-bold uppercase tracking-wider text-[#0B2E59]" colSpan={2}>
-                    Total project investment
-                  </td>
-                  <td className="hidden sm:table-cell" />
-                  <td className="whitespace-nowrap px-4 py-4 text-right font-display text-2xl font-bold text-[#0B2E59]">{money(p.subtotal)}</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <p className="mt-3 text-sm text-[#667085]">
-            <span className="font-display text-xs font-bold uppercase tracking-wider text-[#F47B20]">Note </span>
-            {p.pricingNote}
+        {/* ACT 2 — Scope and investment */}
+        <section className="act act-break">
+          <Eyebrow>One package / twelve priced components</Eyebrow>
+          <ActHeadline>Scope + investment</ActHeadline>
+          <p className="mt-5 max-w-2xl text-lg text-[#3a3f46]">
+            Every proposed sign and project allowance is shown below. Pricing is based on the
+            complete package and the supplied drawings.
           </p>
 
+          <div className="mt-10 grid gap-x-14 gap-y-10 lg:grid-cols-2">
+            {groups.map((g) => (
+              <div key={g.id}>
+                <div className="flex items-baseline justify-between gap-4 border-b-2 border-[var(--p-ink)] pb-2">
+                  <h3 className="font-display text-lg font-bold uppercase tracking-wide text-[var(--p-ink)]">{g.label}</h3>
+                  <span className="font-display text-lg font-bold text-[var(--hsc-blue)]">{money(g.subtotal)}</span>
+                </div>
+                <ul>
+                  {g.items.map((it) => (
+                    <li key={it.id} className="border-b border-[var(--p-line)]">
+                      <details>
+                        <summary className="flex items-baseline justify-between gap-4 py-3">
+                          <span className="flex items-baseline gap-2 font-medium">
+                            <span className="disclosure font-display" aria-hidden="true">+</span>
+                            {it.title}
+                          </span>
+                          <span className="whitespace-nowrap font-semibold">{money(it.price)}</span>
+                        </summary>
+                        <p className="pb-3 pl-5 pr-4 text-sm leading-relaxed text-[var(--p-muted)]">{it.description}</p>
+                      </details>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="panel mt-12 bg-[var(--hsc-navy)] p-7 text-white sm:p-10">
+            <div className="flex flex-col gap-8 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <div className="text-sm text-white/70">Total project investment</div>
+                <div className="font-display font-bold" style={{ fontSize: "clamp(2.8rem, 6vw, 5.25rem)", lineHeight: 1 }}>{money(total)}</div>
+                <div className="mt-1 text-sm text-white/70">Applicable sales tax is not included</div>
+              </div>
+              <dl className="space-y-2 text-[15px] sm:text-right">
+                <div><dt className="inline text-white/70">Deposit with agreement: </dt><dd className="inline font-semibold">{money(deposit)}</dd></div>
+                <div><dt className="inline text-white/70">Final payment upon installation: </dt><dd className="inline font-semibold">{money(balance)}</dd></div>
+              </dl>
+            </div>
+            <p className="mt-6 border-t border-white/20 pt-4 text-sm text-white/70">{p.pricingNote}</p>
+          </div>
+
           {review && (
-            <figure className="mt-10">
-              <blockquote className="text-xl leading-relaxed text-[#17202A]">"{review.quote}"</blockquote>
-              <figcaption className="mt-3 text-sm text-[#667085]">
-                <span className="font-semibold text-[#17202A]">{review.name}</span> · {review.platform} review of Houston Sign Crafters
+            <figure className="mt-10 max-w-3xl">
+              <blockquote className="text-xl leading-relaxed">"{review.quote}"</blockquote>
+              <figcaption className="mt-3 text-sm text-[var(--p-muted)]">
+                <span className="font-semibold text-[var(--p-ink)]">{review.name}</span> · verified {review.platform} review of Houston Sign Crafters
               </figcaption>
             </figure>
           )}
         </section>
 
-        {/* 03 What is included */}
-        <section>
-          <SectionHead n="03">What is included</SectionHead>
-          <ul className="mt-6 grid gap-x-10 gap-y-2.5 sm:grid-cols-2">
-            {p.inclusions.map((inc) => (
-              <li key={inc} className="flex items-start gap-2.5">
-                <svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="#176B45" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mt-1.5 flex-none" aria-hidden="true">
-                  <path d="M3 10.5l4.5 4.5L17 5.5" />
-                </svg>
-                <span>{inc}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
+        {/* ACT 3 — Delivery plan */}
+        <section className="act act-break">
+          <Eyebrow>A practical path to installation</Eyebrow>
+          <ActHeadline>How the project moves</ActHeadline>
+          <p className="mt-5 max-w-2xl text-lg text-[#3a3f46]">{p.scheduleIntro}</p>
 
-        {/* 04 Schedule */}
-        <section>
-          <SectionHead n="04">Schedule</SectionHead>
-          <ol className="mt-6 space-y-4">
-            {p.schedule.map((s, i) => (
-              <li key={s.title} className="flex gap-5">
-                <span className="font-display text-lg font-bold text-[#C7D6E8]" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span>
-                <div>
-                  <span className="font-semibold text-[#17202A]">{s.title}</span>
-                  {s.timing && <span className="ml-2 text-[15px] text-[#1155AA]">{s.timing}</span>}
-                  <span className="ml-2 text-[15px] text-[#667085]">{s.description}</span>
-                </div>
-              </li>
-            ))}
-          </ol>
-          <p className="mt-6 max-w-2xl text-[15px] leading-relaxed text-[#3d4a5c]">{p.scheduleStatement}</p>
-        </section>
+          <div className="panel mt-10 bg-[var(--hsc-cyan-light)] p-6 sm:p-10">
+            <ol className="space-y-6">
+              {p.schedule.map((s, i) => (
+                <li key={s.title} className="flex gap-5 border-b border-[#bfe6f5] pb-6 last:border-0 last:pb-0">
+                  <span className="font-display text-3xl font-bold text-[var(--hsc-blue)]" aria-hidden="true">{i + 1}</span>
+                  <div className="pt-1.5">
+                    <div className="font-display text-lg font-bold uppercase tracking-wide">{s.title}</div>
+                    <p className="mt-1 text-[15px] text-[#3a3f46]">{s.description}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <span className="pill mt-8 inline-block bg-white text-[var(--hsc-navy)]">Target: requested opening window</span>
+          </div>
 
-        {/* 05 Responsibilities and exclusions */}
-        <section>
-          <SectionHead n="05">Responsibilities and exclusions</SectionHead>
-          <div className="mt-6 grid gap-10 md:grid-cols-2">
+          <div className="mt-10 grid items-center gap-8 lg:grid-cols-2">
+            <figure className="overflow-hidden rounded-2xl border border-[var(--p-line)] bg-white p-4">
+              <Image src={p.assets.canopyDrawing.src} alt={p.assets.canopyDrawing.alt} width={p.assets.canopyDrawing.w} height={p.assets.canopyDrawing.h} className="h-auto w-full" />
+            </figure>
             <div>
-              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-[#0B2E59]">Houston Sign Crafters</h3>
-              <ul className="mt-3 space-y-2 text-[15px]">
-                {p.responsibilities.hsc.map((r) => (
-                  <li key={r} className="flex items-start gap-2.5">
-                    <span className="tick" style={{ background: "#0B463B" }} aria-hidden="true" />
-                    <span>{r}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className="font-display text-sm font-bold uppercase tracking-wider text-[#0B2E59]">Customer, landlord, or general contractor</h3>
-              <ul className="mt-3 space-y-2 text-[15px]">
-                {p.responsibilities.customer.map((r) => (
-                  <li key={r} className="flex items-start gap-2.5">
-                    <span className="tick" style={{ background: "#F47B20" }} aria-hidden="true" />
-                    <span>{r}</span>
+              <h3 className="font-display text-lg font-bold uppercase tracking-wide">What we need from your team</h3>
+              <ul className="mt-4 space-y-2.5 text-[15px]">
+                {p.customerInputs.map((c) => (
+                  <li key={c} className="flex items-start gap-2.5">
+                    <span className="mt-[9px] h-1.5 w-1.5 flex-none rounded-full bg-[var(--hsc-blue)]" aria-hidden="true" />
+                    <span>{c}</span>
                   </li>
                 ))}
               </ul>
             </div>
           </div>
-          <h3 className="mt-9 font-display text-sm font-bold uppercase tracking-wider text-[#0B2E59]">Exclusions</h3>
-          <ol className="mt-3 list-decimal space-y-1.5 pl-5 text-sm leading-relaxed text-[#3d4a5c]">
-            {p.exclusions.map((x) => (
-              <li key={x}>{x}</li>
-            ))}
-          </ol>
         </section>
 
-        {/* 06 Work you can drive past */}
-        {evidence.length > 0 && (
-          <section>
-            <SectionHead n="06">Work you can drive past</SectionHead>
-            <p className="mt-5 max-w-2xl text-[15px] text-[#3d4a5c]">
-              Recent Houston Sign Crafters installs. Each was designed, fabricated, permitted, and
-              installed by the same crew proposed for this project, including face- and halo-illuminated
-              work comparable to the Earth Burger exterior scope.
-            </p>
-            <div className="mt-6 grid gap-4 sm:grid-cols-3">
-              {evidence.map((e) => (
-                <figure key={e.id} className="overflow-hidden rounded-sm border border-[#D9E1EA] bg-white">
-                  <div className="relative aspect-[4/3]">
-                    <Image src={e.imageSrc} alt={`${e.title}: ${e.signType} in ${e.location}`} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover" />
-                  </div>
-                  <figcaption className="px-3 py-2 text-[13px]">
-                    <span className="font-semibold text-[#17202A]">{e.title}</span>
-                    <span className="text-[#667085]"> · {e.signType}</span>
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </section>
-        )}
+        {/* ACT 4 — Approval and commercial terms */}
+        <section className="act act-break">
+          <Eyebrow>One decision / one next step</Eyebrow>
+          <ActHeadline>Ready to authorize</ActHeadline>
+          <p className="mt-5 max-w-2xl text-lg text-[#3a3f46]">{p.approvalIntro}</p>
 
-        {/* 07 Why Houston Sign Crafters */}
-        <section>
-          <SectionHead n="07">Why Houston Sign Crafters</SectionHead>
-          <ul className="mt-6 grid gap-x-10 gap-y-2.5 sm:grid-cols-2">
-            {p.whyHsc.map((w) => (
-              <li key={w} className="flex items-start gap-2.5">
-                <span className="tick" style={{ background: "#1155AA" }} aria-hidden="true" />
-                <span>{w}</span>
-              </li>
+          <div className="mt-10 grid items-start gap-8 lg:grid-cols-2">
+            <div className="panel bg-[var(--hsc-blue-light)] p-6 sm:p-8">
+              <h3 className="font-display text-lg font-bold uppercase tracking-wide">Commercial summary</h3>
+              <dl className="mt-4 space-y-3 text-[15px]">
+                <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Total</dt><dd className="font-semibold">{money(total)} {p.salesTaxLabel}</dd></div>
+                <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Due with agreement</dt><dd className="font-semibold">{money(deposit)}</dd></div>
+                <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Due upon installation</dt><dd className="font-semibold">{money(balance)}</dd></div>
+                <div className="flex justify-between gap-6"><dt className="text-[var(--p-muted)]">Valid through</dt><dd className="font-semibold">{p.validThrough}</dd></div>
+              </dl>
+              <h3 className="mt-7 font-display text-lg font-bold uppercase tracking-wide">Houston Sign Crafters includes</h3>
+              <ul className="mt-3 space-y-2 text-[15px]">
+                {p.hscIncludes.map((x) => (
+                  <li key={x} className="flex items-start gap-2.5">
+                    <svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="var(--hsc-blue)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mt-1.5 flex-none" aria-hidden="true">
+                      <path d="M3 10.5l4.5 4.5L17 5.5" />
+                    </svg>
+                    <span>{x}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <figure className="overflow-hidden rounded-2xl border border-[var(--p-line)] bg-white p-4">
+              <Image src={p.assets.interiorDrawing.src} alt={p.assets.interiorDrawing.alt} width={p.assets.interiorDrawing.w} height={p.assets.interiorDrawing.h} className="h-auto w-full" />
+            </figure>
+          </div>
+
+          <h3 className="mt-10 font-display text-lg font-bold uppercase tracking-wide">Important conditions</h3>
+          <ol className="mt-3 max-w-3xl list-decimal space-y-1.5 pl-5 text-sm leading-relaxed text-[#3a3f46]">
+            {p.conditions.map((c) => (
+              <li key={c}>{c}</li>
             ))}
-          </ul>
-          <p className="mt-6 max-w-2xl text-[15px] italic leading-relaxed text-[#3d4a5c]">{p.positioning}</p>
+          </ol>
+
           {p.contact && (
-            <div className="mt-8 border-t border-[#E4EAF1] pt-6">
-              <div className="font-display text-xs font-bold uppercase tracking-wider text-[#667085]">Who runs your project</div>
-              <div className="mt-2 font-display text-xl font-bold text-[#0B2E59]">{p.contact.name}</div>
-              <div className="text-sm text-[#3d4a5c]">{p.contact.title}, Houston Sign Crafters</div>
-              <div className="mt-1.5 text-sm text-[#667085]">
+            <div className="mt-10 border-t border-[var(--p-line)] pt-6">
+              <div className="font-display text-xs font-bold uppercase tracking-[0.14em] text-[var(--p-muted)]">Who runs your project</div>
+              <div className="mt-2 font-display text-xl font-bold text-[var(--hsc-navy)]">{p.contact.name}</div>
+              <div className="text-sm text-[#3a3f46]">{p.contact.title}, Houston Sign Crafters</div>
+              <div className="mt-1.5 text-sm text-[var(--p-muted)]">
                 Direct:{" "}
-                <ProposalAction kind="phone" href={BUSINESS.phoneHref} className="font-semibold text-[#1155AA]" eventProps={eventProps}>{BUSINESS.phone}</ProposalAction>
+                <ProposalAction kind="phone" href={BUSINESS.phoneHref} className="font-semibold text-[var(--hsc-blue)]" eventProps={eventProps}>{BUSINESS.phone}</ProposalAction>
                 {" "}·{" "}
-                <ProposalAction kind="email" href={mailtoAgreement} className="font-semibold text-[#1155AA]" eventProps={eventProps}>{BUSINESS.email}</ProposalAction>
+                <ProposalAction kind="email" href={mailtoAgreement} className="font-semibold text-[var(--hsc-blue)]" eventProps={eventProps}>{BUSINESS.email}</ProposalAction>
               </div>
             </div>
           )}
         </section>
 
-        {/* 08 Commercial terms */}
-        <section>
-          <SectionHead n="08">Commercial terms</SectionHead>
-          <ul className="mt-6 space-y-2 text-[15px]">
-            {p.terms.map((t) => (
-              <li key={t} className="flex items-start gap-2.5">
-                <span className="tick" style={{ background: "#1155AA" }} aria-hidden="true" />
-                <span>{t}</span>
-              </li>
-            ))}
-          </ul>
-        </section>
-
-        {/* Request agreement */}
-        <section id="request" className="no-print">
-          <div className="rounded-sm border border-[#D9E1EA] bg-white p-7 sm:p-9">
-            <h2>Ready to move the Houston location forward?</h2>
-            <p className="mt-4 max-w-2xl leading-relaxed">
-              Request the final agreement and deposit invoice. Houston Sign Crafters will then coordinate
-              the site survey and confirm the permitting and production schedule.
+        {/* Final CTA */}
+        <section id="request" className="act">
+          <div className="panel bg-[var(--hsc-blue)] p-7 text-white sm:p-12">
+            <p className="font-display text-xs font-semibold uppercase tracking-[0.2em] text-white/70">Next step</p>
+            <h2 className="mt-3 font-display font-bold uppercase leading-[0.95]" style={{ fontSize: "clamp(2.5rem, 6vw, 5rem)" }}>
+              Request the agreement
+            </h2>
+            <p className="mt-4 max-w-2xl text-lg text-white/85">
+              Then we will schedule the field survey and confirm the permitting and production path.
             </p>
-            <div className="mt-6 max-w-2xl">
+            <div className="no-print mt-8 max-w-2xl">
               <LeadForm
                 kind="contact"
-                submitLabel="Request Agreement & Schedule Survey"
+                submitLabel="Request Agreement"
                 messageLabel={`Anything we should know before sending the ${p.projectName} agreement?`}
               />
             </div>
-            <p className="mt-5 text-sm text-[#667085]">
-              Prefer email or phone?{" "}
-              <ProposalAction kind="email" href={mailtoAgreement} className="font-semibold text-[#1155AA] underline underline-offset-2" eventProps={eventProps}>
-                {BUSINESS.email}
-              </ProposalAction>{" "}
-              ·{" "}
-              <ProposalAction kind="phone" href={BUSINESS.phoneHref} className="font-semibold text-[#1155AA] underline underline-offset-2" eventProps={eventProps}>
-                {BUSINESS.phone}
-              </ProposalAction>{" "}
-              ·{" "}
-              <ProposalAction kind="pdf" href={p.pdfUrl} className="font-semibold text-[#1155AA] underline underline-offset-2" eventProps={eventProps}>
-                Download Proposal PDF
-              </ProposalAction>
+            <p className="mt-6 text-sm text-white/80">
+              <ProposalAction kind="email" href={mailtoAgreement} className="font-semibold text-white underline underline-offset-2" eventProps={eventProps}>{BUSINESS.email}</ProposalAction>
+              {" "}·{" "}
+              <ProposalAction kind="phone" href={BUSINESS.phoneHref} className="font-semibold text-white underline underline-offset-2" eventProps={eventProps}>{BUSINESS.phone}</ProposalAction>
+              {" "}· {BUSINESS.address.streetAddress}, {BUSINESS.address.addressLocality}, {BUSINESS.address.addressRegion}
+              {" "}·{" "}
+              <ProposalAction kind="pdf" href={p.pdfUrl} className="font-semibold text-white underline underline-offset-2" eventProps={eventProps}>Download PDF</ProposalAction>
             </p>
           </div>
-        </section>
 
-        {/* Sign-off */}
-        <section>
-          <div className="text-[15px] text-[#3d4a5c]">Prepared and submitted by</div>
-          <div className="mt-1 font-display text-2xl font-bold text-[#0B2E59]">{p.contact?.name || "Houston Sign Crafters"}</div>
-          <div className="text-sm text-[#667085]">{p.contact?.title ? `${p.contact.title}, ` : ""}Houston Sign Crafters · {p.proposalDate}</div>
+          <div className="mt-10">
+            <div className="text-[15px] text-[#3a3f46]">Prepared and submitted by</div>
+            <div className="mt-1 font-display text-2xl font-bold text-[var(--hsc-navy)]">{p.contact?.name || "Houston Sign Crafters"}</div>
+            <div className="text-sm text-[var(--p-muted)]">{p.contact?.title ? `${p.contact.title}, ` : ""}Houston Sign Crafters · {p.proposalDate}</div>
+          </div>
         </section>
       </div>
 
       {/* Footer */}
-      <footer className="border-t border-[#E4EAF1] bg-white">
-        <div className="doc py-8 text-sm text-[#667085]">
-          <div className="font-semibold text-[#17202A]">Houston Sign Crafters</div>
+      <footer className="border-t border-[var(--p-line)] bg-white">
+        <div className="doc py-8 text-sm text-[var(--p-muted)]">
+          <div className="font-semibold text-[var(--p-ink)]">Houston Sign Crafters</div>
           <div>{BUSINESS.address.streetAddress}, {BUSINESS.address.addressLocality}, {BUSINESS.address.addressRegion}</div>
           <div>{BUSINESS.phone} · {BUSINESS.email} · Proposal #{p.proposalId}</div>
           <div className="mt-3 text-xs">Confidential commercial proposal prepared for {p.preparedFor}.</div>
