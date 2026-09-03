@@ -20,6 +20,16 @@ const nextConfig: NextConfig = {
   //
   // Before DNS cutover: re-crawl + check GSC "Pages" for any indexed URL not
   // covered here and add it (playbook Field Note #25).
+  // Unlisted client proposals: belt-and-suspenders noindex at the header level
+  // so the PDF file (which can't carry a meta tag) is covered too.
+  async headers() {
+    return [
+      {
+        source: "/proposals/:path*",
+        headers: [{ key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" }],
+      },
+    ];
+  },
   async redirects() {
     return [
       // Top-level pages renamed in the rebuild

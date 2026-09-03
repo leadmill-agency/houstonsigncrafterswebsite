@@ -22,7 +22,7 @@ export default function Nav() {
   const pathname = usePathname();
 
   // Landing pages (/lp/*) are chrome-free for ad conversion — no nav escape routes.
-  if (pathname?.startsWith("/lp")) return null;
+  if (pathname?.startsWith("/lp") || pathname?.startsWith("/proposals")) return null;
 
   return (
     <header className="sticky top-0 z-50">
