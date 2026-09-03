@@ -172,24 +172,25 @@ export default async function ProposalPage({ params }) {
             complete package and the supplied drawings.
           </p>
 
-          {/* One vertical, fully expanded list (owner call 2026-09-02): every
-              description visible, no disclosure affordance — a $47k line item
-              should never hide its spec behind a click. */}
-          <div className="mt-10 max-w-3xl space-y-10">
+          {/* One continuous invoice-style table (owner calls 2026-09-02): specs
+              always visible, nothing behind a click, but condensed so the whole
+              investment reads in roughly one view — tight rows, small spec
+              type, slim group-subtotal dividers instead of separate blocks. */}
+          <div className="mt-8 max-w-3xl">
             {groups.map((g) => (
               <div key={g.id}>
-                <div className="flex items-baseline justify-between gap-4 border-b-2 border-[var(--p-ink)] pb-2">
-                  <h3 className="font-display text-lg font-bold uppercase tracking-wide text-[var(--p-ink)]">{g.label}</h3>
-                  <span className="font-display text-lg font-bold text-[var(--hsc-blue)]">{money(g.subtotal)}</span>
+                <div className="flex items-baseline justify-between gap-4 border-b border-[var(--p-ink)] pb-1 pt-5 first:pt-0">
+                  <h3 className="font-display text-[13px] font-bold uppercase tracking-[0.12em] text-[var(--p-ink)]">{g.label}</h3>
+                  <span className="font-display text-[13px] font-bold text-[var(--hsc-blue)]">{money(g.subtotal)}</span>
                 </div>
                 <ul>
                   {g.items.map((it) => (
-                    <li key={it.id} className="border-b border-[var(--p-line)] py-3.5">
+                    <li key={it.id} className="border-b border-[var(--p-line)] py-2">
                       <div className="flex items-baseline justify-between gap-6">
-                        <span className="font-semibold">{it.title}</span>
-                        <span className="whitespace-nowrap font-semibold">{money(it.price)}</span>
+                        <span className="text-[15px] font-semibold leading-snug">{it.title}</span>
+                        <span className="whitespace-nowrap text-[15px] font-semibold">{money(it.price)}</span>
                       </div>
-                      <p className="mt-1 max-w-xl text-sm leading-relaxed text-[var(--p-muted)]">{it.description}</p>
+                      <p className="mt-0.5 max-w-xl text-xs leading-snug text-[var(--p-muted)]">{it.description}</p>
                     </li>
                   ))}
                 </ul>

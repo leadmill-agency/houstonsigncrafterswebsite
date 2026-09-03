@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Earth Burger Houston Signage Proposal</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Public+Sans:wght@400;600;700&display=swap');
+  @page { size: letter portrait; margin: 0.72in 0.65in 0.7in; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  :root {
+    --blue: #0C51AA; --cyan: #09B2FB; --navy: #082F5F;
+    --blue-light: #DCEBFF; --ink: #202124; --muted: #62676E; --line: #D9DEE5;
+  }
+  body { font-family: 'Public Sans', Arial, sans-serif; color: var(--ink); font-size: 10pt; line-height: 1.5; font-variant-numeric: tabular-nums; }
+  .pagehead { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2.5px solid var(--navy); padding-bottom: 4px; margin-bottom: 12px; }
+  .pagehead .t { font-family: Oswald, Arial, sans-serif; font-weight: 600; font-size: 9pt; text-transform: uppercase; letter-spacing: 0.06em; color: var(--navy); }
+  .pagehead .d { font-family: Oswald, Arial, sans-serif; font-weight: 600; font-size: 9pt; color: var(--muted); }
+  h2 { font-family: Oswald, Arial, sans-serif; font-weight: 700; text-transform: uppercase; font-size: 15.5pt; color: var(--navy); letter-spacing: 0.02em; margin-bottom: 4px; }
+  h3 { font-family: Oswald, Arial, sans-serif; font-weight: 600; text-transform: uppercase; font-size: 10.5pt; color: var(--ink); margin: 10px 0 5px; }
+  .eyebrow { font-family: Oswald, Arial, sans-serif; font-weight: 600; font-size: 8.5pt; text-transform: uppercase; letter-spacing: 0.18em; color: var(--blue); margin-bottom: 3px; }
+  .page { page-break-after: always; }
+  .page:last-child { page-break-after: auto; }
+  .muted { color: var(--muted); }
+  .small { font-size: 9pt; }
+  /* Cover */
+  .cover { text-align: left; }
+  .cover .logos { display: flex; justify-content: space-between; align-items: center; margin-bottom: 22px; }
+  .cover .eb-logo { height: 92px; }
+  .cover .hsc-logo { height: 40px; }
+  .cover h1 { font-family: Oswald, Arial, sans-serif; font-weight: 700; text-transform: uppercase; font-size: 34pt; line-height: 1.02; color: var(--ink); }
+  .factbox { margin-top: 22px; border: 1.5px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .factbox .row { display: flex; border-bottom: 1px solid var(--line); }
+  .factbox .row:last-child { border-bottom: 0; }
+  .factbox .cell { flex: 1; padding: 9px 14px; }
+  .factbox .cell + .cell { border-left: 1px solid var(--line); }
+  .factbox .lbl { font-family: Oswald, Arial, sans-serif; font-size: 7.5pt; font-weight: 600; text-transform: uppercase; letter-spacing: 0.12em; color: var(--blue); }
+  .factbox .val { font-weight: 600; font-size: 10pt; margin-top: 1px; }
+  .totalband { margin-top: 10px; background: var(--navy); color: #fff; border-radius: 10px; padding: 10px 16px; display: flex; justify-content: space-between; align-items: flex-end; }
+  .totalband .n { font-family: Oswald, Arial, sans-serif; font-weight: 700; font-size: 21pt; line-height: 1; }
+  .totalband .s { color: rgba(255,255,255,0.75); font-size: 8.5pt; }
+  .drawing { border: 1.5px solid var(--line); border-radius: 10px; padding: 10px; background: #fff; }
+  .drawing img { width: 100%; display: block; object-fit: contain; }
+  .drawing.hero img { max-height: 4.55in; margin: 0 auto; }
+  .drawing.side img { max-height: 2.9in; margin: 0 auto; }
+  .cap { font-size: 8pt; color: var(--muted); margin-top: 5px; }
+  /* Pricing */
+  .group { margin-top: 8px; }
+  .group .ghead { display: flex; justify-content: space-between; border-bottom: 2px solid var(--ink); padding-bottom: 2px; }
+  .group .ghead h3 { margin: 0; }
+  .group .ghead .gsub { font-family: Oswald, Arial, sans-serif; font-weight: 700; color: var(--blue); font-size: 11.5pt; }
+  .item { border-bottom: 1px solid var(--line); padding: 2.2px 0; }
+  .item .top { display: flex; justify-content: space-between; font-weight: 600; }
+  .item .desc { font-size: 7.6pt; line-height: 1.3; color: var(--muted); margin-top: 0; max-width: 5.9in; }
+  .note { border-left: 3px solid var(--cyan); padding-left: 10px; font-size: 8.5pt; color: var(--muted); margin-top: 8px; }
+  /* Lists */
+  ul.checks { list-style: none; }
+  ul.checks li { padding-left: 16px; position: relative; margin-bottom: 4px; }
+  ul.checks li::before { content: ""; position: absolute; left: 0; top: 7px; width: 6px; height: 6px; background: var(--blue); border-radius: 50%; }
+  ol.conds { padding-left: 18px; font-size: 9pt; color: #3a3f46; }
+  ol.conds li { margin-bottom: 4px; }
+  .steps { counter-reset: s; margin-top: 10px; }
+  .step { display: flex; gap: 12px; padding: 5px 0; border-bottom: 1px solid var(--line); }
+  .step:last-child { border-bottom: 0; }
+  .step .num { font-family: Oswald, Arial, sans-serif; font-weight: 700; font-size: 15pt; color: var(--blue); min-width: 22px; }
+  .cols2 { display: flex; gap: 22px; }
+  .cols2 > div { flex: 1; }
+  .installs { display: flex; gap: 10px; margin-top: 8px; }
+  .installs figure { flex: 1; border: 1.5px solid var(--line); border-radius: 8px; overflow: hidden; }
+  .installs img { width: 100%; height: 1.25in; object-fit: cover; display: block; }
+  .installs figcaption { font-size: 7.5pt; padding: 4px 7px; color: var(--muted); }
+  .signoff { margin-top: 14px; border-top: 1.5px solid var(--line); padding-top: 12px; }
+  .signoff .name { font-family: Oswald, Arial, sans-serif; font-weight: 700; font-size: 14pt; color: var(--navy); }
+</style>
+</head>
+<body>
+
+<!-- PAGE 1: COVER -->
+<div class="page cover">
+  <div class="logos">
+    <img class="eb-logo" src="file:///Users/rameel/Desktop/Manual Library/Leadmill/HSC/houstonsigncrafters-nextjs/public/proposals/eb/earth-burger-logo.png" alt="Earth Burger logo">
+    <img class="hsc-logo" src="file:///Users/rameel/Desktop/Manual Library/Leadmill/HSC/houstonsigncrafters-nextjs/public/logo-light.png" alt="Houston Sign Crafters">
+  </div>
+  <p class="eyebrow">Signage fabrication and installation proposal</p>
+  <h1>Earth Burger<br>Houston</h1>
+  <p style="margin-top:8px; font-size: 12pt;">Fabrication, permitting coordination, engineering allowance, and installation for the complete Houston signage package.</p>
+
+  <div class="factbox">
+    <div class="row">
+      <div class="cell"><div class="lbl">Project site</div><div class="val">4640 Scott Street, Houston, TX 77004</div></div>
+      <div class="cell"><div class="lbl">Prepared for</div><div class="val">Sinelli Concepts International</div></div>
+    </div>
+    <div class="row">
+      <div class="cell"><div class="lbl">Prepared by</div><div class="val">Houston Sign Crafters</div></div>
+      <div class="cell"><div class="lbl">Proposal date</div><div class="val">September 2, 2026</div></div>
+    </div>
+    <div class="row">
+      <div class="cell"><div class="lbl">Valid through</div><div class="val">September 17, 2026</div></div>
+      <div class="cell"><div class="lbl">Scope basis</div><div class="val">Ten-sheet signage package dated June 30, 2026</div></div>
+    </div>
+  </div>
+
+  <div class="totalband">
+    <div>
+      <div class="s">TOTAL PROJECT INVESTMENT</div>
+      <div class="n">$47,250</div>
+      <div class="s">before applicable sales tax</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="s">Deposit with agreement: <b style="color:#fff;">$23,625</b></div>
+      <div class="s">Final payment upon installation: <b style="color:#fff;">$23,625</b></div>
+    </div>
+  </div>
+
+  <p style="margin-top:20px;" class="small muted">3 illuminated exterior identity signs · 2 drive-thru structures · 3 interior elements</p>
+</div>
+
+<!-- PAGE 2: SUMMARY + EAST ELEVATION -->
+<div class="page">
+  <div class="pagehead"><span class="t">Earth Burger Houston · Signage Proposal · HSC-EB-20001</span><span class="d">DATE: 9-2-2026</span></div>
+  <p class="eyebrow">Earth Burger #20001</p>
+  <h2>Project summary</h2>
+  <p style="margin-top:6px;">Houston Sign Crafters proposes to coordinate, fabricate, permit, and install the complete signage package for Earth Burger #20001 at 4640 Scott Street in Houston. The scope is based on the ten-sheet signage drawing package dated June 30, 2026 and includes three illuminated exterior identity signs, drive-thru signage, wayfinding, a wall stencil, and three interior sign elements.</p>
+  <p style="margin-top:8px;" class="muted">Our objective is to deliver the Houston location within the requested opening window while providing Sinelli Concepts with one local point of accountability for field verification, permitting coordination, fabrication, installation, and warranty support.</p>
+  <h3 style="margin-top:18px;">East front elevation · supplied drawing set</h3>
+  <div class="drawing hero">
+    <img src="file:///Users/rameel/Desktop/Manual Library/Leadmill/HSC/houstonsigncrafters-nextjs/public/proposals/eb/east-elevation.png" alt="East front elevation drawing">
+  </div>
+  <p class="cap">Face- and halo-illuminated logo assembly, approx. 8'-4 1/4" W x 6'-2 3/4" H, with night view and 32'-0" frontage elevation. From the supplied June 30, 2026 package.</p>
+</div>
+
+<!-- PAGE 3: SCOPE AND INVESTMENT -->
+<div class="page">
+  <div class="pagehead"><span class="t">Earth Burger Houston · Signage Proposal · HSC-EB-20001</span><span class="d">DATE: 9-2-2026</span></div>
+  <p class="eyebrow">One package / twelve priced components</p>
+  <h2>Scope + investment</h2>
+  <p class="small muted" style="margin-bottom:2px;">Every proposed sign and project allowance is shown below. Pricing is based on the complete package and the supplied drawings.</p>
+
+  <div class="group">
+    <div class="ghead"><h3>Exterior identity</h3><span class="gsub">$19,300</span></div>
+    <div class="item"><div class="top"><span>East illuminated logo</span><span>$5,100</span></div><div class="desc">Approx. 8'-4 1/4" W x 6'-2 3/4" H face- and halo-illuminated logo assembly with painted aluminum backer.</div></div>
+    <div class="item"><div class="top"><span>South illuminated logo</span><span>$4,600</span></div><div class="desc">Approx. 6'-10 3/8" W x 4'-1" H face- and halo-illuminated logo assembly with painted aluminum backer and survey-dependent bracket system.</div></div>
+    <div class="item"><div class="top"><span>North illuminated logo</span><span>$8,900</span></div><div class="desc">Approx. 16'-8 1/4" W x 3'-10" H face- and halo-illuminated logo assembly with painted aluminum backer and survey-dependent bracket system.</div></div>
+    <div class="item"><div class="top"><span>South wall stencil</span><span>$700</span></div><div class="desc">Approx. 7'-8 1/4" W x 6'-10 3/8" H stencil production and application; final paint by GC.</div></div>
+  </div>
+
+  <div class="group">
+    <div class="ghead"><h3>Drive-thru and wayfinding</h3><span class="gsub">$16,450</span></div>
+    <div class="item"><div class="top"><span>Drive-thru canopy structure (installation included)</span><span>$13,350</span></div><div class="desc">Fabricated drive-thru canopy with illuminated Earth Burger logo, Order Here copy, clearance copy, steel/aluminum support structure, and HSC installation. Installation for this structure is included in this line.</div></div>
+    <div class="item"><div class="top"><span>Drive-thru wayfinding fixture</span><span>$3,100</span></div><div class="desc">Approx. 54" W x 79" H painted aluminum wayfinding fixture with 48" panel, dimensional copy, arrow, and support posts.</div></div>
+  </div>
+
+  <div class="group">
+    <div class="ghead"><h3>Interior signage</h3><span class="gsub">$4,050</span></div>
+    <div class="item"><div class="top"><span>Interior Veggie Joint letters</span><span>$975</span></div><div class="desc">Approx. 6'-5 5/8" W x 7 1/2" H white Sintra letters, flush mounted.</div></div>
+    <div class="item"><div class="top"><span>Interior round 100% sign</span><span>$1,250</span></div><div class="desc">Approx. 39" diameter painted ACM panel with dimensional Sintra copy and stud-mounted pads.</div></div>
+    <div class="item"><div class="top"><span>Entrance mixed-material sign</span><span>$1,825</span></div><div class="desc">Approx. 3'-7 1/4" W x 2'-7 1/2" H layered Sintra, turf, painted copy, and laminated vinyl sign.</div></div>
+  </div>
+
+  <div class="group">
+    <div class="ghead"><h3>Project delivery and allowances</h3><span class="gsub">$7,450</span></div>
+    <div class="item"><div class="top"><span>Combined installation (all non-canopy signage)</span><span>$5,000</span></div><div class="desc">Installation of all included exterior and interior sign elements except the drive-thru canopy, whose installation is included in its own line.</div></div>
+    <div class="item"><div class="top"><span>Permit allowance</span><span>$850</span></div><div class="desc">Standard sign-permit coordination and allowance.</div></div>
+    <div class="item"><div class="top"><span>Engineering allowance</span><span>$1,600</span></div><div class="desc">Structural engineering allowance for the proposed scope.</div></div>
+  </div>
+
+  <div class="totalband" style="margin-top:16px;">
+    <div>
+      <div class="s">TOTAL PROJECT INVESTMENT</div>
+      <div class="n">$47,250</div>
+      <div class="s">Applicable sales tax is not included</div>
+    </div>
+    <div style="text-align:right;">
+      <div class="s">Deposit with agreement: <b style="color:#fff;">$23,625</b></div>
+      <div class="s">Final payment upon installation: <b style="color:#fff;">$23,625</b></div>
+    </div>
+  </div>
+  <p class="note">Package pricing may require revision if individual components are removed or materially changed.</p>
+</div>
+
+<!-- PAGE 4: DELIVERY PLAN -->
+<div class="page">
+  <div class="pagehead"><span class="t">Earth Burger Houston · Signage Proposal · HSC-EB-20001</span><span class="d">DATE: 9-2-2026</span></div>
+  <p class="eyebrow">A practical path to installation</p>
+  <h2>How the project moves</h2>
+  <p class="small muted">The sequence is built around Earth Burger's requested 90-day opening window. Agency review, approvals, and site readiness remain schedule dependencies.</p>
+
+  <div class="steps">
+    <div class="step"><span class="num">1</span><div><b>Authorize.</b> Execute the agreement and submit the 50% deposit.</div></div>
+    <div class="step"><span class="num">2</span><div><b>Verify.</b> Field survey and final dimensions, approximately 2-3 business days after site access.</div></div>
+    <div class="step"><span class="num">3</span><div><b>Engineer and permit.</b> Prepare required documents and submit after verified drawings. Review timing is controlled by third parties.</div></div>
+    <div class="step"><span class="num">4</span><div><b>Fabricate.</b> Approximately 4-6 weeks after final artwork, engineering, and permit approvals.</div></div>
+    <div class="step"><span class="num">5</span><div><b>Install.</b> Approximately 2-4 working days after fabrication, site readiness, and scheduling confirmation.</div></div>
+  </div>
+
+  <div class="cols2" style="margin-top:16px;">
+    <div class="drawing side" style="max-width: 3.3in;">
+      <img src="file:///Users/rameel/Desktop/Manual Library/Leadmill/HSC/houstonsigncrafters-nextjs/public/proposals/eb/canopy.png" alt="Drive-thru canopy drawing">
+      <p class="cap">Drive-thru canopy, front and side views. From the supplied drawing set.</p>
+    </div>
+    <div>
+      <h3 style="margin-top:0;">What we need from your team</h3>
+      <ul class="checks small">
+        <li>Final brand, artwork, landlord, and construction approvals</li>
+        <li>Property and construction documents requested by permitting authorities</li>
+        <li>Primary 120V circuits at each sign location</li>
+        <li>Safe and unobstructed site access</li>
+        <li>Drive-thru concrete base, anchor bolts, and J-hooks identified in the supplied drawing</li>
+        <li>Final paint application for the south wall stencil</li>
+      </ul>
+      <h3>Work you can drive past</h3>
+      <p class="small muted">Recent Houston Sign Crafters installs by the same crew proposed for this project, including face- and halo-illuminated work.</p>
+    </div>
+  </div>
+  <div class="installs">
+    <figure><img src="file:///Users/rameel/Desktop/Manual Library/Leadmill/HSC/houstonsigncrafters-nextjs/public/portfolio/copper.jpg" alt="Copper Espresso Bar channel letters"><figcaption><b>Copper Espresso Bar</b> · Illuminated Channel Letters</figcaption></figure>
+    <figure><img src="file:///Users/rameel/Desktop/Manual Library/Leadmill/HSC/houstonsigncrafters-nextjs/public/portfolio/coronation.jpg" alt="Coronation Theater halo-lit letters"><figcaption><b>Coronation Theater and Bar</b> · Halo-Lit Channel Letters</figcaption></figure>
+    <figure><img src="file:///Users/rameel/Desktop/Manual Library/Leadmill/HSC/houstonsigncrafters-nextjs/public/portfolio/luce.jpg" alt="Luce Avenue Coffee halo-lit letters"><figcaption><b>Luce Avenue Coffee</b> · Halo-Lit Letters &amp; Logo</figcaption></figure>
+  </div>
+</div>
+
+<!-- PAGE 5: TERMS + SIGN-OFF -->
+<div class="page">
+  <div class="pagehead"><span class="t">Earth Burger Houston · Signage Proposal · HSC-EB-20001</span><span class="d">DATE: 9-2-2026</span></div>
+  <p class="eyebrow">One decision / one next step</p>
+  <h2>Ready to authorize</h2>
+  <p class="small muted">The package gives Sinelli Concepts one Houston-based partner for field verification, fabrication, installation, and project closeout.</p>
+
+  <div class="cols2" style="margin-top:14px;">
+    <div>
+      <h3 style="margin-top:0;">Houston Sign Crafters includes</h3>
+      <ul class="checks small">
+        <li>Field verification and project coordination</li>
+        <li>Listed fabrication and installation scope</li>
+        <li>Standard permit and engineering coordination</li>
+        <li>Installation scheduling and closeout</li>
+        <li>Five-year limited warranty on qualifying HSC-fabricated electrical signage</li>
+      </ul>
+      <h3>Commercial summary</h3>
+      <ul class="checks small">
+        <li>$47,250 total before applicable sales tax</li>
+        <li>$23,625 due with the agreement</li>
+        <li>$23,625 due upon installation</li>
+        <li>Proposal valid through September 17, 2026</li>
+      </ul>
+    </div>
+    <div class="drawing side" style="max-width: 3.1in;">
+      <img src="file:///Users/rameel/Desktop/Manual Library/Leadmill/HSC/houstonsigncrafters-nextjs/public/proposals/eb/interior-entrance.png" alt="Entrance interior sign drawing">
+      <p class="cap">Entrance area interior sign. From the supplied drawing set.</p>
+    </div>
+  </div>
+
+  <h3>Important conditions</h3>
+  <ol class="conds">
+    <li>Permit or engineering costs above the stated allowances require written approval.</li>
+    <li>Final dimensions and attachment methods remain subject to field verification.</li>
+    <li>Concealed conditions, inadequate structure, unavailable electrical service, underground conflicts, scope changes, remobilization, storage, and after-hours work are excluded unless authorized.</li>
+    <li>Changes may affect both price and schedule.</li>
+    <li>The final fabrication and installation agreement controls if it conflicts with this proposal.</li>
+  </ol>
+
+  <h3>Next step</h3>
+  <p class="small">Reply to this proposal or email <b>sales@houstonsigncrafters.com</b> to request the final agreement and deposit invoice. We will then coordinate the field survey and confirm the permitting and production schedule. Direct line: <b>(832) 974-2546</b>.</p>
+
+  <div class="signoff">
+    <div class="small muted">Prepared and submitted by</div>
+    <div class="name">Rameel Sheikh</div>
+    <div class="small muted">Owner, Houston Sign Crafters · September 2, 2026</div>
+  </div>
+  <div style="margin-top: 18px; border-top: 1px solid var(--line); padding-top: 8px; font-size: 7.5pt; color: var(--muted); display: flex; justify-content: space-between;">
+    <span>Houston Sign Crafters · 1359 E 40th St, Houston, TX 77022 · (832) 974-2546 · sales@houstonsigncrafters.com</span>
+    <span>Confidential commercial proposal · #HSC-EB-20001</span>
+  </div>
+</div>
+
+</body>
+</html>
