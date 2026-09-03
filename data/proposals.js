@@ -85,6 +85,9 @@ export const PROPOSALS = {
       interiorDrawing: { src: "/proposals/eb/interior-entrance.png", w: 1526, h: 1496, alt: "Entrance area interior sign drawing: layered 100% plant-based veggie joint sign, 3'-7 1/4\" wide, from the supplied drawing set" },
     },
     // Real Google review (index into data/testimonials.js) and the human layer.
+    // evidencePortfolioIds: real installs (data/portfolio.js) shown at the end
+    // of Act 3 as execution proof; the drawings prove package comprehension.
+    evidencePortfolioIds: ["copper-espresso-bar", "coronation-theater", "luce-avenue-coffee"],
     testimonialIndex: 2,
     contact: { name: "Rameel Sheikh", title: "Owner" },
     pdfUrl: "/proposals/Houston_Sign_Crafters_Earth_Burger_Houston_Proposal.pdf",

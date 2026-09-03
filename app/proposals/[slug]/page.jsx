@@ -3,7 +3,7 @@ import { notFound } from "next/navigation";
 import { getProposal, getProposalSlugs } from "@/data/proposals";
 import { BUSINESS } from "@/data/business";
 import { TESTIMONIALS } from "@/data/testimonials";
-import LeadForm from "@/components/LeadForm";
+import PORTFOLIO from "@/data/portfolio";
 import { ProposalTracking, ProposalAction } from "@/components/ProposalClient";
 
 // Unlisted client proposal pages — four-act decision document per the v2 PRD
@@ -51,6 +51,9 @@ export default async function ProposalPage({ params }) {
   const deposit = (total * p.depositPercent) / 100;
   const balance = total - deposit;
   const review = Number.isInteger(p.testimonialIndex) ? TESTIMONIALS[p.testimonialIndex] : null;
+  const evidence = (p.evidencePortfolioIds || [])
+    .map((id) => PORTFOLIO.find((x) => x.id === id))
+    .filter(Boolean);
   const eventProps = { proposal_id: p.proposalId, client: p.client, market: "Houston", proposal_value: total, proposal_version: p.version };
   const mailtoAgreement = `mailto:${BUSINESS.email}?subject=${encodeURIComponent(`${p.projectName} #${p.proposalId.split("-").pop()} - Request Agreement and Site Survey`)}&body=${encodeURIComponent(`We would like to move forward with the ${p.projectName} signage proposal dated ${p.proposalDate}. Please send the final agreement and deposit invoice and coordinate the field survey.`)}`;
 
@@ -255,6 +258,30 @@ export default async function ProposalPage({ params }) {
               </ul>
             </div>
           </div>
+
+          {evidence.length > 0 && (
+            <div className="mt-14">
+              <h3 className="font-display text-lg font-bold uppercase tracking-wide">Work you can drive past</h3>
+              <p className="mt-2 max-w-2xl text-[15px] text-[#3a3f46]">
+                Recent Houston Sign Crafters installs. Each was designed, fabricated, permitted, and
+                installed by the same crew proposed for this project, including face- and
+                halo-illuminated work comparable to the Earth Burger exterior scope.
+              </p>
+              <div className="mt-5 grid gap-4 sm:grid-cols-3">
+                {evidence.map((e) => (
+                  <figure key={e.id} className="overflow-hidden rounded-2xl border border-[var(--p-line)] bg-white">
+                    <div className="relative aspect-[4/3]">
+                      <Image src={e.imageSrc} alt={`${e.title}: ${e.signType} in ${e.location}`} fill sizes="(max-width: 640px) 100vw, 33vw" className="object-cover" />
+                    </div>
+                    <figcaption className="px-3.5 py-2.5 text-[13px]">
+                      <span className="font-semibold text-[var(--p-ink)]">{e.title}</span>
+                      <span className="text-[var(--p-muted)]"> · {e.signType}</span>
+                    </figcaption>
+                  </figure>
+                ))}
+              </div>
+            </div>
+          )}
         </section>
 
         {/* ACT 4 — Approval and commercial terms */}
@@ -321,17 +348,22 @@ export default async function ProposalPage({ params }) {
             <p className="mt-4 max-w-2xl text-lg text-white/85">
               Then we will schedule the field survey and confirm the permitting and production path.
             </p>
-            <div className="no-print mt-8 max-w-2xl">
-              <LeadForm
-                kind="contact"
-                submitLabel="Request Agreement"
-                messageLabel={`Anything we should know before sending the ${p.projectName} agreement?`}
-              />
+            {/* No form (owner call): a $47k buyer replies to a person, not a
+                funnel. Primary opens a prefilled email; the direct line sits
+                beside it. The mailto carries the agreement-request event. */}
+            <div className="no-print mt-8 flex flex-col gap-3 sm:flex-row">
+              <ProposalAction kind="agreement" href={mailtoAgreement} className="btn-prop btn-prop-invert" eventProps={eventProps}>
+                Request Agreement by Email
+              </ProposalAction>
+              <ProposalAction kind="phone" href={BUSINESS.phoneHref} className="btn-prop border border-white/50 text-white hover:border-white" eventProps={eventProps}>
+                Call {p.contact?.name?.split(" ")[0] || "us"} directly: {BUSINESS.phone}
+              </ProposalAction>
             </div>
+            <p className="mt-4 text-sm text-white/75">
+              The email arrives pre-written. Send it as is, or add anything we should know.
+            </p>
             <p className="mt-6 text-sm text-white/80">
               <ProposalAction kind="email" href={mailtoAgreement} className="font-semibold text-white underline underline-offset-2" eventProps={eventProps}>{BUSINESS.email}</ProposalAction>
-              {" "}·{" "}
-              <ProposalAction kind="phone" href={BUSINESS.phoneHref} className="font-semibold text-white underline underline-offset-2" eventProps={eventProps}>{BUSINESS.phone}</ProposalAction>
               {" "}· {BUSINESS.address.streetAddress}, {BUSINESS.address.addressLocality}, {BUSINESS.address.addressRegion}
               {" "}·{" "}
               <ProposalAction kind="pdf" href={p.pdfUrl} className="font-semibold text-white underline underline-offset-2" eventProps={eventProps}>Download PDF</ProposalAction>
