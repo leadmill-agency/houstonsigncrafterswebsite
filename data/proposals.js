@@ -86,10 +86,12 @@ export const PROPOSALS = {
     // Client's own logo (from earthburger.com, owner-supplied 2026-09-02) —
     // cover identification only, per the PRD's "identify the project" rule.
     clientLogo: { src: "/proposals/eb/earth-burger-logo.png", w: 500, h: 297 },
+    // Official Earth Burger brand renderings from earthburger.com (owner call
+    // 2026-09-02: brand renders instead of the fabricator's drawing crops).
+    // Labeled as brand prototype renderings, never as this site's design.
     assets: {
-      exteriorDrawing: { src: "/proposals/eb/east-elevation.png", w: 1755, h: 1496, alt: "East front elevation: face- and halo-illuminated Earth Burger logo, 8'-4 1/4\" wide by 6'-2 3/4\" high, with night view and building elevation from the supplied drawing set" },
-      canopyDrawing: { src: "/proposals/eb/canopy.png", w: 1417, h: 1496, alt: "Drive-thru canopy drawing: front and side views with illuminated Earth Burger logo, Order Here copy, and 9'-0\" clearance, from the supplied drawing set" },
-      interiorDrawing: { src: "/proposals/eb/interior-entrance.png", w: 1526, h: 1496, alt: "Entrance area interior sign drawing: layered 100% plant-based veggie joint sign, 3'-7 1/4\" wide, from the supplied drawing set" },
+      renderDay: { src: "/proposals/eb/render-day.jpg", w: 786, h: 748, alt: "Earth Burger brand prototype rendering, daytime: white restaurant with green metal roof, orange accents, and the illuminated Earth Burger logo" },
+      renderNight: { src: "/proposals/eb/render-night.jpg", w: 1800, h: 1013, alt: "Earth Burger brand prototype rendering at dusk: illuminated logo, green neon accents, and lit drive-thru and patio" },
     },
     // Real Google review (index into data/testimonials.js) and the human layer.
     // evidencePortfolioIds: real installs (data/portfolio.js) shown at the end

@@ -127,8 +127,8 @@ export default async function ProposalPage({ params }) {
 
           <div className="panel mt-10 bg-[var(--hsc-blue-light)] p-6 sm:p-10">
             <div className="grid items-center gap-8 lg:grid-cols-2">
-              <figure className="overflow-hidden rounded-2xl bg-white p-4">
-                <Image src={p.assets.exteriorDrawing.src} alt={p.assets.exteriorDrawing.alt} width={p.assets.exteriorDrawing.w} height={p.assets.exteriorDrawing.h} className="h-auto w-full" priority />
+              <figure className="overflow-hidden rounded-2xl">
+                <Image src={p.assets.renderDay.src} alt={p.assets.renderDay.alt} width={p.assets.renderDay.w} height={p.assets.renderDay.h} className="h-auto w-full" priority />
               </figure>
               <div>
                 <span className="pill bg-[var(--hsc-navy)] text-white">Complete signage package</span>
@@ -229,8 +229,8 @@ export default async function ProposalPage({ params }) {
           </div>
 
           <div className="mt-10 grid items-center gap-8 lg:grid-cols-2">
-            <figure className="overflow-hidden rounded-2xl border border-[var(--p-line)] bg-white p-4">
-              <Image src={p.assets.canopyDrawing.src} alt={p.assets.canopyDrawing.alt} width={p.assets.canopyDrawing.w} height={p.assets.canopyDrawing.h} className="h-auto w-full" />
+            <figure className="overflow-hidden rounded-2xl">
+              <Image src={p.assets.renderNight.src} alt={p.assets.renderNight.alt} width={p.assets.renderNight.w} height={p.assets.renderNight.h} className="h-auto w-full" />
             </figure>
             <div>
               <h3 className="font-display text-lg font-bold uppercase tracking-wide">What we need from your team</h3>
@@ -276,30 +276,31 @@ export default async function ProposalPage({ params }) {
           <ActHeadline>Ready to authorize</ActHeadline>
           <p className="mt-5 max-w-2xl text-lg text-[#3a3f46]">{p.approvalIntro}</p>
 
-          <div className="mt-10 grid items-start gap-8 lg:grid-cols-2">
-            <div className="panel bg-[var(--hsc-blue-light)] p-6 sm:p-8">
-              <h3 className="font-display text-lg font-bold uppercase tracking-wide">Commercial summary</h3>
-              <dl className="mt-4 space-y-3 text-[15px]">
-                <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Total</dt><dd className="font-semibold">{money(total)} {p.salesTaxLabel}</dd></div>
-                <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Due with agreement</dt><dd className="font-semibold">{money(deposit)}</dd></div>
-                <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Due upon installation</dt><dd className="font-semibold">{money(balance)}</dd></div>
-                <div className="flex justify-between gap-6"><dt className="text-[var(--p-muted)]">Valid through</dt><dd className="font-semibold">{p.validThrough}</dd></div>
-              </dl>
-              <h3 className="mt-7 font-display text-lg font-bold uppercase tracking-wide">Houston Sign Crafters includes</h3>
-              <ul className="mt-3 space-y-2 text-[15px]">
-                {p.hscIncludes.map((x) => (
-                  <li key={x} className="flex items-start gap-2.5">
-                    <svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="var(--hsc-blue)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mt-1.5 flex-none" aria-hidden="true">
-                      <path d="M3 10.5l4.5 4.5L17 5.5" />
-                    </svg>
-                    <span>{x}</span>
-                  </li>
-                ))}
-              </ul>
+          <div className="panel mt-10 bg-[var(--hsc-blue-light)] p-6 sm:p-8">
+            <div className="grid gap-8 lg:grid-cols-2 lg:gap-12">
+              <div>
+                <h3 className="font-display text-lg font-bold uppercase tracking-wide">Commercial summary</h3>
+                <dl className="mt-4 space-y-3 text-[15px]">
+                  <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Total</dt><dd className="font-semibold">{money(total)} {p.salesTaxLabel}</dd></div>
+                  <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Due with agreement</dt><dd className="font-semibold">{money(deposit)}</dd></div>
+                  <div className="flex justify-between gap-6 border-b border-[#c3d8f2] pb-2"><dt className="text-[var(--p-muted)]">Due upon installation</dt><dd className="font-semibold">{money(balance)}</dd></div>
+                  <div className="flex justify-between gap-6"><dt className="text-[var(--p-muted)]">Valid through</dt><dd className="font-semibold">{p.validThrough}</dd></div>
+                </dl>
+              </div>
+              <div>
+                <h3 className="font-display text-lg font-bold uppercase tracking-wide">Houston Sign Crafters includes</h3>
+                <ul className="mt-4 space-y-2 text-[15px]">
+                  {p.hscIncludes.map((x) => (
+                    <li key={x} className="flex items-start gap-2.5">
+                      <svg viewBox="0 0 20 20" width="15" height="15" fill="none" stroke="var(--hsc-blue)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="mt-1.5 flex-none" aria-hidden="true">
+                        <path d="M3 10.5l4.5 4.5L17 5.5" />
+                      </svg>
+                      <span>{x}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <figure className="overflow-hidden rounded-2xl border border-[var(--p-line)] bg-white p-4">
-              <Image src={p.assets.interiorDrawing.src} alt={p.assets.interiorDrawing.alt} width={p.assets.interiorDrawing.w} height={p.assets.interiorDrawing.h} className="h-auto w-full" />
-            </figure>
           </div>
 
           <h3 className="mt-10 font-display text-lg font-bold uppercase tracking-wide">Important conditions</h3>
