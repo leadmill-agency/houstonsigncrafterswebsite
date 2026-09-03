@@ -8,7 +8,7 @@
 export const PROPOSALS = {
   "earth-burger-houston-20001-7k4m2": {
     proposalId: "HSC-EB-20001",
-    version: "2026-09-02-v2",
+    version: "2026-09-02-v3",
     status: "sent",
     client: "Earth Burger",
     preparedFor: "Sinelli Concepts International",
@@ -17,31 +17,35 @@ export const PROPOSALS = {
     proposalDate: "September 2, 2026",
     validThrough: "September 17, 2026",
     depositPercent: 50,
-    expectedTotal: 47250,
+    expectedTotal: 51000,
     salesTaxLabel: "before applicable sales tax",
     drawingSetDate: "June 30, 2026",
     heroDescription:
       "Fabrication, permitting coordination, engineering allowance, and installation for the complete Houston signage package.",
     summary:
       "Houston Sign Crafters proposes to coordinate, fabricate, permit, and install the complete signage package for Earth Burger #20001 at 4640 Scott Street in Houston. The scope is based on the ten-sheet signage drawing package dated June 30, 2026 and includes three illuminated exterior identity signs, drive-thru signage, wayfinding, a wall stencil, and three interior sign elements.",
+    // Repriced per owner 2026-09-02 (v3): permits at $500 per exterior sign
+    // (City of Houston permits each exterior sign separately, 4 signs), one
+    // combined installation line covering everything including the canopy,
+    // package total set to $51,000.
     groups: [
-      { id: "exterior", label: "Exterior identity", expectedSubtotal: 19300 },
-      { id: "driveThru", label: "Drive-thru and wayfinding", expectedSubtotal: 16450 },
-      { id: "interior", label: "Interior signage", expectedSubtotal: 4050 },
-      { id: "delivery", label: "Project delivery and allowances", expectedSubtotal: 7450 },
+      { id: "exterior", label: "Exterior identity", expectedSubtotal: 20400 },
+      { id: "driveThru", label: "Drive-thru and wayfinding", expectedSubtotal: 14750 },
+      { id: "interior", label: "Interior signage", expectedSubtotal: 4275 },
+      { id: "delivery", label: "Project delivery and allowances", expectedSubtotal: 11575 },
     ],
     items: [
-      { id: "east-logo", group: "exterior", title: "East illuminated logo", description: "Approx. 8'-4 1/4\" W x 6'-2 3/4\" H face- and halo-illuminated logo assembly with painted aluminum backer.", quantity: "1", price: 5100 },
-      { id: "south-logo", group: "exterior", title: "South illuminated logo", description: "Approx. 6'-10 3/8\" W x 4'-1\" H face- and halo-illuminated logo assembly with painted aluminum backer and survey-dependent bracket system.", quantity: "1", price: 4600 },
-      { id: "north-logo", group: "exterior", title: "North illuminated logo", description: "Approx. 16'-8 1/4\" W x 3'-10\" H face- and halo-illuminated logo assembly with painted aluminum backer and survey-dependent bracket system.", quantity: "1", price: 8900 },
-      { id: "stencil", group: "exterior", title: "South wall stencil", description: "Approx. 7'-8 1/4\" W x 6'-10 3/8\" H stencil production and application; final paint by GC.", quantity: "1", price: 700 },
-      { id: "canopy", group: "driveThru", title: "Drive-thru canopy structure (installation included)", description: "Fabricated drive-thru canopy with illuminated Earth Burger logo, Order Here copy, clearance copy, steel/aluminum support structure, and HSC installation. Installation for this structure is included in this line.", quantity: "1", price: 13350, installationIncluded: true },
-      { id: "wayfinding", group: "driveThru", title: "Drive-thru wayfinding fixture", description: "Approx. 54\" W x 79\" H painted aluminum wayfinding fixture with 48\" panel, dimensional copy, arrow, and support posts.", quantity: "1", price: 3100 },
-      { id: "veggie-letters", group: "interior", title: "Interior Veggie Joint letters", description: "Approx. 6'-5 5/8\" W x 7 1/2\" H white Sintra letters, flush mounted.", quantity: "1 set", price: 975 },
-      { id: "round-sign", group: "interior", title: "Interior round 100% sign", description: "Approx. 39\" diameter painted ACM panel with dimensional Sintra copy and stud-mounted pads.", quantity: "1", price: 1250 },
-      { id: "entrance-sign", group: "interior", title: "Entrance mixed-material sign", description: "Approx. 3'-7 1/4\" W x 2'-7 1/2\" H layered Sintra, turf, painted copy, and laminated vinyl sign.", quantity: "1", price: 1825 },
-      { id: "install", group: "delivery", title: "Combined installation (all non-canopy signage)", description: "Installation of all included exterior and interior sign elements except the drive-thru canopy, whose installation is included in its own line.", quantity: "1", price: 5000 },
-      { id: "permit", group: "delivery", title: "Permit allowance", description: "Standard sign-permit coordination and allowance.", quantity: "1", price: 850 },
+      { id: "east-logo", group: "exterior", title: "East illuminated logo", description: "Approx. 8'-4 1/4\" W x 6'-2 3/4\" H face- and halo-illuminated logo assembly with painted aluminum backer.", quantity: "1", price: 5400 },
+      { id: "south-logo", group: "exterior", title: "South illuminated logo", description: "Approx. 6'-10 3/8\" W x 4'-1\" H face- and halo-illuminated logo assembly with painted aluminum backer and survey-dependent bracket system.", quantity: "1", price: 4850 },
+      { id: "north-logo", group: "exterior", title: "North illuminated logo", description: "Approx. 16'-8 1/4\" W x 3'-10\" H face- and halo-illuminated logo assembly with painted aluminum backer and survey-dependent bracket system.", quantity: "1", price: 9400 },
+      { id: "stencil", group: "exterior", title: "South wall stencil", description: "Approx. 7'-8 1/4\" W x 6'-10 3/8\" H stencil production and application; final paint by GC.", quantity: "1", price: 750 },
+      { id: "canopy", group: "driveThru", title: "Drive-thru canopy structure", description: "Fabricated drive-thru canopy with illuminated Earth Burger logo, Order Here copy, clearance copy, and steel/aluminum support structure.", quantity: "1", price: 11500 },
+      { id: "wayfinding", group: "driveThru", title: "Drive-thru wayfinding fixture", description: "Approx. 54\" W x 79\" H painted aluminum wayfinding fixture with 48\" panel, dimensional copy, arrow, and support posts.", quantity: "1", price: 3250 },
+      { id: "veggie-letters", group: "interior", title: "Interior Veggie Joint letters", description: "Approx. 6'-5 5/8\" W x 7 1/2\" H white Sintra letters, flush mounted.", quantity: "1 set", price: 1025 },
+      { id: "round-sign", group: "interior", title: "Interior round 100% sign", description: "Approx. 39\" diameter painted ACM panel with dimensional Sintra copy and stud-mounted pads.", quantity: "1", price: 1325 },
+      { id: "entrance-sign", group: "interior", title: "Entrance mixed-material sign", description: "Approx. 3'-7 1/4\" W x 2'-7 1/2\" H layered Sintra, turf, painted copy, and laminated vinyl sign.", quantity: "1", price: 1925 },
+      { id: "install", group: "delivery", title: "Installation (all signage)", description: "Installation of every sign element in this proposal, including the drive-thru canopy structure, by the HSC crew: equipment, mounting, wiring connections at the sign, and site cleanup.", quantity: "1", price: 7975 },
+      { id: "permit", group: "delivery", title: "Permit allowance (4 exterior signs)", description: "City of Houston requires a separate sign permit for each exterior sign. Allowance of $500 per sign for the four permitted exterior signs, including preparation, submission, and coordination.", quantity: "4", price: 2000 },
       { id: "engineering", group: "delivery", title: "Engineering allowance", description: "Structural engineering allowance for the proposed scope.", quantity: "1", price: 1600 },
     ],
     pricingNote:
