@@ -65,6 +65,7 @@ export default function Footer() {
               <li><Link href="/pricing" className="hover:text-white">Sign Pricing</Link></li>
               <li><Link href="/sign-permits" className="hover:text-white">Sign Permits by City</Link></li>
               <li><Link href="/free-mockup" className="hover:text-white">Free Design Mockup</Link></li>
+              <li><Link href="/sign-mockup" className="hover:text-white">Sign Mockup Tool</Link></li>
               <li><Link href="/guides/sign-permitting-checklist" className="hover:text-white">Sign Permitting Checklist</Link></li>
               <li><Link href="/blog" className="hover:text-white">Blog</Link></li>
               <li><Link href="/company-facts" className="hover:text-white">Company Facts</Link></li>

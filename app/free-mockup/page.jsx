@@ -23,6 +23,9 @@ export default function FreeMockupPage() {
             Get a free, no-obligation design mockup of your custom sign on your own building or
             vehicle. It's the easiest way to picture the finished result.
           </p>
+          <p className="mx-auto mt-3 max-w-2xl text-sm text-white/60">
+            In a hurry? Our <a href="/sign-mockup" className="font-semibold text-white underline underline-offset-2 hover:text-signal">free 5-minute mockup tool</a> puts a sign on your building instantly.
+          </p>
         </div>
       </section>
 
