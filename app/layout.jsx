@@ -5,6 +5,7 @@ import Footer from "@/components/Footer";
 import FooterGate from "@/components/FooterGate";
 import Analytics from "@/components/Analytics";
 import MetaPixel from "@/components/MetaPixel";
+import RB2B from "@/components/RB2B";
 import { GTMHead, GTMBody } from "@/components/GTM";
 import { BUSINESS, SERVICE_AREAS } from "@/data/business";
 
@@ -111,6 +112,7 @@ export default function RootLayout({ children }) {
         <GTMHead />
         <Analytics />
         <MetaPixel />
+        <RB2B />
       </head>
       <body className="font-sans antialiased">
         <GTMBody />
