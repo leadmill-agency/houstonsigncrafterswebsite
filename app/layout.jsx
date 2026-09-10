@@ -7,6 +7,7 @@ import Analytics from "@/components/Analytics";
 import MetaPixel from "@/components/MetaPixel";
 import RB2B from "@/components/RB2B";
 import { GTMHead, GTMBody } from "@/components/GTM";
+import AttributionCapture from "@/components/AttributionCapture";
 import OpenAIPixel from "@/components/OpenAIPixel";
 import { BUSINESS, SERVICE_AREAS } from "@/data/business";
 
@@ -118,6 +119,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="font-sans antialiased">
         <GTMBody />
+        <AttributionCapture />
         <Nav />
         {children}
         <FooterGate>

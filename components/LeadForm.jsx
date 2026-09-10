@@ -1,9 +1,10 @@
 "use client";
 
-import { useActionState, useRef, useEffect } from "react";
+import { useActionState, useRef, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { submitLead } from "@/lib/leads";
 import { trackEvent, trackPixel, trackOaiq } from "@/lib/analytics";
+import { ATTRIBUTION_FIELDS, getAttribution } from "@/lib/attribution";
 
 const initialState = { ok: null, errors: {}, message: "" };
 
@@ -26,6 +27,12 @@ export default function LeadForm({
   const [state, formAction, pending] = useActionState(submitLead, initialState);
   const formRef = useRef(null);
   const router = useRouter();
+  // Ad attribution captured on arrival (lib/attribution.js) rides along
+  // as hidden fields. Loaded in an effect so SSR markup stays stable.
+  const [attribution, setAttribution] = useState({});
+  useEffect(() => {
+    setAttribution(getAttribution());
+  }, []);
 
   useEffect(() => {
     if (state.ok && formRef.current) {
@@ -61,6 +68,9 @@ export default function LeadForm({
       className={`rounded-sm border border-fog bg-white p-6 text-left md:p-8 ${className}`}
     >
       <input type="hidden" name="kind" value={kind} />
+      {ATTRIBUTION_FIELDS.map((f) =>
+        attribution[f] ? <input key={f} type="hidden" name={f} value={attribution[f]} /> : null
+      )}
       {/* Honeypot */}
       <div className="absolute -left-[9999px] h-1 w-1 overflow-hidden" aria-hidden="true">
         <label>Leave blank<input type="text" name="website" tabIndex={-1} autoComplete="off" /></label>
