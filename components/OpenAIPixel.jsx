@@ -4,7 +4,7 @@
 // the server-side Conversions API twin lives in lib/leads.js, deduped by
 // sharing the lead record id as event_id. The pixel ID is public by nature
 // (visible in page source); env var overrides for testing.
-const PIXEL_ID = process.env.NEXT_PUBLIC_OPENAI_PIXEL_ID || "6a8b718d71bc819dbbf4c802727ebb15";
+const PIXEL_ID = process.env.NEXT_PUBLIC_OPENAI_PIXEL_ID || "Kpb39q9fpSLgdgjoXfmgcW";
 
 export default function OpenAIPixel() {
   return (
