@@ -3,7 +3,7 @@
 import { useActionState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { submitLead } from "@/lib/leads";
-import { trackEvent, trackPixel } from "@/lib/analytics";
+import { trackEvent, trackPixel, trackOaiq } from "@/lib/analytics";
 
 const initialState = { ok: null, errors: {}, message: "" };
 
@@ -33,6 +33,9 @@ export default function LeadForm({
       trackEvent("form_submit", { form_name: `lead_${kind}`, form_location: kind });
       if (kind === "quote") trackEvent("generate_lead", { value: 1, currency: "USD" });
       trackPixel("Lead", { content_name: `lead_${kind}` });
+      // OpenAI Ads conversion — event_id matches the server-side CAPI event
+      // (lib/leads.js) so the platform dedups the pair to one lead_created.
+      trackOaiq("lead_created", { type: "customer_action" }, state.leadId ? { event_id: state.leadId } : undefined);
       // Google Ads conversion signal (contractor spec): push the dataLayer
       // event ONCE at the moment of real submit success — the GTM trigger is
       // built on this event, not the /thankyou pageview, so a refresh of the

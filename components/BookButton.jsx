@@ -1,7 +1,7 @@
 "use client";
 
 import { BUSINESS } from "@/data/business";
-import { trackEvent, trackPixel } from "@/lib/analytics";
+import { trackEvent, trackPixel, trackOaiq } from "@/lib/analytics";
 
 // Booking CTA. Opens the Google Calendar scheduling page and fires the
 // conversion signals first: dataLayer `booking_click` (for the Google Ads
@@ -11,6 +11,7 @@ export default function BookButton({ label = "Pick a Time", className = "btn btn
   const handleClick = () => {
     trackEvent("booking_click", { link_url: BUSINESS.bookingUrl });
     trackPixel("Schedule", { content_name: "booking_click" });
+    trackOaiq("custom", { type: "custom" }, { custom_event_name: "booking_click" });
     if (typeof window !== "undefined") {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: "booking_click" });

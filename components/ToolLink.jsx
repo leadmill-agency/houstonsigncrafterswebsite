@@ -1,6 +1,6 @@
 "use client";
 
-import { trackEvent, trackPixel } from "@/lib/analytics";
+import { trackEvent, trackPixel, trackOaiq } from "@/lib/analytics";
 
 // CTA to the Design Your Sign tool (tool.houstonsigncrafters.com). Fires the
 // conversion signals before the new tab opens: dataLayer `tool_click` (same
@@ -11,6 +11,7 @@ export default function ToolLink({ label = "Design My Sign Free", className = "b
   const handleClick = () => {
     trackEvent("tool_click", { link_url: TOOL_URL, source });
     trackPixel("Lead", { content_name: "design_tool_click" });
+    trackOaiq("custom", { type: "custom" }, { custom_event_name: "tool_click" });
     if (typeof window !== "undefined") {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({ event: "tool_click" });
