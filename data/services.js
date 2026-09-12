@@ -436,61 +436,7 @@ const SERVICES = {
       { t: "Print, hem, grommet", b: "Heavy 13oz+ vinyl or mesh with UV-stable inks, finished and reinforced." },
       { t: "Ready to hang", b: "Grommets in place, pole pockets or wind slits added on request." },
     ],
-    related: ["vehicle-wraps", "wall-graphics", "wedding-signage"],
-  },
-
-  "wedding-signage": {
-    slug: "wedding-signage",
-    name: "Wedding & Event Signage",
-    shortName: "Wedding Signage",
-    order: 7,
-    icon: "pencil",
-    img: "https://images.unsplash.com/photo-1519225421980-715cb0215aed?w=1200&q=75",
-    testimonialIndex: 2,
-    metaTitle: "Wedding & Event Signage in Houston, TX",
-    metaDescription:
-      "Custom wedding and event signage in Houston, TX: welcome signs, seating charts, neon-look signs, and backdrops. Fast and stress-free. Free 1-day quote.",
-    h1: "Wedding & Event Signage in Houston, TX",
-    heroSubtitle:
-      "Welcome signs, seating charts, custom neon, and backdrops. Beautiful event signage, even on a tight timeline.",
-    answer:
-      "Wedding and event signs are the pieces that guide and wow your guests: welcome signs, seating charts, table numbers, directionals, bar menus, custom faux-neon, and big step-and-repeat backdrops for photos. We make them in acrylic, mirror, foam board, vinyl, and LED faux-neon, matched to your colors and theme. Tight timeline? We handle a lot of last-minute event work, so if your date's close, reach out. We can usually still help. Every piece is quoted in one business day.",
-    sections: [
-      {
-        heading: "What wedding signs do you make?",
-        body:
-          "We create welcome signs, seating charts and escort displays, table numbers, directional and wayfinding signs, bar and menu signs, custom monograms, and large step-and-repeat photo backdrops. Faux-neon LED signs with your names or a phrase are especially popular for receptions and photos.",
-      },
-      {
-        heading: "Can you produce event signage on short notice?",
-        body:
-          "Often, yes. Event timelines are tight and things change. We're set up to handle rush and last-minute requests. Tell us your event date when you reach out and we'll tell you honestly what we can deliver in time.",
-      },
-      {
-        heading: "What materials and styles are available?",
-        body:
-          "We print and fabricate on acrylic, mirrored and frosted panels, foam board, wood-look substrates, vinyl, and LED faux-neon. Whether your theme is modern, classic, or rustic, we match fonts, colors, and finishes to your invitation suite and décor.",
-      },
-      {
-        heading: "Do you design the signs to match my theme?",
-        body:
-          "Yes. Share your colors, fonts, or invitation design and our team creates coordinated signage, sending proofs for approval so everything matches your event's look before we produce it.",
-      },
-    ],
-    faqs: [
-      { q: "Do you make custom neon signs for weddings?", a: "Yes. We build LED faux-neon signs with your names, initials, or a custom phrase, in your choice of color. They're safe, lightweight, and reusable." },
-      { q: "Can you match my wedding colors and invitations?", a: "Absolutely. We coordinate fonts, colors, and finishes to your invitation suite and décor and proof everything before production." },
-      { q: "How early should I order wedding signage?", a: "Earlier is better, but we specialize in tight timelines. Reach out with your date and we'll let you know what's possible." },
-      { q: "Do you offer backdrops for photos?", a: "Yes. We produce step-and-repeat backdrops and large statement signs perfect for photos and social sharing." },
-      { q: "Can you make signs for corporate events and parties?", a: "Yes. The same welcome signs, backdrops, seating displays, and faux-neon we build for weddings work for corporate events, quinceañeras, birthdays, and grand openings. Tell us the occasion and the date." },
-    ],
-    process: [
-      { t: "Share your date, theme, and pieces", b: "Colors, fonts, or your invitation design, plus the list of signs you need. Quote in one business day." },
-      { t: "Proofs matched to your look", b: "Every piece is designed to coordinate with your invitations and decor, and you approve each proof." },
-      { t: "Production, rush when needed", b: "Acrylic, mirror, foam board, vinyl, and faux-neon, produced to your timeline." },
-      { t: "Ready before your event", b: "Finished pieces done in time for setup day, with your deadline confirmed up front." },
-    ],
-    related: ["custom-banners", "wall-graphics", "channel-letters"],
+    related: ["vehicle-wraps", "wall-graphics", "storefront-signs"],
   },
 };
 

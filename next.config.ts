@@ -43,6 +43,8 @@ const nextConfig: NextConfig = {
       // Old landing / printing pages → closest new equivalent
       { source: "/sign-printing", destination: "/services", permanent: true },
       { source: "/banners-landing", destination: "/services/custom-banners", permanent: true },
+      // Service retired 2026-09-12 (HSC doesn't offer wedding/event signage)
+      { source: "/services/wedding-signage", destination: "/services/custom-banners", permanent: true },
 
       // Legacy blog posts. NOTE: two old slugs are now REPUBLISHED as real
       // posts on the same URL (channel-letter cost + channel-letters-vs-cabinet),
