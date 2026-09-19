@@ -207,7 +207,72 @@ const SERVICES = {
       { t: "Permits and engineering", b: "We pull the permit and coordinate stamped engineering when wind load or size requires it." },
       { t: "Build and installation", b: "Welded frame, finished cabinet, masonry base, footing, crane set, and cleanup by our own crew. 5-year warranty." },
     ],
-    related: ["channel-letters", "wall-graphics", "vehicle-wraps"],
+    related: ["channel-letters", "pole-signs", "storefront-signs"],
+  },
+
+  // Added 2026-09-19 per Rameel: pole/pylon signs are a named core product
+  // (exterior $4k+ focus) but had no page — "pole signs houston" searches had
+  // nowhere to land. order 2.5 slots it right after monuments.
+  "pole-signs": {
+    slug: "pole-signs",
+    name: "Pole & Pylon Signs",
+    shortName: "Pole Signs",
+    order: 2.5,
+    icon: "marker",
+    img: "/portfolio/athome.jpg",
+    portfolioIds: ["at-home-shopping-center", "kirkwood-tech-center"],
+    testimonialIndex: 2,
+    metaTitle: "Pole Signs & Pylon Signs in Houston, TX",
+    metaDescription:
+      "Custom pole and pylon signs in Houston, TX: design, engineering, permitting, fabrication, and crane installation for shopping centers and highway sites.",
+    h1: "Pole & Pylon Signs in Houston, TX",
+    heroSubtitle:
+      "High-visibility freestanding signage for shopping centers, pad sites, and highway frontage — designed, managed, and installed by one Houston team.",
+    answer:
+      "A pole sign (or pylon sign) lifts your name high above the road on one or two steel supports, so drivers see you from a distance — from the feeder, the intersection, or across a full parking lot. It's the sign that pulls traffic into shopping centers, gas stations, restaurants, and pad sites on busy Houston corridors. We handle the whole project: design mockup, stamped engineering and wind-load calculations when the height requires them, the city or county permit, cabinet fabrication in our shop, and crane installation by our own crew. Send a photo of the site and you'll hear from us within one business day.",
+    sections: [
+      {
+        heading: "What is a pole sign, and how is it different from a monument?",
+        body:
+          "Both are freestanding signs, but they solve different problems. A [monument sign](/services/monument-signs) sits low on a solid base and works at driveway distance. A pole sign raises the cabinet ten, twenty, or more feet in the air so it reads from much farther away — which is why shopping centers near highways, gas stations, and drive-thru restaurants use them. A pylon sign is the wider version of the same idea: a broad tower, often wrapped in aluminum or masonry-look cladding, that carries a main cabinet plus a stack of tenant panels. The [At Home Shopping Center pylon](/portfolio) is a real example — individual illuminated tenant panels facing a high-traffic road.",
+      },
+      {
+        heading: "What does a multi-tenant pylon do for a shopping center?",
+        body:
+          "For a retail center, the pylon is shared real estate: every tenant gets a lit panel at the road, and the center itself gets an anchor identity above them. We build tenant panels so they swap individually — when a tenant changes, the new panel slides in without touching the rest of the sign. Property managers appreciate that the wiring runs through serviceable access, so one dark panel doesn't mean opening the whole cabinet. If you manage a center, we can also reface or upgrade an existing pylon rather than replace it; see our [sign repair and refurbishment page](/services/sign-repair).",
+      },
+      {
+        heading: "How do engineering and wind load work for tall signs?",
+        body:
+          "Height is what separates pole signs from everything else we build. A tall freestanding structure on the Gulf Coast has to be engineered for hurricane-zone wind loads: stamped drawings, a properly sized steel support, and a concrete footing designed for the soil and the sign's height and area. Jurisdictions around Houston commonly require sealed engineering before they'll issue a permit for a tall ground sign — unincorporated Harris County, for example, asks for engineered plans on taller structures. We coordinate the licensed structural engineer, the drawings, and the footing spec as part of the project, not as your homework.",
+      },
+      {
+        heading: "Do pole signs need a permit in Houston?",
+        body:
+          "Yes — a freestanding sign of any real height needs a permit everywhere in the Houston area, and the issuing office depends on the address: City of Houston Sign Administration inside city limits, the county for unincorporated areas, and different rules again in Katy, Sugar Land, and the other suburbs. Height and size limits also vary by jurisdiction, which affects what we design in the first place. We confirm the correct office and the applicable limits during the site survey, then prepare and submit the permit package. Our [sign permit guide](/sign-permits) breaks down each jurisdiction with links to the official sources.",
+      },
+      {
+        heading: "How much does a pole sign cost?",
+        body:
+          "Pole signs are engineered structures, so price follows height, cabinet size, the number of tenant panels, illumination, steel and footing requirements, and permitting. Rather than quote a range that won't match your site, we do it the accurate way: a site survey, then a design mockup with an itemized estimate that separates design, engineering, permit, fabrication, and crane installation — so you can see exactly where the money goes before anything is built.",
+      },
+    ],
+    faqs: [
+      { q: "How tall can a pole sign be in Houston?", a: "It depends on the jurisdiction and the property. Each city and county around Houston sets its own height and area limits for freestanding signs, and landlord or development criteria can restrict further. We confirm the limits for your exact address during the survey and design to them from the start." },
+      { q: "Can you replace the faces or tenant panels on an existing pylon?", a: "Yes. If the structure is sound, refacing cabinets or swapping tenant panels is far more economical than rebuilding. We survey the existing sign, confirm the structure and wiring are serviceable, and quote the reface." },
+      { q: "Do pole signs need engineering?", a: "Tall freestanding signs typically require stamped structural engineering for wind load before a permit is issued. We coordinate the licensed engineer and include the engineering in your itemized estimate." },
+      { q: "Are your pole sign cabinets illuminated?", a: "Most are. We build internally illuminated cabinets with UL-listed LED lighting, and tenant panels light individually so each business reads clearly at night." },
+      { q: "How long does a pole sign project take?", a: "Longer than a wall sign: engineering, permitting, footing work, and crane scheduling all add time, so most projects run several weeks to a few months depending on the jurisdiction. We give you a realistic timeline with your quote and keep you posted at each stage." },
+      { q: "What warranty comes with a pole sign?", a: "Our 5-year warranty on materials and workmanship, including the LED lighting in cabinets and panels we build." },
+    ],
+    process: [
+      { t: "Send a photo of the site", b: "Show us the frontage and tell us what should be on the sign. We review it and call you within one business day." },
+      { t: "Site survey", b: "Sightlines, setbacks, utilities, soil conditions at the footing location, and the jurisdiction's height and size limits." },
+      { t: "Design mockup with your estimate", b: "The sign rendered at your site, with an itemized estimate: design, engineering, permit, fabrication, and crane installation." },
+      { t: "Engineering and permits", b: "Stamped wind-load engineering when height requires it, then the permit package to the correct city or county office." },
+      { t: "Fabrication and crane set", b: "Cabinets built and bench-tested lit in our Houston shop, steel set in an engineered footing, crane installation and cleanup by our own crew. 5-year warranty." },
+    ],
+    related: ["monument-signs", "channel-letters", "storefront-signs"],
   },
 
   "vehicle-wraps": {
@@ -382,6 +447,70 @@ const SERVICES = {
       { t: "Clean install on your schedule", b: "Mounted level and sequenced around your business hours, from one sign to a full building." },
     ],
     related: ["wall-graphics", "channel-letters", "monument-signs"],
+  },
+
+  // Added 2026-09-19 per Rameel: repairs, refurbs, and improvements are a
+  // named content priority — dark letters, storm damage, refacing, and LED
+  // retrofits bring exterior-sign owners in the door.
+  "sign-repair": {
+    slug: "sign-repair",
+    name: "Sign Repair & Refurbishment",
+    shortName: "Sign Repair",
+    order: 5.5,
+    icon: "bolt",
+    img: "/portfolio/clearlake.jpg",
+    testimonialIndex: 0,
+    metaTitle: "Sign Repair & Refurbishment in Houston, TX",
+    metaDescription:
+      "Sign repair in Houston, TX: dark channel letters, storm damage, cracked faces, LED retrofits, and full refurbishment — even for signs we didn't build.",
+    h1: "Sign Repair & Refurbishment in Houston, TX",
+    heroSubtitle:
+      "Dark letters, cracked faces, storm damage, tired cabinets — we diagnose, repair, and refurbish commercial signs across Houston, including signs we didn't build.",
+    answer:
+      "A dark or damaged sign costs you customers every night it stays broken — and it tells everyone driving past that the business behind it isn't paying attention. We repair and refurbish commercial signs across the Houston area: channel letters with dead sections, cabinets with failed lighting, cracked or faded faces, storm and wind damage, and rusted or peeling structures that need a refresh instead of a replacement. You don't need to know what's wrong — we diagnose on site, then give you an itemized quote that says exactly what failed and what fixing it costs. And yes, we work on signs other companies built.",
+    sections: [
+      {
+        heading: "What sign problems do you repair?",
+        body:
+          "The most common calls: letters or whole sections gone dark, flickering or dim lighting, cracked or fallen acrylic faces, water intrusion after a storm, cabinets damaged by wind or vehicles, and electrical faults that trip breakers. On older signs the usual culprit is the lighting system itself — failing transformers, ballasts, or aging neon. We open the sign, find the actual fault rather than guessing, and repair it with the same UL-listed components we use in our new builds.",
+      },
+      {
+        heading: "Is an LED retrofit worth it for an older sign?",
+        body:
+          "Often, yes. If your channel letters or cabinet still run on fluorescent lamps, neon, or old transformers, a retrofit replaces the internals with modern LED modules and low-voltage power supplies while keeping the sign you already own. The result is brighter, more even lighting, lower power usage, and far fewer service calls — dead transformers are one of the most common reasons Houston signs go dark. We'll tell you honestly whether your sign is a good retrofit candidate or whether the money is better spent elsewhere.",
+      },
+      {
+        heading: "Can you reface a sign instead of replacing it?",
+        body:
+          "If the structure is sound, refacing is the economical way to rebrand or refresh: new faces in a cabinet, new panels on a [monument](/services/monument-signs) or [pylon](/services/pole-signs), or repainted returns and trim on channel letters. Rebranding after a purchase or franchise change usually doesn't require rebuilding the sign — and swapping the copy on an already-permitted sign generally doesn't trigger a new sign permit, though electrical or structural changes do. We check the permit question for your specific case before work starts.",
+      },
+      {
+        heading: "What does refurbishment include?",
+        body:
+          "A refurbishment brings a structurally sound sign back to presentable: rust treated and repainted, faded faces replaced, lighting upgraded, sealed against water, and hardware replaced where corrosion has taken hold. For property managers, refurbishing a center's monument or pylon is dramatically cheaper than replacement and avoids the full permitting cycle a new structure requires. We survey the sign, photograph what we find, and quote repair and replacement side by side so you can compare honestly.",
+      },
+      {
+        heading: "Do you repair signs you didn't build?",
+        body:
+          "Yes — a large share of our repair work is on signs installed by other companies. We diagnose on site, tell you what failed and why, and give you an itemized quote before any work happens. If the sign is beyond sensible repair, we'll say so plainly and show you what a replacement would look like with a [free design mockup](/free-mockup).",
+      },
+    ],
+    faqs: [
+      { q: "My sign is partially dark. What's usually wrong?", a: "On LED signs, a failed power supply or a bad module section. On older signs, dead transformers, ballasts, or aging neon. We open the sign and test rather than guess, then quote the actual fix." },
+      { q: "Do you repair signs that another company built?", a: "Yes. Most repair calls we take are for signs we didn't build. We diagnose on site and give you an itemized quote before any work starts." },
+      { q: "Does a sign repair need a permit?", a: "Routine repairs and like-for-like face changes on an already-permitted sign generally don't require a new permit. Converting to electronic messaging, or structural and electrical changes, do. We confirm what applies to your sign before work begins." },
+      { q: "Can you fix storm or wind damage?", a: "Yes. We repair wind-damaged cabinets, replace broken faces, and reseal against water intrusion. If the damage is structural, we assess whether the sign can be repaired safely or needs engineering review." },
+      { q: "Should I repair my sign or replace it?", a: "If the structure and cabinet are sound, repair or refurbishment is usually the better value. If the sign is failing structurally or no longer fits your brand, replacement can be smarter. We quote it straight and show you both options when it's a close call." },
+      { q: "Do you use the same parts as your new signs?", a: "Yes. Repairs and retrofits use the same UL-listed LED modules, power supplies, and materials we build new signs with in our Houston shop." },
+    ],
+    process: [
+      { t: "Tell us what's wrong", b: "Send a photo of the sign and describe what you're seeing — dark sections, damage, fading. We review it and call you within one business day." },
+      { t: "On-site diagnosis", b: "We inspect the sign, test the lighting and electrical, and photograph what we find." },
+      { t: "Itemized repair quote", b: "Exactly what failed, what fixing it costs, and — when it's a close call — what replacement would cost, side by side." },
+      { t: "Repair or refurbish", b: "Repairs use the same UL-listed components as our new builds. Permits pulled if the scope requires them." },
+      { t: "Back on and checked at night", b: "We verify the sign lit after dark, sealed and finished, before we call it done." },
+    ],
+    related: ["channel-letters", "monument-signs", "pole-signs"],
   },
 
   "custom-banners": {
