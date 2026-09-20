@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { getAllServices } from "@/data/services";
 import CTASection from "@/components/CTASection";
+import LeadForm from "@/components/LeadForm";
+import PhoneLink from "@/components/PhoneLink";
+import TextLink from "@/components/TextLink";
+import { BUSINESS } from "@/data/business";
 
 // "Manufacturing" wording is deliberate: GSC shows the manufacturing/fabrication
 // query family (business sign manufacturing houston pos ~5.6, sign fabrication
@@ -18,14 +22,31 @@ export default function ServicesHub() {
 
   return (
     <main>
-      <section className="bg-cloud">
-        <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:px-6">
-          <h1 className="text-4xl font-bold text-ink">Sign Manufacturing and Installation in Houston</h1>
-          <p className="mx-auto mt-4 max-w-2xl text-steel">
-            We manufacture every kind of business sign in our own Houston shop and install it
-            with our own crew: design, fabrication, permits, and installation from one team,
-            first sketch to final light-up.
-          </p>
+      {/* Same split as the homepage and service-page heroes: pitch left, form
+          right, so nobody has to scroll to ask for a quote (owner request
+          2026-08-31; extended to the services hub 2026-09-19). */}
+      <section className="bg-ink text-white">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:py-16">
+          <div className="grid items-center gap-8 lg:grid-cols-2">
+            <div>
+              <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
+                Sign Manufacturing and Installation in Houston
+              </h1>
+              <p className="mt-4 text-lg text-white/75">
+                We manufacture every kind of business sign in our own Houston shop and install
+                it with our own crew: design, fabrication, permits, and installation from one
+                team, first sketch to final light-up.
+              </p>
+              <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+                <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
+                <TextLink className="btn btn-outline-light" label="Text Us" />
+              </div>
+            </div>
+            <div className="w-full">
+              <div className="eyebrow mb-3 text-center text-white/70">Free quote in 1 business day</div>
+              <LeadForm kind="quote" submitLabel="Get My Free Quote" messageLabel="Tell us about your sign project" />
+            </div>
+          </div>
         </div>
       </section>
 
