@@ -277,9 +277,8 @@ const SERVICES = {
 
   // Added 2026-09-19 per Rameel: commercial canopies/awnings are a growth line
   // (Jamal already bids them via PlanHub; valid STATEWIDE per the bid-desk
-  // rule). CLAIMS DISCIPLINE: awnings/canopies are NOT fabricated in-house —
-  // this page uses the approved "designed, managed, and installed" framing and
-  // never claims shop fabrication or the 5-year warranty for them.
+  // rule). Fabricated IN-HOUSE (Rameel confirmed 2026-09-19, superseding the
+  // earlier supplier-fab note) — in-house/built-in-Houston claims are fine here.
   "awnings-canopies": {
     slug: "awnings-canopies",
     name: "Commercial Awnings & Canopies",
@@ -293,14 +292,14 @@ const SERVICES = {
       "Commercial awnings and canopies for storefronts, walkways, patios, and drive-thrus — designed, engineered, permitted, and installed. Serving all of Texas.",
     h1: "Commercial Awnings & Canopies in Houston, TX",
     heroSubtitle:
-      "Storefront awnings, walkway and entry canopies, patio covers, and drive-thru structures — designed, managed, and installed by one team, anywhere in Texas.",
+      "Storefront awnings, walkway and entry canopies, patio covers, and drive-thru structures — designed, fabricated, and installed by one Houston team, anywhere in Texas.",
     answer:
-      "A commercial awning or canopy does two jobs at once: it shades and shelters your customers, and it puts your brand on the front of the building. We handle awning and canopy projects end to end — design, engineering coordination, permitting, and installation — for storefronts, restaurant patios, walkways between buildings, school and church entries, and drive-thru lanes. Signage work stays close to Houston, but canopy and awning projects we take on across all of Texas. Send us photos of the building or the plans from your GC, and we'll tell you within one business day whether it's a fit.",
+      "A commercial awning or canopy does two jobs at once: it shades and shelters your customers, and it puts your brand on the front of the building. We handle awning and canopy projects end to end — design, in-house fabrication, engineering coordination, permitting, and installation — for storefronts, restaurant patios, walkways between buildings, school and church entries, and drive-thru lanes. Signage work stays close to Houston, but canopy and awning projects we take on across all of Texas. Send us photos of the building or the plans from your GC, and we'll tell you within one business day whether it's a fit.",
     sections: [
       {
         heading: "What kinds of awnings and canopies do you handle?",
         body:
-          "Storefront fabric and metal awnings (with or without branding), entry and walkway canopies for schools, churches, medical buildings, and multifamily properties, restaurant patio covers, porte-cochères, and drive-thru canopies. On new construction and remodels, canopies often arrive as a line item in the architectural drawings — we work from those plans, coordinate the engineering, and deliver the finished structure. On existing buildings, we start from photos and a site survey and design something that fits the façade and the code.",
+          "Storefront fabric and metal awnings (with or without branding), entry and walkway canopies for schools, churches, medical buildings, and multifamily properties, restaurant patio covers, porte-cochères, and drive-thru canopies. On new construction and remodels, canopies often arrive as a line item in the architectural drawings — we work from those plans, coordinate the engineering, and fabricate and install the finished structure ourselves. On existing buildings, we start from photos and a site survey and design something that fits the façade and the code.",
       },
       {
         heading: "Can an awning carry my business name?",
@@ -336,7 +335,7 @@ const SERVICES = {
       { t: "Site survey or plan takeoff", b: "Measurements and attachment conditions on site, or a scope takeoff straight from the GC's plan set." },
       { t: "Design and itemized estimate", b: "The awning or canopy rendered on your building, with an estimate that separates design, engineering, permits, materials, and installation." },
       { t: "Engineering and permits", b: "Sealed structural drawings where required, then the permit package to the correct city or county office." },
-      { t: "Installation", b: "Managed end to end — delivered, installed, inspected, and closed out with the permitting authority." },
+      { t: "Fabrication and installation", b: "Built in our Houston shop, installed, inspected, and closed out with the permitting authority." },
     ],
     related: ["channel-letters", "pole-signs", "storefront-signs"],
   },
