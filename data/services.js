@@ -275,6 +275,72 @@ const SERVICES = {
     related: ["monument-signs", "channel-letters", "storefront-signs"],
   },
 
+  // Added 2026-09-19 per Rameel: commercial canopies/awnings are a growth line
+  // (Jamal already bids them via PlanHub; valid STATEWIDE per the bid-desk
+  // rule). CLAIMS DISCIPLINE: awnings/canopies are NOT fabricated in-house —
+  // this page uses the approved "designed, managed, and installed" framing and
+  // never claims shop fabrication or the 5-year warranty for them.
+  "awnings-canopies": {
+    slug: "awnings-canopies",
+    name: "Commercial Awnings & Canopies",
+    shortName: "Awnings & Canopies",
+    order: 2.7,
+    icon: "marker",
+    img: "/portfolio/athome.jpg",
+    testimonialIndex: 4,
+    metaTitle: "Commercial Awnings & Canopies in Houston, TX",
+    metaDescription:
+      "Commercial awnings and canopies for storefronts, walkways, patios, and drive-thrus — designed, engineered, permitted, and installed. Serving all of Texas.",
+    h1: "Commercial Awnings & Canopies in Houston, TX",
+    heroSubtitle:
+      "Storefront awnings, walkway and entry canopies, patio covers, and drive-thru structures — designed, managed, and installed by one team, anywhere in Texas.",
+    answer:
+      "A commercial awning or canopy does two jobs at once: it shades and shelters your customers, and it puts your brand on the front of the building. We handle awning and canopy projects end to end — design, engineering coordination, permitting, and installation — for storefronts, restaurant patios, walkways between buildings, school and church entries, and drive-thru lanes. Signage work stays close to Houston, but canopy and awning projects we take on across all of Texas. Send us photos of the building or the plans from your GC, and we'll tell you within one business day whether it's a fit.",
+    sections: [
+      {
+        heading: "What kinds of awnings and canopies do you handle?",
+        body:
+          "Storefront fabric and metal awnings (with or without branding), entry and walkway canopies for schools, churches, medical buildings, and multifamily properties, restaurant patio covers, porte-cochères, and drive-thru canopies. On new construction and remodels, canopies often arrive as a line item in the architectural drawings — we work from those plans, coordinate the engineering, and deliver the finished structure. On existing buildings, we start from photos and a site survey and design something that fits the façade and the code.",
+      },
+      {
+        heading: "Can an awning carry my business name?",
+        body:
+          "Yes — and in many jurisdictions a branded awning counts as signage, which changes the permit path. Graphics on an awning valance or face are often the most economical way to add brand presence to a storefront, and they pair naturally with [channel letters](/services/channel-letters) above. We design the awning and any lettering together so the whole façade reads as one piece, and we permit it correctly as sign, structure, or both.",
+      },
+      {
+        heading: "How do engineering and wind load work for canopies?",
+        body:
+          "A canopy is a structure before it's anything else. Gulf Coast wind loads mean frames, anchoring, and footings typically need real engineering — and most cities and counties require sealed drawings before they'll issue a structural permit. We coordinate the licensed engineer, prepare the permit package for the correct jurisdiction, and schedule inspections, the same way we run [pole sign](/services/pole-signs) projects. Our [sign permit guide](/sign-permits) covers who reviews what around Houston.",
+      },
+      {
+        heading: "Do you only serve Houston?",
+        body:
+          "For canopy and awning work, no — we take on projects across all of Texas. General contractors bidding schools, retail centers, and municipal work statewide send us canopy and awning scopes regularly, and we quote them the same way: from the drawings, with engineering and permitting included. Signage-only projects we keep within roughly 150 miles of Houston, where our install crews live.",
+      },
+      {
+        heading: "What does a commercial awning or canopy cost?",
+        body:
+          "Price follows size, frame material (aluminum vs steel), covering (fabric, metal panel, polycarbonate), engineering requirements, and how the structure attaches to or stands off the building. A small branded storefront awning is a different project than a freestanding drive-thru canopy with footings. Rather than guess, we quote from your plans or a site survey: an itemized estimate that separates design, engineering, permits, materials, and installation, so you can see exactly what drives the number.",
+      },
+    ],
+    faqs: [
+      { q: "Do commercial awnings need a permit in Houston?", a: "Usually yes. A structural awning or canopy typically needs a building permit, and if it carries your business name or logo it may need a sign permit as well. The path depends on the jurisdiction — we confirm what applies to your address and handle the submittals." },
+      { q: "Do you work outside the Houston area?", a: "For awnings and canopies, yes — we take on projects across all of Texas, including GC-bid work for schools, retail, and municipal facilities. Signage-only projects stay within about 150 miles of Houston." },
+      { q: "Fabric or metal — which should I choose?", a: "Fabric awnings cost less, install faster, and take branding well, but coverings need replacement over the years. Metal canopies cost more upfront and last much longer with less upkeep. We'll recommend based on your building, budget, and how long you plan to be in the space." },
+      { q: "Can you replace just the fabric on an existing awning frame?", a: "Often, yes. If the frame is sound, recovering it — with or without new graphics — costs far less than a new structure. We inspect the frame first and tell you honestly whether it's worth reusing." },
+      { q: "Do you work from architectural drawings for GC bids?", a: "Yes. A large share of our canopy work comes from general contractors' plan sets. Send the drawings and the bid date, and we'll quote the awning and canopy scope with engineering and permitting included." },
+      { q: "Are your canopies engineered for hurricane-zone wind?", a: "Yes — frames, anchoring, and footings are engineered to the wind requirements of your site, with sealed drawings when the jurisdiction requires them, which for structural canopies is most of the time." },
+    ],
+    process: [
+      { t: "Send photos or plans", b: "Snap the storefront, or send the architectural drawings if this is a bid. We review and respond within one business day." },
+      { t: "Site survey or plan takeoff", b: "Measurements and attachment conditions on site, or a scope takeoff straight from the GC's plan set." },
+      { t: "Design and itemized estimate", b: "The awning or canopy rendered on your building, with an estimate that separates design, engineering, permits, materials, and installation." },
+      { t: "Engineering and permits", b: "Sealed structural drawings where required, then the permit package to the correct city or county office." },
+      { t: "Installation", b: "Managed end to end — delivered, installed, inspected, and closed out with the permitting authority." },
+    ],
+    related: ["channel-letters", "pole-signs", "storefront-signs"],
+  },
+
   "vehicle-wraps": {
     slug: "vehicle-wraps",
     name: "Vehicle Wraps",
