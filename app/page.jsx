@@ -287,7 +287,7 @@ export default function HomePage() {
             day. An actual number, not a runaround.
           </p>
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-            <Link href="/quote" className="btn bg-white text-signal-600 hover:bg-white/90">Get a Free Quote</Link>
+            <Link href="/quote" className="btn bg-white text-signal-600 hover:bg-white/90">Get My Free Quote</Link>
             <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
             <TextLink className="btn btn-outline-light" label="Text Us" />
           </div>

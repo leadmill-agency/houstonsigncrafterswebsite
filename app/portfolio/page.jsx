@@ -82,7 +82,7 @@ export default function PortfolioPage() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link href="/quote" className="btn btn-primary">
-                Request a Quote
+                Request My Quote
               </Link>
               <a href="#work" className="btn btn-outline-light">
                 View Our Work
@@ -175,7 +175,7 @@ export default function PortfolioPage() {
           </p>
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link href="/quote" className="btn btn-primary">
-              Request a Quote
+              Request My Quote
             </Link>
             <PhoneLink className="btn btn-outline-light" />
           </div>

@@ -137,7 +137,7 @@ export default function ChannelLettersKatyPage() {
           printed panel ever will.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          <Link href="/quote" className="btn btn-primary">Get a Quote</Link>
+          <Link href="/quote" className="btn btn-primary">Get My Quote</Link>
           <PhoneLink className="btn btn-outline-dark" label={`Call ${BUSINESS.phone}`} />
         </div>
       </section>
@@ -275,7 +275,7 @@ export default function ChannelLettersKatyPage() {
           we&apos;ll need.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          <Link href="/quote" className="btn btn-primary">Get a Quote</Link>
+          <Link href="/quote" className="btn btn-primary">Get My Quote</Link>
           <PhoneLink className="btn btn-outline-dark" label={`Call ${BUSINESS.phone}`} />
           <Link href="/locations/katy-tx" className="btn btn-outline-dark">All Katy Signage</Link>
         </div>

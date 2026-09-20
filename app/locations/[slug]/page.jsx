@@ -76,7 +76,7 @@ export default async function LocationPage({ params }) {
           <p className="mt-4 max-w-2xl text-lg text-white/75">{m.intro}</p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Link href="/quote" className="btn btn-primary">
-              Get a Free Quote
+              Get My Free Quote
             </Link>
             <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
           </div>

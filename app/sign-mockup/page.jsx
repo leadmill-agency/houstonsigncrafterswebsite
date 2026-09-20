@@ -151,7 +151,7 @@ export default function SignMockupPage() {
             </figure>
           </div>
           <div className="mt-8">
-            <ToolLink label="Try It On Your Building" source="examples" />
+            <ToolLink label="Try It On My Building" source="examples" />
           </div>
         </div>
       </section>

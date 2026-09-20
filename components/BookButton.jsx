@@ -7,7 +7,7 @@ import { trackEvent, trackPixel, trackOaiq } from "@/lib/analytics";
 // conversion signals first: dataLayer `booking_click` (for the Google Ads
 // contractor's GTM trigger, same pattern as quote_form_success), GA4 event,
 // and a Meta pixel Schedule event.
-export default function BookButton({ label = "Pick a Time", className = "btn btn-primary" }) {
+export default function BookButton({ label = "Pick My Time", className = "btn btn-primary" }) {
   const handleClick = () => {
     trackEvent("booking_click", { link_url: BUSINESS.bookingUrl });
     trackPixel("Schedule", { content_name: "booking_click" });

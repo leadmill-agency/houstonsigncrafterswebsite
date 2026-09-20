@@ -72,10 +72,10 @@ export default function Nav() {
             {/* Two CTAs: booking (secondary, dark) + quote (primary). Phone stays in the topbar. */}
             <div className="hidden items-center gap-2.5 md:flex">
               <Link href="/book" className="btn btn-slim btn-dark whitespace-nowrap">
-                Schedule a Call
+                Schedule My Call
               </Link>
               <Link href="/quote" className="btn btn-slim btn-primary whitespace-nowrap">
-                Get A Quote
+                Get My Quote
                 <ArrowIcon />
               </Link>
             </div>
@@ -105,10 +105,10 @@ export default function Nav() {
               <div className="mt-4 flex flex-col gap-2">
                 <a href={BUSINESS.phoneHref} className="btn btn-outline-dark w-full">{BUSINESS.phone}</a>
                 <Link href="/book" className="btn btn-slim btn-dark w-full" onClick={() => setOpen(false)}>
-                  Schedule a Call
+                  Schedule My Call
                 </Link>
                 <Link href="/quote" className="btn btn-slim btn-primary w-full" onClick={() => setOpen(false)}>
-                  Get a Quote
+                  Get My Quote
                   <ArrowIcon />
                 </Link>
               </div>

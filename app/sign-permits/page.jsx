@@ -226,7 +226,7 @@ export default function SignPermitsPage() {
           to the right office above, and install after approval.
         </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-          <Link href="/quote" className="btn btn-primary">Get a Permit-Ready Quote</Link>
+          <Link href="/quote" className="btn btn-primary">Get My Permit-Ready Quote</Link>
           <PhoneLink className="btn btn-outline-dark" label={`Call ${BUSINESS.phone}`} />
           <Link href="/guides/sign-permitting-checklist" className="btn btn-outline-dark">Free Permitting Checklist</Link>
         </div>

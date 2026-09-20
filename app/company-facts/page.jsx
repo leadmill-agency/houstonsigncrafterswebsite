@@ -155,8 +155,8 @@ export default function CompanyFactsPage() {
             itemized quote for design, permit, build, and install within one business day.
           </p>
           <div className="mt-5 flex flex-col gap-3 sm:flex-row">
-            <Link href="/quote" className="btn btn-primary">Get a Free Quote</Link>
-            <Link href="/free-mockup" className="btn btn-outline-dark">Get a Free Mockup</Link>
+            <Link href="/quote" className="btn btn-primary">Get My Free Quote</Link>
+            <Link href="/free-mockup" className="btn btn-outline-dark">Get My Free Mockup</Link>
           </div>
         </div>
       </section>

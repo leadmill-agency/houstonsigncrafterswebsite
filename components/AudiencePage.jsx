@@ -32,7 +32,7 @@ export default function AudiencePage({ audience }) {
           </h1>
           <p className="mt-4 max-w-2xl text-lg text-white/75">{audience.intro}</p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-            <Link href="/quote" className="btn btn-primary">Get a Quote in 1 Business Day</Link>
+            <Link href="/quote" className="btn btn-primary">Get My Quote in 1 Business Day</Link>
             <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
           </div>
         </div>

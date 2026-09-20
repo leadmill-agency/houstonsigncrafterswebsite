@@ -13,7 +13,7 @@ export default function CTASection({
         <h2 className="text-3xl font-semibold text-white sm:text-4xl">{title}</h2>
         <p className="mx-auto mt-3 max-w-2xl text-white/70">{subtitle}</p>
         <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-          <Link href="/quote" className="btn btn-primary">Get a Free Quote</Link>
+          <Link href="/quote" className="btn btn-primary">Get My Free Quote</Link>
           <PhoneLink className="btn btn-outline-light" showIcon={false} />
         </div>
       </div>

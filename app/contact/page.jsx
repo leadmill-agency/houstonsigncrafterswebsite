@@ -43,7 +43,7 @@ export default function ContactPage() {
         </div>
 
         <div>
-          <LeadForm kind="contact" submitLabel="Send Message" showCompany messageLabel="How can we help?" />
+          <LeadForm kind="contact" submitLabel="Send My Message" showCompany messageLabel="How can we help?" />
         </div>
       </section>
     </main>
