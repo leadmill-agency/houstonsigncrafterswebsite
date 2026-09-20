@@ -70,6 +70,9 @@ const PORTFOLIO = [
   { id: "tidy", title: "Tidy", category: "Cabinet / Lightbox Signs", signType: "Warehouse Panel Signs", description: "A main TIDY panel over three matching service panels on a metal warehouse.", imageSrc: "/portfolio/tidy.jpg", location: "Houston, TX", industry: "Commercial Services" },
   { id: "ur-beauty-barber", title: "UR Beauty & Barber Academy", category: "Channel Letters", signType: "Channel Letters & Lightbox", description: "Purple channel letters over a white lightbox, photographed the night the power came on.", imageSrc: "/portfolio/urbeauty.jpg", location: "Houston, TX", industry: "Education" },
   { id: "xo-books", title: "X&O Books", category: "Channel Letters", signType: "Dimensional Storefront Letters", description: "White-face letters with navy trim for a bookstore ahead of its opening.", imageSrc: "/portfolio/xobooks.jpg", location: "Houston, TX", industry: "Bookstore" },
+  { id: "turnberry-corner", title: "Turnberry Corner", category: "Channel Letters", signType: "Illuminated Building Letters", description: "Warm-lit serif letters glowing on two elevations of a new retail corner, shot at night.", imageSrc: "/portfolio/turnberry.jpg", location: "Houston, TX", industry: "Retail Center" },
+  { id: "hemp-social", title: "Hemp Social", category: "Channel Letters", signType: "Illuminated Channel Letters & Tagline", description: "White channel letters with a green glow and a lit tagline panel below.", imageSrc: "/portfolio/hempsocial.jpg", location: "Houston, TX", industry: "Retail" },
+  { id: "tt-food-mart", title: "T&T Food Mart", category: "Channel Letters", signType: "Storefront Letters & Logo Round", description: "Red storefront letters with a round T&T logo mark across a neighborhood market fascia.", imageSrc: "/portfolio/ttfoodmart.jpg", location: "Houston, TX", industry: "Convenience Store" },
 ];
 
 export function getPortfolio() {
