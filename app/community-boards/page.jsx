@@ -71,29 +71,79 @@ function ContactCTAs({ dark = false, textLabel = "Text About My Spot" }) {
 export default function CommunityBoards() {
   return (
     <main className="pb-16 lg:pb-0">
-      {/* Hero */}
+      {/* Hero — text left, board mockup right. The mockup is deliberately
+          CSS-built and labeled as an example layout (PRD rule: no borrowed
+          program photography, no unlabeled mockups). Swap for a real install
+          photo when board #1 exists. */}
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
-          <div className="max-w-3xl">
-            <div className="eyebrow mb-3 text-white/70">Houston Community Boards</div>
-            <h1 className="text-3xl font-bold leading-tight sm:text-5xl">
-              Get seen where Houston already spends time.
-            </h1>
-            <p className="mt-5 text-lg text-white/75">
-              We place custom community boards inside busy Houston restaurants, coffee shops,
-              gyms, salons, and neighborhood businesses. The host gets a useful specials board
-              for free. Six local businesses sponsor the bottom of it. Your business stays
-              there for a full year.
-            </p>
-            <p className="mt-4 font-semibold text-white">
-              Six local businesses. One host location. Twelve months of visibility.
-            </p>
-            <div className="mt-7">
-              <ContactCTAs dark />
+          <div className="grid items-center gap-10 lg:grid-cols-2">
+            <div>
+              <div className="eyebrow mb-3 text-white/70">Houston Community Boards</div>
+              <h1 className="text-3xl font-bold leading-tight sm:text-5xl">
+                Get seen where Houston already spends time.
+              </h1>
+              <p className="mt-5 text-lg text-white/75">
+                We place custom community boards inside busy Houston restaurants, coffee shops,
+                gyms, salons, and neighborhood businesses. The host gets a useful specials board
+                for free. Six local businesses sponsor the bottom of it. Your business stays
+                there for a full year.
+              </p>
+              <p className="mt-4 font-semibold text-white">
+                Six local businesses. One host location. Twelve months of visibility.
+              </p>
+              <div className="mt-7">
+                <ContactCTAs dark />
+              </div>
+              <p className="mt-5 text-sm text-white/60">
+                Designed and managed by Houston Sign Crafters, a local Houston sign company.
+              </p>
             </div>
-            <p className="mt-5 text-sm text-white/60">
-              Designed and managed by Houston Sign Crafters, a local Houston sign company.
-            </p>
+
+            <div className="mx-auto w-full max-w-sm">
+              <div className="rounded-md bg-[#23272e] p-4 shadow-2xl ring-1 ring-white/10">
+                <div className="rounded-sm border border-dashed border-white/25 px-4 py-6 text-center">
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/50">
+                    Host&apos;s writable area
+                  </div>
+                  <div className="mt-2 text-lg font-semibold italic text-amber-200/90">
+                    Today&apos;s specials, events &amp; announcements
+                  </div>
+                  <div className="mx-auto mt-4 space-y-2">
+                    <div className="mx-auto h-2 w-4/5 rounded-full bg-white/20" />
+                    <div className="mx-auto h-2 w-3/5 rounded-full bg-white/15" />
+                    <div className="mx-auto h-2 w-2/3 rounded-full bg-white/10" />
+                  </div>
+                </div>
+                <div className="mt-3 rounded-sm bg-white/10 py-1.5 text-center text-[10px] font-bold uppercase tracking-[0.2em] text-white/80">
+                  Support Local Houston Businesses
+                </div>
+                <div className="mt-2 grid grid-cols-3 gap-2">
+                  {["HVAC", "Dentist", "Real Estate"].map((c) => (
+                    <div key={c} className="rounded-sm bg-white px-1.5 py-3 text-center">
+                      <div className="text-[10px] font-bold text-ink">{c}</div>
+                      <div className="mt-0.5 text-[8px] text-steel">Your ad here</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-2 grid grid-cols-3 gap-2">
+                  {["Roofing", "Insurance", "Auto Shop"].map((c) => (
+                    <div key={c} className="rounded-sm bg-white/90 px-1.5 py-3 text-center">
+                      <div className="text-[10px] font-bold text-ink">{c}</div>
+                      <div className="mt-0.5 text-[8px] text-steel">Your ad here</div>
+                    </div>
+                  ))}
+                </div>
+                <div className="mt-3 flex items-center justify-between text-[9px] uppercase tracking-wider text-white/50">
+                  <span>Houston Community Boards</span>
+                  <span>by Houston Sign Crafters</span>
+                </div>
+              </div>
+              <p className="mt-3 text-center text-xs text-white/50">
+                Example layout (mockup) of the 24&Prime; &times; 36&Prime; board. Top ad row is
+                Premium, bottom row is Standard.
+              </p>
+            </div>
           </div>
         </div>
       </section>
