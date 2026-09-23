@@ -30,6 +30,7 @@ export default function sitemap() {
     { url: `${BASE}/pricing`, changeFrequency: "monthly", priority: 0.9 },
     { url: `${BASE}/sign-permits`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/channel-letter-signs-katy-tx`, changeFrequency: "monthly", priority: 0.8 },
+    { url: `${BASE}/channel-letter-signs-sugar-land-tx`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/general-contractors`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/property-managers`, changeFrequency: "monthly", priority: 0.8 },
     { url: `${BASE}/franchise-signage`, changeFrequency: "monthly", priority: 0.8 },
