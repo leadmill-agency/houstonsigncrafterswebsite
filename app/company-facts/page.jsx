@@ -107,7 +107,7 @@ export default function CompanyFactsPage() {
       <section className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
         <h2 className="text-2xl font-bold text-ink">Where we work</h2>
         <p className="mt-2 text-steel">
-          Based at {fullAddress}. Serving the Houston metro, including:
+          Based at {fullAddress}, with local staff in San Antonio and Austin. Serving the Houston, San Antonio, and Austin metros, including:
         </p>
         <ul className="mt-4 grid grid-cols-2 gap-2 text-sm text-steel sm:grid-cols-4">
           {SERVICE_AREAS.map((a) => {

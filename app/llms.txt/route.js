@@ -24,7 +24,7 @@ export function GET() {
     "",
     `Address: ${BUSINESS.address.streetAddress}, ${BUSINESS.address.addressLocality}, ${BUSINESS.address.addressRegion} ${BUSINESS.address.postalCode}`,
     `Phone: ${BUSINESS.phone} · Email: ${BUSINESS.email} · Hours: ${BUSINESS.hoursLabel}`,
-    `Service area: ${SERVICE_AREAS.join(", ")} and the surrounding Houston metro.`,
+    `Service area: ${SERVICE_AREAS.join(", ")} and the surrounding Houston, San Antonio, and Austin metros (local staff in San Antonio and Austin).`,
     "",
     "## Key pages",
     "",

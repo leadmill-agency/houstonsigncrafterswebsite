@@ -21,12 +21,19 @@ import pasadena from "./locations/pasadena-tx.json";
 import spring from "./locations/spring-tx.json";
 import cypress from "./locations/cypress-tx.json";
 import pearland from "./locations/pearland-tx.json";
+import newBraunfels from "./locations/new-braunfels-tx.json";
+import schertz from "./locations/schertz-tx.json";
+import boerne from "./locations/boerne-tx.json";
+import roundRock from "./locations/round-rock-tx.json";
+import georgetown from "./locations/georgetown-tx.json";
+import pflugerville from "./locations/pflugerville-tx.json";
 
 const META = {
   "katy-tx": {
     slug: "katy-tx",
     city: "Katy",
     region: "TX",
+    metro: "Houston",
     cityState: "Katy, TX",
     img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=75",
     metaTitle: "Sign Company in Katy, TX",
@@ -41,6 +48,7 @@ const META = {
     slug: "sugar-land-tx",
     city: "Sugar Land",
     region: "TX",
+    metro: "Houston",
     cityState: "Sugar Land, TX",
     img: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=1200&q=75",
     metaTitle: "Sign Company in Sugar Land, TX",
@@ -55,6 +63,7 @@ const META = {
     slug: "the-woodlands-tx",
     city: "The Woodlands",
     region: "TX",
+    metro: "Houston",
     cityState: "The Woodlands, TX",
     img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=75",
     metaTitle: "Sign Company in The Woodlands, TX",
@@ -69,6 +78,7 @@ const META = {
     slug: "pasadena-tx",
     city: "Pasadena",
     region: "TX",
+    metro: "Houston",
     cityState: "Pasadena, TX",
     img: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=75",
     metaTitle: "Sign Company in Pasadena, TX",
@@ -83,6 +93,7 @@ const META = {
     slug: "spring-tx",
     city: "Spring",
     region: "TX",
+    metro: "Houston",
     cityState: "Spring, TX",
     img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=75",
     metaTitle: "Sign Company in Spring, TX",
@@ -97,6 +108,7 @@ const META = {
     slug: "cypress-tx",
     city: "Cypress",
     region: "TX",
+    metro: "Houston",
     cityState: "Cypress, TX",
     img: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&q=75",
     metaTitle: "Sign Company in Cypress, TX",
@@ -111,6 +123,7 @@ const META = {
     slug: "pearland-tx",
     city: "Pearland",
     region: "TX",
+    metro: "Houston",
     cityState: "Pearland, TX",
     img: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=1200&q=75",
     metaTitle: "Sign Company in Pearland, TX",
@@ -120,6 +133,96 @@ const META = {
     intro:
       "Medical, retail, and restaurant signage for Pearland and the SH-288 corridor, designed, permitted, and installed in-house.",
     nearby: ["Friendswood", "Shadow Creek Ranch", "Manvel", "Alvin", "Fresno"],
+  },
+  "new-braunfels-tx": {
+    slug: "new-braunfels-tx",
+    city: "New Braunfels",
+    region: "TX",
+    metro: "San Antonio",
+    cityState: "New Braunfels, TX",
+    img: "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1200&q=75",
+    metaTitle: "Sign Company in New Braunfels, TX",
+    metaDescription:
+      "Channel letters, monument, pylon, and pole signs for New Braunfels businesses. Built in our Houston shop, permitted under Chapter 106, and installed locally.",
+    h1: "Sign Company in New Braunfels, TX",
+    intro:
+      "Exterior signs for New Braunfels businesses, designed around the city's sign code and built in our own Houston shop.",
+    nearby: ["Gruene", "San Marcos", "Seguin", "Garden Ridge", "Schertz"],
+  },
+  "schertz-tx": {
+    slug: "schertz-tx",
+    city: "Schertz",
+    region: "TX",
+    metro: "San Antonio",
+    cityState: "Schertz, TX",
+    img: "https://images.unsplash.com/photo-1449157291145-7efd050a4d0e?w=1200&q=75",
+    metaTitle: "Sign Company in Schertz, TX",
+    metaDescription:
+      "Pylon, monument, and channel letter signs for Schertz businesses on IH-35, IH-10, and FM 3009. Built in our Houston shop and permitted under Article 11.",
+    h1: "Sign Company in Schertz, TX",
+    intro:
+      "Exterior signs for Schertz businesses, sized to the road you face and built in our own Houston shop.",
+    nearby: ["Cibolo", "Selma", "Universal City", "Garden Ridge", "Converse"],
+  },
+  "boerne-tx": {
+    slug: "boerne-tx",
+    city: "Boerne",
+    region: "TX",
+    metro: "San Antonio",
+    cityState: "Boerne, TX",
+    img: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?w=1200&q=75",
+    metaTitle: "Sign Company in Boerne, TX",
+    metaDescription:
+      "Monument, pylon, and storefront signs for Boerne businesses, designed for Hill Country standards and the historic district. Built in our Houston shop.",
+    h1: "Sign Company in Boerne, TX",
+    intro:
+      "Exterior signs for Boerne businesses, designed around Hill Country sign standards and built in our own Houston shop.",
+    nearby: ["Fair Oaks Ranch", "Comfort", "Bergheim", "Sisterdale", "Leon Springs"],
+  },
+  "round-rock-tx": {
+    slug: "round-rock-tx",
+    city: "Round Rock",
+    region: "TX",
+    metro: "Austin",
+    cityState: "Round Rock, TX",
+    img: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?w=1200&q=75",
+    metaTitle: "Sign Company in Round Rock, TX",
+    metaDescription:
+      "Channel letters, monument and pylon signs, and awnings for Round Rock businesses. Built to the city's sign code, with a 5-year warranty on every sign.",
+    h1: "Sign Company in Round Rock, TX",
+    intro:
+      "Exterior signs for Round Rock businesses, designed around the city's road-type rules and backed by a 5-year warranty.",
+    nearby: ["Georgetown", "Pflugerville", "Hutto", "Cedar Park", "Brushy Creek"],
+  },
+  "georgetown-tx": {
+    slug: "georgetown-tx",
+    city: "Georgetown",
+    region: "TX",
+    metro: "Austin",
+    cityState: "Georgetown, TX",
+    img: "https://images.unsplash.com/photo-1518770660439-4636190af475?w=1200&q=75",
+    metaTitle: "Sign Company in Georgetown, TX",
+    metaDescription:
+      "Monument, channel letter, and highway signs for Georgetown businesses, from the historic Square to I-35. Built to city code with a 5-year warranty.",
+    h1: "Sign Company in Georgetown, TX",
+    intro:
+      "Exterior signs for Georgetown businesses, planned around the historic Square, the highway corridors, and the city's sign code.",
+    nearby: ["Round Rock", "Leander", "Liberty Hill", "Jarrell", "Sun City Texas"],
+  },
+  "pflugerville-tx": {
+    slug: "pflugerville-tx",
+    city: "Pflugerville",
+    region: "TX",
+    metro: "Austin",
+    cityState: "Pflugerville, TX",
+    img: "https://images.unsplash.com/photo-1565008576549-57569a49371d?w=1200&q=75",
+    metaTitle: "Sign Company in Pflugerville, TX",
+    metaDescription:
+      "Masonry monument signs, channel letters, and awnings for Pflugerville businesses near SH 130 and SH 45. Built to Chapter 154 with a 5-year warranty.",
+    h1: "Sign Company in Pflugerville, TX",
+    intro:
+      "Exterior signs for Pflugerville businesses, built around the city's monument sign rules and backed by a 5-year warranty.",
+    nearby: ["Round Rock", "Hutto", "Manor", "Coupland", "Wells Branch"],
   },
 };
 
@@ -131,6 +234,12 @@ const CONTENT = {
   "spring-tx": spring,
   "cypress-tx": cypress,
   "pearland-tx": pearland,
+  "new-braunfels-tx": newBraunfels,
+  "schertz-tx": schertz,
+  "boerne-tx": boerne,
+  "round-rock-tx": roundRock,
+  "georgetown-tx": georgetown,
+  "pflugerville-tx": pflugerville,
 };
 
 const MARKETS = Object.fromEntries(
@@ -139,6 +248,16 @@ const MARKETS = Object.fromEntries(
 
 export function getAllMarkets() {
   return Object.values(MARKETS);
+}
+
+// Metros in display order for the /locations hub.
+export const METROS = ["Houston", "San Antonio", "Austin"];
+
+export function getMarketsByMetro() {
+  const all = Object.values(MARKETS);
+  return METROS.map((metro) => ({ metro, markets: all.filter((m) => m.metro === metro) })).filter(
+    (g) => g.markets.length
+  );
 }
 
 export function getMarket(slug) {

@@ -101,7 +101,7 @@ export const BUSINESS = {
   ],
 };
 
-// Primary metro + suburbs we serve. Used for areaServed schema and as the
+// Metros + suburbs we serve (Houston, San Antonio, Austin). Used for areaServed schema and as the
 // seed list for location pages.
 export const SERVICE_AREAS = [
   "Houston, TX",
@@ -112,6 +112,15 @@ export const SERVICE_AREAS = [
   "Pearland, TX",
   "Spring, TX",
   "Pasadena, TX",
+  // San Antonio + Austin metros (local staff in both, Rameel 2026-09-25)
+  "San Antonio, TX",
+  "New Braunfels, TX",
+  "Schertz, TX",
+  "Boerne, TX",
+  "Austin, TX",
+  "Round Rock, TX",
+  "Georgetown, TX",
+  "Pflugerville, TX",
 ];
 
 export default BUSINESS;
