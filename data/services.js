@@ -307,14 +307,14 @@ const SERVICES = {
     icon: "marker",
     img: "/portfolio/athome.jpg",
     testimonialIndex: 4,
-    metaTitle: "Commercial Awnings & Canopies in Houston, TX",
+    metaTitle: "Commercial Awnings & Canopies in Houston & All of Texas",
     metaDescription:
-      "Commercial awnings and canopies for storefronts, walkways, patios, and drive-thrus — designed, engineered, permitted, and installed. Serving all of Texas.",
-    h1: "Commercial Awnings & Canopies in Houston, TX",
+      "Commercial awnings and canopies for storefronts, walkways, patios, and drive-thrus. Designed, engineered, permitted, and installed anywhere in Texas, with local staff in Houston, San Antonio, and Austin.",
+    h1: "Commercial Awnings & Canopies in Houston and Across Texas",
     heroSubtitle:
-      "Storefront awnings, walkway and entry canopies, patio covers, and drive-thru structures — designed, fabricated, and installed by one Houston team, anywhere in Texas.",
+      "Storefront awnings, walkway and entry canopies, patio covers, and drive-thru structures. Built in our Houston shop and installed anywhere in Texas, with local staff in Houston, San Antonio, and Austin.",
     answer:
-      "A commercial awning or canopy does two jobs at once: it shades and shelters your customers, and it puts your brand on the front of the building. We handle awning and canopy projects end to end — design, in-house fabrication, engineering coordination, permitting, and installation — for storefronts, restaurant patios, walkways between buildings, school and church entries, and drive-thru lanes. Signage work stays close to Houston, but canopy and awning projects we take on across all of Texas. Send us photos of the building or the plans from your GC, and we'll tell you within one business day whether it's a fit.",
+      "A commercial awning or canopy does two jobs at once: it shades and shelters your customers, and it puts your brand on the front of the building. We handle awning and canopy projects end to end — design, in-house fabrication, engineering coordination, permitting, and installation — for storefronts, restaurant patios, walkways between buildings, school and church entries, and drive-thru lanes. We take on awning and canopy projects across all of Texas, with local staff in Houston, San Antonio, and Austin. Send us photos of the building or the plans from your GC, and we'll tell you within one business day whether it's a fit.",
     sections: [
       {
         heading: "What kinds of awnings and canopies do you handle?",
@@ -329,12 +329,12 @@ const SERVICES = {
       {
         heading: "How do engineering and wind load work for canopies?",
         body:
-          "A canopy is a structure before it's anything else. Gulf Coast wind loads mean frames, anchoring, and footings typically need real engineering — and most cities and counties require sealed drawings before they'll issue a structural permit. We coordinate the licensed engineer, prepare the permit package for the correct jurisdiction, and schedule inspections, the same way we run [pole sign](/services/pole-signs) projects. Our [sign permit guide](/sign-permits) covers who reviews what around Houston.",
+          "A canopy is a structure before it's anything else. Wind loads vary across Texas, from Gulf Coast hurricane exposure to Hill Country storms, so frames, anchoring, and footings typically need real engineering — and most cities and counties require sealed drawings before they'll issue a structural permit. We coordinate the licensed engineer, prepare the permit package for the correct jurisdiction, and schedule inspections, the same way we run [pole sign](/services/pole-signs) projects. Our [sign permit guide](/sign-permits) covers who reviews what around Houston.",
       },
       {
-        heading: "Do you only serve Houston?",
+        heading: "Do you serve San Antonio, Austin, and the rest of Texas?",
         body:
-          "For canopy and awning work, no — we take on projects across all of Texas. General contractors bidding schools, retail centers, and municipal work statewide send us canopy and awning scopes regularly, and we quote them the same way: from the drawings, with engineering and permitting included. Signage-only projects we keep within roughly 150 miles of Houston, where our install crews live.",
+          "Yes. We take on awning and canopy projects anywhere in Texas, and we have local staff in San Antonio and Austin as well as Houston, so sign projects in those cities are covered too. General contractors bidding schools, retail centers, and municipal work statewide send us canopy and awning scopes regularly, and we quote them the same way: from the drawings, with engineering and permitting included.",
       },
       {
         heading: "What does a commercial awning or canopy cost?",
@@ -344,7 +344,7 @@ const SERVICES = {
     ],
     faqs: [
       { q: "Do commercial awnings need a permit in Houston?", a: "Usually yes. A structural awning or canopy typically needs a building permit, and if it carries your business name or logo it may need a sign permit as well. The path depends on the jurisdiction — we confirm what applies to your address and handle the submittals." },
-      { q: "Do you work outside the Houston area?", a: "For awnings and canopies, yes — we take on projects across all of Texas, including GC-bid work for schools, retail, and municipal facilities. Signage-only projects stay within about 150 miles of Houston." },
+      { q: "Do you work outside the Houston area?", a: "Yes. We take on awning and canopy projects anywhere in Texas, including GC-bid work for schools, retail, and municipal facilities. We also have local staff in San Antonio and Austin for sign and awning projects there." },
       { q: "Fabric or metal — which should I choose?", a: "Fabric awnings cost less, install faster, and take branding well, but coverings need replacement over the years. Metal canopies cost more upfront and last much longer with less upkeep. We'll recommend based on your building, budget, and how long you plan to be in the space." },
       { q: "Can you replace just the fabric on an existing awning frame?", a: "Often, yes. If the frame is sound, recovering it — with or without new graphics — costs far less than a new structure. We inspect the frame first and tell you honestly whether it's worth reusing." },
       { q: "Do you work from architectural drawings for GC bids?", a: "Yes. A large share of the canopy scopes we quote come straight from general contractors' plan sets. Send the drawings and the bid date, and we'll quote the awning and canopy scope with engineering and permitting included." },
