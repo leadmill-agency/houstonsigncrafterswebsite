@@ -28,19 +28,19 @@ const publicSans = Public_Sans({
 export const metadata = {
   metadataBase: new URL(BUSINESS.url),
   title: {
-    default: "Houston Sign Company | Custom Signs, Channel Letters & Vehicle Wraps",
+    default: "Houston Sign Company | Channel Letters, Monument & Pole Signs",
     template: "%s | Houston Sign Crafters",
   },
   description:
-    "Custom sign company in Houston, TX: channel letters, monument signs, vehicle wraps, and banners, built in-house. Free quote in one business day.",
+    "Houston sign company building channel letters, monument signs, and pole signs in our own shop, with permits and install handled. Free quote in 1 business day.",
   robots: "index, follow",
   alternates: { canonical: "/" },
   openGraph: {
     type: "website",
     siteName: BUSINESS.name,
-    title: "Houston Sign Company | Custom Signs, Channel Letters & Vehicle Wraps",
+    title: "Houston Sign Company | Channel Letters, Monument & Pole Signs",
     description:
-      "Custom signage designed, built, permitted, and installed by one Houston team. Channel letters, monument signs, vehicle wraps, banners, and more.",
+      "Channel letters, monument signs, pole signs, and storefront signs, designed, built, permitted, and installed by one Houston team.",
     url: BUSINESS.url,
   },
   twitter: { card: "summary_large_image" },

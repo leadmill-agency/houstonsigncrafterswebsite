@@ -47,9 +47,10 @@ export default function HomePage() {
 
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-24">
           <div className="stagger-in flex flex-col justify-center">
-            <h1 className="text-5xl font-bold leading-[0.98] sm:text-6xl">Custom signs, built in our Houston shop.</h1>
+            <h1 className="text-5xl font-bold leading-[0.98] sm:text-6xl">Houston sign company. Signs built in our own shop.</h1>
             <p className="mt-5 max-w-xl text-lg text-white/80">
-              Channel letters, monument signs, vehicle wraps. We design them, weld and wire them ourselves,
+              <Link href="/services/channel-letters" className="underline decoration-white/40 underline-offset-2 hover:decoration-white">Channel letters in Houston</Link>,
+              monument signs, and pole signs. We design them, weld and wire them ourselves,
               pull the permits, and hang them. One crew, one number to call, and a 5-year warranty bolted to
               every job.
             </p>

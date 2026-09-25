@@ -48,6 +48,26 @@ const SERVICES = {
           "Every set starts as a vector pattern. A CNC router cuts the translucent acrylic faces and the aluminum backs, then a channel bender folds pre-painted aluminum coil into each letter's side walls, called returns. Trim cap seals the face edge, rows of self-adhesive LED modules line the inside of each letter, and everything wires to a low-voltage power supply. We bench-test every letter lit before it leaves the shop. On install day we tape a full-size paper pattern to your fascia, level it, drill on the marks, mount the letters flush or on a painted raceway, and seal every wall penetration with silicone.",
       },
       {
+        heading: "Front-lit, halo-lit, or both: which style fits your storefront?",
+        body:
+          "Front-lit letters have a translucent acrylic face with LEDs inside, so the whole letter glows in your brand color. They read clearly from the road at night and suit most retail storefronts. Halo-lit, or reverse-lit, letters have a solid metal face with the LEDs aimed backward. They cast a soft glow onto the wall behind them, which looks upscale on restaurants, salons, and brick or dark facades. The halo letters we built for Luce Avenue Coffee and Coronation Theater and Bar are good examples on [our work page](/portfolio). You can also combine both: a front-lit letter mounted on a lit backplate gives you a colored glow behind a bright face. We show each option in your mockup so you can compare them on your actual building.",
+      },
+      {
+        heading: "Should your letters go on a raceway or mount flush?",
+        body:
+          "There are two ways to attach channel letters. On a raceway, the letters mount to a slim aluminum box that runs behind them, painted to match your wall. The power supplies live inside that box, so only a few holes go into the building, and landlords often prefer it for exactly that reason. Flush mounting attaches each letter straight to the wall with the wiring passing through behind it. It looks cleaner because nothing shows between the letters, but it needs more wall penetrations and access behind the fascia. Your landlord's sign criteria and the wall construction usually decide which one is right, and we confirm both during the site survey.",
+      },
+      {
+        heading: "What do landlords look for in channel letter sign criteria?",
+        body:
+          "Most Houston shopping centers and office parks publish sign criteria that tenants must follow. They commonly set the size of the sign band, the maximum letter height, the colors you can use, whether letters must be lit and how, and whether a raceway is required. Some larger landlords only allow individually lit letters on their storefronts. A sign can meet city code and still fail the landlord's review, so we read your lease criteria before we design. We help with landlord approvals by preparing the drawings and mockups they ask for, so your sign is approved before fabrication starts.",
+      },
+      {
+        heading: "Do you install channel letters outside Houston?",
+        body:
+          "Yes. We build and install channel letters across the Houston area, including Katy, Sugar Land, The Woodlands, Cypress, Pearland, Spring, and Pasadena. Each city handles sign permits a little differently, and suburbs like Katy and Sugar Land add county, planned-development, or association reviews on top of the city permit. For the details in two of our busiest areas, see [channel letter signs in Katy](/channel-letter-signs-katy-tx) and [channel letter signs in Sugar Land](/channel-letter-signs-sugar-land-tx). If you're still weighing sign types, our comparison of [channel letters vs cabinet signs](/blog/channel-letters-vs-cabinet-signs) covers the trade-offs.",
+      },
+      {
         heading: "How much do channel letters cost in Houston?",
         body:
           "Pricing depends on letter size, lighting style, mounting method, and whether a raceway or backer is required by your landlord. Small interior-tenant sets start lower, while large illuminated exterior sets for multi-tenant centers cost more. Rather than guess, we give you a firm written quote within one business day of seeing your storefront photos or a site visit, including permit and installation costs, with no surprise fees later. Our published ranges for every sign type are on the [Houston sign pricing page](/pricing).",

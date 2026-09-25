@@ -32,6 +32,15 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      // One host only (2026-09-25): www served a full 200 copy of the site and
+      // Google indexed www duplicates of several money pages, splitting ranking
+      // signals. Canonical tags already point at the apex; this makes it binding.
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.houstonsigncrafters.com" }],
+        destination: "https://houstonsigncrafters.com/:path*",
+        permanent: true,
+      },
       // Top-level pages renamed in the rebuild
       { source: "/about-us", destination: "/about", permanent: true },
       { source: "/terms-of-service", destination: "/terms", permanent: true },
