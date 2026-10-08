@@ -95,7 +95,7 @@ export default function HomePage() {
               <span className="transition-transform duration-200 ease-[cubic-bezier(0.2,0,0,1)] group-hover:translate-x-1">→</span>
             </Link>
           </div>
-          <PortfolioGallery items={HOME_GALLERY} portrait />
+          <PortfolioGallery items={HOME_GALLERY} masonry />
           <div className="mt-8 flex flex-wrap items-center gap-2">
             <span className="font-display text-sm font-semibold uppercase tracking-wide text-ink">Looking for something specific?</span>
             {services.map((s) => (
