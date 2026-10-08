@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "@/components/Nav";
 import Footer from "@/components/Footer";
 import FooterGate from "@/components/FooterGate";
+import MobileCallBar from "@/components/MobileCallBar";
 import Analytics from "@/components/Analytics";
 import MetaPixel from "@/components/MetaPixel";
 import RB2B from "@/components/RB2B";
@@ -125,6 +126,7 @@ export default function RootLayout({ children }) {
         <FooterGate>
           <Footer />
         </FooterGate>
+        <MobileCallBar />
       </body>
     </html>
   );
