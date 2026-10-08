@@ -59,7 +59,7 @@ export const BUSINESS = {
     "5-Year Warranty",
     "UL-Certified",
     "Built in Houston",
-    "Free Quote in 1 Business Day",
+    "Free Design Mockup in 1 Business Day",
   ],
 
   // "Who you'll talk to" — the single biggest anti-AI / trust signal.

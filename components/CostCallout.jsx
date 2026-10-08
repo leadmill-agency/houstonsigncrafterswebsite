@@ -2,7 +2,6 @@ import Link from "next/link";
 import { BUSINESS } from "@/data/business";
 import { getPricingRow, formatRange } from "@/data/pricing";
 import PhoneLink from "@/components/PhoneLink";
-import TextLink from "@/components/TextLink";
 
 // Honest "what does it cost / how we quote" block — answers the #1 buyer
 // question instead of dodging it. Pass the service `slug` to show that
@@ -45,7 +44,6 @@ export default function CostCallout({ slug }) {
             <div className="mt-6 flex flex-wrap gap-3">
               <Link href="/quote" className="btn btn-primary">Get My Free Quote</Link>
               <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
-              <TextLink className="btn btn-outline-light" label="Text Us" />
             </div>
             <p className="mt-4 text-sm text-white/60">
               See all our published ranges on the{" "}

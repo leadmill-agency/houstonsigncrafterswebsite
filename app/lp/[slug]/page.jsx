@@ -7,7 +7,6 @@ import TrustBar from "@/components/TrustBar";
 import OfferBadge from "@/components/OfferBadge";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import PhoneLink from "@/components/PhoneLink";
-import TextLink from "@/components/TextLink";
 
 const HERO_FALLBACK =
   "https://images.unsplash.com/photo-1647586028042-1de4d4a935e6?q=80&w=1920&auto=format&fit=crop";
@@ -56,7 +55,6 @@ export default async function LandingPage({ params }) {
         <div className="flex items-center gap-2">
           <PhoneLink className="btn btn-primary btn-sm" />
           <span className="hidden sm:inline-flex">
-            <TextLink className="btn btn-outline-dark btn-sm" label="Text Us" />
           </span>
         </div>
       </header>
@@ -85,10 +83,10 @@ export default async function LandingPage({ params }) {
 
           <div className="flex items-center">
             <div className="w-full">
-              <div className="eyebrow mb-3 text-center text-white/80">Free quote in 1 business day</div>
+              <div className="eyebrow mb-3 text-center text-white/80">Free design mockup within 1 business day</div>
               <LeadForm kind={lp.formKind || "quote"} submitLabel={lp.cta || "Get My Free Quote"} showSignType showMessage={false} />
               <p className="mt-3 text-center text-sm text-white/70">
-                Or <PhoneLink className="font-semibold text-white underline underline-offset-2" showIcon={false} /> · <TextLink className="font-semibold text-white underline underline-offset-2" label="text us" />
+                Or <PhoneLink className="font-semibold text-white underline underline-offset-2" showIcon={false} />
               </p>
             </div>
           </div>
@@ -157,7 +155,6 @@ export default async function LandingPage({ params }) {
           <div className="mt-6 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <a href="#top" className="btn bg-white text-signal-600 hover:bg-white/90">Get My Free Quote</a>
             <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
-            <TextLink className="btn btn-outline-light" label="Text Us" />
           </div>
           <p className="mt-5 text-sm font-semibold uppercase tracking-wide text-white/80">
             We only take a handful of new installs a week. Get your spot.

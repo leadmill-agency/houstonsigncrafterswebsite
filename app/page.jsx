@@ -5,7 +5,7 @@ import { getAllMarkets } from "@/data/markets";
 import { BUSINESS } from "@/data/business";
 import { HOME_FAQS } from "@/data/faqs";
 import PhoneLink from "@/components/PhoneLink";
-import TextLink from "@/components/TextLink";
+import ClientLogos from "@/components/ClientLogos";
 import LeadForm from "@/components/LeadForm";
 import TrustBar from "@/components/TrustBar";
 import OfferBadge from "@/components/OfferBadge";
@@ -54,26 +54,31 @@ export default function HomePage() {
               pull the permits, and hang them. One crew, one number to call, and a 5-year warranty bolted to
               every job.
             </p>
-            {/* No quote button here — the quote form sits right beside the hero,
-                and the nav CTA covers it. Call is the one action the form can't do. */}
+            {/* Call is THE action (owner 2026-10-07: buyers call, so make it loud;
+                text option removed, nobody used it). The quote form sits beside the hero. */}
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
+              <PhoneLink className="btn btn-primary btn-lg" label={`Call ${BUSINESS.phone}`} />
             </div>
-            <p className="mt-3 text-sm text-white/65">
-              Prefer to text? <TextLink className="font-semibold text-white underline underline-offset-2" label="Text us" />
-            </p>
             <OfferBadge tone="dark" className="mt-5" />
             <TrustBar tone="dark" className="mt-6" />
           </div>
 
           <div className="flex items-center">
             <div className="w-full">
-              <div className="eyebrow mb-3 text-center text-white/70">Free quote in 1 business day</div>
-              <LeadForm kind="quote" submitLabel="Get My Free Quote" showSignType showMessage={false} />
+              <LeadForm
+                kind="quote"
+                submitLabel="Get My Free Quote"
+                showSignType
+                showMessage={false}
+                heading="Free design mockup within 1 business day"
+                subheading="We come out to your site for a free survey, then send you design mockups with your sign's dimensions, along with a quote."
+              />
             </div>
           </div>
         </div>
       </section>
+
+      <ClientLogos />
 
       {/* Who you'll talk to — the human */}
       <section className="border-b border-fog bg-white">
@@ -97,7 +102,6 @@ export default function HomePage() {
             </p>
             <div className="mt-7 flex flex-wrap gap-3">
               <PhoneLink className="btn btn-primary" label={`Call ${BUSINESS.phone}`} />
-              <TextLink className="btn btn-outline-dark" label="Text us" />
             </div>
           </div>
         </div>
@@ -290,7 +294,6 @@ export default function HomePage() {
           <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
             <Link href="/quote" className="btn bg-white text-signal-600 hover:bg-white/90">Get My Free Quote</Link>
             <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
-            <TextLink className="btn btn-outline-light" label="Text Us" />
           </div>
           <p className="mt-5 text-sm font-semibold uppercase tracking-wide text-white/80">
             We only take a handful of new installs a week. Get your spot.

@@ -8,7 +8,6 @@ import { TESTIMONIALS } from "@/data/testimonials";
 import Faq from "@/components/Faq";
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
-import TextLink from "@/components/TextLink";
 import OfferBadge from "@/components/OfferBadge";
 import CostCallout from "@/components/CostCallout";
 
@@ -111,14 +110,12 @@ export default async function ServicePage({ params }) {
               <h1 className="text-3xl font-bold leading-tight sm:text-4xl">{s.h1}</h1>
               <p className="mt-4 text-lg text-white/75">{s.heroSubtitle}</p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
-                <TextLink className="btn btn-outline-light" label="Text Us" />
+                <PhoneLink className="btn btn-primary btn-lg" label={`Call ${BUSINESS.phone}`} />
               </div>
               <OfferBadge tone="dark" className="mt-5" />
             </div>
             <div className="w-full">
-              <div className="eyebrow mb-3 text-center text-white/70">Free quote in 1 business day</div>
-              <LeadForm kind="quote" submitLabel="Get My Free Quote" messageLabel={`Tell us about your ${s.shortName.toLowerCase()} project`} />
+              <LeadForm kind="quote" submitLabel="Get My Free Quote" messageLabel={`Tell us about your ${s.shortName.toLowerCase()} project`} heading="Free design mockup within 1 business day" subheading="We come out to your site for a free survey, then send you design mockups with your sign's dimensions, along with a quote." />
             </div>
           </div>
         </div>

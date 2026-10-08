@@ -3,7 +3,6 @@ import { getAllServices } from "@/data/services";
 import CTASection from "@/components/CTASection";
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
-import TextLink from "@/components/TextLink";
 import { BUSINESS } from "@/data/business";
 
 // "Manufacturing" wording is deliberate: GSC shows the manufacturing/fabrication
@@ -38,13 +37,11 @@ export default function ServicesHub() {
                 team, first sketch to final light-up.
               </p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-                <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
-                <TextLink className="btn btn-outline-light" label="Text Us" />
+                <PhoneLink className="btn btn-primary btn-lg" label={`Call ${BUSINESS.phone}`} />
               </div>
             </div>
             <div className="w-full">
-              <div className="eyebrow mb-3 text-center text-white/70">Free quote in 1 business day</div>
-              <LeadForm kind="quote" submitLabel="Get My Free Quote" messageLabel="Tell us about your sign project" />
+              <LeadForm kind="quote" submitLabel="Get My Free Quote" messageLabel="Tell us about your sign project" heading="Free design mockup within 1 business day" subheading="We come out to your site for a free survey, then send you design mockups with your sign's dimensions, along with a quote." />
             </div>
           </div>
         </div>

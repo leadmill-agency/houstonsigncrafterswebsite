@@ -1,6 +1,5 @@
 import { BUSINESS } from "@/data/business";
 import PhoneLink from "@/components/PhoneLink";
-import TextLink from "@/components/TextLink";
 import BookButton from "@/components/BookButton";
 
 // Booking page with the Google Calendar appointment schedule embedded INLINE
@@ -46,8 +45,7 @@ export default function BookPage() {
             label="Open the calendar in a new tab"
             className="font-semibold text-signal-600 underline underline-offset-2 hover:text-ink"
           />{" "}
-          · <PhoneLink className="font-semibold text-ink underline underline-offset-2" showIcon={false} /> ·{" "}
-          <TextLink className="font-semibold text-ink underline underline-offset-2" label="text us" />
+          · <PhoneLink className="font-semibold text-ink underline underline-offset-2" showIcon={false} />
         </p>
       </section>
     </main>

@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS } from "@/data/business";
 import { trackEvent } from "@/lib/analytics";
+import PhoneLink from "@/components/PhoneLink";
 
 const NAV_LINKS = [
   { href: "/services", label: "Services" },
@@ -74,10 +75,8 @@ export default function Nav() {
               <Link href="/book" className="btn btn-slim btn-dark whitespace-nowrap">
                 Schedule My Call
               </Link>
-              <Link href="/quote" className="btn btn-slim btn-primary whitespace-nowrap">
-                Get My Quote
-                <ArrowIcon />
-              </Link>
+              {/* Owner 2026-10-07: the primary nav action is a phone call, not the quote page. */}
+              <PhoneLink className="btn btn-slim btn-primary whitespace-nowrap" label="Call Us Now" />
             </div>
 
             <button
@@ -103,13 +102,9 @@ export default function Nav() {
                 </Link>
               ))}
               <div className="mt-4 flex flex-col gap-2">
-                <a href={BUSINESS.phoneHref} className="btn btn-outline-dark w-full">{BUSINESS.phone}</a>
+                <PhoneLink className="btn btn-slim btn-primary w-full" label={`Call Us Now · ${BUSINESS.phone}`} />
                 <Link href="/book" className="btn btn-slim btn-dark w-full" onClick={() => setOpen(false)}>
                   Schedule My Call
-                </Link>
-                <Link href="/quote" className="btn btn-slim btn-primary w-full" onClick={() => setOpen(false)}>
-                  Get My Quote
-                  <ArrowIcon />
                 </Link>
               </div>
             </nav>

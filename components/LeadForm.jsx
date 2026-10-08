@@ -23,6 +23,8 @@ export default function LeadForm({
   submitLabel = "Send",
   messageLabel = "Tell us about your project",
   className = "",
+  heading,
+  subheading,
 }) {
   const [state, formAction, pending] = useActionState(submitLead, initialState);
   const formRef = useRef(null);
@@ -67,6 +69,12 @@ export default function LeadForm({
       action={formAction}
       className={`rounded-sm border border-fog bg-white p-6 text-left md:p-8 ${className}`}
     >
+      {heading && (
+        <div className="mb-5 border-b border-fog pb-4">
+          <p className="font-display text-xl font-bold uppercase leading-tight tracking-wide text-ink sm:text-2xl">{heading}</p>
+          {subheading && <p className="mt-2 text-sm leading-relaxed text-steel">{subheading}</p>}
+        </div>
+      )}
       <input type="hidden" name="kind" value={kind} />
       {ATTRIBUTION_FIELDS.map((f) =>
         attribution[f] ? <input key={f} type="hidden" name={f} value={attribution[f]} /> : null
