@@ -49,7 +49,7 @@ export default function HomePage() {
           <div className="stagger-in flex flex-col justify-center">
             <h1 className="text-5xl font-bold leading-[0.98] sm:text-6xl">Houston sign company. Signs built in our own shop.</h1>
             <p className="mt-5 max-w-xl text-lg text-white/80">
-              <Link href="/services/channel-letters" className="underline decoration-white/40 underline-offset-2 hover:decoration-white">Channel letters in Houston</Link>,
+              <Link href="/services/channel-letters" className="hover:underline hover:underline-offset-2">Channel letters in Houston</Link>,
               monument signs, and pole signs. We design them, weld and wire them ourselves,
               pull the permits, and hang them. One crew, one number to call, and a 5-year warranty bolted to
               every job.

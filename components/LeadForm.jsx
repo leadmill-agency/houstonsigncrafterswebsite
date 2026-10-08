@@ -71,7 +71,7 @@ export default function LeadForm({
     >
       {heading && (
         <div className="mb-5 border-b border-fog pb-4">
-          <p className="font-display text-xl font-bold uppercase leading-tight tracking-wide text-ink sm:text-2xl">{heading}</p>
+          <p className="font-display text-lg font-bold uppercase leading-tight tracking-wide text-ink sm:text-xl md:whitespace-nowrap lg:text-[1.4rem]">{heading}</p>
           {subheading && <p className="mt-2 text-sm leading-relaxed text-steel">{subheading}</p>}
         </div>
       )}

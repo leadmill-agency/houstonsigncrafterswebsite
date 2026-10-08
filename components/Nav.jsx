@@ -5,7 +5,6 @@ import { usePathname } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
 import { BUSINESS } from "@/data/business";
-import { trackEvent } from "@/lib/analytics";
 import PhoneLink from "@/components/PhoneLink";
 
 const NAV_LINKS = [
@@ -27,22 +26,14 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Contact topbar — phone always, email from sm up. */}
+      {/* Contact topbar — email only. The phone moved into the nav's
+          "Call Us Now" button (owner 2026-10-07: one loud call action, not two). */}
       <div className="bg-ink text-white">
         <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-1.5 text-[13px] sm:gap-3 sm:px-6">
-          <span className="text-white/60">Call us now:</span>
-          <a
-            href={BUSINESS.phoneHref}
-            onClick={() => trackEvent("phone_click", { event_label: "topbar" })}
-            className="font-semibold text-white transition-colors hover:text-signal"
-          >
-            {BUSINESS.phone}
-          </a>
-          <span className="hidden text-white/30 sm:inline" aria-hidden="true">|</span>
-          <span className="hidden text-white/60 sm:inline">Email:</span>
+          <span className="text-white/60">Email:</span>
           <a
             href={`mailto:${BUSINESS.email}`}
-            className="hidden font-semibold text-white transition-colors hover:text-signal sm:inline"
+            className="font-semibold text-white transition-colors hover:text-signal"
           >
             {BUSINESS.email}
           </a>
