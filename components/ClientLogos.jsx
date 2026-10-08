@@ -7,13 +7,15 @@ import Image from "next/image";
 // were named by Rameel in writing on 2026-10-07. Do not add a brand without the
 // same proof. Logo files came from Rameel (10/7) and were recolored to a single
 // white tone on transparent (public/clients/*.png, 160px tall, 2x) so they sit
-// on the ink band like a standard monochrome client row. Meerut BBQ has no logo
-// file yet, so it renders as a wordmark in the same tone.
+// on the ink band like a standard monochrome client row. Meerut BBQ's mark is the
+// wordmark from HSC's own sign drawing (vector), same treatment.
 const LOGOS = [
   { name: "Pizza Hut", src: "/clients/pizza-hut.png", w: 157, h: 160, cls: "h-16 sm:h-20" },
   { name: "Marshalls", src: "/clients/marshalls.png", w: 800, h: 160, cls: "h-7 sm:h-8" },
   { name: "Slick City Action Park", src: "/clients/slick-city.png", w: 337, h: 160, cls: "h-12 sm:h-14" },
   { name: "The Peach Cobbler Factory", src: "/clients/peach-cobbler-factory.png", w: 146, h: 160, cls: "h-16 sm:h-20" },
+  // Wordmark lifted from HSC\'s own sign drawing for the job (Permits/Meerut - Sign Dimensions.pdf, vector).
+  { name: "Meerut BBQ House", src: "/clients/meerut-bbq.png", w: 1843, h: 160, cls: "h-6 sm:h-7" },
 ];
 
 export default function ClientLogos() {
@@ -28,9 +30,6 @@ export default function ClientLogos() {
               <Image src={l.src} alt={`${l.name} logo`} width={l.w} height={l.h} className={`w-auto opacity-80 ${l.cls}`} />
             </li>
           ))}
-          <li className="shrink-0 font-display text-lg font-bold uppercase tracking-[0.08em] text-white/80 sm:text-xl xl:text-2xl">
-            Meerut BBQ
-          </li>
         </ul>
       </div>
     </section>

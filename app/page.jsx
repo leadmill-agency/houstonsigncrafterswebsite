@@ -10,6 +10,7 @@ import LeadForm from "@/components/LeadForm";
 import TrustBar from "@/components/TrustBar";
 import OfferBadge from "@/components/OfferBadge";
 import PortfolioGallery from "@/components/PortfolioGallery";
+import { HOME_GALLERY } from "@/data/home-gallery";
 import Faq from "@/components/Faq";
 import Testimonials from "@/components/Testimonials";
 
@@ -80,6 +81,32 @@ export default function HomePage() {
 
       <ClientLogos />
 
+      {/* The work — image-only gallery */}
+      <section className="bg-cloud">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
+            <div>
+              <p className="eyebrow text-signal-600">Straight from the shop</p>
+              <h2 className="mt-1 text-4xl font-bold text-ink">See what we actually make</h2>
+              <p className="mt-2 max-w-xl text-steel">Real signs we built and installed for Houston businesses: channel letters, monument signs, cabinet signs, wraps, and more.</p>
+            </div>
+            <Link href="/portfolio" className="group inline-flex items-center gap-1.5 font-display text-sm font-semibold uppercase tracking-wide text-signal-600 transition-colors hover:text-ink">
+              See all our work
+              <span className="transition-transform duration-200 ease-[cubic-bezier(0.2,0,0,1)] group-hover:translate-x-1">→</span>
+            </Link>
+          </div>
+          <PortfolioGallery items={HOME_GALLERY} portrait />
+          <div className="mt-8 flex flex-wrap items-center gap-2">
+            <span className="font-display text-sm font-semibold uppercase tracking-wide text-ink">Looking for something specific?</span>
+            {services.map((s) => (
+              <Link key={s.slug} href={`/services/${s.slug}`} className="rounded-sm border border-fog bg-white px-3.5 py-1.5 text-sm text-steel transition-colors hover:border-ink hover:text-ink">
+                {s.shortName}
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Who you'll talk to — the human */}
       <section className="border-b border-fog bg-white">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2">
@@ -103,32 +130,6 @@ export default function HomePage() {
             <div className="mt-7 flex flex-wrap gap-3">
               <PhoneLink className="btn btn-primary" label={`Call ${BUSINESS.phone}`} />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* The work — image-only gallery */}
-      <section className="bg-cloud">
-        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-          <div className="mb-8 flex flex-wrap items-end justify-between gap-4">
-            <div>
-              <p className="eyebrow text-signal-600">Straight from the shop</p>
-              <h2 className="mt-1 text-4xl font-bold text-ink">See what we actually make</h2>
-              <p className="mt-2 max-w-xl text-steel">Real signs we built and installed for Houston businesses: channel letters, monument signs, cabinet signs, wraps, and more.</p>
-            </div>
-            <Link href="/portfolio" className="group inline-flex items-center gap-1.5 font-display text-sm font-semibold uppercase tracking-wide text-signal-600 transition-colors hover:text-ink">
-              See all our work
-              <span className="transition-transform duration-200 ease-[cubic-bezier(0.2,0,0,1)] group-hover:translate-x-1">→</span>
-            </Link>
-          </div>
-          <PortfolioGallery limit={8} />
-          <div className="mt-8 flex flex-wrap items-center gap-2">
-            <span className="font-display text-sm font-semibold uppercase tracking-wide text-ink">Looking for something specific?</span>
-            {services.map((s) => (
-              <Link key={s.slug} href={`/services/${s.slug}`} className="rounded-sm border border-fog bg-white px-3.5 py-1.5 text-sm text-steel transition-colors hover:border-ink hover:text-ink">
-                {s.shortName}
-              </Link>
-            ))}
           </div>
         </div>
       </section>
