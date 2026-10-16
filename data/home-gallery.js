@@ -64,3 +64,26 @@ export const HOME_GALLERY = [
   { src: "/portfolio/extra/coronation-theater-and-bar-sign-close-up.jpg", alt: "Coronation Theater and Bar sign sign close-up, built and installed by Houston Sign Crafters", w: 1080, h: 1350 },
   { src: "/portfolio/ttfoodmart.jpg", alt: "Storefront Letters & Logo Round for T&T Food Mart in Houston, TX", w: 1080, h: 1350 },
 ];
+
+// Curated homepage set (Rameel 2026-10-15, after Vera's critique: "15
+// thumbnails"). First two render as large featured tiles. Mixed sign types:
+// channel letters, halo-lit, monument (Kirkwood), pylons (At Home, Froosta),
+// night and day. S.S. Perfumes is excluded because it is the hero photo.
+// The long list above stays for reuse.
+export const HOME_GALLERY_CURATED = [
+  { src: "/portfolio/slickcity.jpg", alt: "Illuminated Logo & Dimensional Letters for Slick City Action Park in Webster, TX", w: 1600, h: 1194 },
+  { src: "/portfolio/copper.jpg", alt: "Illuminated Channel Letters for Copper Espresso Bar in Houston, TX", w: 1600, h: 1194 },
+  { src: "/portfolio/emporium.jpg", alt: "Illuminated Channel Letters & Window Graphics for Emporium Games in New Caney, TX", w: 1600, h: 1194 },
+  { src: "/portfolio/clearlake.jpg", alt: "Illuminated Channel Letters for Clear Lake Medical Plaza in Houston, TX", w: 1122, h: 1402 },
+  { src: "/portfolio/luce.jpg", alt: "Halo-Lit Channel Letters & Logo for Luce Avenue Coffee Roasters in Houston, TX", w: 1122, h: 1402 },
+  { src: "/portfolio/hashtag.jpg", alt: "Illuminated Channel Letters & Logo for Hashtag India in Houston, TX", w: 1122, h: 1402 },
+  { src: "/portfolio/athome.jpg", alt: "Multi-Tenant Pylon Sign for At Home Shopping Center in Houston, TX", w: 1600, h: 1194 },
+  { src: "/portfolio/kirkwood.jpg", alt: "Monument Sign with Tenant Directory for Kirkwood Tech Center in Houston, TX", w: 1600, h: 1194 },
+  { src: "/portfolio/coronation.jpg", alt: "Halo-Lit Channel Letters for Coronation Theater and Bar in Houston, TX", w: 1080, h: 1350 },
+  { src: "/portfolio/extra/froosta-at-night.jpg", alt: "Froosta sign at night, built and installed by Houston Sign Crafters", w: 1080, h: 1350 },
+  { src: "/portfolio/hempsocial.jpg", alt: "Illuminated Channel Letters & Tagline for Hemp Social in Houston, TX", w: 1080, h: 1350 },
+  { src: "/portfolio/meerut.jpg", alt: "Dimensional Channel Letters & Window Graphics for Meerut BBQ House in Houston, TX", w: 1600, h: 1194 },
+  { src: "/portfolio/peachcobbler.jpg", alt: "Front-Lit Channel Letters for The Peach Cobbler Factory in Houston, TX", w: 1080, h: 1350 },
+  { src: "/portfolio/turnberry.jpg", alt: "Illuminated Building Letters for Turnberry Corner in Houston, TX", w: 1080, h: 1350 },
+  { src: "/portfolio/jamaica.jpg", alt: "Illuminated Channel Letters & Logo for Jamaica Pon Di Road in Houston, TX", w: 1080, h: 1350 },
+];

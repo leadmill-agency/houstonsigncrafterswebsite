@@ -2,25 +2,29 @@ import { BUSINESS } from "@/data/business";
 
 // Rating + verifiable differentiators. No stock check-icons — just stars and
 // uppercase labels split by hairline dividers (reads like a shop's credentials).
-export default function TrustBar({ tone = "light", className = "" }) {
+// `points` overrides the default list so a tight spot (the hero) can show two
+// or three items that fit on one line instead of wrapping onto a second line
+// that starts with a stray divider.
+export default function TrustBar({ tone = "light", className = "", points }) {
   const { reviews, trustPoints } = BUSINESS;
   const isDark = tone === "dark";
   const text = isDark ? "text-white" : "text-ink";
   const sub = isDark ? "text-white/60" : "text-steel";
   const rule = isDark ? "bg-white/25" : "bg-fog";
+  const list = points ?? trustPoints;
 
   const items = [
     ...(reviews?.rating
       ? [
-          <span key="rating" className="inline-flex items-center gap-2">
+          <span key="rating" className="inline-flex items-center gap-2 whitespace-nowrap">
             <Stars rating={reviews.rating} />
             <span className="font-display font-semibold tabular-nums">{reviews.rating.toFixed(1)}</span>
             <span className={sub}>· {reviews.count} reviews</span>
           </span>,
         ]
       : []),
-    ...trustPoints.map((p) => (
-      <span key={p} className="font-display text-xs font-semibold uppercase tracking-wide">
+    ...list.map((p) => (
+      <span key={p} className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-wide">
         {p}
       </span>
     )),

@@ -29,3 +29,6 @@ yarn-debug.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# design-critique loop output
+.design-critique/

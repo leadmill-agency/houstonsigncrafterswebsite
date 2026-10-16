@@ -71,7 +71,7 @@ export default function LeadForm({
     >
       {heading && (
         <div className="mb-5 border-b border-fog pb-4">
-          <p className="font-display text-lg font-bold uppercase leading-tight tracking-wide text-ink sm:text-xl md:whitespace-nowrap lg:text-[1.4rem]">{heading}</p>
+          <p className="font-display text-lg font-bold uppercase leading-tight tracking-wide text-ink sm:text-xl">{heading}</p>
           {subheading && <p className="mt-2 text-sm leading-relaxed text-steel">{subheading}</p>}
         </div>
       )}
@@ -90,7 +90,7 @@ export default function LeadForm({
         <Field label="Phone" name="phone" type="tel" required={phoneRequired} autoComplete="tel" state={state} />
         {/* Owner request 2026-08-31: free-text Project Name. Posts as `company`
             so it rides the existing pipeline (CRM company field + Slack card). */}
-        <Field label="Project Name" name="company" autoComplete="organization" placeholder="Business or project the sign is for" state={state} />
+        <Field label="Project Name" name="company" autoComplete="organization" placeholder="Business or project name" state={state} />
       </div>
 
       <div className="mt-4">
@@ -103,7 +103,7 @@ export default function LeadForm({
         />
       </div>
 
-      <button type="submit" disabled={pending} className="btn btn-primary mt-5 w-full disabled:cursor-not-allowed disabled:opacity-60 sm:w-auto">
+      <button type="submit" disabled={pending} className="btn btn-primary btn-lg mt-5 w-full justify-center disabled:cursor-not-allowed disabled:opacity-60">
         {pending ? "Sending…" : submitLabel}
       </button>
 

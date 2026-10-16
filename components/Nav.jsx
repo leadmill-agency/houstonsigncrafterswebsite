@@ -26,19 +26,6 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-50">
-      {/* Contact topbar — email only. The phone moved into the nav's
-          "Call Us Now" button (owner 2026-10-07: one loud call action, not two). */}
-      <div className="bg-ink text-white">
-        <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-1.5 text-[13px] sm:gap-3 sm:px-6">
-          <span className="text-white/60">Email:</span>
-          <a
-            href={`mailto:${BUSINESS.email}`}
-            className="font-semibold text-white transition-colors hover:text-signal"
-          >
-            {BUSINESS.email}
-          </a>
-        </div>
-      </div>
       <div className="border-b border-fog bg-white/95 backdrop-blur">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex h-20 items-center justify-between gap-4 lg:h-24">
@@ -61,12 +48,10 @@ export default function Nav() {
               ))}
             </nav>
 
-            {/* Two CTAs: booking (secondary, dark) + quote (primary). Phone stays in the topbar. */}
-            <div className="hidden items-center gap-2.5 md:flex">
-              <Link href="/book" className="btn btn-slim btn-dark whitespace-nowrap">
-                Schedule My Call
-              </Link>
-              {/* Owner 2026-10-07: the primary nav action is a phone call, not the quote page. */}
+            {/* One button in the header (owner 2026-10-07: the primary action is a
+                phone call). Booking stays one click away as a plain link so the
+                fold isn't three competing buttons (design critique 2026-10-08). */}
+            <div className="hidden items-center gap-5 md:flex">
               <PhoneLink className="btn btn-slim btn-primary whitespace-nowrap" label="Call Us Now" />
             </div>
 
@@ -94,9 +79,6 @@ export default function Nav() {
               ))}
               <div className="mt-4 flex flex-col gap-2">
                 <PhoneLink className="btn btn-slim btn-primary w-full" label={`Call Us Now · ${BUSINESS.phone}`} />
-                <Link href="/book" className="btn btn-slim btn-dark w-full" onClick={() => setOpen(false)}>
-                  Schedule My Call
-                </Link>
               </div>
             </nav>
           </div>

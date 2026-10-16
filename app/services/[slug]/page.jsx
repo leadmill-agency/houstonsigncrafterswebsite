@@ -115,7 +115,7 @@ export default async function ServicePage({ params }) {
               <OfferBadge tone="dark" className="mt-5" />
             </div>
             <div className="w-full">
-              <LeadForm kind="quote" submitLabel="Get My Free Quote" messageLabel={`Tell us about your ${s.shortName.toLowerCase()} project`} heading="Free design mockup within 1 business day" subheading="We come out to your site for a free survey, then send you design mockups with your sign's dimensions, along with a quote." />
+              <LeadForm kind="quote" submitLabel="Get My Free Quote" messageLabel={`Tell us about your ${s.shortName.toLowerCase()} project`} heading="Free design mockup within 1 business day of your site survey" subheading="We come out for a free site survey, then send you design mockups with your sign's dimensions, along with a quote." />
             </div>
           </div>
         </div>
