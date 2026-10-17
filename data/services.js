@@ -58,6 +58,11 @@ const SERVICES = {
           "There are two ways to attach channel letters. On a raceway, the letters mount to a slim aluminum box that runs behind them, painted to match your wall. The power supplies live inside that box, so only a few holes go into the building, and landlords often prefer it for exactly that reason. Flush mounting attaches each letter straight to the wall with the wiring passing through behind it. It looks cleaner because nothing shows between the letters, but it needs more wall penetrations and access behind the fascia. Your landlord's sign criteria and the wall construction usually decide which one is right, and we confirm both during the site survey.",
       },
       {
+        heading: "What do we need to start your channel letter design?",
+        body:
+          "Four things get a design moving. Your storefront address, so we can check which city or county reviews the sign. A few photos of the building that show the sign band and the wall the letters will mount to. Your lease's sign criteria, if the center has them, because they often set letter height, colors, and mounting before the city ever sees the sign. And your logo files, ideally vector art such as an AI, EPS, SVG, or PDF file. If you only have an image, send what you have and we'll tell you whether it needs to be redrawn. From there we visit for exact measurements and a power check, then send a mockup of the letters on your actual building with an itemized estimate. City reviewers also expect permit drawings to show how the letters attach to the wall and the electrical load, so we draw those details from the site survey, not from guesswork.",
+      },
+      {
         heading: "What do landlords look for in channel letter sign criteria?",
         body:
           "Most Houston shopping centers and office parks publish sign criteria that tenants must follow. They commonly set the size of the sign band, the maximum letter height, the colors you can use, whether letters must be lit and how, and whether a raceway is required. Some larger landlords only allow individually lit letters on their storefronts. A sign can meet city code and still fail the landlord's review, so we read your lease criteria before we design. We help with landlord approvals by preparing the drawings and mockups they ask for, so your sign is approved before fabrication starts.",
@@ -65,7 +70,7 @@ const SERVICES = {
       {
         heading: "Do you install channel letters outside Houston?",
         body:
-          "Yes. We build and install channel letters across the Houston area, including Katy, Sugar Land, The Woodlands, Cypress, Pearland, Spring, and Pasadena. Each city handles sign permits a little differently, and suburbs like Katy and Sugar Land add county, planned-development, or association reviews on top of the city permit. For the details in two of our busiest areas, see [channel letter signs in Katy](/channel-letter-signs-katy-tx) and [channel letter signs in Sugar Land](/channel-letter-signs-sugar-land-tx). If you're still weighing sign types, our comparison of [channel letters vs cabinet signs](/blog/channel-letters-vs-cabinet-signs) covers the trade-offs.",
+          "Yes. We build and install channel letters across the Houston area, including Katy, Sugar Land, The Woodlands, Cypress, Pearland, Spring, and Pasadena. Each city handles sign permits a little differently, and suburbs like Katy and Sugar Land add county, planned-development, or association reviews on top of the city permit. Outside any city limits, in unincorporated Harris County areas such as most of Spring and Cypress, Harris County issues the sign permit itself. For the details in two of our busiest areas, see [channel letter signs in Katy](/channel-letter-signs-katy-tx) and [channel letter signs in Sugar Land](/channel-letter-signs-sugar-land-tx). If you're still weighing sign types, our comparison of [channel letters vs cabinet signs](/blog/channel-letters-vs-cabinet-signs) covers the trade-offs.",
       },
       {
         heading: "How much do channel letters cost in Houston?",
@@ -76,6 +81,16 @@ const SERVICES = {
         heading: "Do you handle sign permits and city code?",
         body:
           "Yes. Houston Sign Crafters pulls the City of Houston sign permits and confirms your sign meets local code and your landlord's criteria before fabrication. Permitting trips up a lot of business owners: wrong size, wrong illumination, or missing approvals can mean a costly redo. We manage that process so your install passes inspection the first time. Every city around Houston handles signs differently, and our [sign permit guide](/sign-permits) breaks down what Houston, Katy, Sugar Land, and the other jurisdictions each require.",
+      },
+      {
+        heading: "Who's allowed to install illuminated channel letters in Texas?",
+        body:
+          "In Texas, wiring an electric sign is licensed work. The Texas Department of Licensing and Regulation (TDLR) requires a business that designs, builds, installs, or services electric signs to hold an Electrical Sign Contractor license, and that business must employ a licensed Master Electrician or Master Sign Electrician as its master of record. Houston Sign Crafters holds the Electrical Sign Contractor license, with a master-licensed electrician on staff, so the same company that builds your letters can legally wire and connect them. If you're comparing sign companies, ask each one for its TDLR license number. You can check it on TDLR's public license search in about a minute.",
+      },
+      {
+        heading: "Do larger channel letter signs need engineering?",
+        body:
+          "Sometimes. The City of Houston's sign plan review checklist calls for sealed, signed engineering drawings, analyzed to the building code the city has adopted, when an individual wall sign is more than 8 feet tall or larger than 60 square feet. Reviewers also check the design against the city's wind-speed requirements and expect the drawings to show the sign's electrical load. Most single-storefront letter sets come in under those limits. Bigger signs, like tall stacked logos or long runs of letters on a large building, may need an engineer's stamp. When yours does, we coordinate the engineer and include that cost in your itemized estimate.",
       },
       {
         heading: "How long does a channel letter project take?",
@@ -97,6 +112,8 @@ const SERVICES = {
       { q: "Do I get to see the sign before you build it?", a: "Yes. After the site survey, we send a free design mockup with your sign's dimensions and an itemized estimate within one business day. The mockup shows the letters on a photo of your actual building, sized to what the city and your landlord allow, so changes happen while they are still just pixels." },
       { q: "Do you install channel letters in San Antonio and Austin?", a: "Yes. We have local staff in both cities who handle the site survey and the installation, and the letters are built in our Houston shop. Each city and suburb has its own sign code, so we check the rules for your address before we design." },
       { q: "What keeps channel letters from going dark?", a: "Quality parts and a warranty. Our letters are built UL-certified with LED modules and power supplies rated for Gulf Coast heat, and every sign carries a 5-year warranty on materials and workmanship, lighting included. If a section ever goes dark, you call the people who built it." },
+      { q: "Is Houston Sign Crafters licensed to install electric signs?", a: "Yes. We hold a Texas Electrical Sign Contractor license from TDLR, with a master-licensed electrician on staff, so our own crew can wire and connect illuminated signs." },
+      { q: "Who issues sign permits outside Houston city limits?", a: "It depends on the address. Suburban cities like Katy and Sugar Land issue their own sign permits, and in unincorporated Harris County, including most of Spring and Cypress, the county's engineering department permits on-premise signs. We confirm the right office during the site survey." },
     ],
     process: [
       { t: "Send photos and a rough size", b: "Snap your storefront and tell us the name going up. We review it and call you within one business day to make sure we're a good fit." },
