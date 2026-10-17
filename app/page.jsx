@@ -85,8 +85,8 @@ export default function HomePage() {
                 submitLabel="Get My Free Quote"
                 showSignType
                 showMessage={false}
-                heading="Free design mockup within 1 business day of your site survey"
-                subheading="We come out for a free site survey, then send you design mockups with your sign's dimensions, along with a quote."
+                heading="Free design mockup in 1 business day"
+                subheading="After a free site survey, you get mockups with your sign's dimensions and a quote within one business day."
               />
             </div>
           </div>
