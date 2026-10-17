@@ -26,6 +26,19 @@ export default function Nav() {
 
   return (
     <header className="sticky top-0 z-50">
+      {/* Contact topbar — email only. Removed 2026-10-15 in the critic pass, restored
+          2026-10-16 per Rameel: "that actually was high converting for us". Keep it. */}
+      <div className="bg-ink text-white">
+        <div className="mx-auto flex max-w-6xl items-center justify-center gap-2 px-4 py-1.5 text-[13px] sm:gap-3 sm:px-6">
+          <span className="text-white/60">Email:</span>
+          <a
+            href={`mailto:${BUSINESS.email}`}
+            className="font-semibold text-white transition-colors hover:text-signal"
+          >
+            {BUSINESS.email}
+          </a>
+        </div>
+      </div>
       <div className="border-b border-fog bg-white/95 backdrop-blur">
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="flex h-20 items-center justify-between gap-4 lg:h-24">
