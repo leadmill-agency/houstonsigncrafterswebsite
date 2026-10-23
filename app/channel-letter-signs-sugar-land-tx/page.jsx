@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/data/business";
 import PhoneLink from "@/components/PhoneLink";
 import Faq from "@/components/Faq";
+import ReviewedBy from "@/components/ReviewedBy";
 
 // Sugar Land × channel letters — Growth OS weekly SEO scan draft (PB16,
 // 2026-09-21), approved by Rameel 2026-09-23. Built on its own structure (three
@@ -129,6 +130,7 @@ export default function ChannelLettersSugarLandPage() {
           Sugar Land, TX · Channel Letters
         </p>
         <h1 className="text-4xl font-bold text-ink">Channel letter signs for Sugar Land storefronts</h1>
+        <ReviewedBy className="mt-2" />
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-steel">
           Channel letters are the individual three-dimensional letters mounted across a
           storefront, usually lit with LEDs. In Sugar Land they do their best work where people

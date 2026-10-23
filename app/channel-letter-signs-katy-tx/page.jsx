@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/data/business";
 import PhoneLink from "@/components/PhoneLink";
 import Faq from "@/components/Faq";
+import ReviewedBy from "@/components/ReviewedBy";
 
 // Katy × channel letters landing page — first page from the Growth OS weekly
 // SEO scan (PB16, approved by Rameel 2026-09-18). Every jurisdiction/landlord
@@ -120,6 +121,7 @@ export default function ChannelLettersKatyPage() {
           Katy, TX · Channel Letters
         </p>
         <h1 className="text-4xl font-bold text-ink">Channel letter signs in Katy, TX</h1>
+        <ReviewedBy className="mt-2" />
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-steel">
           If your business fronts I-10, the Grand Parkway, or a busy Katy shopping center,
           illuminated channel letters are the clearest way to stand out day and night. Major

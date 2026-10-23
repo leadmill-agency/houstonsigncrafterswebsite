@@ -3,6 +3,7 @@ import { BUSINESS } from "@/data/business";
 import { PRICING, formatRange } from "@/data/pricing";
 import PhoneLink from "@/components/PhoneLink";
 import Faq from "@/components/Faq";
+import ReviewedBy from "@/components/ReviewedBy";
 
 // The pricing page almost no sign company publishes: real ranges, in a real
 // table. Ranges owner-confirmed (see data/pricing.js). Answer-first, tabular,
@@ -58,6 +59,7 @@ export default function PricingPage() {
             and free within one business day.
           </p>
         </div>
+        <ReviewedBy />
 
         <div className="mt-8 overflow-x-auto">
           <table className="w-full min-w-[640px] border-collapse text-sm">

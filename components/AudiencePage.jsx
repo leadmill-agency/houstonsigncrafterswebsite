@@ -5,6 +5,7 @@ import { getPortfolio } from "@/data/portfolio";
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
 import Faq from "@/components/Faq";
+import ReviewedBy from "@/components/ReviewedBy";
 
 // Shared template for the buyer-type pages (/general-contractors,
 // /property-managers, /franchise-signage) — data from data/audiences.js.
@@ -42,6 +43,7 @@ export default function AudiencePage({ audience }) {
         <div className="answer-block">
           <p>{audience.answer}</p>
         </div>
+        <ReviewedBy />
       </section>
 
       <section className="border-y border-fog bg-cloud">

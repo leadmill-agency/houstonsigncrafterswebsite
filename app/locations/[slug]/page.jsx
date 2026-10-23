@@ -7,6 +7,7 @@ import CTASection from "@/components/CTASection";
 import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
 import Faq from "@/components/Faq";
+import ReviewedBy from "@/components/ReviewedBy";
 
 export function generateStaticParams() {
   return getMarketSlugs().map((slug) => ({ slug }));
@@ -87,6 +88,7 @@ export default async function LocationPage({ params }) {
         <div className="answer-block">
           <p>{m.answer}</p>
         </div>
+        <ReviewedBy />
 
         <div className="prose-content">
           {m.sections.map((sec) => (

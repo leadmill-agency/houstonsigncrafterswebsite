@@ -1,8 +1,9 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPostBySlug, getAllSlugs, estimateReadTime } from "@/lib/blog";
-import { BUSINESS } from "@/data/business";
+import { BUSINESS, REVIEWER } from "@/data/business";
 import CTASection from "@/components/CTASection";
+import ReviewedBy from "@/components/ReviewedBy";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -45,7 +46,11 @@ export default async function BlogPost({ params }) {
       name: BUSINESS.name,
       logo: { "@type": "ImageObject", url: `${BUSINESS.url}/logo.png` },
     },
-    mainEntityOfPage: { "@type": "WebPage", "@id": `${BUSINESS.url}/blog/${slug}` },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `${BUSINESS.url}/blog/${slug}`,
+      reviewedBy: { "@id": REVIEWER.id },
+    },
   };
 
   const breadcrumbs = {
@@ -73,6 +78,7 @@ export default async function BlogPost({ params }) {
           {post.date && <span>{new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>}
           {post.content && <span> · {estimateReadTime(post.content)} min read</span>}
         </div>
+        <ReviewedBy className="mt-2" />
 
         <div className="prose-content mt-8" dangerouslySetInnerHTML={{ __html: post.html }} />
       </article>

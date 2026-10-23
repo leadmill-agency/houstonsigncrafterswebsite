@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { BUSINESS } from "@/data/business";
 import PhoneLink from "@/components/PhoneLink";
+import ReviewedBy from "@/components/ReviewedBy";
 
 // Sign permits by jurisdiction — the topical-authority anchor page. EVERY fact
 // below was read from the official government/covenant source on 2026-08-23;
@@ -159,6 +160,7 @@ export default function SignPermitsPage() {
             electrical permit. We handle the correct jurisdiction's process as part of every job.
           </p>
         </div>
+        <ReviewedBy />
 
         <div className="mt-8 overflow-x-auto">
           <table className="w-full min-w-[560px] border-collapse text-sm">

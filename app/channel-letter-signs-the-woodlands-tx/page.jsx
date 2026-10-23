@@ -2,6 +2,7 @@ import Link from "next/link";
 import { BUSINESS } from "@/data/business";
 import PhoneLink from "@/components/PhoneLink";
 import Faq from "@/components/Faq";
+import ReviewedBy from "@/components/ReviewedBy";
 
 // The Woodlands × channel letters — Growth OS weekly SEO scan draft (PB16,
 // 2026-10-12), merged with the same week's "business signage in The Woodlands"
@@ -136,6 +137,7 @@ export default function ChannelLettersWoodlandsPage() {
           The Woodlands, TX · Channel Letters
         </p>
         <h1 className="text-4xl font-bold text-ink">Channel letter signs in The Woodlands</h1>
+        <ReviewedBy className="mt-2" />
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-steel">
           In most of the Houston area, channel letters are one choice among several. In The
           Woodlands they are effectively the rule. The Township&apos;s commercial standards limit

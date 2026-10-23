@@ -10,7 +10,7 @@ import RB2B from "@/components/RB2B";
 import { GTMHead, GTMBody } from "@/components/GTM";
 import AttributionCapture from "@/components/AttributionCapture";
 import OpenAIPixel from "@/components/OpenAIPixel";
-import { BUSINESS, SERVICE_AREAS } from "@/data/business";
+import { BUSINESS, SERVICE_AREAS, REVIEWER } from "@/data/business";
 
 // Oswald = condensed, signage-style display face for headlines (reads like
 // fabricated channel lettering). Public Sans = sturdy, plain-spoken body grotesk.
@@ -78,6 +78,7 @@ export default function RootLayout({ children }) {
     })),
     areaServed: SERVICE_AREAS.map((name) => ({ "@type": "City", name })),
     sameAs: BUSINESS.sameAs,
+    founder: { "@id": REVIEWER.id },
     ...(BUSINESS.reviews?.rating
       ? {
           aggregateRating: {
@@ -101,6 +102,18 @@ export default function RootLayout({ children }) {
     publisher: { "@id": `${BUSINESS.url}/#business` },
   };
 
+  // Named reviewer as a Person entity (AI-search playbook Section 2). Pages and
+  // articles reference it by @id; the visible line is components/ReviewedBy.jsx.
+  const personLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "@id": REVIEWER.id,
+    name: REVIEWER.name,
+    jobTitle: REVIEWER.jobTitle,
+    url: REVIEWER.url,
+    worksFor: { "@id": `${BUSINESS.url}/#business` },
+  };
+
   return (
     <html lang="en" className={`${oswald.variable} ${publicSans.variable}`}>
       <head>
@@ -111,6 +124,10 @@ export default function RootLayout({ children }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personLd) }}
         />
         <GTMHead />
         <OpenAIPixel />

@@ -10,6 +10,7 @@ import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
 import OfferBadge from "@/components/OfferBadge";
 import CostCallout from "@/components/CostCallout";
+import ReviewedBy from "@/components/ReviewedBy";
 
 export function generateStaticParams() {
   return getServiceSlugs().map((slug) => ({ slug }));
@@ -127,6 +128,7 @@ export default async function ServicePage({ params }) {
         <div className="answer-block">
           <p>{s.answer}</p>
         </div>
+        <ReviewedBy />
 
         <div className="prose-content">
           {s.sections.map((sec) => (

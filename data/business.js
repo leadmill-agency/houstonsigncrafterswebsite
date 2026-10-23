@@ -124,3 +124,14 @@ export const SERVICE_AREAS = [
 ];
 
 export default BUSINESS;
+
+// Named reviewer for every money page and article (AI-search playbook Section 2:
+// a real person with a real title, shown on the page and in Person schema).
+// Name and title as Rameel asked them to print (2026-10-22). Also used as the
+// LocalBusiness `founder`. Keep it to one person; change it here only.
+export const REVIEWER = {
+  name: "Rameel Sheikh",
+  jobTitle: "Owner",
+  url: "https://houstonsigncrafters.com/about",
+  id: "https://houstonsigncrafters.com/#rameel-sheikh",
+};
