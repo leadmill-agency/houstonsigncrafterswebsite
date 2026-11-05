@@ -61,8 +61,8 @@ const SOURCES = [
     url: "https://www.sugarlandtx.gov/DocumentCenter/View/32599/FINAL_SIGN-REG_DEC2023",
   },
   {
-    label: "Sugar Land sign permit application",
-    url: "https://www.sugarlandtx.gov/DocumentCenter/View/41362/Application---Sign-Permit",
+    label: "Sugar Land Permits & Inspections (sign permit applications)",
+    url: "https://www.sugarlandtx.gov/2362/Permits-Inspections",
   },
   {
     label: "University Commons planned development ordinance",

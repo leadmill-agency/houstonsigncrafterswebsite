@@ -65,7 +65,10 @@ const FAQS = [
 ];
 
 const SOURCES = [
-  { label: "City of Katy Code, Article 3.06 (Signs)", url: "https://ecode360.com/38863194" },
+  {
+    label: "City of Katy Permit & Building Services (sign permits; Code Article 3.06 is on eCode360, login required)",
+    url: "https://www.cityofkaty.com/government/city-departments/permits-building",
+  },
   {
     label: "Harris County sign permits (ETJ, scenic, toll roads)",
     url: "https://oce.harriscountytx.gov/Services/Permits/Permits-A-to-Z/Signs-Extra-Territorial-Jurisdiction-Scenic-Toll-Roads",
@@ -81,7 +84,7 @@ const SOURCES = [
   },
   {
     label: "Brixmor storefront sign criteria",
-    url: "https://www.brixmor.com/-/media/brixmor/tenants/tenants-pdfs-and-images/ordering-your-storefront-sign.pdf",
+    url: "https://brixmor.com/api/documents/file/Ordering%20Your%20Storefront%20Sign.pdf",
   },
 ];
 

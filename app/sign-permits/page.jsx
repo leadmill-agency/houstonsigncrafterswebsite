@@ -85,7 +85,7 @@ const JURISDICTIONS = [
       "New tenants and name changes need an approved Operating Certificate or Certificate of Occupancy first, and a Business Registration must be on file for the address.",
     ],
     links: [
-      { label: "Sign Standards & Requirements", url: "https://www.pearlandtx.gov/departments/community-development/planning/sign-permits" },
+      { label: "Permits (sign permits go through the Cityworks portal)", url: "https://www.pearlandtx.gov/departments/community-development/permits" },
       { label: "Sign Permit Checklist (PDF)", url: "https://www.pearlandtx.gov/home/showpublisheddocument/35339/638725565375330000" },
     ],
   },
