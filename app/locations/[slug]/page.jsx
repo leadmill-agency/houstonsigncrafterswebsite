@@ -12,6 +12,14 @@ import ReviewedBy from "@/components/ReviewedBy";
 import RichText from "@/components/RichText";
 import PORTFOLIO from "@/data/portfolio";
 
+// Cities that have their own channel-letter guide. The location page links to
+// it so the guide is not an orphan (The Woodlands guide had no inbound links).
+const CHANNEL_LETTER_GUIDES = {
+  "katy-tx": "/channel-letter-signs-katy-tx",
+  "sugar-land-tx": "/channel-letter-signs-sugar-land-tx",
+  "the-woodlands-tx": "/channel-letter-signs-the-woodlands-tx",
+};
+
 export function generateStaticParams() {
   return getMarketSlugs().map((slug) => ({ slug }));
 }
@@ -150,6 +158,16 @@ export default async function LocationPage({ params }) {
           <div className="mt-12">
             <Faq items={m.faqs} heading={`${m.city} sign FAQs`} />
           </div>
+        )}
+
+        {CHANNEL_LETTER_GUIDES[slug] && (
+          <p className="mt-10 rounded-sm border border-fog bg-cloud p-5 text-steel">
+            Planning lit letters for a storefront? Our guide to{" "}
+            <Link href={CHANNEL_LETTER_GUIDES[slug]} className="font-medium text-signal-600 underline underline-offset-2 hover:text-ink">
+              channel letter signs in {m.city}
+            </Link>{" "}
+            covers the local permit process and landlord criteria.
+          </p>
         )}
 
         <h2 className="mb-4 mt-12 text-2xl font-bold text-ink">Sign services in {m.city}</h2>
