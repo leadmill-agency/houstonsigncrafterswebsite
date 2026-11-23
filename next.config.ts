@@ -7,6 +7,13 @@ const nextConfig: NextConfig = {
     ],
   },
 
+  // Lead-form photos ride the submitLead server action. The default body cap
+  // is 1 MB; the browser shrinks photos to about 3 MB in total (lib/photo.js)
+  // and Vercel's own request limit is 4.5 MB.
+  experimental: {
+    serverActions: { bodySizeLimit: "4mb" },
+  },
+
   // 301 redirect map from the old Framer site → new in-house URLs.
   // Source list = the live houstonsigncrafters.com sitemap (crawled 2026-06-18).
   //

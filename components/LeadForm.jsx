@@ -5,6 +5,7 @@ import { useRouter } from "next/navigation";
 import { submitLead } from "@/lib/leads";
 import { trackEvent, trackPixel, trackOaiq } from "@/lib/analytics";
 import { ATTRIBUTION_FIELDS, getAttribution } from "@/lib/attribution";
+import { preparePhotos, setInputFiles, MAX_PHOTOS } from "@/lib/photo";
 
 const initialState = { ok: null, errors: {}, message: "" };
 
@@ -18,6 +19,12 @@ const initialState = { ok: null, errors: {}, message: "" };
 // carries that context, and heard-about gets asked on the first call. Legacy
 // props (showCompany/showSignType/showMessage) are accepted but ignored so
 // existing call sites don't break.
+//
+// Photo upload (owner request 2026-11-23): optional, up to three photos, on
+// every form except the guide download. The site asks visitors to "send a
+// photo" in several places and the form had no way to take one. Photos are
+// shrunk in the browser (lib/photo.js) and ride the same server action; the
+// lead always submits even when a photo can't be attached.
 export default function LeadForm({
   kind = "contact",
   submitLabel = "Send",
@@ -36,9 +43,55 @@ export default function LeadForm({
     setAttribution(getAttribution());
   }, []);
 
+  const showPhotos = kind !== "guide";
+  const photoInput = useRef(null);
+  // [{ name, url }] previews of what is attached right now.
+  const [photos, setPhotos] = useState([]);
+  const [photoBusy, setPhotoBusy] = useState(false);
+  const [photoNote, setPhotoNote] = useState("");
+  // The prepared File objects, kept so one photo can be removed without re-picking.
+  const photoFiles = useRef([]);
+
+  function showAttached(files) {
+    setPhotos((old) => {
+      old.forEach((p) => URL.revokeObjectURL(p.url));
+      return files.map((f) => ({ name: f.name, url: URL.createObjectURL(f) }));
+    });
+  }
+
+  async function onPhotosPicked(e) {
+    const input = e.target;
+    if (!input.files?.length) return;
+    setPhotoBusy(true);
+    setPhotoNote("");
+    const { files, dropped } = await preparePhotos(input.files);
+    // If the browser can't swap in the small versions, send no photo at all
+    // rather than risk an oversized upload that fails the whole form.
+    const applied = setInputFiles(input, files);
+    if (!applied) input.value = "";
+    photoFiles.current = applied ? files : [];
+    showAttached(photoFiles.current);
+    if (!applied || (dropped > 0 && files.length === 0)) {
+      setPhotoNote("We couldn't attach that photo. Send the form anyway and we'll ask you for it.");
+    } else if (dropped > 0) {
+      setPhotoNote(`We attached ${files.length}. The form takes up to ${MAX_PHOTOS} photos.`);
+    }
+    setPhotoBusy(false);
+  }
+
+  function removePhoto(i) {
+    const next = photoFiles.current.filter((_, k) => k !== i);
+    if (photoInput.current && !setInputFiles(photoInput.current, next)) photoInput.current.value = "";
+    photoFiles.current = next;
+    showAttached(next);
+    setPhotoNote("");
+  }
+
   useEffect(() => {
     if (state.ok && formRef.current) {
       formRef.current.reset();
+      photoFiles.current = [];
+      setPhotos([]);
       trackEvent("form_submit", { form_name: `lead_${kind}`, form_location: kind });
       if (kind === "quote") trackEvent("generate_lead", { value: 1, currency: "USD" });
       trackPixel("Lead", { content_name: `lead_${kind}` });
@@ -103,7 +156,50 @@ export default function LeadForm({
         />
       </div>
 
-      <button type="submit" disabled={pending} className="btn btn-primary btn-lg mt-5 w-full justify-center disabled:cursor-not-allowed disabled:opacity-60">
+      {showPhotos && (
+        <div className="mt-4">
+          <span className="mb-1.5 block text-xs font-semibold text-carbon">
+            Photo of your building or current sign <span className="font-normal text-steel">(optional)</span>
+          </span>
+          <div className="flex flex-wrap items-center gap-3">
+            <label className="inline-flex cursor-pointer items-center gap-2 rounded-sm border border-fog bg-cloud px-3 py-2 text-sm font-semibold text-ink transition-colors hover:border-ink focus-within:border-ink">
+              <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
+                <path d="M3 6.5h2.6l1.2-1.8h6.4l1.2 1.8H17a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5a1 1 0 0 1 1-1z" />
+                <circle cx="10" cy="11" r="2.8" />
+              </svg>
+              {photos.length > 0 ? "Change photos" : "Add a photo"}
+              <input
+                ref={photoInput}
+                type="file"
+                name="photos"
+                accept="image/*"
+                multiple
+                onChange={onPhotosPicked}
+                className="sr-only"
+              />
+            </label>
+            {photoBusy && <span className="text-xs text-steel" aria-live="polite">Preparing photo…</span>}
+            {photos.map((p, i) => (
+              <span key={p.url} className="relative inline-block">
+                {/* Local blob preview of the visitor's own file; next/image can't optimise it. */}
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img src={p.url} alt={`Attached photo ${i + 1}`} className="h-12 w-12 rounded-sm border border-fog object-cover" />
+                <button
+                  type="button"
+                  onClick={() => removePhoto(i)}
+                  aria-label={`Remove photo ${i + 1}`}
+                  className="absolute -right-2.5 -top-2.5 flex h-6 w-6 items-center justify-center rounded-full bg-ink text-sm font-bold leading-none text-white"
+                >
+                  ×
+                </button>
+              </span>
+            ))}
+          </div>
+          {photoNote && <p className="mt-2 text-xs text-steel" aria-live="polite">{photoNote}</p>}
+        </div>
+      )}
+
+      <button type="submit" disabled={pending || photoBusy} className="btn btn-primary btn-lg mt-5 w-full justify-center disabled:cursor-not-allowed disabled:opacity-60">
         {pending ? "Sending…" : submitLabel}
       </button>
 
