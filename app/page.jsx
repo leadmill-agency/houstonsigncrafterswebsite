@@ -13,6 +13,7 @@ import { HOME_GALLERY_CURATED } from "@/data/home-gallery";
 import { PRICING, formatRange } from "@/data/pricing";
 import Faq from "@/components/Faq";
 import Testimonials from "@/components/Testimonials";
+import PORTFOLIO from "@/data/portfolio";
 
 // Hero + closing band use real HSC installs, not stock (design critique
 // 2026-10-08: the stock welding shot was darkened into a navy wash and the
@@ -35,6 +36,9 @@ const STEPS = [
   { title: "We build it & permit it", body: "Fabrication starts in our shop while we handle the City paperwork. No surprise “that's not to code” after the money's spent." },
   { title: "We put it up", body: "Our licensed crew installs it, wires it, and makes sure it passes inspection. Then it's yours, warrantied for five years." },
 ];
+
+// Inline text links inside body copy on light backgrounds.
+const inlineLink = "font-medium text-ink underline decoration-fog underline-offset-2 hover:decoration-signal";
 
 const PROOF = ["UL-certified fabrication", "Our own install crew", "Permits handled in-house", "5-year warranty"];
 
@@ -64,9 +68,10 @@ export default function HomePage() {
             {/* The claim leads; the SEO phrase lives in the first body sentence. */}
             <h1 className="text-5xl font-bold leading-[0.98] sm:text-6xl lg:text-7xl">Signs built in our own shop.</h1>
             <p className="mt-5 max-w-lg text-lg text-white/85">
-              A Houston sign company that does the whole job:{" "}
-              <Link href="/services/channel-letters" className="hover:underline hover:underline-offset-2">channel letters in Houston</Link>,
-              monuments, and pole signs, built and installed by our own crew. 5-year warranty on every one.
+              A Houston sign company that does the whole job on custom business signs:{" "}
+              <Link href="/services/channel-letters" className="hover:underline hover:underline-offset-2">channel letters in Houston</Link>,{" "}
+              <Link href="/services/monument-signs" className="hover:underline hover:underline-offset-2">monument signs</Link>, and{" "}
+              <Link href="/services/pole-signs" className="hover:underline hover:underline-offset-2">pole signs</Link>, built and installed by our own crew. 5-year warranty on every one.
             </p>
             {/* Call is THE action (owner 2026-10-07: buyers call, so make it loud;
                 text option removed, nobody used it). The quote form sits beside the hero. */}
@@ -101,7 +106,22 @@ export default function HomePage() {
           <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
             <div>
               <h2 className="text-4xl font-bold text-ink sm:text-5xl">See what we actually make</h2>
-              <p className="mt-2 max-w-xl text-steel">Real signs we built and installed for Houston businesses: channel letters, monument signs, cabinet signs, wraps, and more.</p>
+              {/* Count comes from data/portfolio.js so it stays true. Text links, not
+                  image links: these are the contextual votes for the money pages and
+                  the city pages (organic plan 2026-11-23). */}
+              <p className="mt-2 max-w-2xl text-steel">
+                Real custom signs we built and installed:{" "}
+                <Link href="/services/channel-letters" className={inlineLink}>channel letter signs</Link>,{" "}
+                <Link href="/services/monument-signs" className={inlineLink}>monument signs</Link>,{" "}
+                <Link href="/services/pole-signs" className={inlineLink}>pylon signs</Link>, and{" "}
+                <Link href="/services/storefront-signs" className={inlineLink}>storefront signs</Link>. Our portfolio shows{" "}
+                {PORTFOLIO.length} installs across Houston,{" "}
+                <Link href="/locations/sugar-land-tx" className={inlineLink}>Sugar Land</Link>,{" "}
+                <Link href="/locations/katy-tx" className={inlineLink}>Katy</Link>,{" "}
+                <Link href="/locations/spring-tx" className={inlineLink}>Spring</Link>,{" "}
+                <Link href="/locations/cypress-tx" className={inlineLink}>Cypress</Link>,{" "}
+                <Link href="/locations/the-woodlands-tx" className={inlineLink}>The Woodlands</Link>, and nearby cities.
+              </p>
             </div>
             <Link href="/portfolio" className="group inline-flex items-center gap-1.5 font-display text-sm font-semibold uppercase tracking-wide text-signal-600 transition-colors hover:text-ink">
               See all our work
@@ -204,7 +224,7 @@ export default function HomePage() {
       <section className="bg-ink text-white">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16 lg:py-24">
           <div>
-            <h2 className="text-4xl font-bold sm:text-6xl">What does a sign cost?</h2>
+            <h2 className="text-4xl font-bold sm:text-6xl">What does a custom sign cost?</h2>
             {/* Published ranges as display numerals (critique 2026-10-08, owner
                 10/15). Every figure comes from data/pricing.js; no new numbers. */}
             <dl className="mt-8 grid gap-6 sm:grid-cols-3">
@@ -251,7 +271,7 @@ export default function HomePage() {
             <div className="relative aspect-[4/3] overflow-hidden rounded-sm">
               <Image
                 src="/portfolio/kirkwood.jpg"
-                alt="Brick monument sign with tenant directory we built for Kirkwood Tech Center in Houston, TX"
+                alt="Brick monument sign with tenant directory we built for Kirkwood Tech Center in Stafford, TX"
                 fill
                 sizes="(max-width: 1024px) 100vw, 45vw"
                 className="object-cover"
@@ -297,6 +317,24 @@ export default function HomePage() {
               <span className="text-sm text-steel">from deposit to install, permits included</span>
             </figcaption>
           </figure>
+        </div>
+      </section>
+
+      {/* Repair: the one contextual link the repair page was missing. It did not
+          rank for "sign repair houston"; the homepage did (organic plan 2026-11-23). */}
+      <section className="border-b border-fog bg-white">
+        <div className="mx-auto flex max-w-6xl flex-col gap-5 px-4 py-12 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+          <div className="max-w-2xl">
+            <h2 className="text-3xl font-bold text-ink">Already have a sign that's dark or damaged?</h2>
+            <p className="mt-2 leading-relaxed text-steel">
+              You may not need a new one. We fix dead letters and failed lighting, reface faded
+              cabinets, and retrofit older signs to LED, including signs other companies built. See
+              how{" "}
+              <Link href="/services/sign-repair" className={inlineLink}>sign repair in Houston</Link>{" "}
+              works.
+            </p>
+          </div>
+          <Link href="/services/sign-repair" className="btn btn-outline-dark flex-shrink-0">Fix My Sign</Link>
         </div>
       </section>
 

@@ -11,6 +11,7 @@ import PhoneLink from "@/components/PhoneLink";
 import OfferBadge from "@/components/OfferBadge";
 import CostCallout from "@/components/CostCallout";
 import ReviewedBy from "@/components/ReviewedBy";
+import RichText from "@/components/RichText";
 
 export function generateStaticParams() {
   return getServiceSlugs().map((slug) => ({ slug }));
@@ -31,25 +32,6 @@ export async function generateMetadata({ params }) {
       images: s.img ? [{ url: s.img }] : undefined,
     },
   };
-}
-
-// Renders a section body string, turning [label](/path) markdown links into
-// real internal links. Internal paths only; anything else renders as text.
-function BodyText({ text }) {
-  const parts = text.split(/(\[[^\]]+\]\(\/[^)]*\))/g);
-  return (
-    <p>
-      {parts.map((part, i) => {
-        const m = part.match(/^\[([^\]]+)\]\((\/[^)]*)\)$/);
-        if (!m) return part;
-        return (
-          <Link key={i} href={m[2]} className="font-medium text-signal-600 underline underline-offset-2 hover:text-ink">
-            {m[1]}
-          </Link>
-        );
-      })}
-    </p>
-  );
 }
 
 export default async function ServicePage({ params }) {
@@ -134,7 +116,7 @@ export default async function ServicePage({ params }) {
           {s.sections.map((sec) => (
             <div key={sec.heading}>
               <h2>{sec.heading}</h2>
-              <BodyText text={sec.body} />
+              <RichText text={sec.body} />
             </div>
           ))}
         </div>

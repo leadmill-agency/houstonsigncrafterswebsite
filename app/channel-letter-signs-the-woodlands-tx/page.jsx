@@ -263,9 +263,9 @@ export default function ChannelLettersWoodlandsPage() {
             installation. Once you approve it, we prepare the Plan Review Committee submittal and
             handle any landlord sign-off. After approval, the letters are cut, wired, and tested
             lit in our Houston shop, and our own crew installs them. Illuminated channel letters
-            are UL-certified and carry our 5-year warranty. More on the product itself is on our{" "}
+            are UL-certified and carry our 5-year warranty. More on the product itself is on our page about{" "}
             <Link href="/services/channel-letters" className={link}>
-              channel letters page
+              channel letter signs in Houston
             </Link>
             , and the{" "}
             <Link href="/locations/the-woodlands-tx" className={link}>

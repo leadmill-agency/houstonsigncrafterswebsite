@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getGuide, getGuideSlugs } from "@/data/guides";
 import { BUSINESS } from "@/data/business";
@@ -39,6 +40,15 @@ export default async function GuidePage({ params }) {
               </li>
             ))}
           </ul>
+          {g.hub && (
+            <p className="mt-8 text-sm text-steel">
+              {g.hub.lead}{" "}
+              <Link href={g.hub.href} className="font-medium text-ink underline decoration-fog underline-offset-2 hover:decoration-signal">
+                {g.hub.label}
+              </Link>{" "}
+              lists who issues the permit at your address.
+            </p>
+          )}
         </div>
 
         <div>

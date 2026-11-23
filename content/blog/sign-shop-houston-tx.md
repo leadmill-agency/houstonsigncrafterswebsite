@@ -52,7 +52,7 @@ A trustworthy estimate separates design, permits, electrical, fabrication, and i
 
 ## What drives the cost of a sign
 
-Price depends on sign type and size, lighting, whether engineering is required, electrical work, permit and plan-review fees, and installation conditions such as access, height, and foundations. Special districts add their own reviews. Historic districts, for example, need a Certificate of Appropriateness before the city issues a sign permit. For typical ranges by sign type, see our [pricing page](/pricing) and our breakdown of [what channel letters cost in Houston](/blog/how-much-do-channel-letters-cost-houston).
+Price depends on sign type and size, lighting, whether engineering is required, electrical work, permit and plan-review fees, and installation conditions such as access, height, and foundations. Special districts add their own reviews. Historic districts, for example, need a Certificate of Appropriateness before the city issues a sign permit. For typical ranges by sign type, see our [pricing page](/pricing) and our breakdown of [what channel letters cost in Houston](/blog/how-much-do-channel-letters-cost-in-houston).
 
 ## How we work at Houston Sign Crafters
 

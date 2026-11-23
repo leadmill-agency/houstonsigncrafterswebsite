@@ -5,6 +5,9 @@ import { getAllServices } from "@/data/services";
 import { BUSINESS } from "@/data/business";
 import PortfolioGallery from "@/components/PortfolioGallery";
 import PhoneLink from "@/components/PhoneLink";
+import { getAllMarkets } from "@/data/markets";
+
+const inlineLink = "font-medium text-ink underline decoration-fog underline-offset-2 hover:decoration-signal";
 
 export const metadata = {
   title: "Commercial Sign Portfolio",
@@ -39,6 +42,7 @@ export default function PortfolioPage() {
   const services = getAllServices();
   const featured = projects.filter((p) => p.featured).slice(0, 4);
   const collage = (featured.length >= 3 ? featured : projects).slice(0, 4);
+  const cityLinks = getAllMarkets().filter((m) => projects.some((p) => p.location === m.cityState));
 
   // ImageGallery schema referencing the real project photos.
   const schema = {
@@ -118,9 +122,25 @@ export default function PortfolioPage() {
         <div className="mb-8 max-w-2xl">
           <h2 className="text-3xl font-bold text-ink">Recent sign work</h2>
           <p className="mt-2 text-steel">
-            Channel letters, monument signs, cabinet signs, and window graphics we've built and
-            installed for Houston businesses.
+            {projects.length} signs we've built and installed for Houston-area businesses:{" "}
+            <Link href="/services/channel-letters" className={inlineLink}>channel letter signs</Link>,{" "}
+            <Link href="/services/monument-signs" className={inlineLink}>monument signs</Link>,{" "}
+            <Link href="/services/pole-signs" className={inlineLink}>pylon signs</Link>, and{" "}
+            <Link href="/services/storefront-signs" className={inlineLink}>storefront cabinet signs</Link>.
           </p>
+          {/* Cities with a location page and at least one install in the portfolio. */}
+          {cityLinks.length > 0 && (
+            <p className="mt-2 text-steel">
+              Most are in Houston. You can also see our work in{" "}
+              {cityLinks.map((c, i) => (
+                <span key={c.slug}>
+                  {i > 0 && (i === cityLinks.length - 1 ? ", and " : ", ")}
+                  <Link href={`/locations/${c.slug}`} className={inlineLink}>{c.city}</Link>
+                </span>
+              ))}
+              .
+            </p>
+          )}
         </div>
         <PortfolioGallery />
       </section>

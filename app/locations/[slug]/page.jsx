@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import { getMarket, getMarketSlugs } from "@/data/markets";
 import { getAllServices } from "@/data/services";
@@ -8,6 +9,8 @@ import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
 import Faq from "@/components/Faq";
 import ReviewedBy from "@/components/ReviewedBy";
+import RichText from "@/components/RichText";
+import PORTFOLIO from "@/data/portfolio";
 
 export function generateStaticParams() {
   return getMarketSlugs().map((slug) => ({ slug }));
@@ -35,6 +38,15 @@ export default async function LocationPage({ params }) {
   if (!m) notFound();
 
   const services = getAllServices();
+
+  // Real installs in this city, then in the nearby cities this page already
+  // names (data/portfolio.js; cities verified in _project/INSTALL-LOCATIONS.md).
+  // Nothing renders when there are none, so no page claims work it can't show.
+  const inCity = PORTFOLIO.filter((p) => p.location === m.cityState);
+  const nearCity = PORTFOLIO.filter(
+    (p) => p.location !== m.cityState && (m.nearby || []).some((n) => p.location === `${n}, ${m.region}`)
+  );
+  const installs = [...inCity, ...nearCity].slice(0, 6);
 
   // The sitewide LocalBusiness (layout.jsx, @id #business) already covers this
   // city in areaServed. Re-declaring LocalBusiness here with the SAME @id but a
@@ -95,11 +107,44 @@ export default async function LocationPage({ params }) {
             <div key={sec.heading}>
               <h2>{sec.heading}</h2>
               {sec.body.split(/\n\n+/).map((para, i) => (
-                <p key={i}>{para}</p>
+                <RichText key={i} text={para} />
               ))}
             </div>
           ))}
         </div>
+
+        {installs.length > 0 && (
+          <div className="mt-12">
+            <h2 className="text-2xl font-bold text-ink">
+              {inCity.length > 0 ? `Signs we've built in ${m.city}` : `Signs we've built near ${m.city}`}
+            </h2>
+            <p className="mt-2 text-steel">
+              Real installs from our{" "}
+              <Link href="/portfolio" className="font-medium text-signal-600 underline underline-offset-2 hover:text-ink">portfolio</Link>
+              {nearCity.length > 0 && inCity.length > 0 ? `, in ${m.city} and the cities next door.` : "."}
+            </p>
+            <div className="mt-6 grid gap-4 sm:grid-cols-2">
+              {installs.map((p) => (
+                <figure key={p.id} className="img-outline overflow-hidden rounded-sm border border-fog bg-white">
+                  <div className="relative aspect-[4/3]">
+                    <Image
+                      src={p.imageSrc}
+                      alt={`${p.signType} for ${p.title} in ${p.location}`}
+                      fill
+                      sizes="(max-width: 640px) 100vw, 384px"
+                      className="object-cover"
+                      style={p.objectPosition ? { objectPosition: p.objectPosition } : undefined}
+                    />
+                  </div>
+                  <figcaption className="px-4 py-3">
+                    <span className="block font-semibold text-ink">{p.title}</span>
+                    <span className="block text-sm text-steel">{p.signType} · {p.location}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        )}
 
         {m.faqs?.length > 0 && (
           <div className="mt-12">

@@ -232,9 +232,9 @@ export default function ChannelLettersSugarLandPage() {
           through the portal, and handle any county submittal. The letters are cut, wired, and
           tested lit in our Houston shop, then our own crew installs them and coordinates the
           final inspection. Illuminated channel letters are UL-certified and carry our 5-year
-          warranty on materials and workmanship. For more on the product itself, see our{" "}
+          warranty on materials and workmanship. For more on the product itself, see our page about{" "}
           <Link href="/services/channel-letters" className={link}>
-            channel letters page
+            channel letter signs in Houston
           </Link>{" "}
           or finished work in the{" "}
           <Link href="/portfolio" className={link}>

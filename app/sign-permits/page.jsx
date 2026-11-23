@@ -227,6 +227,12 @@ export default function SignPermitsPage() {
           order we run on every job: we confirm the criteria, prepare permit-ready drawings, submit
           to the right office above, and install after approval.
         </p>
+        <p className="mt-3 max-w-2xl leading-relaxed text-steel">
+          The permit package depends on the sign. See what goes into{" "}
+          <Link href="/services/channel-letters" className="font-medium text-ink underline decoration-fog underline-offset-2 hover:decoration-signal">channel letter signs</Link>,{" "}
+          <Link href="/services/monument-signs" className="font-medium text-ink underline decoration-fog underline-offset-2 hover:decoration-signal">monument signs</Link>, and{" "}
+          <Link href="/services/pole-signs" className="font-medium text-ink underline decoration-fog underline-offset-2 hover:decoration-signal">pole and pylon signs</Link>.
+        </p>
         <div className="mt-6 flex flex-col gap-3 sm:flex-row">
           <Link href="/quote" className="btn btn-primary">Get My Permit-Ready Quote</Link>
           <PhoneLink className="btn btn-outline-dark" label={`Call ${BUSINESS.phone}`} />

@@ -63,7 +63,7 @@ The business owners who get tripped up usually order a sign first and deal with 
 3. **Get a permit-ready drawing** that documents dimensions and mounting.
 4. **Submit and get approval** before fabrication starts.
 
-At [Houston Sign Crafters](/services/channel-letters), we handle this for you: we review your lease criteria, confirm city code, pull the permit, and only then build and install. It's the difference between a sign that goes up cleanly and one you pay for twice.
+At Houston Sign Crafters, we handle this for you on every [channel letter sign](/services/channel-letters) and [monument sign](/services/monument-signs) we build: we review your lease criteria, confirm city code, pull the permit, and only then build and install. It's the difference between a sign that goes up cleanly and one you pay for twice.
 
 Outside the Houston city limits? Every suburb runs this differently. See our jurisdiction-by-jurisdiction breakdown: [who issues sign permits in Houston, Katy, Sugar Land, The Woodlands, Pearland, Pasadena, and unincorporated Harris County](/sign-permits).
 

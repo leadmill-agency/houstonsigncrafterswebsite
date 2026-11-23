@@ -21,6 +21,8 @@ const GUIDES = {
       "The documents and drawings you'll need to submit",
       "How long approval really takes, and how to speed it up",
     ],
+    // The page that should rank for permit searches. The checklist supports it.
+    hub: { lead: "Need the rules for your city right now?", label: "Sign permits in Houston and the suburbs", href: "/sign-permits" },
   },
 };
 

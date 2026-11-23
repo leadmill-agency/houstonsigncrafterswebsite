@@ -151,7 +151,7 @@ const SERVICES = {
       {
         heading: "What counts as a storefront sign?",
         body:
-          "Four things, mostly. Channel letters are individually built, usually LED-lit letters mounted to your fascia, the standard for retail and restaurants. Cabinet signs (lightboxes) put your whole logo on one internally lit panel. Dimensional letters are non-lit cut letters for a cleaner, architectural look. Window graphics turn your glass into signage for hours, offers, and branding. Many storefronts combine two or more, like the letters-plus-cabinet builds you can see on [our work page](/portfolio).",
+          "Four things, mostly. [Channel letter signs](/services/channel-letters) are individually built, usually LED-lit letters mounted to your fascia, the standard for retail and restaurants. Cabinet signs (lightboxes) put your whole logo on one internally lit panel. Dimensional letters are non-lit cut letters for a cleaner, architectural look. Window graphics turn your glass into signage for hours, offers, and branding. Many storefronts combine two or more, like the letters-plus-cabinet builds you can see on [our work page](/portfolio).",
       },
       {
         heading: "Which type is right for my storefront?",
@@ -172,6 +172,16 @@ const SERVICES = {
         heading: "How is the sign built and installed?",
         body:
           "Lit letters are cut and bent in our Houston shop, wired with LED modules, and bench-tested before they ship. The full build process is on our [channel letters page](/services/channel-letters). On install day our own crew levels a full-size pattern on your fascia, mounts the sign, seals every penetration, and checks it lit. One crew from mockup to light-up, no subcontractors, and a 5-year warranty on the work.",
+      },
+      {
+        heading: "What if drivers can't see my storefront from the street?",
+        body:
+          "Letters on the building only work when people can see the building. If your storefront sits back from the road, add a sign at the street. A [monument sign](/services/monument-signs) at the driveway names your business at eye level for passing cars. In a shopping center, a tenant panel on the [pole or pylon sign](/services/pole-signs) does the same job. We can design both as one project, so the colors, the lighting, and the permit package all match.",
+      },
+      {
+        heading: "Already have a storefront sign that's dark or damaged?",
+        body:
+          "You may not need a new sign. We fix dead letters and failed lighting, reface faded cabinets, and retrofit older signs to LED, including signs other companies built. We diagnose the problem on site and give you an itemized quote for the fix. See how [sign repair in Houston](/services/sign-repair) works.",
       },
     ],
     faqs: [
@@ -531,14 +541,14 @@ const SERVICES = {
     icon: "pencil",
     img: "https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1200&q=75",
     testimonialIndex: 4,
-    metaTitle: "Interior Signs in Houston, TX",
+    metaTitle: "Lobby & Interior Office Signs in Houston, TX",
     metaDescription:
       "Custom interior signs in Houston, TX: lobby logo signs, office signage, ADA and wayfinding. In-house design and installation. Free 1-day quote.",
-    h1: "Interior Signs in Houston, TX",
+    h1: "Lobby & Interior Signs in Houston, TX",
     heroSubtitle:
       "Lobby logo signs, office and suite signage, ADA and wayfinding. A polished, on-brand interior.",
     answer:
-      "Interior signs are everything inside your space: the reception logo wall, dimensional letters, acrylic and metal wall signs, suite and office plaques, ADA room signs, wayfinding, hours on the door. They make a space feel finished and tell people they're in the right place. We design, build, and install the whole interior package for offices, medical and dental practices, retail, restaurants, and gyms, color-matched to your brand and mounted clean. Quote's back in a business day.",
+      "Interior signs are everything inside your space: the reception logo wall, dimensional letters, acrylic and metal wall signs, suite and office signs, ADA room signs, wayfinding, hours on the door. They make a space feel finished and tell people they're in the right place. We design, build, and install the whole interior package for offices, medical and dental practices, retail, restaurants, and gyms, color-matched to your brand and mounted clean. Quote's back in a business day.",
     sections: [
       {
         heading: "What are interior signs?",
@@ -559,6 +569,31 @@ const SERVICES = {
         heading: "Can you brand our whole office?",
         body:
           "Absolutely. Many clients start with a reception logo sign and add suite signs, wayfinding, conference-room names, and wall graphics for a cohesive, branded interior. We can design the full package so everything coordinates, and install it on your schedule with minimal disruption.",
+      },
+      {
+        heading: "What kinds of lobby signs do Houston offices choose?",
+        body:
+          "Most lobby signs are one of four builds. Flat-cut acrylic letters mount straight to the wall and suit a clean, modern office. Dimensional metal letters, brushed or painted, add depth and look at home in a law firm or a corporate reception area. An acrylic panel on standoffs carries a full-color logo and works well on glass or textured walls. A lit logo sign, halo-lit or face-lit, makes the wall behind the front desk the first thing a visitor sees. We show you the options on a photo of your own wall, so you can compare them before anything is built.",
+      },
+      {
+        heading: "Lit or non-lit: which lobby sign fits your wall?",
+        body:
+          "Non-lit letters cost less and need nothing behind the wall. They suit most offices with good lobby lighting. A lit sign needs a power source behind or near the wall, so we check for one at the site survey. If there is no power, we tell you what it takes to add it, or we design a non-lit sign that still stands out. Halo-lit letters glow softly against the wall and look best on a matte surface. Polished stone or glass behind the letters can reflect the LEDs, and we plan for that in the mockup.",
+      },
+      {
+        heading: "How does a lobby sign project work in a leased office?",
+        body:
+          "Most office buildings have rules for tenant signs, and the property manager has to approve the design. We help with landlord approvals. We read the building's sign criteria, design inside its size and finish limits, and prepare the drawing the manager needs. After approval, the sign is built in our Houston shop. We schedule the install around your business hours, and it usually takes about one day.",
+      },
+      {
+        heading: "Do you make wayfinding signs?",
+        body:
+          "Yes. Wayfinding signs point visitors to suites, elevators, restrooms, and exits. We plan the set from your floor plan, so each sign sits where a visitor has to choose a direction. The signs share one look with your lobby sign: the same colors, type, and finish. Signs that identify permanent rooms follow ADA rules for raised characters, braille, and contrast.",
+      },
+      {
+        heading: "Can you sign a whole building, inside and out?",
+        body:
+          "Yes. Contractors, developers, and property managers often want one company for the full sign package. That means the sign at the street, the letters on the building, the lobby sign, and the room signs inside. We design them together so the colors, type, and finishes match, and you deal with one team and one schedule. Start outside with [channel letter signs](/services/channel-letters) or a [monument sign](/services/monument-signs), then carry the same look indoors. See how we work with [property managers](/property-managers) and [general contractors](/general-contractors). When a sign needs service later, we handle [sign repair](/services/sign-repair) too.",
       },
     ],
     faqs: [
@@ -601,12 +636,12 @@ const SERVICES = {
     heroSubtitle:
       "Dark letters, cracked faces, storm damage, tired cabinets — we diagnose, repair, and refurbish commercial signs across Houston, including signs we didn't build.",
     answer:
-      "A dark or damaged sign costs you customers every night it stays broken — and it tells everyone driving past that the business behind it isn't paying attention. We repair and refurbish commercial signs across the Houston area: channel letters with dead sections, cabinets with failed lighting, cracked or faded faces, storm and wind damage, and rusted or peeling structures that need a refresh instead of a replacement. You don't need to know what's wrong — we diagnose on site, then give you an itemized quote that says exactly what failed and what fixing it costs. And yes, we work on signs other companies built.",
+      "A dark or damaged sign costs you customers every night it stays broken — and it tells everyone driving past that the business behind it isn't paying attention. We handle sign repair and refurbishment in Houston and across the metro area: channel letters with dead sections, cabinets with failed lighting, cracked or faded faces, storm and wind damage, and rusted or peeling structures that need a refresh instead of a replacement. You don't need to know what's wrong — we diagnose on site, then give you an itemized quote that says exactly what failed and what fixing it costs. And yes, we work on signs other companies built.",
     sections: [
       {
         heading: "What sign problems do you repair?",
         body:
-          "The most common calls: letters or whole sections gone dark, flickering or dim lighting, cracked or fallen acrylic faces, water intrusion after a storm, cabinets damaged by wind or vehicles, and electrical faults that trip breakers. On older signs the usual culprit is the lighting system itself — failing transformers, ballasts, or aging neon. We open the sign, find the actual fault rather than guessing, and repair it with the same UL-listed components we use in our new builds.",
+          "The most common calls: [channel letter signs](/services/channel-letters) with letters or whole sections gone dark, flickering or dim lighting, cracked or fallen acrylic faces, water intrusion after a storm, cabinets damaged by wind or vehicles, and electrical faults that trip breakers. On older signs the usual culprit is the lighting system itself — failing transformers, ballasts, or aging neon. We open the sign, find the actual fault rather than guessing, and repair it with the same UL-listed components we use in our new builds.",
       },
       {
         heading: "Is an LED retrofit worth it for an older sign?",

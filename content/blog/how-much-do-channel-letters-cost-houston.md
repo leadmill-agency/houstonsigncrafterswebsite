@@ -29,7 +29,7 @@ keywords: ["how much do channel letters cost houston", "channel letter sign cost
 | Raceway-mounted sets | $3,500 – $18,000+ | Letters on a painted aluminum box that carries the wiring. Many landlords require it. |
 | Custom logo systems | $5,000 – $25,000+ | Letters plus a fabricated, illuminated logo element, like the sets in [our portfolio](/portfolio). |
 
-These ranges cover the whole project: fabrication, permitting, and installation. Where your sign lands inside a range comes down to the factors below.
+These ranges cover the whole project: fabrication, permitting, and installation. Where your sign lands inside a range comes down to the factors below. For how the letters are built, lit, and mounted, see our page on [channel letter signs in Houston](/services/channel-letters).
 
 ## What actually drives the price
 

@@ -246,9 +246,9 @@ export default function ChannelLettersKatyPage() {
           engineering drawing before the permit is issued, and we coordinate licensed structural
           engineers when code or landlord requires one. Electrical hookups meet local code and are
           inspected by a licensed electrician, scheduled alongside installation so power and
-          inspection line up with your opening date. Learn more about the product itself on our{" "}
+          inspection line up with your opening date. Learn more about the product itself on our page about{" "}
           <Link href="/services/channel-letters" className="underline decoration-fog underline-offset-2 hover:decoration-signal">
-            channel letters service page
+            channel letter signs in Houston
           </Link>{" "}
           or see the{" "}
           <Link href="/portfolio" className="underline decoration-fog underline-offset-2 hover:decoration-signal">
