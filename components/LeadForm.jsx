@@ -5,7 +5,7 @@ import { useRouter } from "next/navigation";
 import { submitLead } from "@/lib/leads";
 import { trackEvent, trackPixel, trackOaiq } from "@/lib/analytics";
 import { ATTRIBUTION_FIELDS, getAttribution } from "@/lib/attribution";
-import { preparePhotos, setInputFiles, MAX_PHOTOS } from "@/lib/photo";
+import { preparePhotos, setInputFiles, MAX_PHOTOS, MAX_TOTAL_BYTES } from "@/lib/photo";
 
 const initialState = { ok: null, errors: {}, message: "" };
 
@@ -45,6 +45,14 @@ export default function LeadForm({
 
   const showPhotos = kind !== "guide";
   const photoInput = useRef(null);
+  // The file input stays disabled until this script is running. A photo picked
+  // before then would skip the shrink step and could be too big to upload,
+  // which would fail the whole form. A disabled input is also left out of a
+  // no-script submit, so that path still delivers the lead.
+  const [photosReady, setPhotosReady] = useState(false);
+  useEffect(() => {
+    setPhotosReady(true);
+  }, []);
   // [{ name, url }] previews of what is attached right now.
   const [photos, setPhotos] = useState([]);
   const [photoBusy, setPhotoBusy] = useState(false);
@@ -77,6 +85,20 @@ export default function LeadForm({
       setPhotoNote(`We attached ${files.length}. The form takes up to ${MAX_PHOTOS} photos.`);
     }
     setPhotoBusy(false);
+  }
+
+  // Last line of defence at submit time: never send an upload that is too
+  // big to get through, whatever state the file input is in.
+  function guardPhotoSize(e) {
+    const input = photoInput.current;
+    if (!input?.files?.length) return;
+    const total = Array.from(input.files).reduce((sum, f) => sum + f.size, 0);
+    if (total <= MAX_TOTAL_BYTES) return;
+    e.preventDefault();
+    input.value = "";
+    photoFiles.current = [];
+    showAttached([]);
+    setPhotoNote("That photo was too large to attach. Press the button again to send the form without it.");
   }
 
   function removePhoto(i) {
@@ -120,6 +142,7 @@ export default function LeadForm({
     <form
       ref={formRef}
       action={formAction}
+      onSubmit={guardPhotoSize}
       className={`rounded-sm border border-fog bg-white p-6 text-left md:p-8 ${className}`}
     >
       {heading && (
@@ -174,6 +197,7 @@ export default function LeadForm({
                 name="photos"
                 accept="image/*"
                 multiple
+                disabled={!photosReady}
                 onChange={onPhotosPicked}
                 className="sr-only"
               />
