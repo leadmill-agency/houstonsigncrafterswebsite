@@ -24,7 +24,7 @@ export default function TrustBar({ tone = "light", className = "", points }) {
         ]
       : []),
     ...list.map((p) => (
-      <span key={p} className="whitespace-nowrap font-display text-xs font-semibold uppercase tracking-wide">
+      <span key={p} className="whitespace-nowrap text-sm font-semibold">
         {p}
       </span>
     )),

@@ -66,13 +66,12 @@ export default async function LandingPage({ params }) {
 
         <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 lg:grid-cols-2 lg:gap-10 lg:py-16">
           <div className="flex flex-col justify-center">
-            <p className="eyebrow mb-3 text-signal">{lp.eyebrow}</p>
             <h1 className="text-4xl font-bold leading-[1.02] sm:text-5xl">{lp.headline}</h1>
             <p className="mt-4 max-w-xl text-lg text-white/80">{lp.subhead}</p>
             <OfferBadge tone="dark" className="mt-5 self-start" />
             <ul className="mt-5 space-y-2">
               {lp.bullets.map((b) => (
-                <li key={b} className="flex items-start gap-2.5 text-white/90">
+                <li key={b} className="flex items-start gap-2.5 text-white/80">
                   <span className="mt-2 h-2 w-2 flex-shrink-0 bg-signal" aria-hidden="true" />
                   <span>{b}</span>
                 </li>
@@ -83,9 +82,9 @@ export default async function LandingPage({ params }) {
 
           <div className="flex items-center">
             <div className="w-full">
-              <div className="eyebrow mb-3 text-center text-white/80">Free design mockup within 1 business day</div>
+              <div className="mb-3 text-center font-display text-lg font-semibold text-white">Free design mockup within 1 business day</div>
               <LeadForm kind={lp.formKind || "quote"} submitLabel={lp.cta || "Get My Free Quote"} showSignType showMessage={false} />
-              <p className="mt-3 text-center text-sm text-white/70">
+              <p className="mt-3 text-center text-sm text-white/80">
                 Or <PhoneLink className="font-semibold text-white underline underline-offset-2" showIcon={false} />
               </p>
             </div>
@@ -94,10 +93,10 @@ export default async function LandingPage({ params }) {
       </section>
 
       {/* Trust strip */}
-      <section className="border-b border-fog bg-ink">
+      <section className="bg-ink">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-7 gap-y-2 px-4 py-4 sm:px-6">
           {["In-house fabrication", "Permits handled", "Licensed install", "5-Year Warranty", "UL-Certified"].map((t) => (
-            <span key={t} className="inline-flex items-center gap-2.5 font-display text-xs font-semibold uppercase tracking-wide text-white">
+            <span key={t} className="inline-flex items-center gap-2.5 text-sm font-semibold text-white">
               <span className="h-1.5 w-1.5 bg-signal" aria-hidden="true" />
               {t}
             </span>
@@ -107,7 +106,6 @@ export default async function LandingPage({ params }) {
 
       {/* The work */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <p className="eyebrow text-signal-600">Recent work</p>
         <h2 className="mt-1 text-3xl font-bold text-ink">Signs we've built for Houston businesses</h2>
         <div className="mt-8">
           <PortfolioGallery limit={6} />
@@ -115,14 +113,13 @@ export default async function LandingPage({ params }) {
       </section>
 
       {/* What you get */}
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <h2 className="text-3xl font-bold text-ink">What you get</h2>
           <div className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-4">
-            {WHAT_YOU_GET.map((item, i) => (
-              <div key={item.t} className="border-t-2 border-ink pt-4">
-                <span className="font-display text-2xl font-bold text-signal-600">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="mt-1 text-lg font-semibold text-ink">{item.t}</h3>
+            {WHAT_YOU_GET.map((item) => (
+              <div key={item.t} className="">
+                <h3 className="text-lg font-semibold text-ink">{item.t}</h3>
                 <p className="mt-1.5 text-sm leading-relaxed text-steel">{item.b}</p>
               </div>
             ))}
@@ -134,10 +131,9 @@ export default async function LandingPage({ params }) {
       <section className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
         <h2 className="text-3xl font-bold text-ink">How it works</h2>
         <ol className="mt-8 grid gap-x-8 gap-y-8 sm:grid-cols-3">
-          {STEPS.map((s, i) => (
-            <li key={s.t} className="border-t-2 border-ink pt-4">
-              <span className="font-display text-3xl font-bold text-signal-600">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="mt-1 text-lg font-semibold text-ink">{s.t}</h3>
+          {STEPS.map((s) => (
+            <li key={s.t} className="">
+              <h3 className="text-lg font-semibold text-ink">{s.t}</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-steel">{s.b}</p>
             </li>
           ))}
@@ -148,7 +144,7 @@ export default async function LandingPage({ params }) {
       <section className="bg-signal">
         <div className="mx-auto max-w-3xl px-4 py-14 text-center sm:px-6">
           <h2 className="text-3xl font-bold text-white sm:text-4xl">Ready for a sign that gets noticed?</h2>
-          <p className="mx-auto mt-3 max-w-xl text-white/85">
+          <p className="mx-auto mt-3 max-w-xl text-white/80">
             Send a photo and a rough size. You'll have a real quote in your inbox within one business
             day. {BUSINESS.offer?.label ? `Mention this ad for ${BUSINESS.offer.label.toLowerCase()}.` : ""}
           </p>
@@ -156,19 +152,19 @@ export default async function LandingPage({ params }) {
             <a href="#top" className="btn bg-white text-signal-600 hover:bg-white/90">Get My Free Quote</a>
             <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
           </div>
-          <p className="mt-5 text-sm font-semibold uppercase tracking-wide text-white/80">
+          <p className="mt-5 text-sm font-semibold text-white/80">
             We only take a handful of new installs a week. Get your spot.
           </p>
         </div>
       </section>
 
       {/* Minimal footer */}
-      <footer className="bg-ink text-white/70">
+      <footer className="bg-ink text-white/80">
         <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-4 py-6 text-sm sm:flex-row sm:px-6">
           <span>© {new Date().getFullYear()} {BUSINESS.legalName} · Houston, TX</span>
           <span className="flex items-center gap-4">
             <a href={BUSINESS.phoneHref} className="font-semibold text-white">{BUSINESS.phone}</a>
-            <span className="text-white/50">{BUSINESS.hoursLabel}</span>
+            <span className="text-white/60">{BUSINESS.hoursLabel}</span>
           </span>
         </div>
       </footer>

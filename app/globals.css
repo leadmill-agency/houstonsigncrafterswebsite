@@ -47,15 +47,6 @@ h1, h2, h3 {
   text-wrap: balance; /* keep the last line from orphaning a single word */
 }
 
-/* Section eyebrow — small industrial label */
-.eyebrow {
-  font-family: var(--font-display);
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  font-size: 0.72rem;
-}
-
 /* --- Buttons: squared, uppercase, chunky (physical/industrial) --- */
 .btn {
   display: inline-flex;
@@ -127,28 +118,17 @@ h1, h2, h3 {
 
 /* --- Reusable content components --- */
 
-/* Answer-first block — clean white panel with a heavy blue rule, no gradient box */
+/* Answer-first block: a plain lead paragraph. It used to be a white panel
+   with a blue rule and a "Short answer" label; both read as template
+   furniture (design pass 2026-11-24). The text and its position are what
+   matter to search engines, so those are unchanged. */
 .answer-block {
-  border-left: 5px solid var(--color-signal);
-  background: #fff;
-  padding: 20px 26px;
-  margin: 0 0 32px;
-}
-.answer-block::before {
-  content: "Short answer";
-  display: block;
-  font-family: var(--font-display);
-  font-size: 0.72rem;
-  text-transform: uppercase;
-  letter-spacing: 0.16em;
-  font-weight: 600;
-  color: var(--color-signal-600);
-  margin-bottom: 8px;
+  margin: 0 0 28px;
 }
 .answer-block p {
-  font-size: 16.5px;
-  line-height: 1.7;
-  color: var(--color-carbon);
+  font-size: 1.15rem;
+  line-height: 1.65;
+  color: var(--color-ink);
   margin: 0;
 }
 
@@ -195,9 +175,7 @@ h1, h2, h3 {
   padding: 14px 4px;
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: 0.85rem;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 0.95rem;
   color: var(--color-signal-600);
   cursor: pointer;
   list-style: none;
@@ -251,8 +229,6 @@ h1, h2, h3 {
   text-align: left;
   font-family: var(--font-display);
   font-size: 0.78rem;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
   background: var(--color-ink);
   color: #fff;
   padding: 10px 14px;

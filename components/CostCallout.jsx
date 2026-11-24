@@ -17,7 +17,6 @@ export default function CostCallout({ slug }) {
   return (
     <section className="bg-ink text-white">
       <div className="mx-auto max-w-5xl px-4 py-14 sm:px-6">
-        <p className="eyebrow text-signal">Real talk</p>
         <h2 className="mt-1 text-3xl font-bold sm:text-4xl">What does it cost?</h2>
         <div className="mt-6 grid gap-6 text-lg leading-relaxed text-white/80 md:grid-cols-2">
           <div>

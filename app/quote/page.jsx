@@ -34,7 +34,7 @@ export default function QuotePage() {
               </li>
             ))}
           </ul>
-          <div className="mt-8 rounded-sm border border-fog bg-cloud p-4 text-sm text-steel">
+          <div className="mt-8 rounded-sm bg-cloud p-4 text-sm text-steel">
             Prefer to talk? Call{" "}
             <PhoneLink className="font-semibold text-ink" showIcon={false} /> · {BUSINESS.hoursLabel}
           </div>

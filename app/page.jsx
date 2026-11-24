@@ -66,8 +66,8 @@ export default function HomePage() {
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-28">
           <div className="stagger-in flex flex-col justify-center">
             {/* The claim leads; the SEO phrase lives in the first body sentence. */}
-            <h1 className="text-5xl font-bold leading-[0.98] sm:text-6xl lg:text-7xl">Signs built in our own shop.</h1>
-            <p className="mt-5 max-w-lg text-lg text-white/85">
+            <h1 className="text-5xl font-bold leading-[0.98] sm:text-6xl lg:text-7xl">Signs built in our own shop</h1>
+            <p className="mt-5 max-w-lg text-lg text-white/80">
               A Houston sign company that does the whole job on custom business signs:{" "}
               <Link href="/services/channel-letters" className="hover:underline hover:underline-offset-2">channel letters in Houston</Link>,{" "}
               <Link href="/services/monument-signs" className="hover:underline hover:underline-offset-2">monument signs</Link>, and{" "}
@@ -80,7 +80,7 @@ export default function HomePage() {
             </div>
             <OfferBadge tone="dark" className="mt-5" />
             {/* Three items that fit one line; the full list lives on /about. */}
-            <TrustBar tone="dark" className="mt-6" points={["5-Year Warranty", "Built in Houston"]} />
+            <TrustBar tone="dark" className="mt-6" points={["5-year warranty", "Built in Houston"]} />
           </div>
 
           <div className="flex items-center">
@@ -123,7 +123,7 @@ export default function HomePage() {
                 <Link href="/locations/the-woodlands-tx" className={inlineLink}>The Woodlands</Link>, and nearby cities.
               </p>
             </div>
-            <Link href="/portfolio" className="group inline-flex items-center gap-1.5 font-display text-sm font-semibold uppercase tracking-wide text-signal-600 transition-colors hover:text-ink">
+            <Link href="/portfolio" className="group inline-flex items-center gap-1.5 font-display text-sm font-semibold text-signal-600 transition-colors hover:text-ink">
               See all our work
               <span className="transition-transform duration-200 ease-[cubic-bezier(0.2,0,0,1)] group-hover:translate-x-1">→</span>
             </Link>
@@ -134,13 +134,13 @@ export default function HomePage() {
 
       {/* Who you'll talk to + why in-house matters. One section instead of two
           that made the same claim (design critique 2026-10-08). Copy verbatim. */}
-      <section className="border-b border-fog bg-white">
+      <section className="bg-white">
         <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-cloud lg:sticky lg:top-32">
             <Image src={team.photo} alt={team.name ? `${team.name}, ${team.title} at Houston Sign Crafters` : "The Houston Sign Crafters crew and work truck on a job site"} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           </div>
           <div>
-            <h2 className="text-4xl font-bold text-ink sm:text-5xl">A real sign maker picks up.</h2>
+            <h2 className="text-4xl font-bold text-ink sm:text-5xl">A real sign maker picks up</h2>
             <p className="mt-4 text-lg leading-relaxed text-steel">
               {team.name
                 ? `Most days that's ${team.name}, our ${team.title.toLowerCase()}, who ${team.note}.`
@@ -158,7 +158,7 @@ export default function HomePage() {
             <p className="mt-3 text-lg leading-relaxed text-steel">We're an actual shop. The cutting, welding, wiring, painting, and printing all happen here in Houston, done by the same people who answer your call and climb the ladder on install day. If something's off, there's nobody to point at but us. That's the point.</p>
             <div className="mt-7 flex flex-wrap gap-x-7 gap-y-3">
               {PROOF.map((p) => (
-                <span key={p} className="inline-flex items-center gap-2.5 font-display text-sm font-semibold uppercase tracking-wide text-ink">
+                <span key={p} className="inline-flex items-center gap-2.5 font-display text-sm font-semibold text-ink">
                   <span className="h-2.5 w-2.5 bg-ink" aria-hidden="true" />
                   {p}
                 </span>
@@ -196,7 +196,7 @@ export default function HomePage() {
                 />
               </div>
             </div>
-            <span className="absolute left-4 top-4 bg-ink/85 px-3 py-1.5 font-display text-xs font-semibold uppercase tracking-wide text-white">
+            <span className="absolute left-4 top-4 bg-ink/85 px-3 py-1.5 text-sm font-semibold text-white">
               Built + installed by our crew
             </span>
           </div>
@@ -204,10 +204,9 @@ export default function HomePage() {
           <div>
             <h2 className="text-4xl font-bold text-ink">What's included</h2>
             <p className="mt-2 max-w-xl text-steel">Every project includes the whole thing, start to finish.</p>
-            <ol className="mt-8 divide-y divide-fog">
-              {WHAT_YOU_GET.map((item, i) => (
-                <li key={item.t} className="flex items-start gap-4 py-4 first:pt-0 last:pb-0">
-                  <span className="font-display text-xl font-bold leading-7 text-ink/40">{String(i + 1).padStart(2, "0")}</span>
+            <ol className="mt-8">
+              {WHAT_YOU_GET.map((item) => (
+                <li key={item.t} className="py-3.5 first:pt-0 last:pb-0">
                   <div>
                     <h3 className="font-semibold text-ink">{item.t}</h3>
                     <p className="mt-0.5 text-sm leading-relaxed text-steel">{item.b}</p>
@@ -233,9 +232,9 @@ export default function HomePage() {
                 { label: "Most lit storefront sets", value: "$4,000 – $12,000" },
                 { label: "Monument signs", value: formatRange(PRICING.find((r) => r.serviceSlug === "monument-signs")) },
               ].map((s) => (
-                <div key={s.label} className="border-l-2 border-signal pl-4">
+                <div key={s.label}>
                   <dd className="font-display text-3xl font-bold leading-none text-white sm:text-4xl">{s.value}</dd>
-                  <dt className="mt-2 text-sm text-white/70">{s.label}</dt>
+                  <dt className="mt-2 text-sm text-white/80">{s.label}</dt>
                 </div>
               ))}
             </dl>
@@ -277,7 +276,7 @@ export default function HomePage() {
                 className="object-cover"
               />
             </div>
-            <figcaption className="mt-3 font-display text-xs font-semibold uppercase tracking-wide text-white/60">
+            <figcaption className="mt-3 text-sm font-semibold text-white/60">
               Monument sign, Kirkwood Tech Center · built and installed by our crew
             </figcaption>
           </figure>
@@ -286,17 +285,16 @@ export default function HomePage() {
 
       {/* Process: a vertical timeline beside a night install, instead of four
           equal numbered columns. The 6-week figure is owner-verified (brand kit). */}
-      <section className="border-b border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto grid max-w-6xl gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[1fr_0.8fr] lg:gap-16">
           <div>
             <h2 className="text-4xl font-bold text-ink sm:text-5xl">How a sign gets made</h2>
             <p className="mt-2 max-w-xl text-steel">No mystery, no runaround. Here's the whole thing.</p>
             <ol className="mt-10 border-l-2 border-ink/15">
-              {STEPS.map((s, i) => (
+              {STEPS.map((s) => (
                 <li key={s.title} className="relative pb-9 pl-8 last:pb-0">
                   <span className="absolute -left-[9px] top-1 h-4 w-4 bg-ink" aria-hidden="true" />
-                  <span className="font-display text-xs font-semibold uppercase tracking-[0.18em] text-steel">Step {i + 1}</span>
-                  <h3 className="mt-1 text-2xl font-semibold text-ink">{s.title}</h3>
+                  <h3 className="text-2xl font-semibold text-ink">{s.title}</h3>
                   <p className="mt-2 max-w-lg leading-relaxed text-steel">{s.body}</p>
                 </li>
               ))}
@@ -322,7 +320,7 @@ export default function HomePage() {
 
       {/* Repair: the one contextual link the repair page was missing. It did not
           rank for "sign repair houston"; the homepage did (organic plan 2026-11-23). */}
-      <section className="border-b border-fog bg-white">
+      <section className="bg-white">
         <div className="mx-auto flex max-w-6xl flex-col gap-5 px-4 py-12 sm:px-6 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
           <div className="max-w-2xl">
             <h2 className="text-3xl font-bold text-ink">Already have a sign that's dark or damaged?</h2>
@@ -344,7 +342,7 @@ export default function HomePage() {
         <p className="mt-2 text-steel">Based in Houston, on the road across the metro most days.</p>
         <div className="mt-6 flex flex-wrap gap-2.5">
           {markets.map((m) => (
-            <Link key={m.slug} href={`/locations/${m.slug}`} className="rounded-sm border border-fog bg-white px-4 py-2 text-sm font-semibold text-ink transition-colors hover:border-ink">
+            <Link key={m.slug} href={`/locations/${m.slug}`} className="rounded-sm bg-white px-4 py-2 text-sm font-semibold text-ink transition-colors hover:bg-cloud">
               {m.city}
             </Link>
           ))}
@@ -361,7 +359,7 @@ export default function HomePage() {
       <section className="bg-white">
         <div className="mx-auto max-w-3xl px-4 py-16 sm:px-6">
           <h2 className="mb-8 text-4xl font-bold text-ink">Questions we get a lot</h2>
-          <Faq items={HOME_FAQS} heading={null} />
+          <Faq items={HOME_FAQS} heading={null} initialVisible={8} />
         </div>
       </section>
 
@@ -377,7 +375,7 @@ export default function HomePage() {
         <div className="absolute inset-0 -z-10 bg-ink/70" />
         <div className="mx-auto max-w-4xl px-4 py-28 text-center sm:px-6 lg:py-36">
           <h2 className="text-4xl font-bold sm:text-6xl">Got a wall that needs a sign?</h2>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-white/85">
+          <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">
             Send a photo and a rough size. You'll have a real quote in your inbox within one business
             day. An actual number, not a runaround.
           </p>
@@ -385,7 +383,7 @@ export default function HomePage() {
             <Link href="/quote" className="btn btn-primary btn-lg">Get My Free Quote</Link>
             <PhoneLink className="btn btn-outline-light btn-lg" label={`Call ${BUSINESS.phone}`} />
           </div>
-          <p className="mt-6 text-sm font-semibold uppercase tracking-wide text-white/75">
+          <p className="mt-6 text-sm font-semibold text-white/80">
             We only take a handful of new installs a week. Get your spot.
           </p>
         </div>

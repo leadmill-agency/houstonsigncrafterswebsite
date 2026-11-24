@@ -26,7 +26,7 @@ export default function Testimonials({ limit = 6, heading = "What Houston busine
   };
 
   return (
-    <section className="border-y border-fog bg-cloud">
+    <section className="bg-cloud">
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
         <div className="flex flex-wrap items-end justify-between gap-4">
           <h2 className="text-3xl font-bold text-ink sm:text-4xl">{heading}</h2>
@@ -36,25 +36,25 @@ export default function Testimonials({ limit = 6, heading = "What Houston busine
           </p>
         </div>
         <div className="mt-8 grid gap-6 lg:grid-cols-[1.35fr_1fr]">
-          <figure className="flex flex-col justify-between border-l-4 border-signal bg-white p-7 sm:p-9">
+          <figure className="flex flex-col justify-between bg-white p-7 sm:p-9">
             <div>
               <Stars n={lead.rating} />
               <blockquote className="mt-4 font-display text-2xl font-semibold leading-snug text-ink sm:text-3xl">
                 &ldquo;{lead.quote}&rdquo;
               </blockquote>
             </div>
-            <figcaption className="mt-6 text-xs font-semibold uppercase tracking-wide text-steel">
+            <figcaption className="mt-6 text-sm font-semibold text-steel">
               {lead.name} · {lead.platform}
             </figcaption>
           </figure>
           <div className="grid gap-6">
             {rest.map((t) => (
-              <figure key={t.name} className="flex flex-col border border-fog bg-white p-6">
+              <figure key={t.name} className="flex flex-col bg-white p-6">
                 <Stars n={t.rating} />
                 <blockquote className="mt-3 flex-1 text-sm leading-relaxed text-carbon">
                   &ldquo;{t.quote}&rdquo;
                 </blockquote>
-                <figcaption className="mt-4 text-xs font-semibold uppercase tracking-wide text-steel">
+                <figcaption className="mt-4 text-sm font-semibold text-steel">
                   {t.name} · {t.platform}
                 </figcaption>
               </figure>

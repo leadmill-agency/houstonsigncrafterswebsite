@@ -9,7 +9,7 @@ import LeadForm from "@/components/LeadForm";
 import PhoneLink from "@/components/PhoneLink";
 import Faq from "@/components/Faq";
 import ReviewedBy from "@/components/ReviewedBy";
-import RichText from "@/components/RichText";
+import FoldedSections from "@/components/FoldedSections";
 import PORTFOLIO from "@/data/portfolio";
 
 // Cities that have their own channel-letter guide. The location page links to
@@ -88,13 +88,13 @@ export default async function LocationPage({ params }) {
 
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:py-16">
-          <nav className="mb-4 text-sm text-white/50">
+          <nav className="mb-4 text-sm text-white/60">
             <Link href="/" className="hover:text-white">Home</Link> ·{" "}
             <Link href="/locations" className="hover:text-white">Service Areas</Link> ·{" "}
             <span className="text-white/80">{m.city}</span>
           </nav>
           <h1 className="text-3xl font-bold leading-tight sm:text-4xl">{m.h1}</h1>
-          <p className="mt-4 max-w-2xl text-lg text-white/75">{m.intro}</p>
+          <p className="mt-4 max-w-2xl text-lg text-white/80">{m.intro}</p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Link href="/quote" className="btn btn-primary">
               Get My Free Quote
@@ -110,16 +110,7 @@ export default async function LocationPage({ params }) {
         </div>
         <ReviewedBy />
 
-        <div className="prose-content">
-          {m.sections.map((sec) => (
-            <div key={sec.heading}>
-              <h2>{sec.heading}</h2>
-              {sec.body.split(/\n\n+/).map((para, i) => (
-                <RichText key={i} text={para} />
-              ))}
-            </div>
-          ))}
-        </div>
+        <FoldedSections sections={m.sections} open={3} topic={`signs in ${m.city}`} />
 
         {installs.length > 0 && (
           <div className="mt-12">
@@ -133,7 +124,7 @@ export default async function LocationPage({ params }) {
             </p>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               {installs.map((p) => (
-                <figure key={p.id} className="img-outline overflow-hidden rounded-sm border border-fog bg-white">
+                <figure key={p.id} className="overflow-hidden rounded-sm bg-white">
                   <div className="relative aspect-[4/3]">
                     <Image
                       src={p.imageSrc}
@@ -161,7 +152,7 @@ export default async function LocationPage({ params }) {
         )}
 
         {CHANNEL_LETTER_GUIDES[slug] && (
-          <p className="mt-10 rounded-sm border border-fog bg-cloud p-5 text-steel">
+          <p className="mt-10 rounded-sm bg-cloud p-5 text-steel">
             Planning lit letters for a storefront? Our guide to{" "}
             <Link href={CHANNEL_LETTER_GUIDES[slug]} className="font-medium text-signal-600 underline underline-offset-2 hover:text-ink">
               channel letter signs in {m.city}
@@ -173,7 +164,7 @@ export default async function LocationPage({ params }) {
         <h2 className="mb-4 mt-12 text-2xl font-bold text-ink">Sign services in {m.city}</h2>
         <div className="grid gap-4 sm:grid-cols-2">
           {services.map((s) => (
-            <Link key={s.slug} href={`/services/${s.slug}`} className="flex items-center gap-3 rounded-sm border border-fog p-4 hover:border-ink">
+            <Link key={s.slug} href={`/services/${s.slug}`} className="flex items-center gap-3 rounded-sm bg-white p-4 hover:bg-cloud">
               <span className="font-medium text-ink">{s.shortName}</span>
             </Link>
           ))}
@@ -185,7 +176,7 @@ export default async function LocationPage({ params }) {
           </p>
         )}
 
-        <div className="mt-10 rounded-sm border border-fog bg-cloud p-6">
+        <div className="mt-12">
           <h3 className="text-lg font-bold text-ink">Get a free quote in {m.city}</h3>
           <p className="mt-1 text-sm text-steel">Written quote within one business day.</p>
           <div className="mt-4">

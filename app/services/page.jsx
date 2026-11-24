@@ -31,7 +31,7 @@ export default function ServicesHub() {
               <h1 className="text-3xl font-bold leading-tight sm:text-4xl">
                 Sign Manufacturing and Installation in Houston
               </h1>
-              <p className="mt-4 text-lg text-white/75">
+              <p className="mt-4 text-lg text-white/80">
                 We manufacture every kind of business sign in our own Houston shop and install
                 it with our own crew: design, fabrication, permits, and installation from one
                 team, first sketch to final light-up.
@@ -50,7 +50,7 @@ export default function ServicesHub() {
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
-            <Link key={s.slug} href={`/services/${s.slug}`} className="group flex flex-col rounded-sm border border-fog p-6 transition-colors hover:border-ink">
+            <Link key={s.slug} href={`/services/${s.slug}`} className="group flex flex-col rounded-sm bg-white p-6 transition-colors hover:bg-cloud">
               <h2 className="font-semibold text-ink group-hover:text-signal-600">{s.name}</h2>
               <p className="mt-1 flex-1 text-sm text-steel">{s.heroSubtitle}</p>
               <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-signal-600">

@@ -126,9 +126,6 @@ export default function ChannelLettersSugarLandPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <section className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-signal-600">
-          Sugar Land, TX · Channel Letters
-        </p>
         <h1 className="text-4xl font-bold text-ink">Channel letter signs for Sugar Land storefronts</h1>
         <ReviewedBy className="mt-2" />
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-steel">
@@ -150,7 +147,7 @@ export default function ChannelLettersSugarLandPage() {
         </div>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-5xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">Three layers of approval in Sugar Land</h2>
           <p className="mt-3 max-w-2xl leading-relaxed text-steel">
@@ -159,12 +156,9 @@ export default function ChannelLettersSugarLandPage() {
             size, style, and lighting you can use.
           </p>
           <div className="mt-6 grid gap-4 md:grid-cols-3">
-            {LAYERS.map((layer, i) => (
-              <div key={layer.title} className="border border-fog bg-white p-5">
-                <p className="text-xs font-semibold uppercase tracking-wider text-signal-600">
-                  Layer {i + 1}
-                </p>
-                <h3 className="mt-1 font-semibold text-ink">{layer.title}</h3>
+            {LAYERS.map((layer) => (
+              <div key={layer.title} className="bg-white p-5">
+                <h3 className="font-semibold text-ink">{layer.title}</h3>
                 <p className="mt-2 text-[15px] leading-relaxed text-steel">{layer.body}</p>
               </div>
             ))}
@@ -203,7 +197,7 @@ export default function ChannelLettersSugarLandPage() {
         </p>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">Watch for the toll road rule</h2>
           <p className="mt-3 max-w-2xl leading-relaxed text-steel">
@@ -244,7 +238,7 @@ export default function ChannelLettersSugarLandPage() {
         </p>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <Faq items={FAQS} heading="Sugar Land channel letter questions" />
         </div>

@@ -120,9 +120,6 @@ export default function ChannelLettersKatyPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <section className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-signal-600">
-          Katy, TX · Channel Letters
-        </p>
         <h1 className="text-4xl font-bold text-ink">Channel letter signs in Katy, TX</h1>
         <ReviewedBy className="mt-2" />
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-steel">
@@ -147,7 +144,7 @@ export default function ChannelLettersKatyPage() {
         </div>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">
             Four jurisdictions, one trade area: how Katy permitting works
@@ -196,7 +193,7 @@ export default function ChannelLettersKatyPage() {
         </p>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">
             Our process: call, survey, mockup with itemized estimate
@@ -223,11 +220,9 @@ export default function ChannelLettersKatyPage() {
                 "Fabrication and install",
                 "We fabricate in our Houston shop to UL standards, coordinate a licensed electrician for final wiring, install with our own crews, and provide the documentation needed to close the permit.",
               ],
-            ].map(([title, body], i) => (
+            ].map(([title, body]) => (
               <li key={title} className="flex items-start gap-4">
-                <span className="mt-0.5 flex h-7 w-7 flex-shrink-0 items-center justify-center bg-signal text-sm font-bold text-white">
-                  {i + 1}
-                </span>
+                <span className="mt-2 h-2 w-2 flex-shrink-0 bg-signal" aria-hidden="true" />
                 <div>
                   <h3 className="font-semibold text-ink">{title}</h3>
                   <p className="mt-1 text-[15px] leading-relaxed text-steel">{body}</p>
@@ -263,7 +258,7 @@ export default function ChannelLettersKatyPage() {
         </p>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <Faq items={FAQS} heading="Katy channel letter questions" />
         </div>

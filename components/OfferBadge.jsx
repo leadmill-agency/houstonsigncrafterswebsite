@@ -13,7 +13,7 @@ export default function OfferBadge({ tone = "light", className = "" }) {
       href={offer.href}
       className={`inline-flex items-center gap-2.5 rounded-sm border border-signal bg-signal/10 px-3 py-2 text-sm font-semibold transition-colors hover:bg-signal/20 ${text} ${className}`}
     >
-      <span className="bg-signal px-1.5 py-0.5 font-display text-[11px] font-bold uppercase tracking-wide text-white">Offer</span>
+      <span className="bg-signal px-1.5 py-0.5 font-display text-[11px] font-bold text-white">Offer</span>
       <span>
         {offer.label} <span className="font-normal opacity-80">· {offer.detail}</span>
       </span>

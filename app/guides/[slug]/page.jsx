@@ -29,7 +29,6 @@ export default async function GuidePage({ params }) {
     <main>
       <section className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:py-20">
         <div>
-          <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-signal-600">Free Guide</p>
           <h1 className="text-4xl font-bold text-ink">{g.title}</h1>
           <p className="mt-4 text-lg text-steel">{g.subtitle}</p>
           <ul className="mt-8 space-y-3">
@@ -52,7 +51,7 @@ export default async function GuidePage({ params }) {
         </div>
 
         <div>
-          <div className="mb-3 text-center text-sm font-medium text-steel">Enter your email and we'll send the PDF</div>
+          <div className="mb-3 text-center text-sm font-medium text-steel">Enter your email and we'll send the free PDF</div>
           <LeadForm
             kind="guide"
             submitLabel="Email Me the Guide"

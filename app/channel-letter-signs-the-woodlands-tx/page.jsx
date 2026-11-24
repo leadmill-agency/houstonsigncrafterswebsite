@@ -133,9 +133,6 @@ export default function ChannelLettersWoodlandsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
 
       <section className="mx-auto max-w-4xl px-4 py-14 sm:px-6">
-        <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-signal-600">
-          The Woodlands, TX · Channel Letters
-        </p>
         <h1 className="text-4xl font-bold text-ink">Channel letter signs in The Woodlands</h1>
         <ReviewedBy className="mt-2" />
         <p className="mt-4 max-w-2xl text-lg leading-relaxed text-steel">
@@ -156,7 +153,7 @@ export default function ChannelLettersWoodlandsPage() {
         </div>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">How tall can your letters be?</h2>
           <p className="mt-3 max-w-2xl leading-relaxed text-steel">
@@ -164,7 +161,7 @@ export default function ChannelLettersWoodlandsPage() {
             building, measured as gross building area. A two-line sign can be up to one and a
             half times the one-line height, including the space between the lines.
           </p>
-          <div className="mt-6 max-w-xl overflow-hidden border border-fog bg-white">
+          <div className="mt-6 max-w-xl overflow-hidden bg-white">
             <table className="w-full text-left text-[15px]">
               <thead className="bg-ink text-white">
                 <tr>
@@ -198,7 +195,7 @@ export default function ChannelLettersWoodlandsPage() {
         </p>
         <div className="mt-6 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
           {RULES.map((rule) => (
-            <div key={rule.title} className="border border-fog bg-white p-5">
+            <div key={rule.title} className="bg-white p-5">
               <h3 className="font-semibold text-ink">{rule.title}</h3>
               <p className="mt-2 text-[15px] leading-relaxed text-steel">{rule.body}</p>
             </div>
@@ -206,7 +203,7 @@ export default function ChannelLettersWoodlandsPage() {
         </div>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">Two surprises worth knowing early</h2>
           <h3 className="mt-5 font-semibold text-ink">A 20-day hold for &quot;Woodlands&quot; in the name</h3>
@@ -247,7 +244,7 @@ export default function ChannelLettersWoodlandsPage() {
         </p>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">How a Woodlands project runs</h2>
           <p className="mt-3 max-w-2xl leading-relaxed text-steel">
@@ -280,7 +277,7 @@ export default function ChannelLettersWoodlandsPage() {
         <Faq items={FAQS} heading="The Woodlands channel letter questions" />
       </section>
 
-      <section className="border-t border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">Start with the address</h2>
           <p className="mt-3 max-w-2xl leading-relaxed text-steel">

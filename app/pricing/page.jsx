@@ -40,9 +40,8 @@ export default function PricingPage() {
     <main>
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
-          <p className="eyebrow text-signal">Straight answers</p>
           <h1 className="text-3xl font-bold sm:text-4xl">What a sign costs in Houston</h1>
-          <p className="mt-4 max-w-2xl text-lg text-white/75">
+          <p className="mt-4 max-w-2xl text-lg text-white/80">
             Most sign companies won't publish numbers. Here are our real ranges, installed, in
             Houston, and what moves a project inside them.
           </p>
@@ -97,7 +96,7 @@ export default function PricingPage() {
         </p>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">The four things that set your price</h2>
           <div className="mt-6 grid gap-x-10 gap-y-6 sm:grid-cols-2">
@@ -106,10 +105,9 @@ export default function PricingPage() {
               ["Lighting", "Front-lit, halo-lit, or combination LED changes fabrication and electrical scope."],
               ["Mounting", "Flush to brick, raceway, wireway, or a ground foundation. Each installs differently."],
               ["Permitting", "City permits, landlord criteria, and engineering letters where the sign needs them."],
-            ].map(([t, b], i) => (
-              <div key={t} className="border-t-2 border-ink pt-3">
-                <span className="font-display text-xl font-bold text-signal-600">{String(i + 1).padStart(2, "0")}</span>
-                <h3 className="mt-1 font-semibold text-ink">{t}</h3>
+            ].map(([t, b]) => (
+              <div key={t} className="">
+                <h3 className="font-semibold text-ink">{t}</h3>
                 <p className="mt-1 text-sm leading-relaxed text-steel">{b}</p>
               </div>
             ))}
@@ -127,7 +125,7 @@ export default function PricingPage() {
       <section className="bg-signal">
         <div className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-6">
           <h2 className="text-3xl font-bold text-white">Want the exact number?</h2>
-          <p className="mx-auto mt-3 max-w-xl text-white/85">
+          <p className="mx-auto mt-3 max-w-xl text-white/80">
             Send a photo of your storefront and a rough size and you'll have an itemized, written
             quote within one business day. Design, permit, build, and install included.
           </p>

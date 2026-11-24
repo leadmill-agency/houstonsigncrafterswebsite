@@ -83,7 +83,7 @@ export default function Nav() {
         </div>
 
         {open && (
-          <div className="border-t border-fog bg-white px-4 py-4 md:hidden">
+          <div className="bg-white px-4 py-4 md:hidden">
             <nav className="flex flex-col">
               {NAV_LINKS.map((l) => (
                 <Link key={l.href} href={l.href} className="border-b border-fog py-3 font-semibold text-ink" onClick={() => setOpen(false)}>

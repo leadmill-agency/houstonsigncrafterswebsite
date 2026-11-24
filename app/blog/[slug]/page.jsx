@@ -72,7 +72,7 @@ export default async function BlogPost({ params }) {
         <nav className="mb-4 text-sm text-steel">
           <Link href="/blog" className="hover:text-ink">← Blog</Link>
         </nav>
-        {post.category && <span className="text-xs font-semibold uppercase tracking-wider text-signal-600">{post.category}</span>}
+        {post.category && <span className="text-xs font-semibold text-signal-600">{post.category}</span>}
         <h1 className="mt-2 text-3xl font-bold leading-tight text-ink sm:text-4xl">{post.title}</h1>
         <div className="mt-3 text-sm text-steel">
           {post.date && <span>{new Date(post.date).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" })}</span>}

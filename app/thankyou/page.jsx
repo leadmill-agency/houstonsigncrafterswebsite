@@ -20,9 +20,8 @@ export default function ThankYouPage() {
     <main>
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-3xl px-4 py-16 text-center sm:px-6">
-          <p className="eyebrow text-signal">Request received</p>
-          <h1 className="text-4xl font-bold sm:text-5xl">Thanks, we're on it.</h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-white/75">
+          <h1 className="text-4xl font-bold sm:text-5xl">Thanks, we're on it</h1>
+          <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">
             Your request just landed with our team. You'll hear from us within one business day,
             usually a lot faster.
           </p>
@@ -36,10 +35,10 @@ export default function ThankYouPage() {
             "We review your request and call you to make sure we're a good fit.",
             "We come out for a site survey and take exact measurements.",
             "You get a free design mockup with an itemized estimate: design, permit, build, and install.",
-          ].map((step, i) => (
+          ].map((step) => (
             <li key={step} className="flex items-start gap-3">
-              <span className="font-display text-xl font-bold text-signal-600">{String(i + 1).padStart(2, "0")}</span>
-              <span className="pt-0.5 text-steel">{step}</span>
+              <span className="mt-2.5 h-2 w-2 flex-shrink-0 bg-signal" aria-hidden="true" />
+              <span className="text-steel">{step}</span>
             </li>
           ))}
         </ol>

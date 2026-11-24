@@ -31,7 +31,7 @@ export default function LocationsHub() {
             <h2 className="mb-5 text-2xl font-bold text-ink">{metro} area</h2>
             <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
               {markets.map((m) => (
-                <Link key={m.slug} href={`/locations/${m.slug}`} className="group flex flex-col rounded-sm border border-fog p-6 transition-colors hover:border-ink">
+                <Link key={m.slug} href={`/locations/${m.slug}`} className="group flex flex-col rounded-sm bg-white p-6 transition-colors hover:bg-cloud">
                   <h3 className="font-semibold text-ink group-hover:text-signal-600">{m.city}, {m.region}</h3>
                   <p className="mt-1 flex-1 text-sm text-steel">{m.intro.slice(0, 120)}…</p>
                   <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-signal-600">
@@ -43,7 +43,7 @@ export default function LocationsHub() {
           </div>
         ))}
 
-        <div className="mt-10 rounded-sm border border-fog bg-cloud p-6">
+        <div className="mt-10 rounded-sm bg-cloud p-6">
           <h3 className="font-semibold text-ink">Also serving</h3>
           <p className="mt-2 text-sm text-steel">{SERVICE_AREAS.join(" · ")}, plus nearby communities. Don't see your area? <Link href="/contact" className="font-medium text-signal-600">Get in touch</Link>. We likely cover it.</p>
         </div>

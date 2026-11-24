@@ -15,7 +15,7 @@ const LANDING = {
     metaDescription:
       "Custom storefront signs in Houston: channel letters, monument signs, and more. Built, permitted, and installed in-house. Free quote in one business day.",
     eyebrow: "Houston Sign Company",
-    headline: "Custom storefront signs, built in Houston.",
+    headline: "Custom storefront signs, built in Houston",
     subhead:
       "Channel letters, monument signs, vehicle wraps. Designed, fabricated, permitted, and installed by one local crew. Get a free quote in one business day.",
     heroImage: "/portfolio/clearlake.jpg",
@@ -34,7 +34,7 @@ const LANDING = {
     metaDescription:
       "Illuminated channel letter signs for your Houston storefront. Built and installed in-house with permits handled. Free quote within one business day.",
     eyebrow: "Houston Storefront Signs",
-    headline: "Illuminated channel letters for your storefront.",
+    headline: "Illuminated channel letters for your storefront",
     subhead:
       "UL-listed LED channel letters. Designed, built, permitted, and installed by one Houston team. Free quote in one business day.",
     heroImage: "/portfolio/jys.jpg",
@@ -52,7 +52,7 @@ const LANDING = {
     metaDescription:
       "Custom car, truck, van, and fleet wraps in Houston, designed and installed on premium cast vinyl. Free quote within one business day.",
     eyebrow: "Houston Vehicle Wraps",
-    headline: "Turn your vehicle into a 24/7 billboard.",
+    headline: "Turn your vehicle into a 24/7 billboard",
     subhead:
       "Premium car, truck, van, and fleet wraps, designed and installed in Houston. Thousands of impressions a day for one flat cost.",
     heroImage: "/portfolio/slickcity.jpg",

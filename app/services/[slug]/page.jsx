@@ -11,7 +11,7 @@ import PhoneLink from "@/components/PhoneLink";
 import OfferBadge from "@/components/OfferBadge";
 import CostCallout from "@/components/CostCallout";
 import ReviewedBy from "@/components/ReviewedBy";
-import RichText from "@/components/RichText";
+import FoldedSections from "@/components/FoldedSections";
 
 export function generateStaticParams() {
   return getServiceSlugs().map((slug) => ({ slug }));
@@ -81,7 +81,7 @@ export default async function ServicePage({ params }) {
       {/* Hero */}
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:py-16">
-          <nav className="mb-4 text-sm text-white/50">
+          <nav className="mb-4 text-sm text-white/60">
             <Link href="/" className="hover:text-white">Home</Link> ·{" "}
             <Link href="/services" className="hover:text-white">Services</Link> ·{" "}
             <span className="text-white/80">{s.shortName}</span>
@@ -91,7 +91,7 @@ export default async function ServicePage({ params }) {
           <div className="grid items-center gap-8 lg:grid-cols-2">
             <div>
               <h1 className="text-3xl font-bold leading-tight sm:text-4xl">{s.h1}</h1>
-              <p className="mt-4 text-lg text-white/75">{s.heroSubtitle}</p>
+              <p className="mt-4 text-lg text-white/80">{s.heroSubtitle}</p>
               <div className="mt-7 flex flex-col gap-3 sm:flex-row">
                 <PhoneLink className="btn btn-primary btn-lg" label={`Call ${BUSINESS.phone}`} />
               </div>
@@ -112,14 +112,7 @@ export default async function ServicePage({ params }) {
         </div>
         <ReviewedBy />
 
-        <div className="prose-content">
-          {s.sections.map((sec) => (
-            <div key={sec.heading}>
-              <h2>{sec.heading}</h2>
-              <RichText text={sec.body} />
-            </div>
-          ))}
-        </div>
+        <FoldedSections sections={s.sections} open={4} topic={s.shortName.toLowerCase()} />
       </section>
 
       {/* Real installs of this sign type */}
@@ -128,7 +121,7 @@ export default async function ServicePage({ params }) {
           <h2 className="text-3xl font-bold text-ink">Recent {s.shortName.toLowerCase()} installs</h2>
           <div className={`mt-8 grid gap-5 sm:grid-cols-2 ${projects.length > 2 ? "lg:grid-cols-3" : ""}`}>
             {projects.map((p) => (
-              <figure key={p.id} className="img-outline overflow-hidden rounded-sm border border-fog bg-white">
+              <figure key={p.id} className="overflow-hidden rounded-sm bg-white">
                 <div className="relative aspect-[4/3]">
                   <Image
                     src={p.imageSrc}
@@ -156,14 +149,13 @@ export default async function ServicePage({ params }) {
 
       {/* Per-service process timeline */}
       {s.process?.length > 0 && (
-        <section className="border-y border-fog bg-cloud">
+        <section className="bg-cloud">
           <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
             <h2 className="text-3xl font-bold text-ink">How it works, start to finish</h2>
             <div className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-              {s.process.map((step, i) => (
-                <div key={step.t} className="border-t-2 border-ink pt-4">
-                  <span className="font-display text-2xl font-bold text-signal-600">{String(i + 1).padStart(2, "0")}</span>
-                  <h3 className="mt-1 text-lg font-semibold text-ink">{step.t}</h3>
+              {s.process.map((step) => (
+                <div key={step.t} className="">
+                  <h3 className="text-lg font-semibold text-ink">{step.t}</h3>
                   <p className="mt-1.5 text-sm leading-relaxed text-steel">{step.b}</p>
                 </div>
               ))}
@@ -177,7 +169,7 @@ export default async function ServicePage({ params }) {
       {/* One real Google review, matched to this service */}
       {review && (
         <section className="mx-auto max-w-3xl px-4 pt-14 sm:px-6">
-          <blockquote className="border-l-4 border-signal bg-white py-1 pl-6">
+          <blockquote>
             <div className="flex gap-0.5 text-signal" aria-label={`${review.rating} out of 5 stars`}>
               {Array.from({ length: review.rating }).map((_, i) => (
                 <svg key={i} viewBox="0 0 20 20" width="16" height="16" fill="currentColor" aria-hidden="true">
@@ -195,7 +187,7 @@ export default async function ServicePage({ params }) {
 
       {/* On-page quote form */}
       <section className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
-        <div className="rounded-sm border border-fog bg-cloud p-6 text-center md:p-8">
+        <div className="text-center">
           <h2 className="text-2xl font-bold text-ink">Get a free quote for {s.shortName.toLowerCase()}</h2>
           <p className="mt-1 text-sm text-steel">Written quote within one business day. Permitting and installation included.</p>
           <div className="mt-5">
@@ -206,7 +198,7 @@ export default async function ServicePage({ params }) {
 
       {/* FAQ */}
       <section className="px-4 pb-14 sm:px-6">
-        <Faq items={s.faqs} heading={`${s.shortName}: frequently asked questions`} />
+        <Faq items={s.faqs} heading={`${s.shortName}: frequently asked questions`} initialVisible={6} />
       </section>
 
       {/* Related services */}
@@ -215,7 +207,7 @@ export default async function ServicePage({ params }) {
           <h2 className="mb-6 text-2xl font-bold text-ink">Related services</h2>
           <div className="grid gap-5 sm:grid-cols-3">
             {related.map((r) => (
-              <Link key={r.slug} href={`/services/${r.slug}`} className="group flex flex-col rounded-sm border border-fog p-5">
+              <Link key={r.slug} href={`/services/${r.slug}`} className="group flex flex-col rounded-sm bg-white p-5 hover:bg-cloud">
                 <h3 className="font-semibold text-ink group-hover:text-signal-600">{r.shortName}</h3>
                 <span className="mt-2 inline-flex items-center gap-1 text-sm font-medium text-signal-600">
                   Learn more →

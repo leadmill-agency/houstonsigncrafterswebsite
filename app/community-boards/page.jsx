@@ -79,11 +79,10 @@ export default function CommunityBoards() {
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:py-20">
           <div className="grid items-center gap-10 lg:grid-cols-2">
             <div>
-              <div className="eyebrow mb-3 text-white/70">Houston Community Boards</div>
               <h1 className="text-3xl font-bold leading-tight sm:text-5xl">
                 Get seen where Houston already spends time.
               </h1>
-              <p className="mt-5 text-lg text-white/75">
+              <p className="mt-5 text-lg text-white/80">
                 We place custom community boards inside busy Houston restaurants, coffee shops,
                 gyms, salons, and neighborhood businesses. The host gets a useful specials board
                 for free. Six local businesses sponsor the bottom of it. Your business stays
@@ -103,7 +102,7 @@ export default function CommunityBoards() {
             <div className="mx-auto w-full max-w-sm">
               <div className="rounded-md bg-[#23272e] p-4 shadow-2xl ring-1 ring-white/10">
                 <div className="rounded-sm border border-dashed border-white/25 px-4 py-6 text-center">
-                  <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/50">
+                  <div className="text-[10px] font-semibold uppercase tracking-[0.2em] text-white/60">
                     Host&apos;s writable area
                   </div>
                   <div className="mt-2 text-lg font-semibold italic text-amber-200/90">
@@ -134,12 +133,12 @@ export default function CommunityBoards() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-3 flex items-center justify-between text-[9px] uppercase tracking-wider text-white/50">
+                <div className="mt-3 flex items-center justify-between text-[9px] uppercase tracking-wider text-white/60">
                   <span>Houston Community Boards</span>
                   <span>by Houston Sign Crafters</span>
                 </div>
               </div>
-              <p className="mt-3 text-center text-xs text-white/50">
+              <p className="mt-3 text-center text-xs text-white/60">
                 Example layout (mockup) of the 24&Prime; &times; 36&Prime; board. Top ad row is
                 Premium, bottom row is Standard.
               </p>
@@ -149,7 +148,7 @@ export default function CommunityBoards() {
       </section>
 
       {/* Value strip */}
-      <section className="border-b border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto grid max-w-6xl gap-6 px-4 py-10 text-center sm:grid-cols-3 sm:px-6">
           <div>
             <div className="text-3xl font-bold text-ink">6 advertisers</div>
@@ -168,7 +167,7 @@ export default function CommunityBoards() {
 
       {/* How it works */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <h2 className="text-2xl font-bold text-ink sm:text-3xl">Local advertising without another dashboard.</h2>
+        <h2 className="text-2xl font-bold text-ink sm:text-3xl">Local advertising without another dashboard</h2>
         <p className="mt-3 max-w-2xl text-steel">
           No bidding. No daily ad budget. No algorithm to manage. Pick a board, approve your
           ad, and your business is physically visible inside that location for the next 12 months.
@@ -179,10 +178,9 @@ export default function CommunityBoards() {
             { t: "You claim one of six spots", b: "Six local businesses appear beneath the host's writable section. We only allow one business per category — if you claim the HVAC spot, no other HVAC company can buy onto that board during your term." },
             { t: "We design and install your ad", b: "Send us your logo, phone number, website, and a short description. We create the artwork, send it for approval, and handle the rest." },
             { t: "It stays up for one year", b: "Your 12-month term begins when the board is installed and your ad is live. We send you a photo once it is placed." },
-          ].map((s, i) => (
-            <div key={s.t} className="rounded-sm border border-fog p-6">
-              <div className="text-sm font-bold text-signal-600">Step {i + 1}</div>
-              <h3 className="mt-1 font-semibold text-ink">{s.t}</h3>
+          ].map((s) => (
+            <div key={s.t} className="rounded-sm bg-white p-6">
+              <h3 className="font-semibold text-ink">{s.t}</h3>
               <p className="mt-2 text-sm text-steel">{s.b}</p>
             </div>
           ))}
@@ -192,14 +190,14 @@ export default function CommunityBoards() {
       {/* Who should advertise */}
       <section className="bg-cloud">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <h2 className="text-2xl font-bold text-ink sm:text-3xl">Built for businesses that win locally.</h2>
+          <h2 className="text-2xl font-bold text-ink sm:text-3xl">Built for businesses that win locally</h2>
           <p className="mt-3 max-w-2xl text-steel">
             This works best for businesses that serve customers in a specific part of Houston
             and benefit from repeated local visibility.
           </p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
             {CATEGORIES.map((c) => (
-              <div key={c.name} className="rounded-sm border border-fog bg-white p-5">
+              <div key={c.name} className="rounded-sm bg-white p-5">
                 <h3 className="font-semibold text-ink">{c.name}</h3>
                 <p className="mt-1 text-sm text-steel">{c.items}</p>
               </div>
@@ -216,7 +214,7 @@ export default function CommunityBoards() {
 
       {/* Why physical */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <h2 className="text-2xl font-bold text-ink sm:text-3xl">Be there before somebody searches for you.</h2>
+        <h2 className="text-2xl font-bold text-ink sm:text-3xl">Be there before somebody searches for you</h2>
         <p className="mt-3 max-w-2xl text-steel">
           Digital ads are useful when someone is actively looking for a service. Community
           boards do something different: they help people recognize your name before the need
@@ -225,7 +223,7 @@ export default function CommunityBoards() {
         </p>
         <div className="mt-8 grid gap-5 sm:grid-cols-2">
           {COMPARISONS.map((c) => (
-            <div key={c.name} className="rounded-sm border border-fog p-5">
+            <div key={c.name} className="rounded-sm bg-white p-5">
               <h3 className="font-semibold text-ink">{c.name}</h3>
               <p className="mt-1 text-sm text-steel">{c.body}</p>
             </div>
@@ -237,10 +235,10 @@ export default function CommunityBoards() {
       <section id="pricing" className="bg-ink text-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <h2 className="text-2xl font-bold sm:text-3xl">One payment. A full year on the board.</h2>
-          <p className="mt-2 text-white/70">Artwork is included. No monthly ad budget. No setup fee.</p>
+          <p className="mt-2 text-white/80">Artwork is included. No monthly ad budget. No setup fee.</p>
           <div className="mt-8 grid gap-6 lg:grid-cols-2">
             <div className="rounded-sm bg-white p-7 text-ink">
-              <div className="eyebrow text-steel">{PRICING.standard.label}</div>
+              <div className="text-sm font-semibold text-steel">{PRICING.standard.label}</div>
               <div className="mt-1 text-4xl font-bold">{money(PRICING.standard.price)}</div>
               <div className="text-sm text-steel">per board / per year</div>
               <ul className="mt-4 space-y-2 text-sm text-steel">
@@ -253,7 +251,7 @@ export default function CommunityBoards() {
               <TextLink className="btn btn-primary mt-6 w-full sm:w-auto" label="Text About Standard" />
             </div>
             <div className="rounded-sm bg-white p-7 text-ink">
-              <div className="eyebrow text-signal-600">{PRICING.premium.label}</div>
+              <div className="text-sm font-semibold text-signal-600">{PRICING.premium.label}</div>
               <div className="mt-1 text-4xl font-bold">{money(PRICING.premium.price)}</div>
               <div className="text-sm text-steel">per board / per year</div>
               <ul className="mt-4 space-y-2 text-sm text-steel">
@@ -277,14 +275,14 @@ export default function CommunityBoards() {
 
       {/* Multi-board + locations */}
       <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-        <h2 className="text-2xl font-bold text-ink sm:text-3xl">One neighborhood or the whole side of town.</h2>
+        <h2 className="text-2xl font-bold text-ink sm:text-3xl">One neighborhood or the whole side of town</h2>
         <p className="mt-3 max-w-2xl text-steel">
           If your customers come from more than one area, you can reserve the same category
           across multiple boards — Katy, Richmond, Sugar Land, The Heights, Cypress, Pearland,
           or wherever we have boards live.
         </p>
-        <div className="mt-8 rounded-sm border border-fog bg-cloud p-7">
-          <h3 className="text-lg font-bold text-ink">First Houston locations coming soon.</h3>
+        <div className="mt-8 rounded-sm bg-cloud p-7">
+          <h3 className="text-lg font-bold text-ink">First Houston locations coming soon</h3>
           <p className="mt-2 max-w-2xl text-steel">
             We&apos;re currently selecting host locations across Greater Houston. Want first
             choice when a board opens near your customers? Text us your business type and the
@@ -299,11 +297,10 @@ export default function CommunityBoards() {
       {/* Host section */}
       <section className="bg-signal-600 text-white">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
-          <div className="eyebrow mb-2 text-white/80">For restaurants &amp; local businesses</div>
           <h2 className="text-2xl font-bold sm:text-3xl">Want the board? It&apos;s free.</h2>
           <div className="mt-4 grid gap-8 lg:grid-cols-2">
             <div>
-              <p className="text-white/90">
+              <p className="text-white/80">
                 We are looking for busy Houston businesses willing to host a community board
                 near their entrance, counter, or waiting area. You pay nothing. You get the
                 majority of the space to write daily specials, happy hour, events,
@@ -317,7 +314,7 @@ export default function CommunityBoards() {
             </div>
             <div>
               <p className="font-semibold">What we ask from you:</p>
-              <ul className="mt-2 space-y-1 text-white/90">
+              <ul className="mt-2 space-y-1 text-white/80">
                 <li>1. Keep the board somewhere customers can easily see it.</li>
                 <li>2. Keep it up for the agreed 12-month period.</li>
                 <li>3. Let us know if it ever needs service or replacement.</li>
@@ -352,7 +349,7 @@ export default function CommunityBoards() {
       </section>
 
       {/* Sticky mobile CTA — DM traffic reads this on a phone */}
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-fog bg-white p-3 lg:hidden">
+      <div className="fixed inset-x-0 bottom-0 z-40 bg-white p-3 lg:hidden">
         <div className="mx-auto flex max-w-lg gap-3">
           <TextLink className="btn btn-primary flex-1 justify-center text-center" label="Text About My Spot" />
           <PhoneLink className="btn btn-outline-dark" showIcon={true} label="Call" />

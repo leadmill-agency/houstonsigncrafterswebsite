@@ -13,10 +13,9 @@ export default function WhatYouGet({ heading = "What you get with every sign" })
     <section className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
       <h2 className="text-3xl font-bold text-ink">{heading}</h2>
       <div className="mt-8 grid gap-x-10 gap-y-8 sm:grid-cols-2 lg:grid-cols-3">
-        {ITEMS.map((item, i) => (
-          <div key={item.t} className="border-t-2 border-ink pt-4">
-            <span className="font-display text-2xl font-bold text-signal-600">{String(i + 1).padStart(2, "0")}</span>
-            <h3 className="mt-1 text-lg font-semibold text-ink">{item.t}</h3>
+        {ITEMS.map((item) => (
+          <div key={item.t} className="">
+            <h3 className="text-lg font-semibold text-ink">{item.t}</h3>
             <p className="mt-1.5 text-sm leading-relaxed text-steel">{item.b}</p>
           </div>
         ))}

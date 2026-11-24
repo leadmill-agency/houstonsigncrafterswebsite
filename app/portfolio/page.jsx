@@ -78,9 +78,8 @@ export default function PortfolioPage() {
       <section className="bg-ink text-white">
         <div className="mx-auto grid max-w-6xl items-center gap-10 px-4 py-14 sm:px-6 lg:grid-cols-2 lg:py-20">
           <div>
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wider text-signal">Our Work</p>
             <h1 className="text-4xl font-bold leading-tight sm:text-5xl">Commercial Signs Built for Houston Businesses</h1>
-            <p className="mt-5 text-lg text-white/75">
+            <p className="mt-5 text-lg text-white/80">
               Design, permitting, fabrication, and installation for storefronts, offices,
               restaurants, franchises, and commercial properties.
             </p>
@@ -106,10 +105,10 @@ export default function PortfolioPage() {
       </section>
 
       {/* Trust strip */}
-      <section className="border-b border-fog bg-ink">
+      <section className="bg-ink">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-x-7 gap-y-2 px-4 py-4 sm:px-6">
           {TRUST.map((t) => (
-            <span key={t} className="inline-flex items-center gap-2.5 font-display text-xs font-semibold uppercase tracking-wide text-white">
+            <span key={t} className="inline-flex items-center gap-2.5 text-sm font-semibold text-white">
               <span className="h-1.5 w-1.5 bg-signal" aria-hidden="true" />
               {t}
             </span>
@@ -155,12 +154,12 @@ export default function PortfolioPage() {
               we'll help you figure out the right option.
             </p>
           </div>
-          <div className="grid gap-px overflow-hidden border border-fog bg-fog sm:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
             {services.map((s) => (
               <Link key={s.slug} href={`/services/${s.slug}`} className="group bg-white p-6 transition-colors hover:bg-cloud">
                 <h3 className="font-display text-lg font-semibold text-ink group-hover:text-signal-600">{s.name}</h3>
                 <p className="mt-1 text-sm text-steel">{s.heroSubtitle}</p>
-                <span className="mt-3 inline-block font-display text-xs font-semibold uppercase tracking-wide text-signal-600">View →</span>
+                <span className="mt-3 inline-block text-sm font-semibold text-signal-600">View →</span>
               </Link>
             ))}
           </div>
@@ -175,10 +174,9 @@ export default function PortfolioPage() {
           and production, then install the sign.
         </p>
         <ol className="mt-10 grid gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
-          {PROCESS.map((step, i) => (
-            <li key={step.title} className="border-t-2 border-ink pt-4">
-              <span className="font-display text-2xl font-bold text-signal-600">{String(i + 1).padStart(2, "0")}</span>
-              <h3 className="mt-1 text-lg font-semibold text-ink">{step.title}</h3>
+          {PROCESS.map((step) => (
+            <li key={step.title} className="">
+              <h3 className="text-lg font-semibold text-ink">{step.title}</h3>
               <p className="mt-1.5 text-sm leading-relaxed text-steel">{step.body}</p>
             </li>
           ))}
@@ -189,7 +187,7 @@ export default function PortfolioPage() {
       <section className="bg-ink">
         <div className="mx-auto max-w-5xl px-4 py-14 text-center sm:px-6">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Need a sign for your business?</h2>
-          <p className="mx-auto mt-3 max-w-2xl text-white/70">
+          <p className="mx-auto mt-3 max-w-2xl text-white/80">
             Send us your logo, storefront photo, and rough dimensions. We'll help you figure out the
             right sign type, design, and next step.
           </p>
@@ -199,7 +197,7 @@ export default function PortfolioPage() {
             </Link>
             <PhoneLink className="btn btn-outline-light" />
           </div>
-          <p className="mt-4 text-sm text-white/50">Serving Houston and surrounding areas.</p>
+          <p className="mt-4 text-sm text-white/60">Serving Houston and surrounding areas.</p>
         </div>
       </section>
     </main>

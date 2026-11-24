@@ -62,7 +62,7 @@ export default function SignMockupPage() {
               <h1 className="text-4xl font-bold leading-tight sm:text-5xl">
                 See your sign on your building before you spend a dollar
               </h1>
-              <p className="mt-4 max-w-xl text-lg text-white/75">
+              <p className="mt-4 max-w-xl text-lg text-white/80">
                 Upload a photo of your storefront and our free tool puts a finished sign on it:
                 day view, night view, and a realistic budget range. About 5 minutes. No signup.
               </p>
@@ -129,7 +129,7 @@ export default function SignMockupPage() {
       </section>
 
       {/* Day/night example */}
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <h2 className="text-3xl font-bold text-ink">Day and night, on the real building</h2>
           <p className="mt-2 max-w-2xl text-steel">
@@ -137,13 +137,13 @@ export default function SignMockupPage() {
             produces, and the kind we refine by hand when a project moves forward.
           </p>
           <div className="mt-8 grid gap-5 sm:grid-cols-2">
-            <figure className="img-outline overflow-hidden rounded-sm border border-fog bg-white">
+            <figure className="overflow-hidden rounded-sm bg-white">
               <div className="relative aspect-[4/3]">
                 <Image src="/tool/mockup-day.jpg" alt="Daytime sign mockup rendered on a Houston storefront before fabrication" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover" />
               </div>
               <figcaption className="px-4 py-2.5 text-sm text-steel">Day view</figcaption>
             </figure>
-            <figure className="img-outline overflow-hidden rounded-sm border border-fog bg-white">
+            <figure className="overflow-hidden rounded-sm bg-white">
               <div className="relative aspect-[4/3]">
                 <Image src="/tool/mockup-night.jpg" alt="Night sign mockup showing the illuminated letters on the same Houston storefront" fill sizes="(max-width: 640px) 100vw, 50vw" className="object-cover" />
               </div>
@@ -165,7 +165,7 @@ export default function SignMockupPage() {
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-4xl px-4 py-14 text-center sm:px-6">
           <h2 className="text-3xl font-bold sm:text-4xl">Five minutes from now, you'll know</h2>
-          <p className="mx-auto mt-3 max-w-xl text-white/75">
+          <p className="mx-auto mt-3 max-w-xl text-white/80">
             What the sign looks like on your building, how it glows at night, and roughly what it
             costs. Then it's your call.
           </p>

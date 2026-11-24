@@ -50,7 +50,7 @@ export default function AboutPage() {
 
         <div className="mt-10 grid gap-5 sm:grid-cols-2">
           {DIFFERENTIATORS.map((d) => (
-            <div key={d.title} className="rounded-sm border border-fog p-5">
+            <div key={d.title} className="rounded-sm bg-white p-5">
               <h3 className="font-semibold text-ink">{d.title}</h3>
               <p className="mt-1 text-sm text-steel">{d.body}</p>
             </div>

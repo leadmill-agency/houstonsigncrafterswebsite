@@ -23,20 +23,20 @@ export default function ContactPage() {
           <div className="mt-8 space-y-4">
             <div className="flex items-center gap-3">
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-steel">Phone</div>
+                <div className="text-xs font-semibold text-steel">Phone</div>
                 <PhoneLink className="font-semibold text-ink" showIcon={false} />
               </div>
             </div>
             <div className="flex items-center gap-3">
               <div>
-                <div className="text-xs font-semibold uppercase tracking-wider text-steel">Email &amp; hours</div>
+                <div className="text-xs font-semibold text-steel">Email &amp; hours</div>
                 <a href={`mailto:${BUSINESS.email}`} className="font-medium text-ink">{BUSINESS.email}</a>
                 <div className="text-sm text-steel">{BUSINESS.hoursLabel}</div>
               </div>
             </div>
           </div>
 
-          <div className="mt-8 rounded-sm border border-fog bg-cloud p-4 text-sm text-steel">
+          <div className="mt-8 rounded-sm bg-cloud p-4 text-sm text-steel">
             Ready for numbers? Skip ahead and{" "}
             <a href="/quote" className="font-semibold text-signal-600">request a free quote →</a>
           </div>

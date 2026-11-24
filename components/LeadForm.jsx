@@ -143,11 +143,11 @@ export default function LeadForm({
       ref={formRef}
       action={formAction}
       onSubmit={guardPhotoSize}
-      className={`rounded-sm border border-fog bg-white p-6 text-left md:p-8 ${className}`}
+      className={`rounded-sm bg-white shadow-[0_1px_3px_rgb(13_23_34/0.08),0_14px_32px_-18px_rgb(13_23_34/0.28)] p-6 text-left md:p-8 ${className}`}
     >
       {heading && (
-        <div className="mb-5 border-b border-fog pb-4">
-          <p className="font-display text-lg font-bold uppercase leading-tight tracking-wide text-ink sm:text-xl">{heading}</p>
+        <div className="mb-5">
+          <p className="font-display text-lg font-bold leading-tight text-ink sm:text-xl">{heading}</p>
           {subheading && <p className="mt-2 text-sm leading-relaxed text-steel">{subheading}</p>}
         </div>
       )}
@@ -185,7 +185,7 @@ export default function LeadForm({
             Photo of your building or current sign <span className="font-normal text-steel">(optional)</span>
           </span>
           <div className="flex flex-wrap items-center gap-3">
-            <label className="inline-flex cursor-pointer items-center gap-2 rounded-sm border border-fog bg-cloud px-3 py-2 text-sm font-semibold text-ink transition-colors hover:border-ink focus-within:border-ink">
+            <label className="inline-flex cursor-pointer items-center gap-2 rounded-sm bg-cloud px-3 py-2 text-sm font-semibold text-ink transition-colors focus-within:bg-fog hover:bg-fog">
               <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
                 <path d="M3 6.5h2.6l1.2-1.8h6.4l1.2 1.8H17a1 1 0 0 1 1 1V15a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V7.5a1 1 0 0 1 1-1z" />
                 <circle cx="10" cy="11" r="2.8" />
@@ -207,7 +207,7 @@ export default function LeadForm({
               <span key={p.url} className="relative inline-block">
                 {/* Local blob preview of the visitor's own file; next/image can't optimise it. */}
                 {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src={p.url} alt={`Attached photo ${i + 1}`} className="h-12 w-12 rounded-sm border border-fog object-cover" />
+                <img src={p.url} alt={`Attached photo ${i + 1}`} className="h-12 w-12 rounded-sm bg-white object-cover" />
                 <button
                   type="button"
                   onClick={() => removePhoto(i)}

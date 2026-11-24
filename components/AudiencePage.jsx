@@ -27,11 +27,10 @@ export default function AudiencePage({ audience }) {
 
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:py-16">
-          <p className="eyebrow text-signal">{audience.eyebrow}</p>
           <h1 className="mt-1 max-w-3xl text-3xl font-bold leading-tight sm:text-4xl lg:text-5xl">
             {audience.h1}
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-white/75">{audience.intro}</p>
+          <p className="mt-4 max-w-2xl text-lg text-white/80">{audience.intro}</p>
           <div className="mt-7 flex flex-col gap-3 sm:flex-row">
             <Link href="/quote" className="btn btn-primary">Get My Quote in 1 Business Day</Link>
             <PhoneLink className="btn btn-outline-light" label={`Call ${BUSINESS.phone}`} />
@@ -46,12 +45,12 @@ export default function AudiencePage({ audience }) {
         <ReviewedBy />
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
           <h2 className="text-3xl font-bold text-ink">How we work with {audience.name.toLowerCase()}</h2>
           <div className="mt-8 grid gap-x-10 gap-y-8 md:grid-cols-2">
             {audience.pains.map((item) => (
-              <div key={item.h} className="border-t-2 border-ink pt-4">
+              <div key={item.h} className="">
                 <h3 className="text-lg font-semibold text-ink">{item.h}</h3>
                 <p className="mt-2 text-sm leading-relaxed text-steel">{item.p}</p>
                 {item.link && (
@@ -91,7 +90,7 @@ export default function AudiencePage({ audience }) {
         </section>
       )}
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-3xl px-4 py-14 sm:px-6">
           <h2 className="mb-6 text-3xl font-bold text-ink">Common questions</h2>
           <Faq items={audience.faqs} heading={null} />

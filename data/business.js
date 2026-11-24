@@ -56,10 +56,10 @@ export const BUSINESS = {
 
   // Verifiable differentiators for the trust bar (no unverified claims).
   trustPoints: [
-    "5-Year Warranty",
-    "UL-Certified",
+    "5-year warranty",
+    "UL-certified",
     "Built in Houston",
-    "Free Design Mockup in 1 Business Day",
+    "Free design mockup in 1 business day",
   ],
 
   // "Who you'll talk to" — the single biggest anti-AI / trust signal.

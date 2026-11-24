@@ -30,7 +30,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-wider text-white/50">Signs We Make</div>
+            <div className="text-xs font-semibold text-white/60">Signs we make</div>
             <ul className="mt-4 space-y-2 text-sm">
               {services.map((s) => (
                 <li key={s.slug}>
@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-wider text-white/50">Service Areas</div>
+            <div className="text-xs font-semibold text-white/60">Service areas</div>
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/locations" className="hover:text-white">Houston</Link></li>
               {markets.map((m) => (
@@ -53,7 +53,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <div className="text-xs font-semibold uppercase tracking-wider text-white/50">Company</div>
+            <div className="text-xs font-semibold text-white/60">Company</div>
             <ul className="mt-4 space-y-2 text-sm">
               <li><Link href="/about" className="hover:text-white">About Us</Link></li>
               <li><Link href="/general-contractors" className="hover:text-white">For General Contractors</Link></li>
@@ -75,7 +75,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
           <p>© {new Date().getFullYear()} {BUSINESS.legalName}. Serving Houston &amp; surrounding areas.</p>
           <div className="flex gap-4">
             <Link href="/privacy" className="hover:text-white">Privacy Policy</Link>

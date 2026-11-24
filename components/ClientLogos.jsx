@@ -20,9 +20,9 @@ const LOGOS = [
 
 export default function ClientLogos() {
   return (
-    <section aria-label="Businesses we have built signs for" className="border-t border-white/10 bg-ink text-white">
+    <section aria-label="Businesses we have built signs for" className="bg-ink text-white">
       <div className="mx-auto max-w-6xl px-4 py-7 sm:px-6">
-        <p className="text-center text-sm text-white/55">Signs we&apos;ve built for</p>
+        <p className="text-center text-sm text-white/60">Signs we&apos;ve built for</p>
         {/* One row, always: wraps nowhere, scrolls sideways on phones. */}
         <ul className="mt-5 flex items-center gap-x-10 overflow-x-auto whitespace-nowrap px-2 [scrollbar-width:none] sm:justify-between sm:gap-x-8 [&::-webkit-scrollbar]:hidden">
           {LOGOS.map((l) => (

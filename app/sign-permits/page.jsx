@@ -136,11 +136,10 @@ export default function SignPermitsPage() {
 
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
-          <p className="eyebrow text-signal">Permitting, demystified</p>
           <h1 className="text-3xl font-bold sm:text-4xl">
             Sign permits in Houston &amp; the surrounding cities: who issues what
           </h1>
-          <p className="mt-4 max-w-2xl text-lg text-white/75">
+          <p className="mt-4 max-w-2xl text-lg text-white/80">
             Every jurisdiction in the metro runs sign permits differently: different office,
             different code, different quirks. Here's the map, sourced from each authority's own
             published rules.
@@ -190,10 +189,10 @@ export default function SignPermitsPage() {
       </section>
 
       {JURISDICTIONS.map((j, i) => (
-        <section key={j.id} id={j.id} className={i % 2 === 0 ? "border-y border-fog bg-cloud" : ""}>
+        <section key={j.id} id={j.id} className={i % 2 === 0 ? "bg-cloud" : ""}>
           <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
             <h2 className="text-2xl font-bold text-ink">{j.name}</h2>
-            <p className="mt-1 text-sm font-semibold uppercase tracking-wide text-signal-600">{j.authority}</p>
+            <p className="mt-1 text-sm font-semibold text-signal-600">{j.authority}</p>
             <ul className="mt-4 space-y-2.5">
               {j.facts.map((f) => (
                 <li key={f.slice(0, 40)} className="flex items-start gap-2.5 text-[15px] leading-relaxed text-steel">

@@ -21,17 +21,16 @@ export default function BookPage() {
     <main>
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-3xl px-4 py-12 text-center sm:px-6">
-          <p className="eyebrow text-signal">Free 30-minute consult</p>
           <h1 className="text-4xl font-bold sm:text-5xl">Talk to a sign maker, not a salesperson</h1>
-          <p className="mx-auto mt-4 max-w-xl text-lg text-white/75">
-            Pick a time below. Bring a photo of your storefront and we'll talk sign type, real
+          <p className="mx-auto mt-4 max-w-xl text-lg text-white/80">
+            Pick a time below for a free 30-minute call. Bring a photo of your storefront and we'll talk sign type, real
             price range, permits, and timeline on the spot.
           </p>
         </div>
       </section>
 
       <section className="mx-auto max-w-4xl px-4 py-10 sm:px-6">
-        <div className="img-outline overflow-hidden rounded-sm border border-fog bg-white">
+        <div className="overflow-hidden rounded-sm bg-white">
           <iframe
             src={BUSINESS.bookingEmbedUrl}
             title="Book a time with Houston Sign Crafters"

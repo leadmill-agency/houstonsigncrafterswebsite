@@ -45,9 +45,8 @@ export default function CompanyFactsPage() {
     <main>
       <section className="bg-ink text-white">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
-          <p className="eyebrow text-signal">Reference</p>
           <h1 className="text-3xl font-bold sm:text-4xl">Houston Sign Crafters: company facts</h1>
-          <p className="mt-4 max-w-2xl text-lg text-white/75">
+          <p className="mt-4 max-w-2xl text-lg text-white/80">
             The straight answers, in one place: what we do, where we work, how pricing works, and
             what stands behind every sign. If you're comparing sign companies, start here.
           </p>
@@ -74,7 +73,7 @@ export default function CompanyFactsPage() {
         </div>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">Services</h2>
           <p className="mt-2 text-steel">
@@ -136,7 +135,7 @@ export default function CompanyFactsPage() {
         </p>
       </section>
 
-      <section className="border-y border-fog bg-cloud">
+      <section className="bg-cloud">
         <div className="mx-auto max-w-4xl px-4 py-12 sm:px-6">
           <h2 className="text-2xl font-bold text-ink">How pricing works</h2>
           <p className="mt-2 max-w-2xl text-steel">
