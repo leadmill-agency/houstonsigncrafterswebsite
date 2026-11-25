@@ -138,14 +138,13 @@ export default function HomePage() {
       <section className="bg-white">
         <div className="mx-auto grid max-w-6xl items-start gap-10 px-4 py-20 sm:px-6 lg:grid-cols-[0.95fr_1.05fr] lg:gap-16">
           <div className="relative aspect-[4/5] overflow-hidden rounded-sm bg-cloud lg:sticky lg:top-32">
-            <Image src={team.photo} alt={team.name ? `${team.name}, ${team.title} at Houston Sign Crafters` : "The Houston Sign Crafters crew and work truck on a job site"} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
+            <Image src={team.photo} alt="Illuminated channel letters we built and installed for JYS in Houston" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
           </div>
           <div>
             <h2 className="text-4xl font-bold text-ink sm:text-5xl">A real sign maker picks up</h2>
             <p className="mt-4 text-lg leading-relaxed text-steel">
-              {team.name
-                ? `Most days that's ${team.name}, our ${team.title.toLowerCase()}, who ${team.note}.`
-                : "You'll talk to someone on our crew who builds signs for a living."}{" "}
+              {/* No name here (owner request 2026-11-25): "just say the owner answers". */}
+              {`Most days that's our ${team.title.toLowerCase()}, who ${team.note}.`}{" "}
               No phone tree, no overseas script, no “let me transfer you.” You tell us what you've got, and we
               tell you straight: what'll work, what it'll run, and how fast we can get it up.
             </p>

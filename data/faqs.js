@@ -118,7 +118,7 @@ export const HOME_FAQS = [
   },
   {
     q: "Who will I talk to when I call?",
-    a: "A real sign maker, not a call center. Most days that is Rameel Sheikh, our owner, who answers most calls himself. Tell us what you have in mind and we will tell you straight what will work, what it will run, and how fast we can get it up.",
+    a: "A real sign maker, not a call center. Most days that is our owner, who answers most calls himself. Tell us what you have in mind and we will tell you straight what will work, what it will run, and how fast we can get it up.",
   },
 ];
 

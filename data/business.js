@@ -65,8 +65,11 @@ export const BUSINESS = {
   // "Who you'll talk to" — the single biggest anti-AI / trust signal.
   // Owners confirmed by Rameel 2026-08-23. TODO: real HEADSHOT(s) →
   // public/team/, then update `photo`.
+  // 2026-11-25 (owner): do not print his name in this block. "Just say the
+  // owner answers." `name` stays null so no template can bring it back. The
+  // "Reviewed by" line uses REVIEWER below, which is a separate decision.
   team: {
-    name: "Rameel Sheikh",
+    name: null,
     title: "Owner",
     photo: "/portfolio/jys.jpg", // interim: real HSC truck on a job site
     note: "answers most of the calls himself",
