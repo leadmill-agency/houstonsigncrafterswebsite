@@ -36,6 +36,170 @@ const SERVICES = {
       "Custom illuminated storefront lettering, designed, fabricated, permitted, and installed by one Houston team.",
     answer:
       "Channel letters are the 3D letters you see across the top of most storefronts, usually lit with LEDs, mounted right to the building, spelling out your name. They're the go-to storefront sign in Houston because they read clean day and night and pass most city and landlord codes. We build the whole thing ourselves: a mockup so you see it first, UL-listed fabrication in our shop, the City permits, and our own crew on install day. Most jobs are quoted in one business day, up in a few weeks, and carry a 5-year warranty.",
+    // Depth blocks (2026-11-25): photos per option, published prices, specs from our
+    // permit drawings, named jobs, buyer types and verified city rules. Facts only;
+    // sources are the permit drawings, data/pricing.js and app/sign-permits.
+    options: {
+      "heading": "Four ways we build channel letters",
+      "items": [
+        {
+          "name": "Front-lit",
+          "id": "peach-cobbler-factory",
+          "body": "LEDs sit inside each letter and shine through a 3/16-inch acrylic face. This is the standard storefront build, and the easiest to read from the road at night."
+        },
+        {
+          "name": "Halo-lit",
+          "id": "siam-sunrise-thai-eatery",
+          "body": "A solid metal face with the LEDs aimed backward, so each letter glows against the wall. It needs a clear back and standoffs, and it looks best on a matte wall."
+        },
+        {
+          "name": "Front-lit on a lit backplate",
+          "id": "hemp-social",
+          "body": "Front-lit letters mounted on a shaped aluminum backplate that carries its own LEDs. Two light sources in one sign, often in two colors."
+        },
+        {
+          "name": "Non-lit dimensional letters",
+          "id": "parkerjoe",
+          "body": "Cut letters with no lighting. They cost the least and suit storefronts that are well lit or closed at night."
+        }
+      ]
+    },
+    priceTable: {
+      "heading": "What channel letters cost in Houston",
+      "columns": [
+        "Sign type",
+        "Typical installed price",
+        "What it is"
+      ],
+      "rows": [
+        [
+          "Non-lit letters",
+          "$2,000 – $8,000+",
+          "Dimensional cut letters with no lighting."
+        ],
+        [
+          "Front-lit channel letters",
+          "$3,000 – $15,000+",
+          "LEDs glow through colored acrylic faces. The Houston standard."
+        ],
+        [
+          "Raceway-mounted sets",
+          "$3,500 – $18,000+",
+          "Letters on a painted aluminum box that carries the wiring. Many landlords require it."
+        ],
+        [
+          "Halo-lit letters",
+          "$4,000 – $20,000+",
+          "Light glows onto the wall behind each letter. More fabrication."
+        ],
+        [
+          "Custom logo systems",
+          "$5,000 – $25,000+",
+          "Letters plus a fabricated, lit logo."
+        ]
+      ],
+      "note": "Prices include fabrication, the permit, and installation. Most single lit storefronts land between $4,000 and $12,000. A typical project takes 6 to 8 weeks, and the size of the sign does not change that. See every range on our [pricing page](/pricing)."
+    },
+    specs: {
+      "heading": "How our channel letters are built",
+      "rows": [
+        [
+          "Face",
+          "3/16-inch acrylic. Color comes from translucent vinyl on the face."
+        ],
+        [
+          "Trim cap",
+          "1 inch."
+        ],
+        [
+          "Returns (the sides)",
+          ".040 aluminum, 3 to 5 inches deep, painted to match your brand or your building."
+        ],
+        [
+          "Back",
+          ".050 to .063 aluminum. Halo-lit and dual-lit letters use a clear acrylic back on 1.5-inch standoffs."
+        ],
+        [
+          "Lighting",
+          "White LED modules. We pick the color temperature for each job, from warm 3000K to cool 6400K."
+        ],
+        [
+          "Power",
+          "12-volt, UL-listed Class 2 LED power supplies with a disconnect switch."
+        ],
+        [
+          "Listing",
+          "UL 48 listed and labeled for exterior use."
+        ],
+        [
+          "Mounting",
+          "Flush to the wall with at least three non-corrosive bolts per letter, or on a raceway or wireway painted to match."
+        ],
+        [
+          "Warranty",
+          "5 years on materials and workmanship, lighting included."
+        ]
+      ],
+      "note": "These specs come from our permit drawings for recent Houston-area jobs. Your landlord's sign criteria can change the depth, the color, or the mounting."
+    },
+    jobs: {
+      "heading": "Channel letters we built, and how",
+      "items": [
+        {
+          "id": "copper-espresso-bar",
+          "fact": "Front-and-back-lit letters, 5 inches deep, with warm 3000K LEDs and dark bronze returns."
+        },
+        {
+          "id": "dice-fortress",
+          "fact": "Letters with .040 aluminum returns painted the building color, and cool 6400K LEDs."
+        },
+        {
+          "id": "coronation-theater",
+          "fact": "Back-lit aluminum letters, 5 inches thick."
+        },
+        {
+          "id": "hashtag-india",
+          "fact": "Front-lit letters with black 4-inch returns, a 1-inch trim cap, and white LEDs."
+        },
+        {
+          "id": "clear-lake-medical-plaza",
+          "fact": "Lit letters with 4-inch black returns on an 8-inch wireway."
+        },
+        {
+          "id": "town-square-socialhouse",
+          "fact": "Halo-lit letters beside a lit logo cabinet with a 3/16-inch acrylic face and 4-inch returns."
+        }
+      ]
+    },
+    buyers: {
+      "heading": "Who buys channel letters",
+      "items": [
+        {
+          "who": "Restaurants and coffee bars",
+          "body": "They are open after dark, so the sign has to read at night. Copper Espresso Bar, Jamaica Pon Di Road, and The Peach Cobbler Factory all run lit letters."
+        },
+        {
+          "who": "Retail stores in shopping centers",
+          "body": "Most centers set the letter style, color, and mounting in their sign criteria. We design inside those rules. S.S. Perfumes and Hemp Social are recent retail builds."
+        },
+        {
+          "who": "Medical and dental offices",
+          "body": "Patients look for the name from the parking lot. Clara Vision, New Promise Neuropathy, and Clear Lake Medical Plaza use lit letters."
+        },
+        {
+          "who": "Gyms and studios",
+          "body": "Fire Form Pilates in Manvel and Ignite Pilates in Brookshire both have building letters we made."
+        },
+        {
+          "who": "Entertainment venues",
+          "body": "Big walls need big letters. Slick City Action Park, Emporium Games, and Coronation Theater and Bar are examples."
+        },
+        {
+          "who": "Property managers and contractors",
+          "body": "We work from your plan set or your tenant criteria. See how we work with [property managers](/property-managers) and [general contractors](/general-contractors)."
+        }
+      ]
+    },
     sections: [
       {
         heading: "What are channel letter signs?",
@@ -147,6 +311,114 @@ const SERVICES = {
       "The sign over your door, done right: designed, built, permitted, and installed by one Houston crew.",
     answer:
       "A storefront sign is the sign that names your business on the front of your building, and it usually means one of four things: lit channel letters, a cabinet (lightbox) sign, non-lit dimensional letters, or window graphics. Most Houston storefronts use lit channel letters because they read day and night and pass most landlord criteria. We handle the whole job in-house: a mockup on a photo of your actual storefront, UL-listed fabrication in our Houston shop, the city permit, and installation by our own crew, backed by a 5-year warranty. Send a photo and you'll have a written quote in one business day.",
+    // Depth blocks (2026-11-25): photos per option, published prices, specs from our
+    // permit drawings, named jobs, buyer types and verified city rules. Facts only;
+    // sources are the permit drawings, data/pricing.js and app/sign-permits.
+    options: {
+      "heading": "The four kinds of storefront sign",
+      "items": [
+        {
+          "name": "Lit channel letters",
+          "id": "peach-cobbler-factory",
+          "body": "Individual letters with LEDs inside. The standard for retail and restaurants, and what most landlord criteria ask for."
+        },
+        {
+          "name": "Cabinet or lightbox",
+          "id": "go-church",
+          "body": "One lit box that carries your whole logo. A good fit when the logo is detailed or the sign band is short."
+        },
+        {
+          "name": "Non-lit dimensional letters",
+          "id": "xo-books",
+          "body": "Cut letters with no lighting, for a clean look on a storefront that does not need to be seen at night."
+        },
+        {
+          "name": "Window graphics",
+          "id": "emporium-games",
+          "body": "Cut or printed vinyl on the glass for hours, services, and branding. Often added to a letter set."
+        }
+      ]
+    },
+    priceTable: {
+      "heading": "What a storefront sign costs in Houston",
+      "columns": [
+        "Sign type",
+        "Typical installed price",
+        "What it is"
+      ],
+      "rows": [
+        [
+          "Non-lit dimensional letters",
+          "$2,000 – $8,000+",
+          "Cut letters with no lighting."
+        ],
+        [
+          "Front-lit channel letters",
+          "$3,000 – $15,000+",
+          "The standard lit storefront sign."
+        ],
+        [
+          "Raceway-mounted letter sets",
+          "$3,500 – $18,000+",
+          "Lit letters on a painted box that carries the wiring."
+        ],
+        [
+          "Letters with a lit logo",
+          "$5,000 – $25,000+",
+          "A letter set plus a fabricated, lit logo."
+        ]
+      ],
+      "note": "Prices include fabrication, the permit, and installation. Most single lit storefronts land between $4,000 and $12,000. Cabinet signs and window graphics are priced per job. See every range on our [pricing page](/pricing)."
+    },
+    specs: {
+      "heading": "How we build a storefront cabinet sign",
+      "rows": [
+        [
+          "Face",
+          "3/16-inch white acrylic, with your artwork in vinyl."
+        ],
+        [
+          "Returns (the sides)",
+          "4 inches deep, with a 1-inch trim cap."
+        ],
+        [
+          "Back",
+          ".063 aluminum composite panel."
+        ],
+        [
+          "Lighting",
+          "White LED modules in rows across the back."
+        ],
+        [
+          "Listing",
+          "UL-listed, like every lit sign we build."
+        ]
+      ],
+      "note": "From our permit drawing for the Town Square Socialhouse logo cabinet. Letter specs are on our [channel letters page](/services/channel-letters)."
+    },
+    jobs: {
+      "heading": "Storefront signs we built",
+      "items": [
+        {
+          "id": "ss-perfumes"
+        },
+        {
+          "id": "gyro-king"
+        },
+        {
+          "id": "jamaica-pon-di-road"
+        },
+        {
+          "id": "cane-island-nails-spa"
+        },
+        {
+          "id": "treehouse-cafe-n-grill"
+        },
+        {
+          "id": "1929-po-boy-kitchen"
+        }
+      ]
+    },
     sections: [
       {
         heading: "What counts as a storefront sign?",
@@ -225,6 +497,136 @@ const SERVICES = {
       "Ground-level business signage that anchors your address, built to last and to match your brand.",
     answer:
       "A monument sign is the low, freestanding sign that sits at your driveway or entrance and names your business, office park, or community from the street. Unlike a tall pole sign, it sits close to the ground on a solid base (masonry, stone, aluminum, or acrylic) and can be lit for night visibility. A lot of Houston developments and HOAs require them. We design, build, permit, and install monuments end to end, color-matched to your brand and engineered for Gulf Coast wind. Send a photo and you'll have a quote in a business day.",
+    // Depth blocks (2026-11-25): photos per option, published prices, specs from our
+    // permit drawings, named jobs, buyer types and verified city rules. Facts only;
+    // sources are the permit drawings, data/pricing.js and app/sign-permits.
+    options: {
+      "heading": "Monument and ground signs we have built",
+      "items": [
+        {
+          "name": "Brick base with a tenant directory",
+          "id": "kirkwood-tech-center",
+          "body": "A masonry base with a lit cabinet and tenant panels that can be swapped as businesses change. Built for an office park in Stafford."
+        },
+        {
+          "name": "Brick monument for one business",
+          "id": "coopwoods-air-conditioning",
+          "body": "A single-name sign on a brick base at the street, for a business with its own frontage."
+        },
+        {
+          "name": "Post-and-panel sign",
+          "id": "rig-runner",
+          "body": "A panel between two posts. The simplest kind of ground sign."
+        },
+        {
+          "name": "Tall multi-tenant sign",
+          "id": "at-home-shopping-center",
+          "body": "When a center needs to be seen from farther away, a pylon does the job. See [pole and pylon signs](/services/pole-signs)."
+        }
+      ]
+    },
+    priceTable: {
+      "heading": "What a monument sign costs in Houston",
+      "columns": [
+        "",
+        "Typical figure",
+        "Notes"
+      ],
+      "rows": [
+        [
+          "Installed price",
+          "$6,000 – $50,000+",
+          "Size, base material, lighting, and the foundation move the price."
+        ],
+        [
+          "Timeline",
+          "10 – 12 weeks",
+          "Includes design, engineering where needed, the permit, and installation. Size does not change it."
+        ]
+      ],
+      "note": "Every range we publish is on our [pricing page](/pricing)."
+    },
+    specs: {
+      "heading": "How we build a lit monument",
+      "rows": [
+        [
+          "Size on a recent job",
+          "8 feet wide, 6 feet high, and 16 inches deep (Clear Lake Medical Plaza)."
+        ],
+        [
+          "Frame",
+          "Shop-welded steel and aluminum tube."
+        ],
+        [
+          "Faces",
+          "3/16-inch white acrylic."
+        ],
+        [
+          "Lighting",
+          "LEDs built into the cabinet."
+        ],
+        [
+          "Base",
+          "Masonry, stone, or aluminum, matched to your building."
+        ],
+        [
+          "Rebuilds",
+          "We can rebuild on an existing monument. Clear Lake Medical Plaza was a redevelopment of the sign already on the site."
+        ]
+      ],
+      "note": "From our permit drawings for the Clear Lake Medical Plaza monument."
+    },
+    rules: {
+      "heading": "Monument sign rules by city",
+      "columns": [
+        "Where",
+        "What the rules say"
+      ],
+      "rows": [
+        [
+          "City of Houston",
+          "Most sign permits go only to licensed sign contractors. The city's stated processing time is 4 to 11 business days."
+        ],
+        [
+          "Sugar Land",
+          "Size is capped by district: 36 square feet and 4 feet tall in residential areas, 60 square feet and 6 feet tall in nonresidential areas, and 100 square feet and 10 feet tall with US-59 frontage. Permits are valid for 180 days."
+        ],
+        [
+          "Pasadena",
+          "Needs a scaled site plan, structural and electrical designs, an elevation drawing, and landscaping around the sign. The foundation is inspected before concrete is poured."
+        ],
+        [
+          "Pearland",
+          "The design of every permanent sign must be certified by a professional engineer."
+        ],
+        [
+          "Spring and Cypress",
+          "Harris County issues the permit in unincorporated areas. Ground signs 30 feet or taller need engineer-sealed foundation drawings."
+        ]
+      ],
+      "note": "Read from each office's published rules in August 2026. Sources and links are on our [sign permits page](/sign-permits)."
+    },
+    buyers: {
+      "heading": "Who buys monument signs",
+      "items": [
+        {
+          "who": "Office parks and multi-tenant buildings",
+          "body": "One sign at the entrance names every tenant. Kirkwood Tech Center uses a brick monument with a tenant directory."
+        },
+        {
+          "who": "Medical plazas",
+          "body": "Patients need to find the right driveway. We rebuilt the monument at Clear Lake Medical Plaza and made the lit letters on the building."
+        },
+        {
+          "who": "Businesses with their own street frontage",
+          "body": "A monument at the road works when the building sits back from traffic. Coopwood's Air Conditioning has one."
+        },
+        {
+          "who": "Property managers and developers",
+          "body": "We often build the monument with the building letters, so the colors, lighting, and permits match. See how we work with [property managers](/property-managers)."
+        }
+      ]
+    },
     sections: [
       {
         heading: "What is a monument sign?",
@@ -295,6 +697,78 @@ const SERVICES = {
       "High-visibility freestanding signage for shopping centers, pad sites, and highway frontage — designed, managed, and installed by one Houston team.",
     answer:
       "A pole sign (or pylon sign) lifts your name high above the road on one or two steel supports, so drivers see you from a distance — from the feeder, the intersection, or across a full parking lot. It's the sign that pulls traffic into shopping centers, gas stations, restaurants, and pad sites on busy Houston corridors. We handle the whole project: design mockup, stamped engineering and wind-load calculations when the height requires them, the city or county permit, cabinet fabrication in our shop, and crane installation by our own crew. Send a photo of the site and you'll hear from us within one business day.",
+    // Depth blocks (2026-11-25): photos per option, published prices, specs from our
+    // permit drawings, named jobs, buyer types and verified city rules. Facts only;
+    // sources are the permit drawings, data/pricing.js and app/sign-permits.
+    options: {
+      "heading": "Pole and pylon work we have built",
+      "items": [
+        {
+          "name": "Multi-tenant pylon",
+          "id": "at-home-shopping-center",
+          "body": "One tall structure that carries every tenant's panel. It is the sign that pulls drivers into a shopping center."
+        },
+        {
+          "name": "Single-business pylon cabinet",
+          "id": "zesty-cleaners",
+          "body": "A lit cabinet on its own structure, for a business that needs to be seen from the road. This one is in Cypress."
+        },
+        {
+          "name": "New tenant panel",
+          "id": "flying-biscuit-cafe",
+          "body": "When a tenant moves in, the panel on the center's pylon changes. We built this one for Flying Biscuit Cafe in Magnolia."
+        },
+        {
+          "name": "Lit panel in an existing pylon",
+          "id": "mash-dogs-burgers",
+          "body": "A new lit face for a lightbox that is already on the pylon."
+        }
+      ]
+    },
+    rules: {
+      "heading": "Pole and pylon sign rules by city",
+      "columns": [
+        "Where",
+        "What the rules say"
+      ],
+      "rows": [
+        [
+          "City of Houston",
+          "Most sign permits go only to licensed sign contractors. The city's stated processing time is 4 to 11 business days."
+        ],
+        [
+          "Spring and Cypress",
+          "Harris County issues the permit in unincorporated areas. Ground signs 30 feet or taller need engineer-sealed foundation drawings and a hole inspection."
+        ],
+        [
+          "Pasadena",
+          "Pylon signs need a scaled site plan, structural and electrical designs, an elevation drawing, and landscaping. The foundation is inspected before concrete is poured."
+        ],
+        [
+          "Pearland",
+          "The design of every permanent sign must be certified by a professional engineer."
+        ],
+        [
+          "Sugar Land",
+          "Electronic signs and revolving or moving signs are prohibited."
+        ]
+      ],
+      "note": "Read from each office's published rules in August 2026. Sources and links are on our [sign permits page](/sign-permits)."
+    },
+    jobs: {
+      "heading": "More pylon panels we built",
+      "items": [
+        {
+          "id": "luxe-lash-studio"
+        },
+        {
+          "id": "soi-brow-threading-salon"
+        },
+        {
+          "id": "town-square-socialhouse"
+        }
+      ]
+    },
     sections: [
       {
         heading: "What is a pole sign, and how is it different from a monument?",
@@ -637,6 +1111,50 @@ const SERVICES = {
       "Dark letters, cracked faces, storm damage, tired cabinets — we diagnose, repair, and refurbish commercial signs across Houston, including signs we didn't build.",
     answer:
       "A dark or damaged sign costs you customers every night it stays broken — and it tells everyone driving past that the business behind it isn't paying attention. We handle sign repair and refurbishment in Houston and across the metro area: channel letters with dead sections, cabinets with failed lighting, cracked or faded faces, storm and wind damage, and rusted or peeling structures that need a refresh instead of a replacement. You don't need to know what's wrong — we diagnose on site, then give you an itemized quote that says exactly what failed and what fixing it costs. And yes, we work on signs other companies built.",
+    // Depth blocks (2026-11-25): photos per option, published prices, specs from our
+    // permit drawings, named jobs, buyer types and verified city rules. Facts only;
+    // sources are the permit drawings, data/pricing.js and app/sign-permits.
+    rules: {
+      "heading": "Common sign problems and how we fix them",
+      "columns": [
+        "What you see",
+        "Usual cause",
+        "Usual fix"
+      ],
+      "rows": [
+        [
+          "Letters or whole sections are dark",
+          "A failed power supply or failed LED modules.",
+          "We test the letter, then replace the failed part with the same UL-listed components we use in new signs."
+        ],
+        [
+          "Flickering or dim light",
+          "Aging transformers, ballasts, or neon in an older sign.",
+          "An LED retrofit, which replaces the old lighting inside the sign you already have."
+        ],
+        [
+          "A cracked or missing face",
+          "Wind, impact, or age.",
+          "A new acrylic face cut to match the original."
+        ],
+        [
+          "Faded or peeling graphics",
+          "Years of sun.",
+          "A reface with new vinyl or a new face, and repainting where needed."
+        ],
+        [
+          "Water inside after a storm",
+          "Failed seals around the face or the wall penetrations.",
+          "We open the sign, dry it, replace damaged parts, and reseal it."
+        ],
+        [
+          "The sign trips a breaker",
+          "An electrical fault in the sign or its feed.",
+          "We trace the fault and repair the wiring."
+        ]
+      ],
+      "note": "We diagnose on site before quoting, so the estimate lists what actually failed. We work on signs other companies built."
+    },
     sections: [
       {
         heading: "What sign problems do you repair?",
