@@ -148,8 +148,8 @@ export default async function ServicePage({ params }) {
 
       {/* Hero */}
       <section className="bg-ink text-white">
-        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 lg:py-16">
-          <nav className="mb-4 text-sm text-white/60">
+        <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:pb-6 lg:pt-4">
+          <nav className="mb-4 text-sm text-white/60 lg:mb-2">
             <Link href="/" className="hover:text-white">Home</Link> ·{" "}
             <Link href="/services" className="hover:text-white">Services</Link> ·{" "}
             <span className="text-white/80">{s.shortName}</span>
@@ -166,7 +166,7 @@ export default async function ServicePage({ params }) {
               <OfferBadge tone="dark" className="mt-5" />
             </div>
             <div className="w-full">
-              <LeadForm kind="quote" submitLabel="Get My Free Quote" messageLabel={`Tell us about your ${s.shortName.toLowerCase()} project`} heading="Free design mockup in 1 business day" subheading="After a free site survey, you get mockups with your sign's dimensions and a quote within one business day." />
+              <LeadForm kind="quote" submitLabel="Get My Free Quote" messageLabel={`Tell us about your ${s.shortName.toLowerCase()} project`} heading="Free design mockup in 1 business day" subheading="After a free site survey, you get mockups with your sign's dimensions and a quote within one business day." compact />
             </div>
           </div>
         </div>

@@ -32,6 +32,10 @@ export default function LeadForm({
   className = "",
   heading,
   subheading,
+  // Hero forms pass `compact` so the whole form, button included, fits on one
+  // laptop screen beside the headline (owner request 2026-11-25). Same fields,
+  // less air: a shorter message box and the photo control on one line.
+  compact = false,
 }) {
   const [state, formAction, pending] = useActionState(submitLead, initialState);
   const formRef = useRef(null);
@@ -143,12 +147,12 @@ export default function LeadForm({
       ref={formRef}
       action={formAction}
       onSubmit={guardPhotoSize}
-      className={`rounded-sm bg-white shadow-[0_1px_3px_rgb(13_23_34/0.08),0_14px_32px_-18px_rgb(13_23_34/0.28)] p-6 text-left md:p-8 ${className}`}
+      className={`rounded-sm bg-white shadow-[0_1px_3px_rgb(13_23_34/0.08),0_14px_32px_-18px_rgb(13_23_34/0.28)] ${compact ? "p-5 md:p-6" : "p-6 md:p-8"} text-left ${className}`}
     >
       {heading && (
-        <div className="mb-5">
+        <div className={compact ? "mb-4" : "mb-5"}>
           <p className="font-display text-lg font-bold leading-tight text-ink sm:text-xl">{heading}</p>
-          {subheading && <p className="mt-2 text-sm leading-relaxed text-steel">{subheading}</p>}
+          {subheading && <p className={`text-sm text-steel ${compact ? "mt-1.5 leading-snug" : "mt-2 leading-relaxed"}`}>{subheading}</p>}
         </div>
       )}
       <input type="hidden" name="kind" value={kind} />
@@ -160,7 +164,7 @@ export default function LeadForm({
         <label>Leave blank<input type="text" name="website" tabIndex={-1} autoComplete="off" /></label>
       </div>
 
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className={`grid sm:grid-cols-2 ${compact ? "gap-3" : "gap-4"}`}>
         <Field label="Name" name="name" required autoComplete="name" state={state} />
         <Field label="Email" name="email" type="email" required autoComplete="email" state={state} />
         <Field label="Phone" name="phone" type="tel" required={phoneRequired} autoComplete="tel" state={state} />
@@ -169,21 +173,23 @@ export default function LeadForm({
         <Field label="Project Name" name="company" autoComplete="organization" placeholder="Business or project name" state={state} />
       </div>
 
-      <div className="mt-4">
+      <div className={compact ? "mt-3" : "mt-4"}>
         <label className="mb-1.5 block text-xs font-semibold text-carbon">{messageLabel}</label>
         <textarea
           name="message"
-          rows={4}
+          rows={compact ? 2 : 4}
           placeholder="What kind of sign, rough size, and where it's going. Anything helps."
           className="field w-full resize-y rounded-sm border border-fog px-3 py-2 text-sm text-carbon"
         />
       </div>
 
       {showPhotos && (
-        <div className="mt-4">
-          <span className="mb-1.5 block text-xs font-semibold text-carbon">
-            Photo of your building or current sign <span className="font-normal text-steel">(optional)</span>
-          </span>
+        <div className={compact ? "mt-3" : "mt-4"}>
+          {!compact && (
+            <span className="mb-1.5 block text-xs font-semibold text-carbon">
+              Photo of your building or current sign <span className="font-normal text-steel">(optional)</span>
+            </span>
+          )}
           <div className="flex flex-wrap items-center gap-3">
             <label className="inline-flex cursor-pointer items-center gap-2 rounded-sm bg-cloud px-3 py-2 text-sm font-semibold text-ink transition-colors focus-within:bg-fog hover:bg-fog">
               <svg viewBox="0 0 20 20" width="16" height="16" fill="none" stroke="currentColor" strokeWidth="1.6" aria-hidden="true">
@@ -202,6 +208,9 @@ export default function LeadForm({
                 className="sr-only"
               />
             </label>
+            {compact && photos.length === 0 && !photoBusy && (
+              <span className="text-xs text-steel">Optional. Your building or current sign.</span>
+            )}
             {photoBusy && <span className="text-xs text-steel" aria-live="polite">Preparing photo…</span>}
             {photos.map((p, i) => (
               <span key={p.url} className="relative inline-block">
@@ -223,7 +232,7 @@ export default function LeadForm({
         </div>
       )}
 
-      <button type="submit" disabled={pending || photoBusy} className="btn btn-primary btn-lg mt-5 w-full justify-center disabled:cursor-not-allowed disabled:opacity-60">
+      <button type="submit" disabled={pending || photoBusy} className={`btn btn-primary btn-lg w-full justify-center disabled:cursor-not-allowed disabled:opacity-60 ${compact ? "mt-4" : "mt-5"}`}>
         {pending ? "Sending…" : submitLabel}
       </button>
 

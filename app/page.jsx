@@ -63,7 +63,7 @@ export default function HomePage() {
             lettering out of the frame, so nothing competes with the headline. */}
         <div className="absolute inset-0 -z-10 bg-gradient-to-r from-black/85 via-black/60 via-45% to-black/15" />
 
-        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-16 sm:px-6 lg:grid-cols-2 lg:py-28">
+        <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 lg:min-h-[min(calc(100svh-8.5rem),47.5rem)] lg:grid-cols-2 lg:items-center lg:py-8">
           <div className="stagger-in flex flex-col justify-center">
             {/* The claim leads; the SEO phrase lives in the first body sentence. */}
             <h1 className="text-5xl font-bold leading-[0.98] sm:text-6xl lg:text-7xl">Signs built in our own shop</h1>
@@ -92,6 +92,7 @@ export default function HomePage() {
                 showMessage={false}
                 heading="Free design mockup in 1 business day"
                 subheading="After a free site survey, you get mockups with your sign's dimensions and a quote within one business day."
+                compact
               />
             </div>
           </div>
